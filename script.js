@@ -1,4 +1,7 @@
-// What is a closure?
+
+//////////////
+// CLOSURES //
+//////////////
 
 // A closure is the combination of a function and the lexical environment in which that function was declared
 
