@@ -23,7 +23,8 @@ function makeFunction(){
 // let name = "Phil"
 
 let displayNameTwo = makeFunction()
-displayNameTwo() //Logs "Phil"
+displayNameTwo() 
+//PRINTS: "Phil" to the console
 
 // Notes
 

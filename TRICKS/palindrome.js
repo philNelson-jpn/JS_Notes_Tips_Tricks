@@ -16,3 +16,5 @@ function palindrome(string){
 }
 
 palindrome("Yo, banana boy!")
+
+// PRINTS: "true" to the console
