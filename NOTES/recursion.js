@@ -85,6 +85,8 @@ function printNames(currentPersonRecursion){
 
 printNames(personRecursion)
 
+// PRINTS Brad, Cliff, Junior to the console
+
 // BREAKDOWN //
 
 // With recursion, we are running a function within another function, so we first create a function (currentPersonRecursion) where we would have normally created a variable in a while loop.

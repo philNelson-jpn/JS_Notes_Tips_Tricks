@@ -13,6 +13,8 @@ function sayWhatsUp(name, callback){
 
 sayWhatsUp("Phil", printSomething)
 
+// PRINTS "What's up, Phil" to the console
+
 // Breakdown:
 
 // printSomething() - logs something to the console
@@ -47,6 +49,8 @@ function sayHi(name){
 
 doStuff(2, 10, "Phil")
 
+// PRINTS 12 "Hi, my name is Phil" to the console.
+
 /////////////////////////////////////////////////////////////
 // PASSING FUNCTIONS AS ARGUMENTS Pt. 2 w/ Arrow Functions //
 /////////////////////////////////////////////////////////////
@@ -63,3 +67,5 @@ let doStuffArrow = (a, b, name) => {
 }
 
 doStuffArrow(12, 14, "Philly Arrow Man")
+
+// PRINTS "26 Arrow says hello to Philly Arrow Man" to the console.
