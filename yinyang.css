@@ -1,0 +1,44 @@
+.yin-yang {
+	height: 200px;
+	width: 200px;
+	position: relative;
+	background: rgb(255, 255, 255);
+	background: linear-gradient(
+		90deg,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(255, 255, 255, 1) 50%,
+		rgba(0, 0, 0, 1) 50%,
+		rgba(0, 0, 0, 1) 100%
+	);
+	border-radius: 50%;
+	box-sizing: border-box;
+	border: 4px solid black;
+}
+
+.yin-yang::before {
+	content: "";
+	position: absolute;
+	height: 96px;
+	width: 96px;
+	border-radius: 50%;
+	box-sizing: border-box;
+	background: black;
+	border: 36px solid white;
+	left: 50%;
+	top: -0.2%;
+	transform: translateX(-50%);
+}
+
+.yin-yang::after {
+	content: "";
+	position: absolute;
+	height: 96px;
+	width: 96px;
+	border-radius: 50%;
+	box-sizing: border-box;
+	background: white;
+	border: 36px solid black;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+}
