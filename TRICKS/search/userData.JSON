@@ -231,25 +231,25 @@
     },
     {
         "id": 11,
-        "name": "Clementina DAFUCK",
-        "username": "Moriah.Stanton",
-        "email": "Rey.Padberg@karina.biz",
+        "name": "Choco DaFudge",
+        "username": "Fudgy.choco",
+        "email": "Choc@fudge.biz",
         "address": {
-          "street": "Kattie Turnpike",
-          "suite": "Suite 198",
-          "city": "Lebsackbury",
-          "zipcode": "31428-2261",
+          "street": "Chocolate Lane",
+          "suite": "Suite 07734",
+          "city": "Milksybury",
+          "zipcode": "404-404",
           "geo": {
-            "lat": "-38.2386",
-            "lng": "57.2232"
+            "lat": "-39.2386",
+            "lng": "77.2232"
           }
         },
-        "phone": "024-648-3804",
-        "website": "ambrose.net",
+        "phone": "66-456-3339",
+        "website": "fudgychoco.net",
         "company": {
-          "name": "Hoeger LLC",
-          "catchPhrase": "Centralized empowering task-force",
-          "bs": "target end-to-end models"
+          "name": "Huge Tracks of LLC",
+          "catchPhrase": "Centralized empowering chocolate people",
+          "bs": "balogny"
         }
     }
   ]
