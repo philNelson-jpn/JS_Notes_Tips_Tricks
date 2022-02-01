@@ -20,23 +20,25 @@ searchInput.addEventListener("input", e => {
 })
 
 // grab an api of fake users
-fetch("https://jsonplaceholder.typicode.com/users")
+fetch("userData.JSON")
     .then(res => res.json())
     .then(data => {
     users = data.map(user => {
         // get the content inside our template, clone it and return a document fragment
         const card = userCardTemplate.content.cloneNode(true).children[0]
-        // get the first child of the card (with all of the content inside it (body,header))
+        // get the first child of the card (with all of the content inside it (email,header))
         const header = card.querySelector("[data-header]")
-        const body = card.querySelector("[data-body]")
+        const email = card.querySelector("[data-email]")
+        const phone = card.querySelector("[data-phone]")
 
         header.textContent = user.name
-        body.textContent = user.email
+        email.textContent = user.email
+        phone.textContent = user.phone
 
         userCardContainer.append(card)
 
         // Does the name/email include
-        return { name: user.name, email: user.email, element: card}
+        return { name: user.name, email: user.email, phone: user.phone, element: card}
     })
 
 })

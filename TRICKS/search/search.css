@@ -22,7 +22,7 @@ input {
 .user-cards {
 	display: grid;
 	/* make cards that will fill up the available space of the viewport */
-	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(15.7rem, 1fr));
 	/* The smallest size a card can be is 150px, once another card can fit in the available space at 150px, it will do so */
 	gap: 1rem;
 	margin: auto;
@@ -35,12 +35,15 @@ input {
 }
 
 .card > .header {
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 	margin-bottom: 0.5rem;
 }
 
-.card > .body {
+.card > .email,
+.phone {
 	color: #777;
+	margin: 0.25rem 0;
+	text-align: right;
 }
 
 .hide {
