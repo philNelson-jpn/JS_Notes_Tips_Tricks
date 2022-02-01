@@ -1,0 +1,48 @@
+.search-wrapper {
+	padding-top: 3rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	align-items: center;
+	margin: auto;
+	font-size: 2rem;
+	font-family: "Source Sans Pro";
+	font-weight: 700;
+}
+
+input {
+	font-size: 2rem;
+	width: 15em;
+	outline: black solid 4px;
+	border-radius: 0.2em;
+	margin-bottom: 3rem;
+	padding: 0 0.5em;
+}
+
+.user-cards {
+	display: grid;
+	/* make cards that will fill up the available space of the viewport */
+	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+	/* The smallest size a card can be is 150px, once another card can fit in the available space at 150px, it will do so */
+	gap: 1rem;
+	margin: auto;
+}
+
+.card {
+	outline: black solid 0.25rem;
+	border-radius: 0.2rem;
+	padding: 0.75rem;
+}
+
+.card > .header {
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.card > .body {
+	color: #777;
+}
+
+.hide {
+	display: none;
+}
