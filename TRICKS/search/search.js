@@ -20,6 +20,7 @@ searchInput.addEventListener("input", e => {
 })
 
 // grab an api of fake users
+// https://jsonplaceholder.typicode.com/users
 fetch("userData.JSON")
     .then(res => res.json())
     .then(data => {
