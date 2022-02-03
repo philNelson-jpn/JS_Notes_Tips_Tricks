@@ -41,13 +41,22 @@ header {
 }
 
 .moon {
-	transform: translateZ(-15px) scale(3);
+	transform: translateZ(-18px) scale(3);
 	position: absolute;
 	height: 4rem;
 	width: 4rem;
 	z-index: 2;
+	left: -20rem;
+	top: -5rem;
+}
+
+.falcon {
+	transform: translateZ(-10px) scale(2);
+	position: absolute;
+	width: 20rem;
+	z-index: 2;
 	right: -20rem;
-	top: -2rem;
+	bottom: -2rem;
 }
 
 .title {
