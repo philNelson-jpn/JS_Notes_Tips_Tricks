@@ -40,6 +40,16 @@ header {
 	z-index: -1;
 }
 
+.moon {
+	transform: translateZ(-15px) scale(3);
+	position: absolute;
+	height: 4rem;
+	width: 4rem;
+	z-index: 2;
+	right: -20rem;
+	top: -2rem;
+}
+
 .title {
 	position: relative;
 	font-size: 10rem;
