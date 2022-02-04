@@ -25,29 +25,35 @@ body {
 }
 
 .image-gallery {
+	margin-top: 4rem;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 2fr 1fr;
+	grid-template-columns: repeat(3, 10vw);
+	grid-template-rows: 1fr 1fr;
 	justify-content: center;
-	align-content: end;
+	align-content: center;
+	justify-items: center;
+	gap: 3rem;
 }
 
 .main-photo {
 	grid-column: 1 / 4;
-	width: 20vw;
+	width: 40vw;
 }
 
 .thumbnail-one {
 	grid-column: 1;
 	grid-row: 2;
+	width: 10vw;
 }
 
 .thumbnail-two {
 	grid-column: 2;
 	grid-row: 2;
+	width: 10vw;
 }
 
 .thumbnail-three {
 	grid-column: 3;
 	grid-row: 2;
+	width: 10vw;
 }
