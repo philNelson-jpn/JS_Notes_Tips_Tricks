@@ -26,8 +26,8 @@ header {
 .background {
 	transform: translateZ(-20px) scale(3);
 	position: absolute;
-	height: 120%;
-	width: 100%;
+	height: 150%;
+	width: 150%;
 	object-fit: cover;
 	z-index: -1;
 }
@@ -41,6 +41,7 @@ header {
 }
 
 .moon {
+	/* display: none; */
 	transform: translateZ(-18px) scale(3);
 	position: absolute;
 	height: 5rem;
@@ -51,15 +52,16 @@ header {
 }
 
 .falcon {
-	transform: translateZ(-10px) scale(2);
+	/* display: none; */
+	transform: translateZ(-12px) scale(2);
 	position: absolute;
 	width: 20rem;
-	z-index: 2;
 	right: -20rem;
 	bottom: -2rem;
 }
 
 .title {
+	/* display: none; */
 	position: relative;
 	font-size: 7rem;
 	top: -4rem;
@@ -71,7 +73,8 @@ header {
 
 .top {
 	position: relative;
-	left: 0.8rem;
+	left: 0.95rem;
+	font-size: 1.038em;
 }
 
 .bottom {
@@ -80,6 +83,7 @@ header {
 }
 
 section {
+	display: none;
 	font-size: 2rem;
 	padding: 2rem;
 	background-color: rgba(17, 17, 17, 1);
