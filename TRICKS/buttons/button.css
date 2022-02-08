@@ -1,61 +1,22 @@
-/* Make our button press in when we click on it */
-/* 
+.button-box {
+	display: flex;
+	height: 100vh;
+}
+
+button {
+	font-family: "Star Jedi", arial;
+	letter-spacing: 2px;
+	margin: auto;
+}
+
 .pushable {
-	background: hsl(340deg 100% 32%);
-	border-radius: 12px;
+	position: relative;
 	border: none;
+	background: transparent;
 	padding: 0;
 	cursor: pointer;
 	outline-offset: 4px;
-}
-.front {
-	display: block;
-	padding: 12px 42px;
-	border-radius: 12px;
-	font-size: 1.25rem;
-	background: hsl(345deg 100% 47%);
-	color: white;
-	transform: translateY(-6px);
-}
-
-.pushable:active .front {
-	transform: translateY(-2px);
-}
-
-/* Make our button "rise up" to meet our cursor */
-
-/* .front {
-	will-change: transform;
-	transition: transform 250ms;
-}
-
-.pushable:hover .front {
-	transform: translateY(-6px);
-}
-
-.pushable:active .front {
-	transform: translateY(-2px);
-} */
-
-/* .front {
-	transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
-}
-
-.pushable:hover .front {
-	transform: translateY(-6px);
-	transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
-}
-
-.pushable:active .front {
-	transform: translateY(-2px);
-	transition: transform 34ms;
-} */
-.pushable {
-	position: relative;
-	background: transparent;
-	border: none;
-	padding: 0;
-	cursor: pointer;
+	transition: filter 250ms;
 }
 .shadow {
 	position: absolute;
@@ -65,7 +26,9 @@
 	height: 100%;
 	border-radius: 12px;
 	background: hsl(0deg 0% 0% / 0.25);
+	will-change: transform;
 	transform: translateY(2px);
+	transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
 }
 .edge {
 	position: absolute;
@@ -74,32 +37,45 @@
 	width: 100%;
 	height: 100%;
 	border-radius: 12px;
-	background: hsl(340deg 100% 32%);
+	background: linear-gradient(
+		to left,
+		rgb(0, 82, 14) 0%,
+		rgb(19, 163, 0) 8%,
+		rgb(0, 163, 49) 92%,
+		rgb(14, 82, 0) 100%
+	);
 }
 .front {
 	display: block;
 	position: relative;
-	padding: 12px 42px;
+	padding: 12px 32px;
 	border-radius: 12px;
 	font-size: 1.25rem;
 	color: white;
-	background: hsl(345deg 100% 47%);
+	background: rgb(31, 165, 91);
+	will-change: transform;
 	transform: translateY(-4px);
+	transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
 }
-
+.pushable:hover {
+	filter: brightness(110%);
+}
 .pushable:hover .front {
 	transform: translateY(-6px);
-}
-.pushable:hover .shadow {
-	transform: translateY(4px);
+	transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
 }
 .pushable:active .front {
 	transform: translateY(-2px);
+	transition: transform 34ms;
+}
+.pushable:hover .shadow {
+	transform: translateY(4px);
+	transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
 }
 .pushable:active .shadow {
 	transform: translateY(1px);
+	transition: transform 34ms;
 }
-
 .pushable:focus:not(:focus-visible) {
 	outline: none;
 }
