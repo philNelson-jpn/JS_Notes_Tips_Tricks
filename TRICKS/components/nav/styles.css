@@ -2,6 +2,10 @@ body {
 	background: black;
 	margin: 0;
 	padding: 0;
+	line-height: 1.6;
+	font-family: sans-serif;
+	font-weight: 600;
+	min-height: 100vh;
 }
 
 header {
@@ -22,8 +26,6 @@ header {
 	gap: 1.5em;
 	list-style: none;
 	flex-grow: 1;
-	font-family: sans-serif;
-	font-weight: 600;
 }
 
 .nav__list a {
