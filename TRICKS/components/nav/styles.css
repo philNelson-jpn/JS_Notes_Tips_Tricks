@@ -1,0 +1,38 @@
+body {
+	background: black;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background: white;
+	display: flex;
+}
+
+.nav {
+	display: flex;
+	padding: 16px 32px;
+	flex-grow: 1;
+}
+
+.nav__list {
+	margin: 0;
+	padding: 10px;
+	display: flex;
+	gap: 1.5em;
+	list-style: none;
+	flex-grow: 1;
+	font-family: sans-serif;
+	font-weight: 600;
+}
+
+.nav__list a {
+	color: rgb(78, 70, 70);
+	text-decoration: none;
+}
+
+.nav__list li:nth-of-type(6) {
+	margin-left: auto;
+	border-left: 2px solid;
+	padding-left: 20px;
+}
