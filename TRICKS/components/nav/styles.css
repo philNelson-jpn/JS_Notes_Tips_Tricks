@@ -1,5 +1,5 @@
 body {
-	background: black;
+	background: rgb(56, 56, 56);
 	margin: 0;
 	padding: 0;
 	line-height: 1.6;
@@ -17,6 +17,7 @@ header {
 	display: flex;
 	padding: 16px 32px;
 	flex-grow: 1;
+	box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.7);
 }
 
 .nav__list {
@@ -37,4 +38,12 @@ header {
 	margin-left: auto;
 	border-left: 2px solid;
 	padding-left: 20px;
+}
+
+.nav__list a:hover {
+	color: rgb(255, 20, 184);
+}
+
+.nav:hover {
+	box-shadow: 0 3px 20px 0 rgba(255, 27, 244, 0.8);
 }
