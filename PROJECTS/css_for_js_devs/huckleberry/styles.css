@@ -131,3 +131,44 @@ section h2 {
 section span {
 	font-style: italic;
 }
+
+@media screen and (max-width: 1000px) {
+	.max-width-wrapper > section {
+		margin: 0;
+		padding: 32px;
+		min-width: 600px;
+	}
+
+	.title {
+		margin-left: 32px;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.title h1 {
+		font-size: 2.5rem;
+	}
+
+	.title p {
+		font-size: 1.8rem;
+		min-width: 500px;
+	}
+
+	.max-width-wrapper {
+		max-width: min-content;
+	}
+
+	.max-width-wrapper section {
+		max-width: 400px;
+	}
+
+	.max-width-wrapper section > h2 {
+		font-size: 2rem;
+		max-width: 450px;
+	}
+
+	.max-width-wrapper > section p {
+		max-width: 450px;
+		font-size: 1.8rem;
+	}
+}
