@@ -68,12 +68,16 @@ body {
 main {
 	min-height: 100vh;
 	display: grid;
+	/* align items vertically and horizontally - cards are all of the same width, based off of the content of the largest child*/
 	place-content: center;
+
+	/* align items vertically/horizontally with equal space between - cards shrink to fit content */
+	/* place-items: center; */
 	/* grid-template-columns: repeat(3, 1fr); */
 	gap: 1em;
 }
 
-.grid-items {
+.grid-item {
 	background: white;
 	border-radius: 0.75em;
 	padding: 2em;
