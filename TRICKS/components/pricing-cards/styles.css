@@ -67,7 +67,7 @@ header {
 	align-items: flex-end;
 }
 
-button {
+.btn-animation {
 	min-width: 130px;
 	height: 40px;
 	color: #fff;
@@ -85,13 +85,13 @@ button {
 	border: 5px solid hsl(260deg 20% 30%);
 	color: hsl(260deg 20% 30%);
 }
-button:hover {
+.btn-animation:hover {
 	color: #fff;
 }
-button:hover:after {
+.btn-animation:hover:after {
 	height: 100%;
 }
-button:after {
+.btn-animation:after {
 	content: "";
 	position: absolute;
 	z-index: -1;
@@ -101,4 +101,27 @@ button:after {
 	height: 0;
 	width: 100%;
 	background: hsl(260deg 20% 30%);
+}
+
+.transform {
+	will-change: transform;
+}
+
+.help-btn {
+	position: fixed;
+	right: 32px;
+	bottom: 32px;
+
+	width: 75px;
+	height: 75px;
+	line-height: 44px;
+	border-radius: 50%;
+	background: hsl(345deg 100% 40%);
+	color: white;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 500;
+	border: 3px solid white;
+	box-shadow: 2px 2px 20px hsl(248deg 80% 40% / 0.33);
+	cursor: pointer;
 }
