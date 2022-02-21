@@ -1,3 +1,5 @@
+// Check parent elements to see if they have a transform or will change property that will break fixed positioned elements.
+
 // Replace this with a relevant selector.
 // If you use a tool that auto-generates classes,
 // you can temporarily add an ID and select it

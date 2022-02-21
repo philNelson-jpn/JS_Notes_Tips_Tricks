@@ -1,0 +1,211 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+	margin: 0;
+	/* outline: 1px solid red; */
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+	height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+body {
+	background: rgb(56, 56, 56);
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+	font-family: sans-serif;
+	font-weight: 600;
+	min-height: 100vh;
+}
+
+header {
+	background: white;
+	display: flex;
+}
+
+.nav {
+	display: flex;
+	padding: 16px 32px;
+	flex-grow: 1;
+	box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.7);
+}
+
+form {
+	display: flex;
+}
+input {
+	display: flex;
+	height: 2rem;
+	margin: auto;
+}
+
+.nav__list {
+	margin: 0;
+	padding: 10px;
+	display: flex;
+	gap: 1.5em;
+	list-style: none;
+	flex-grow: 1;
+}
+
+.nav__list a {
+	color: rgb(78, 70, 70);
+	text-decoration: none;
+}
+
+.nav__list li:nth-of-type(11) {
+	margin-right: auto;
+	border-right: 2px solid;
+	padding-right: 20px;
+}
+
+.nav__list a:hover {
+	color: rgb(255, 20, 184);
+}
+
+.card {
+	background-color: white;
+	padding: 32px;
+	border-radius: 8px;
+}
+/* 
+p {
+	margin-bottom: 16px;
+} */
+
+.max-width-wrapper {
+	max-width: 720px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 40px 24px 40px 24px;
+}
+
+/* header {
+	background: black;
+	color: white;
+	font-family: sans-serif;
+	width: 100%;
+}
+
+nav {
+	height: 40px;
+	width: 90%;
+	margin: auto;
+}
+
+li {
+	display: inline-block;
+	height: 40px;
+	list-style: none;
+	float: left;
+	padding: 10px 20px;
+	border-right: 1px solid white;
+}
+
+header a {
+	text-decoration: none;
+	color: white;
+}
+
+input {
+	height: 40px;
+}
+
+span {
+	padding: 10px 20px;
+} */
+
+main {
+	height: 100%;
+	margin: auto;
+}
+
+.main-section {
+	margin: 10px 20px;
+	width: 45%;
+	height: 50%;
+	border: 2px solid red;
+	float: left;
+}
+
+.top-left {
+	margin-top: 10px;
+	width: 25%;
+	height: 25%;
+	border: 2px solid red;
+	float: left;
+}
+.top-right {
+	margin-top: 10px;
+	width: 25%;
+	height: 25%;
+	border: 2px solid red;
+	float: left;
+}
+
+.bottom-left {
+	width: 25%;
+	height: 25%;
+	border: 2px solid red;
+	float: left;
+}
+.bottom-right {
+	width: 25%;
+	height: 25%;
+	border: 2px solid red;
+	float: left;
+}

@@ -103,9 +103,9 @@ header {
 	background: hsl(260deg 20% 30%);
 }
 
-.transform {
+/* div {
 	will-change: transform;
-}
+} */
 
 .help-btn {
 	position: fixed;
