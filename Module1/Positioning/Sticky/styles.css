@@ -1,0 +1,25 @@
+html {
+	height: 100%;
+}
+
+section h2 {
+	position: sticky;
+	top: 0;
+	font-size: 3rem;
+}
+
+section {
+	display: flex;
+	align-items: flex-start;
+	padding: 24px 0px;
+}
+
+section p {
+	flex: 1;
+	margin-left: 48px;
+	font-size: 1.2rem;
+}
+
+section:last-of-type {
+	padding-bottom: 100vh;
+}
