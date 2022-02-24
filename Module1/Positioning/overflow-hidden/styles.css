@@ -1,0 +1,44 @@
+html {
+	height: 100%;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+main {
+	display: grid;
+	align-content: center;
+}
+
+.blob-container {
+	position: relative;
+	height: 400px;
+	width: 600px;
+	border: 4px solid black;
+	display: block;
+	margin: 30px auto;
+
+	overflow: hidden;
+}
+
+.blob.blue {
+	position: absolute;
+	background: slateblue;
+	height: 200px;
+	width: 200px;
+	top: -60px;
+	left: -40px;
+	border-radius: 69% 31% 30% 67% / 72% 47% 40% 26%;
+}
+
+.blob.red {
+	position: absolute;
+	background: rgb(221, 83, 73);
+	height: 200px;
+	width: 200px;
+	bottom: -60px;
+	left: -40px;
+	border-radius: 59% 51% 20% 67% / 22% 47% 40% 26%;
+}
