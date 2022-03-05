@@ -1,0 +1,38 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background: hsl(0 0% 15%);
+}
+
+ol {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	width: 400px;
+}
+
+.message {
+	display: block;
+	padding: 16px;
+	margin: 8px;
+	border-radius: 6px;
+	width: fit-content;
+	max-width: 70%;
+}
+
+.message.sent {
+	align-self: flex-end;
+	background: rgb(54, 181, 255);
+	color: white;
+}
+
+.message.received {
+	background: rgb(226, 244, 255);
+	color: black;
+}
