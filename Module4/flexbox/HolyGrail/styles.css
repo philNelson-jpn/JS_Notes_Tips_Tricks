@@ -1,0 +1,57 @@
+.box {
+	border: 3px solid;
+	padding: 16px;
+}
+
+header.box {
+	border-color: hsl(45deg 100% 50%);
+	background-color: hsl(45deg 100% 50% / 0.2);
+}
+nav.box {
+	border-color: hsl(170deg 100% 35%);
+	background-color: hsl(170deg 100% 35% / 0.2);
+}
+main.box {
+	border-color: hsl(220deg 100% 50%);
+	background-color: hsl(220deg 100% 50% / 0.2);
+}
+aside.box {
+	border-color: hsl(300deg 100% 45%);
+	background-color: hsl(300deg 100% 45% / 0.2);
+}
+footer.box {
+	border-color: hsl(350deg 100% 60%);
+	background-color: hsl(350deg 100% 60% / 0.2);
+}
+
+body,
+html {
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+	height: 100%;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.middle {
+	flex: 1;
+	display: flex;
+}
+
+nav,
+aside {
+	flex: 2;
+}
+
+main {
+	flex: 3;
+}
