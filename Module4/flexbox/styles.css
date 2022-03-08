@@ -20,7 +20,7 @@ ol {
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
-	width: 400px;
+	width: 600px;
 }
 
 .message {
@@ -34,6 +34,7 @@ ol {
 	border-radius: 6px;
 	width: fit-content;
 	max-width: 70%;
+	letter-spacing: 1.5px;
 }
 
 .message.sent {
