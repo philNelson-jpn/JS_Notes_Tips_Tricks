@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Concert+One&family=Kanit:wght@300&family=Oswald:wght@300&family=Patrick+Hand+SC&family=Satisfy&display=swap');
+
+body {
+	background: hsl(158, 55%, 31%);
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Ailerons', 'Oswald', sans-serif;
+	overflow: hidden;
+}
+
+span {
+	color: hsl(158, 55%, 31%);
+	font-size: 12rem;
+	font-weight: bold;
+	display: inline-block;
+	animation: fade_out 4s ease-in-out infinite;
+	letter-spacing: 12px;
+}
+
+.fade span:nth-child(2) {
+	animation-delay: 0.5s;
+}
+
+.fade span:nth-child(3) {
+	animation-delay: 1s;
+}
+
+.fade span:nth-child(4) {
+	animation-delay: 1.5s;
+}
+
+.fade span:nth-child(5) {
+	animation-delay: 2s;
+}
+
+@keyframes fade_out {
+	0% {
+		transform: translate(-12%, 0);
+	}
+	50% {
+		text-shadow: 15px 15px 20px rgba(0, 0, 0, 0.6);
+	}
+	100% {
+		transform: translate(12%, 0);
+	}
+}
