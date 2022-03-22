@@ -1,0 +1,42 @@
+.wrapper {
+	columns: 2;
+	column-gap: 150px;
+	max-width: 64rem;
+	margin: 32px auto;
+	border: 2px solid hsl(35deg 10% 40%);
+	padding: 50px;
+	background: linear-gradient(
+		to right,
+		hsl(35deg, 30%, 90%),
+		hsl(35deg, 30%, 90%) 47%,
+		hsl(35deg, 30%, 70%) 49.5%,
+		hsl(35deg, 20%, 50%) 50%,
+		hsl(35deg, 30%, 70%) 50.5%,
+		hsl(35deg, 30%, 90%) 53%,
+		hsl(35deg, 30%, 90%)
+	);
+}
+
+* {
+	font-family: 'Merriweather', serif;
+}
+
+h2 {
+	font-size: 2rem;
+	margin-bottom: 2em;
+}
+
+p {
+	text-align: justify;
+}
+
+p:not(:first-of-type) {
+	text-indent: 2em;
+}
+
+p:first-of-type::first-letter {
+	font-size: 3rem;
+	float: left;
+	line-height: 1em;
+	margin-right: 0.2em;
+}
