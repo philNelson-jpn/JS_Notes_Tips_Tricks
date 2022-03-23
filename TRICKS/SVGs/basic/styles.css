@@ -1,0 +1,4 @@
+.icon-wrapper circle:hover {
+	stroke: black;
+	fill: hsl(120, 81%, 84%);
+}
