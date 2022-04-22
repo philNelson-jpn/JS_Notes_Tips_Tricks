@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Moat</title>
+</head>
+<body>
+    <style>
+        .wrapper {
+          box-shadow:
+            inset
+            8px 8px 4px hsl(0deg 0% 0% / .2); 
+            /*
+            Prevent box-shadow from spilling over the wrapper and compromising the illusion
+            */
+          overflow: hidden;  
+        }
+        .box {
+          box-shadow:
+            8px 8px 4px hsl(0deg 0% 0% / .2); 
+        }
+      </style>
+      
+      <div class="wrapper">
+        <div class="box">
+          Moat!
+        </div>
+      </div>
+</body>
+</html>
