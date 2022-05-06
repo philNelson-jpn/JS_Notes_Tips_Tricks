@@ -35,15 +35,15 @@ console.log(product)
 
 // Object Destructuring
 
-const person = {
-    name: "Phil",
-    age: 33,
-    favoriteFood: "pizza",
-    address: {
-        street: "Joseph",
-        city: "Oxford"
-    }
-}
+// const person = {
+//     name: "Phil",
+//     age: 33,
+//     favoriteFood: "pizza",
+//     address: {
+//         street: "Joseph",
+//         city: "Oxford"
+//     }
+// }
 
 // Array first to last
 // function nameToFirstAndLast(fullName){
@@ -53,19 +53,28 @@ const person = {
 // const [firstName, lastName] = nameToFirstAndLast("Phil Nelson")
 // console.log(firstName)
 // console.log(lastName)
+// Phil
+// Nelson
 
 // Object first to last
 
-function nameToFirstAndLast(fullName){
-    const [firstName, lastName ] = fullName.split(' ')
-    return {
-        firstName,
-        lastName
-    }
-}
+// function nameToFirstAndLast(fullName){
+//     const [firstName, lastName ] = fullName.split(' ')
+//     return {
+//         firstName,
+//         lastName
+//     }
+// }
 
-const { firstName, lastName } = nameToFirstAndLast("Joe Nelson")
-console.log(firstName)
-console.log(lastName)
+// const { firstName, lastName } = nameToFirstAndLast("Phil Nelson")
+// console.log(firstName)
+// console.log(lastName)
 // Phil
 // Nelson
+
+function addAndMultiply({ a, b, c: {d , e} }){
+    return [a + b, a * b, d / e]
+}
+
+const [sum, product, division] = addAndMultiply({ a: 3 , b: 4, c: {d : 8, e: 2} })
+console.log(division)
