@@ -45,9 +45,27 @@ const person = {
     }
 }
 
-const { address: streetName } = person
-const { street } = streetName
+// Array first to last
+// function nameToFirstAndLast(fullName){
+//     return fullName.split(' ')
+// }
 
-console.log(street)
+// const [firstName, lastName] = nameToFirstAndLast("Phil Nelson")
+// console.log(firstName)
+// console.log(lastName)
 
+// Object first to last
 
+function nameToFirstAndLast(fullName){
+    const [firstName, lastName ] = fullName.split(' ')
+    return {
+        firstName,
+        lastName
+    }
+}
+
+const { firstName, lastName } = nameToFirstAndLast("Joe Nelson")
+console.log(firstName)
+console.log(lastName)
+// Phil
+// Nelson
