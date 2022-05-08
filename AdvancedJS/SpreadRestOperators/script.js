@@ -66,27 +66,27 @@ divs.map(div => {
 
 // Combine two objects and add a new key/value
 
-const person = {
-    name: "Phil",
-    age: 33,
-    favoriteFood: "pizza",
-    address: {
-        street: "Joseph",
-        city: "Oxford"
-    }
-}
+// const person = {
+//     name: "Phil",
+//     age: 33,
+//     favoriteFood: "pizza",
+//     address: {
+//         street: "Joseph",
+//         city: "Oxford"
+//     }
+// }
 
-const details = {
-    favoriteColor: "blue",
-    favoriteDessert: "ice cream"
-}
+// const details = {
+//     favoriteColor: "blue",
+//     favoriteDessert: "ice cream"
+// }
 
-const person2 = {...person, ...details, favoriteSport: "skateboarding"}
+// const person2 = {...person, ...details, favoriteSport: "skateboarding"}
 
-person2.name = "John"
+// person2.name = "John"
 
-console.log(person2)
-console.log(person)
+// console.log(person2)
+// console.log(person)
 
 
 
