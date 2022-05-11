@@ -3,12 +3,16 @@ const person = {
     age: 33,
     favoriteFood: "pizza",
     address: {
-        // street: "Joseph",
+        street: "Joseph",
         city: "Oxford"
     }
 }
 
-console.log(person.address.street)
+function greet(firstName = "human.", salutation = "Hello there,"){
+    console.log(`${salutation} ${firstName}`)
+}
+
+greet()
 
 // const {name: firstName} = person
 // console.log(firstName)
@@ -30,8 +34,13 @@ console.log(person.address.street)
 //     console.log(div)
 // })
 
+/*default param
 // function printName(firstName, lastName = "Nelson", { salutation = "Hello there"} = {}){
 //     console.log(`${salutation} ${firstName} ${lastName}`)
 // }
 
 // printName("Phil", undefined)
+*/
+
+//null coalescing review
+
