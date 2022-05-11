@@ -51,6 +51,8 @@ console.log(currencyMap)
 // 2: {"Mexico" => "Peso"}
 */
 
+
+// Normal way of getting values from an array of objects:
 const items = [
     {
         id: 1,
@@ -74,6 +76,9 @@ function getItemArray(id){
 }
 
 console.log(getItemArray(2))
+// {id: 2, name: 'Test2', description: 'desc2'}
+
+// Now using Map:
 
 const itemsMap = new Map([
     [1, {id: 1, test: "test1", description: "description1"}],
@@ -86,3 +91,4 @@ function getItem(id) {
 }
 
 console.log(getItem(2))
+// {id: 2, name: 'Test2', description: 'description2'}
