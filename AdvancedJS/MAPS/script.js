@@ -22,6 +22,7 @@ console.log(currency)
 
 // MAPS
 
+/*
 const currencyMap = new Map([
     ["United States of America", "USD"],
     ["India", "Ruppee"],
@@ -45,3 +46,43 @@ console.log(currencyMap.has("Mexico"))
 
 currencyMap.delete("India")
 console.log(currencyMap)
+// 0: {"United States of America" => "USD"}
+// 1: {"Japan" => "Yen"}
+// 2: {"Mexico" => "Peso"}
+*/
+
+const items = [
+    {
+        id: 1,
+        name: "Test",
+        description: "desc",
+    },
+    {
+        id: 2,
+        name: "Test2",
+        description: "desc2",
+    },
+    {
+        id: 3,
+        name: "Test3",
+        description: "desc3",
+    },        
+]
+
+function getItemArray(id){
+    return items.find(item => item.id === id)
+}
+
+console.log(getItemArray(2))
+
+const itemsMap = new Map([
+    [1, {id: 1, test: "test1", description: "description1"}],
+    [2, {id: 2, test: "test2", description: "description2"}],
+    [3, {id: 3, test: "test3", description: "description3"}]          
+])
+
+function getItem(id) {
+    return itemsMap.get(id)
+}
+
+console.log(getItem(2))
