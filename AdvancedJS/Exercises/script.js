@@ -74,3 +74,15 @@ console.log(getId(2))
 
 //null coalescing review
 
+/*
+REDUCE METHOD REVIEW
+
+
+const reduceArray = [1, 2, 3, 4, 5]
+
+function reduceArrayFunc(array){
+    console.log(array.reduce((count, number) => count + number, 0))
+}
+
+reduceArrayFunc(reduceArray)
+*/
