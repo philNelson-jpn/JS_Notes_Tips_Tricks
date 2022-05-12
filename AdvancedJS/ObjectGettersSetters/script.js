@@ -15,6 +15,7 @@ console.log(person.fullName())
 // We need to call the function, wouldn't it be nicer if we could have fullName act as a key rather than a function that returns a value?
 
 /*
+
 // GETTER
 const person = {
     firstName: "Phil",
@@ -42,7 +43,7 @@ console.log(personAge.yearBorn)
 
 // SETTER
 // Always takes a value as an argument
-
+/*
 const person = {
     firstName: "Phil",
     lastName: "Nelson",
@@ -54,8 +55,21 @@ const person = {
     },
 }
 
-// person.fullName = "Ricky Bobby"
+// This allows us to set a new value for fullName that will overwrite our getter if we explicitly assign it a new value
+person.fullName = "Ricky Bobby"
 
 console.log(person.fullName)
+// Ricky Bobby
+*/
+
+const person = {
+    ageThisYear: 34,
+    get birthYear(){
+        const date = new Date()
+        return date.getFullYear() - this.ageThisYear
+    }
+}
+
+console.log(person.birthYear)
 
 
