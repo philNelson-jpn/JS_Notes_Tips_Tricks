@@ -62,14 +62,15 @@ console.log(person.fullName)
 // Ricky Bobby
 */
 
-const person = {
-    ageThisYear: 34,
-    get birthYear(){
-        const date = new Date()
-        return date.getFullYear() - this.ageThisYear
-    }
-}
+// const person = {
+//     ageThisYear: 34,
+//     get birthYear(){
+//         const date = new Date()
+//         return date.getFullYear() - this.ageThisYear
+//     }
+// }
 
-console.log(person.birthYear)
+// console.log(person.birthYear)
+
 
 
