@@ -8,6 +8,8 @@ const person = {
     }
 }
 
+/*
+Remove duplicates from an array:
 const array = [1, 2, 3, 4, 4, 3, 2, 5]
 const array2 = ["A", "B", "A", "W", "C", "D", "B"]
 
@@ -18,7 +20,7 @@ function removeDuplicates(array){
 console.log(removeDuplicates(array))
 // (5) [1, 2, 3, 4, 5]
 console.log(removeDuplicates(array2))
-
+// (5) ['A', 'B', 'W', 'C', 'D']
 
 /*
 Map Exercise
