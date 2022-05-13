@@ -1,12 +1,12 @@
-const person = {
-    name: "Phil",
-    age: 33,
-    favoriteFood: "pizza",
-    address: {
-        street: "Joseph",
-        city: "Oxford"
-    }
-}
+// const person = {
+//     name: "Phil",
+//     age: 33,
+//     favoriteFood: "pizza",
+//     address: {
+//         street: "Joseph",
+//         city: "Oxford"
+//     }
+// }
 
 /*
 Remove duplicates from an array:
@@ -86,3 +86,30 @@ function reduceArrayFunc(array){
 
 reduceArrayFunc(reduceArray)
 */
+
+/*
+// getter review
+const person = {
+    firstName: "Phil",
+    lastName: "Nelson",
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`
+    },
+    set fullName(value){
+        ;[this.firstName, this.lastName] = value.split(' ')
+    }
+}
+
+person.fullName = "Sally Smith"
+console.log(person.fullName)
+*/
+
+const person = {
+    ageThisYear: 34,
+    get birthYear(){
+        const date = new Date()
+        return date.getFullYear() - this.ageThisYear
+    }
+}
+
+console.log(person.birthYear)
