@@ -104,6 +104,7 @@ person.fullName = "Sally Smith"
 console.log(person.fullName)
 */
 
+/*
 const person = {
     ageThisYear: 34,
     get birthYear(){
@@ -113,3 +114,18 @@ const person = {
 }
 
 console.log(person.birthYear)
+*/
+
+const person = {
+    firstName: "Phil",
+    lastName: "Nelson",
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`
+    },
+    set fullName(value){
+        ;[this.firstName, this.lastName] = value.split(' ')
+    }
+}
+
+person.fullName = "Ricky Bobby"
+console.log(person.fullName)
