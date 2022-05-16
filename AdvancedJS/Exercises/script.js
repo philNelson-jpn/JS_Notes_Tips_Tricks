@@ -116,6 +116,8 @@ const person = {
 console.log(person.birthYear)
 */
 
+/*
+//getter setter w/ array destructuring
 const person = {
     firstName: "Phil",
     lastName: "Nelson",
@@ -129,3 +131,39 @@ const person = {
 
 person.fullName = "Ricky Bobby"
 console.log(person.fullName)
+
+*/
+
+/*
+// map review
+const map = new Map([
+    [1, {test1: "test1", desc1: "description1"}],
+    [2, {test2: "test2", desc2: "description2"}],
+    [3, {test3: "test3", desc3: "description3"}],        
+])
+
+function getId(id){
+    return map.get(id)
+}
+
+console.log(getId(1))
+*/
+
+/*Null Coalescing Review
+
+*/
+
+const details = {
+    address: {
+        street: "Joseph",
+        city: "Oxford",
+    },
+}
+
+function printCity(details){
+    console.log(details?.address?.city)
+}
+
+printCity(details)
+
+
