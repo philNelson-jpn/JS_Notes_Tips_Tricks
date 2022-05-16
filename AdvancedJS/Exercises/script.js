@@ -149,9 +149,7 @@ function getId(id){
 console.log(getId(1))
 */
 
-/*Null Coalescing Review
-
-*/
+/*Optional Chaining Review
 
 const details = {
     address: {
@@ -165,5 +163,45 @@ function printCity(details){
 }
 
 printCity(details)
+*/
 
+/*
+// Null Coalescing Review, shorthand
+function printName(firstName, lastName){
+    lastName ??= "Nelson"
+    console.log(`${firstName} ${lastName}`)
+}
+
+printName("Phil", "Bobby")
+*/
+
+// Set Review
+/*
+function removeDups(array){
+    return [...new Set(array)]
+}
+
+const numberArray = [1, 2, 3, 4, 3, 2, 3, 2, 1]
+
+console.log(removeDups(numberArray))
+
+*/
+
+window.name = "Global Name"
+
+const person = {
+    name: "Phil",
+    age: 24,
+    address: {
+        street: "Joseph",
+        city: "Oxford",
+    },
+}
+
+function printName(){
+    console.log(this.name)
+}
+
+printName.bind(person)()
+//Phil
 
