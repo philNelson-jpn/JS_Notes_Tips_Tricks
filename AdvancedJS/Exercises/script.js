@@ -187,21 +187,10 @@ console.log(removeDups(numberArray))
 
 */
 
-window.name = "Global Name"
+const currencyMap = new Map([
+    ["USA", "USD"],
+    ["Mexico", "Peso"],
+    ["Japan", "Yen"],
+])
 
-const person = {
-    name: "Phil",
-    age: 24,
-    address: {
-        street: "Joseph",
-        city: "Oxford",
-    },
-}
-
-function printName(){
-    console.log(this.name)
-}
-
-printName.bind(person)()
-//Phil
-
+console.log(currencyMap.get("USA"))
