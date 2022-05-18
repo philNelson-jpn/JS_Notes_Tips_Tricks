@@ -53,7 +53,7 @@ export function revealTile(board, tile){
     const adjacentTiles = nearbyTiles(board, tile)
     const mines = adjacentTiles.filter(t => t.mine)
     if (mines.length === 0){
-
+        adjacentTiles.forEach(revealTile.bind(null, board))
     } else {
         tile.element.textContent = mines.length
     }
@@ -72,6 +72,18 @@ export function markTile(tile){
     } else {
         tile.status = TILE_STATUSES.MARKED
     }
+}
+
+export function checkWin(board){
+
+}
+
+export function checkLose(board){
+    return board.some(row => {
+        return row.some(tile => {
+            return tile.status === TILE_STATUSES.MINE
+        })
+    })
 }
 
 function getMinePositions(boardSize, numberOfMines){
