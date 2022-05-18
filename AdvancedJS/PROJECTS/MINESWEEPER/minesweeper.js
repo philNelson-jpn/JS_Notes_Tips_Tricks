@@ -10,7 +10,6 @@ export const TILE_STATUSES = {
 export function createBoard(boardSize, numberOfMines){
     const board = []
     const minePositions = getMinePositions(boardSize, numberOfMines)
-    console.log(minePositions)
 
     for (let x = 0; x < boardSize; x++) {
         const row = []
@@ -75,7 +74,11 @@ export function markTile(tile){
 }
 
 export function checkWin(board){
-
+    return board.every(row => {
+        return row.every(tile => {
+            return tile.status === TILE_STATUSES.NUMBER || (tile.mine && (tile.status === TILE_STATUSES.HIDDEN || tile.status === TILE_STATUSES.MARKED))
+        })
+    })
 }
 
 export function checkLose(board){

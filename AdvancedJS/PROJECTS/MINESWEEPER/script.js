@@ -46,6 +46,7 @@ function checkGameEnd() {
 
     if (win) {
         messageText.textContent = "You win!"
+
     }
 
     if (lose) {
@@ -63,7 +64,7 @@ function stopProp(e) {
     e.stopImmediatePropagation()
 }
 
-// Populate the board with tiles/mines
-// Left click on tiles - reveal
-// Right click on tiles - mark
-// Check for win/lose
+// Populate the board with tiles/mines ✅
+// Left click on tiles - reveal　✅
+// Right click on tiles - mark　✅
+// Check for win/lose　✅
