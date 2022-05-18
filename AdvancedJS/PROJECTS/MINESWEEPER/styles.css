@@ -1,13 +1,37 @@
 * {
     box-sizing: border-box;
   }
+
+  html, body {
+    height: 100%;
+  }
+
+  html {
+    --blue-bg: hsl(230deg 40% 20%);
+    --blue-darker: hsl(230deg 40% 24%);
+    --blue-dark: hsl(230deg 40% 28%);
+  }
   
   body {
+    height: 100%;
     margin: 0;
-    background-color: hsl(0, 0%, 20%);
+    background-color: var(--blue-bg);   
+    background-image: radial-gradient(
+      circle at 100% 140%,
+      hsl(320deg 100% 50%) 0%,
+      hsl(320deg 100% 50%) 49.99%,
+      transparent 51%,
+      transparent 100%
+    ),radial-gradient(
+      circle at 0% 120%,
+      blue 0%,
+      dodgerblue 49.99%,
+      transparent 51%,
+      transparent 100%
+    ); 
     display: flex;
     align-items: center;
-    font-size: 3rem;
+    font-size: 2rem;
     flex-direction: column;
     color: white;
     font-family: monospace;
@@ -26,10 +50,13 @@
   .board {
     display: inline-grid;
     padding: 10px;
-    grid-template-columns: repeat(var(--size), 60px);
-    grid-template-rows: repeat(var(--size), 60px);
+    grid-template-columns: repeat(var(--size), 50px);
+    grid-template-rows: repeat(var(--size), 50px);
     gap: 4px;
-    background-color: hsl(0, 0%, 47%);
+    background-color: var(--blue-bg);
+    filter: drop-shadow(4px 4px 8px hsl(0deg 0% 0% / .5));
+    border-radius: 6px;
+    border: 3px solid hsl(0, 0%, 80%);
   }
   
   .board > * {
@@ -41,6 +68,17 @@
     color: white;
     border: 2px solid hsl(0, 0%, 73%);
     user-select: none;
+    border-radius: 2px;
+    transform: scale(1)
+  }
+
+  .board > *:hover {
+    transition: transform 100ms ease-in-out;
+    transform: scale(1.25);
+    box-shadow: 2px 2px 5px hsl(0deg 0% 0% / .7);
+    border: 3px solid hsl(320, 100%, 70%);
+    isolation: isolate;
+    z-index: 1;
   }
   
   .board > [data-status="hidden"] {
@@ -50,6 +88,7 @@
   
   .board > [data-status="mine"] {
     background-color: hsl(0, 100%, 63%);
+    border: 2px solid red;
   }
   
   .board > [data-status="number"] {
@@ -57,5 +96,5 @@
   }
   
   .board > [data-status="marked"] {
-    background-color: hsl(57, 92%, 59%);
+    background-color: hsl(210, 100%, 70%);
   }
