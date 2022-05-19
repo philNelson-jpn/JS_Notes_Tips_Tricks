@@ -97,10 +97,13 @@ h1{
 #equation{
     margin-block-end: 16px;
     padding: 8px;
+    width: clamp(400px, 70vw, 1000px);
     border-radius: 8px 0px 0px 8px / 8px 0px 0px 8px;    
     transform: translateY(0px);
     filter: drop-shadow(0px 2px 4px hsl(0deg 0% 0% / 0));
     transition: transform 400ms, filter 400ms;
+    font-size: clamp(1rem, 3vw, 4rem);
+    padding-inline-start: 1rem;
 }
 
 #equation:hover, #equation:focus{
@@ -111,6 +114,7 @@ h1{
 
 button{
     padding: 8px;
+    padding-inline: 1rem;
     border-radius: 0px 8px 8px 0px / 0px 8px 8px 0px;
     background-image: linear-gradient(
          hsl(148, 100%, 50%) 25%,
@@ -120,6 +124,7 @@ button{
     transform: translateY(0px);
     filter: drop-shadow(0px 2px 4px hsl(0deg 0% 0% / 0));
     transition: transform 400ms, filter 400ms;
+    font-size: clamp(1rem, 3vw, 4rem);
 }
 
 button:hover, button:focus{
