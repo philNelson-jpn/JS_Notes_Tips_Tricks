@@ -187,6 +187,7 @@ console.log(removeDups(numberArray))
 
 */
 
+/*
 const currencyMap = new Map([
     ["USA", "USD"],
     ["Mexico", "Peso"],
@@ -194,3 +195,16 @@ const currencyMap = new Map([
 ])
 
 console.log(currencyMap.get("USA"))
+*/
+
+const person = {
+    firstName: "Phil",
+    lastName: "Nelson",
+    address: {
+        street: "Joseph",
+        city: "Oxford"
+    },
+}
+
+const {address: {street}} = person
+console.log(street)
