@@ -197,14 +197,10 @@ const currencyMap = new Map([
 console.log(currencyMap.get("USA"))
 */
 
-const person = {
-    firstName: "Phil",
-    lastName: "Nelson",
-    address: {
-        street: "Joseph",
-        city: "Oxford"
-    },
+function fullName(...name){
+    return `${firstName} ${middleName} ${lastName}`
 }
 
-const {address: {street}} = person
-console.log(street)
+const name = [firstName = "Phil", middleName = "Andrew", lastName = "Nelson"]
+
+console.log(fullName(...name))
