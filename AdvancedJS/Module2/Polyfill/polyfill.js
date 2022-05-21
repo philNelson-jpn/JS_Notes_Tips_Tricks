@@ -3,3 +3,4 @@ if (Math.double == null)    {
         return number * 2
     }
 }
+

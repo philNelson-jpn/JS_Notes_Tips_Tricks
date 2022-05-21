@@ -197,10 +197,34 @@ const currencyMap = new Map([
 console.log(currencyMap.get("USA"))
 */
 
-function fullName(...name){
-    return `${firstName} ${middleName} ${lastName}`
+// function fullName(...name){
+//     return `${firstName} ${middleName} ${lastName}`
+// }
+
+// const name = [firstName = "Phil", middleName = "Andrew", lastName = "Nelson"]
+
+// console.log(fullName(...name))
+
+// remove duplicates with new Set
+
+/*
+const array = [1, 2, 3, 4, 3, 2, 5, 6, 2]
+
+function removeDups(array){
+    return [...new Set(array)]
 }
 
-const name = [firstName = "Phil", middleName = "Andrew", lastName = "Nelson"]
+console.log(removeDups(array))
+*/
 
-console.log(fullName(...name))
+const person = {
+    firstName: "Phil",
+    lastName: "Nelson",
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`
+    }
+}
+
+const { firstName: theFirstName } = person
+
+console.log(theFirstName)

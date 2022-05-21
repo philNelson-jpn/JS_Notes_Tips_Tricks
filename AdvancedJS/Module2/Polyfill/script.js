@@ -6,7 +6,6 @@ console.log(Math.double(number))
 // Uncaught TypeError: Math.double is not a function
 
 // We can create a new script that assigns a custom implementation that will execute the code the way we want:
-
 /*
 In polyfill.js
 
