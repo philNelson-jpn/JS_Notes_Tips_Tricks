@@ -22,3 +22,7 @@ if (Math.double == null)    {
 }
 
 */
+
+const number2 = 2
+
+console.log(Math.double(number2))

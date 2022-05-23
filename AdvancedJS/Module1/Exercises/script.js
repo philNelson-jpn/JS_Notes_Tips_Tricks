@@ -217,14 +217,35 @@ function removeDups(array){
 console.log(removeDups(array))
 */
 
-const person = {
-    firstName: "Phil",
-    lastName: "Nelson",
-    get fullName(){
-        return `${this.firstName} ${this.lastName}`
-    }
-}
+// Polyfill review
 
-const { firstName: theFirstName } = person
+// const phil = {
+//     name: "Phil",
+//     age: "33",
+//     address: {
+//         street: "Joseph",
+//         city: "Oxford",
+//     },
+// }
 
-console.log(theFirstName)
+// const details = {
+//     hobby: "training",
+// }
+
+// const newObject = {...phil, ...details, favoriteColor: "blue"}
+
+// console.log(newObject)
+
+const currencyMap = new Map([
+    ["USA", "USD"],
+    ["India", "Ruppee"],
+    ["Japan", "Yen"],
+])
+
+console.log(currencyMap.set("USA", "DOLLA BILLS"))
+console.log(currencyMap.has("USA"))
+console.log(currencyMap.get("USA"))
+
+currencyMap.forEach(value => {
+    console.log(value)
+})
