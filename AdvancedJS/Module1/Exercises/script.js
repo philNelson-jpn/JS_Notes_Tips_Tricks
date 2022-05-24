@@ -236,16 +236,31 @@ console.log(removeDups(array))
 
 // console.log(newObject)
 
-const currencyMap = new Map([
-    ["USA", "USD"],
-    ["India", "Ruppee"],
-    ["Japan", "Yen"],
-])
+// const currencyMap = new Map([
+//     ["USA", "USD"],
+//     ["India", "Ruppee"],
+//     ["Japan", "Yen"],
+// ])
 
-console.log(currencyMap.set("USA", "DOLLA BILLS"))
-console.log(currencyMap.has("USA"))
-console.log(currencyMap.get("USA"))
+// console.log(currencyMap.set("USA", "DOLLA BILLS"))
+// console.log(currencyMap.has("USA"))
+// console.log(currencyMap.get("USA"))
 
-currencyMap.forEach(value => {
-    console.log(value)
-})
+// currencyMap.forEach(value => {
+//     console.log(value)
+// })
+
+const person = {
+    firstName: "Phil",
+    lastName: "Nelson",
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`
+    },
+    set fullName(value){
+        ;[this.firstName, this.lastName] = value.split(' ')
+    },
+}
+
+
+
+console.log(person.fullName)
