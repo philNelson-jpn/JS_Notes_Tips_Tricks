@@ -83,7 +83,8 @@ class CreateUser {
 const user = new CreateUser("zam@bobby.com", "petsName5000", "Japanese")
 console.log(user)
 user.printPassword()
-
+// CreateUser {email: 'zam@bobby.com', password: 'petsName5000', language: 'Japanese'}
+// script.js:79 petsName5000
 
 
 
