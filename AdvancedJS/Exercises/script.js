@@ -424,7 +424,7 @@ user.printPassword()
 ------------------------------------------------------------
 -----------------------------------------------------------*/
 
-
+/*
 class Animal {
     constructor(name){
         this.name = name
@@ -463,11 +463,6 @@ class Dog extends Animal {
         console.log("Arf!")
     }
 }
-
-
-
-
-
 
 const dog = new Dog("Fluffy", "Phil")
 console.log(dog.owner)
