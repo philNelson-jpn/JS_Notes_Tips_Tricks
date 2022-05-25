@@ -250,17 +250,55 @@ console.log(removeDups(array))
 //     console.log(value)
 // })
 
-const person = {
-    firstName: "Phil",
-    lastName: "Nelson",
-    get fullName(){
-        return `${this.firstName} ${this.lastName}`
-    },
-    set fullName(value){
-        ;[this.firstName, this.lastName] = value.split(' ')
-    },
+// const person = {
+//     firstName: "Phil",
+//     lastName: "Nelson",
+//     get fullName(){
+//         return `${this.firstName} ${this.lastName}`
+//     },
+//     set fullName(value){
+//         ;[this.firstName, this.lastName] = value.split(' ')
+//     },
+// }
+
+
+
+// console.log(person.fullName)
+
+// 5-25-2022
+
+/*Spread/Rest operator, cloning arrays
+// const array = [1, 2, 3, 4, 5]
+// const newArray = [...array]
+
+// array.push(1)
+// newArray.push(5)
+
+// console.log(newArray)
+// console.log(array)
+
+*/
+
+/*
+// Create an array from a node list
+const divs = [...document.querySelectorAll("div")]
+
+divs.forEach(div => {
+    console.log(div)
+})
+*/
+
+function Person(name, age){
+    this.name = name
+    this.age = age
 }
 
+Person.prototype.printName = function(){
+    console.log(this.name)
+}
 
+const newPerson = new Person("Phil", 33)
+const newPerson2 = Object.create(newPerson)
 
-console.log(person.fullName)
+newPerson2.name = "Bob"
+console.log(newPerson2.age)

@@ -34,8 +34,8 @@
 // console.log(cat.speak())
 // // meow
 
-// person with a name
-// janitor that inherits person + number of mops prop + function of clean w/ number of mops
+// Create a Person class with a name
+// Next, create a Janitor that inherits Person + takes an additional numberOfMops prop + creates a clean() function that prints 'I cleaned with numberOfMops mops'
 
 class Person {
     constructor(name){
