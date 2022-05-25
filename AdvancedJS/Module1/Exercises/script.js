@@ -288,6 +288,9 @@ divs.forEach(div => {
 })
 */
 
+/*
+
+// Create a prototype and add a function to it
 function Person(name, age){
     this.name = name
     this.age = age
@@ -302,3 +305,215 @@ const newPerson2 = Object.create(newPerson)
 
 newPerson2.name = "Bob"
 console.log(newPerson2.age)
+*/
+
+/*
+function Person(name, age){
+    this.name = name
+    this.age = age
+}
+
+Person.prototype.getAge = function(){
+    console.log(this.age)
+}
+
+const person = new Person("PhillyMac", 3244)
+const person2 = Object.create(person)
+
+person2.name = "Ricky Bobby"
+person2.age = 32
+console.log(person2)
+*/
+
+/*Polyfill Review
+const number = 5
+
+if (Math.double == null){
+    Math.double = function(number){
+        return number * 2
+    }
+}
+
+console.log(Math.double(number))
+*/
+
+/*----------------------------------------------------------
+------------------------------------------------------------
+---------------Convert prototype to class-------------------
+------------------------------------------------------------
+------------------------------------------------------------
+
+// function Person(name, age){
+//     this.name = name
+//     this.age = age
+// }
+
+
+class Person{
+    constructor(name, age){
+        this.name = name
+        this.age = age
+    }
+
+    getName(){
+        console.log(this.name)
+    }
+
+    static printHi(){
+        console.log("Hi")
+    }
+    static goodName(){
+        console.log("Philzer")
+    }
+}
+
+console.log(Person.printHi())
+*/
+
+/* Function
+// function createUser(email, password, language){
+//     return {
+//         email,
+//         password,
+//         language,
+//         printPassword(){
+//             console.log(this.password)
+//         }
+//     }
+// }
+
+// console.log(createUser("test@test.com", "password", "English"))
+*/
+
+/*Prototype
+function CreateUser(email, password, language){
+        this.email = email
+        this.password = password
+        this.language = language
+}
+
+CreateUser.prototype.printPassword = function(){
+    console.log(this.password)
+}
+
+const user = new CreateUser("happy@poop.com", "12345", "Hindi")
+console.log(user)
+user.printPassword()
+
+*/
+/*Class
+class CreateUser{
+    constructor(email, password, language){
+        this.email = email
+        this.password = password
+        this.language = language
+    }
+
+    printPassword(){
+        console.log(this.password)
+    }
+}
+
+const user = new CreateUser("gman@gmail.com", "Mithy32", "Japanese")
+user.printPassword()
+*/
+
+/*------------------------------------------------------------
+------------------------------------------------------------
+-------------------------Extends----------------------------
+------------------------------------------------------------
+-----------------------------------------------------------*/
+
+
+class Animal {
+    constructor(name){
+        this.name = name
+    }
+
+    speak(){
+        console.log(`Hello, my name is ${this.name}`)
+    }
+}
+
+
+class Dog extends Animal{
+    constructor(name, owner){
+        super(name)
+        this.owner = owner
+    }
+
+    speak(){
+        console.log("Woof!")
+    }
+}
+
+const doge = new Dog("Dogey", "PhillyMac")
+console.log(doge)
+console.log(doge.speak())
+
+
+
+/*
+class Dog extends Animal {
+    constructor(name, owner){
+        super(name)
+        this.owner = owner
+    }
+    speak(){
+        console.log("Arf!")
+    }
+}
+
+
+
+
+
+
+const dog = new Dog("Fluffy", "Phil")
+console.log(dog.owner)
+
+class Cat extends Animal {
+    speak(){
+        console.log("Meow")
+    }
+}
+
+const cat = new Cat("Flooper")
+console.log(cat.speak())
+
+*/
+
+/*Challenge*/
+
+// Create a Person class with a name
+
+// Next, create a Janitor that inherits Person + takes an additional numberOfMops prop + creates a clean() function that prints 'I cleaned with numberOfMops mops'
+
+/*
+class Person{
+    constructor(name){
+        this.name = name
+    }
+}
+
+class Janitor extends Person{
+    constructor(name, numberOfMops){
+        super(name)
+        this.numberOfMops = numberOfMops
+    }
+
+    clean(){
+        console.log(`I just cleaned the whole school with ${this.numberOfMops} mops!`)
+    }
+}
+
+const janitor = new Janitor("Jerry", 23)
+console.log(janitor.name)
+console.log(janitor.clean())
+// Jerry
+// I just cleaned the whole school with 23 mops!
+*/
+
+
+
+
