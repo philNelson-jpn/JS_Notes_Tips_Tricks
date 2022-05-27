@@ -30,9 +30,20 @@ function addFriend(friendName){
     person.friends.push(friendName)
 }
 
+function addFriendPure(p, friendName){
+    return {...p, friends: [...p.friends, friendName]}
+}
+
+const newFriendObject = addFriendPure(person, "Ricky")
+console.log(newFriendObject.friends[2])
+
+
+
+
+
 
 // Pure function
-
+/*
 function addFriendPure(p, friendName){
     return {...p, friends: [...p.friends, friendName]}
 }
@@ -40,13 +51,8 @@ console.log(person)
 // ['Simon', 'Caleb']
 console.log(addFriendPure(person, "Bobby"))
 // ['Simon', 'Caleb', 'Bobby']
+*/
 
 
 
-
-// function addFriends(p, friendName){
-//     return {...p, friends: [...p.friends, friendName]}
-// }
-
-// console.log(addFriends(person, "Uno"))
 
