@@ -31,9 +31,6 @@ function addFriend(friendName){
 }
 
 
-
-
-
 // Pure function
 
 function addFriendPure(p, friendName){
@@ -42,6 +39,9 @@ function addFriendPure(p, friendName){
 console.log(person)
 // ['Simon', 'Caleb']
 console.log(addFriendPure(person, "Bobby"))
+// ['Simon', 'Caleb', 'Bobby']
+
+
 
 
 // function addFriends(p, friendName){
