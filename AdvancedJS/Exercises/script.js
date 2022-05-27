@@ -509,4 +509,56 @@ console.log(janitor.clean())
 // I just cleaned the whole school with 23 mops!
 */
 
+/*
+// Change from impure function to pure function
+const array = [1, 2, 3, 4]
+
+// impure
+function addElement(element){
+    array.push(element)
+}
+
+// pure (does not modify original array)
+function addElementPure(a, element){
+    return [...a, element]
+}
+
+console.log(addElementPure(array, 5))
+console.log(array)
+*/
+
+/*
+const array = [1, 2, 3, 4, 3, 4, 6, 7, 5, 3, 2]
+
+function removeDups(array){
+    return [...new Set(array)]
+}
+
+const noDups = removeDups(array)
+
+console.log(noDups)
+*/
+
+/*
+// Map Exercise
+const coffeeMap = new Map([
+    ["Komeda", "delicious"],
+    ["Guatamala", "out of this world"],
+    ["Honduras", "absolutely stunning"],
+])
+
+console.log(coffeeMap.set("Komeda", "ridiculously good"))
+// {'Komeda' => 'ridiculously good', 'Guatamala' => 'out of this world', 'Honduras' => 'absolutely stunning'}
+
+coffeeMap.forEach((value, key) => {
+    console.log(`${key} coffee is ${value}`)
+})
+
+// Komeda coffee is ridiculously good
+// Guatamala coffee is out of this world
+// Honduras coffee is absolutely stunning
+
+console.log(coffeeMap.has("Komeda"))
+// true
+*/
 
