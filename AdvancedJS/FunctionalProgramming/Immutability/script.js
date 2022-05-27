@@ -56,9 +56,9 @@ person.name = "Jim"
 // No change
 // person.friends.push("Killmonger")
 // Error: Cannot add property 2, object is not extensible
-console.log(person)
+// console.log(person)
 
 // It is always best practice to clone an object/array to make changes rather than modifying the original.
 
 const newPerson = { ...person, address: { ...person.address, street: "7080" } }
-console.log(newPerson)
+// console.log(newPerson)
