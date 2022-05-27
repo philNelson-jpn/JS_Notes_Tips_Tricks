@@ -25,10 +25,28 @@ const person = {
     friends: ["Simon", "Caleb"],
 }
 
-function addFriends(p, friendName){
-    return {...p, friends: [...p.friends, friendName]}
+// impure function
+function addFriend(friendName){
+    person.friends.push(friendName)
 }
 
-console.log(addFriends(person, "Uno"))
 
+
+
+
+// Pure function
+
+function addFriendPure(p, friendName){
+    return {...p, friends: [...p.friends, friendName]}
+}
 console.log(person)
+// ['Simon', 'Caleb']
+console.log(addFriendPure(person, "Bobby"))
+
+
+// function addFriends(p, friendName){
+//     return {...p, friends: [...p.friends, friendName]}
+// }
+
+// console.log(addFriends(person, "Uno"))
+
