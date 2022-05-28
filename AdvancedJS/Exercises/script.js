@@ -620,4 +620,57 @@ const janitor = new Janitor("Jerry", 25)
 console.log(janitor.clean())
 */
 
+/*
 
+// Polyfill
+const number = 5
+
+if(Math.double == null){
+Math.double = function(number){
+    return number * 2
+}}
+
+console.log(Math.double(number))
+*/
+
+/*
+// Modify the function of a class with a class that extends another class
+class Animal {
+    constructor(name){
+        this.name = name
+    }
+
+    speak(){
+        console.log(`Hi, my name is ${this.name}`)
+    }
+}
+
+class Dog extends Animal {
+    speak(){
+        console.log("WOOF!")
+    }
+}
+
+const indy = new Dog("Indy")
+indy.speak()
+*/
+
+class Person {
+    constructor(name, age){
+        this.name = name
+        this.age = age
+    }
+
+    printName(){
+        console.log(this.name)
+    }
+
+    printHi(){
+        console.log("Hi")
+    }
+    
+}
+
+Person.goodName = "Philly"
+
+console.log(Person.goodName)
