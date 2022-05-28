@@ -562,3 +562,62 @@ console.log(coffeeMap.has("Komeda"))
 // true
 */
 
+/*
+// Function that takes a full name, splits it and returns an object of the first and last name
+
+function splitName(fullName){
+    ;[firstName, lastName] = fullName.split(' ')
+    return {
+        firstName,
+        lastName
+    }
+}
+
+splitName("Phil Nelson")
+console.log(firstName)
+// Phil
+console.log(lastName)
+// Nelson
+*/
+
+// impure to pure function
+
+/*
+const person = {
+    name: "Phil",
+    friends: ["Simon", "Caleb"],
+}
+
+function addFriend(p, friendName){
+    return { ...p, friends: [...p.friends, friendName] }
+}
+
+const newFriendObj = addFriend(person, "Bobby")
+console.log(newFriendObj.friends) 
+*/
+
+/*
+// Class, extends, super, functions within classes
+class Person {
+    constructor(name){
+        this.name = name
+    }
+}
+
+class Janitor extends Person {
+    constructor(name, numberOfMops){
+        super(name)
+        this.numberOfMops = numberOfMops
+    }
+
+    clean(){
+        console.log(`I cleaned with ${this.numberOfMops} mops, today.`)
+    }
+}
+
+const janitor = new Janitor("Jerry", 25)
+
+console.log(janitor.clean())
+*/
+
+
