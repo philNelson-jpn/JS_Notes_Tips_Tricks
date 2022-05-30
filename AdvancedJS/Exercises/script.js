@@ -655,6 +655,7 @@ const indy = new Dog("Indy")
 indy.speak()
 */
 
+/*
 class Person {
     constructor(name, age){
         this.name = name
@@ -674,3 +675,52 @@ class Person {
 Person.goodName = "Philly"
 
 console.log(Person.goodName)
+*/
+
+// 5-30-2022
+
+/*
+class Animal {
+    constructor(name){
+        this.name = name
+    }
+
+    speak(){
+        console.log(`Yo, what up, this ya boy ${this.name}`)
+    }
+}
+
+const dog = new Animal("Indy")
+console.log(dog.speak())
+// Yo, what up, this ya boy Indy
+
+class Cat extends Animal {
+    speak(){
+        console.log(`${this.name} says 'Meow'`)
+    }
+}
+
+const cat = new Cat("Meowmers")
+console.log(cat.speak())
+// Meowmers says 'Meow'
+*/
+
+/*
+// Functions on prototypes + creating new objects
+function Person(name, age){
+    this.name = name
+    this.age = age
+}
+
+Person.prototype.sayIntro = function(name, age){
+    console.log(`Hello, my name is ${this.name}. I am ${this.age} years old.`)
+}
+
+const newPerson = new Person("Phil", 33)
+const newPerson2 = Object.create(newPerson)
+newPerson2.name = "Simon"
+newPerson2.age = 40
+newPerson.sayIntro()
+newPerson2.sayIntro()
+*/
+
