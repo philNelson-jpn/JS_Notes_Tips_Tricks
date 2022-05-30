@@ -724,3 +724,35 @@ newPerson.sayIntro()
 newPerson2.sayIntro()
 */
 
+/*
+// Double an array of numbers with a for loop
+const array = [1, 2, 3, 4, 5]
+
+const newArray = []
+
+for(i = 0; i < array.length; i++){
+    newArray.push(array[i] * 2)
+}
+
+console.log(newArray)
+*/
+
+const person = {
+    name: "Phil",
+    friends: ["Simon", "Caleb"],
+}
+
+function addFriend(a, friendName){
+    return {...a, friends: [...a.friends, friendName]}
+}
+
+const newPerson = addFriend(person, "Bobby")
+
+console.log(newPerson.friends)
+// ['Simon', 'Caleb', 'Bobby']
+console.log(person.friends)
+// ['Simon', 'Caleb']
+// The original object remains unchanged
+
+
+
