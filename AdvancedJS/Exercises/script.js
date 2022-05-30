@@ -737,6 +737,7 @@ for(i = 0; i < array.length; i++){
 console.log(newArray)
 */
 
+/*
 const person = {
     name: "Phil",
     friends: ["Simon", "Caleb"],
@@ -753,6 +754,24 @@ console.log(newPerson.friends)
 console.log(person.friends)
 // ['Simon', 'Caleb']
 // The original object remains unchanged
+
+*/
+
+class CreateUser {
+    constructor(email, password, language){
+        this.email = email
+        this.password = password
+        this.language = language
+    }
+
+    printPassword(){
+        console.log(this.password)
+    }
+}
+
+
+const phil = new CreateUser("testy@tentacles.com", "1234567", "Nihongo")
+phil.printPassword()
 
 
 
