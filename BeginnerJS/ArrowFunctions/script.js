@@ -40,6 +40,9 @@ function func(x, callback){
 }
 
 func(10, variable => console.log(variable))
+// 10
+
+
 
 
 
