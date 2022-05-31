@@ -769,7 +769,6 @@ class CreateUser {
     }
 }
 
-
 const phil = new CreateUser("testy@tentacles.com", "1234567", "Nihongo")
 phil.printPassword()
 
