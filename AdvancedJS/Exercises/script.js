@@ -824,6 +824,46 @@ const [subject, verb, object] = speakJapanese("私は 食べる ラーメンを"
 console.log(subject, object, verb)
 */
 
+// 6-2-2022
+/*
+const person = {
+    firstName: "Phil",
+    lastName: "Nelson",
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`
+    },
+}
+
+console.log(person.fullName)
+*/
+
+/*
+// Print everyone's name from this object with a recursive function:
+
+const person = {
+    name: "Phil",
+    friend: {
+        name: "Simon",
+        friend: {
+            name: "Caleb"
+        }
+    }
+}
+
+function getNames(currentPerson){
+    if(currentPerson == null) return
+    console.log(currentPerson.name)
+    getNames(currentPerson.friend)
+}
+
+getNames(person)
+*/
+
+const person = {
+    name: "Phil",
+    friends: ["Simon", "Caleb"],
+}
+
 
 
 

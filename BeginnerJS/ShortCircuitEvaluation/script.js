@@ -17,6 +17,8 @@ const person = {
         street: "main st."
     }
 }
+// Short Circuit Evaluation with &&
 console.log(person && person.address && person.address.street)
+// Optional Chaining
 console.log(person?.address?.street)
 
