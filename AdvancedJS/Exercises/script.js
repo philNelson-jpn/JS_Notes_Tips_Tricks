@@ -808,6 +808,20 @@ const [firstName, lastName] = printFullName("Phil Nelson")
 console.log(firstName)
 */
 
+// default params in objects
+
+function greet(firstName, {salutation = "Hello there,", japaneseTitle = "san"} = {}){
+    console.log(`${salutation} ${firstName}-${japaneseTitle}`)
+}
+
+greet("Phil")
+
+function speakJapanese(sentence){
+    return sentence.split(' ')
+}
+
+const [subject, verb, object] = speakJapanese("私は 食べる ラーメンを")
+console.log(subject, object, verb)
 
 
 
