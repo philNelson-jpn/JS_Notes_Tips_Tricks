@@ -757,6 +757,7 @@ console.log(person.friends)
 
 */
 
+/*
 class CreateUser {
     constructor(email, password, language){
         this.email = email
@@ -771,6 +772,45 @@ class CreateUser {
 
 const phil = new CreateUser("testy@tentacles.com", "1234567", "Nihongo")
 phil.printPassword()
+*/
+
+// 6-1-2022
+
+/*
+class Person {
+    constructor(name, age){
+        this.name = name
+        this.age = age
+    }
+
+    printName(){
+        console.log(this.name)
+    }
+
+    printHi(){
+        console.log(`Hello, ${this.name}`)
+    }
+
+    static goodName = "Philly"
+}
+
+const phil = new Person("Phil", 25)
+
+console.log(Person.goodName)
+*/
+
+/*
+function printFullName(fullName){
+    return fullName.split(' ')
+}
+
+const [firstName, lastName] = printFullName("Phil Nelson")
+console.log(firstName)
+*/
+
+
+
+
 
 
 
