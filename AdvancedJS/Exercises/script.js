@@ -809,7 +809,7 @@ console.log(firstName)
 */
 
 // default params in objects
-
+/*
 function greet(firstName, {salutation = "Hello there,", japaneseTitle = "san"} = {}){
     console.log(`${salutation} ${firstName}-${japaneseTitle}`)
 }
@@ -822,7 +822,7 @@ function speakJapanese(sentence){
 
 const [subject, verb, object] = speakJapanese("私は 食べる ラーメンを")
 console.log(subject, object, verb)
-
+*/
 
 
 
