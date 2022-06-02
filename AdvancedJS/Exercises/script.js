@@ -859,12 +859,86 @@ function getNames(currentPerson){
 getNames(person)
 */
 
+// Add a friend to an array within a new object
+/*
 const person = {
     name: "Phil",
     friends: ["Simon", "Caleb"],
 }
 
+function addFriend(p, newFriend){
+    return {...p, friends: [...p.friends, newFriend]}
+}
 
+const threeFriends = addFriend(person, "Ricky")
+console.log(threeFriends.friends)
+*/
+
+/*
+const person = {
+    firstName: "Phil",
+    lastName: "Nelson",
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`
+    },
+    set fullName(value){
+        return [this.firstName, this.lastName] = value.split(' ')
+    }
+}
+
+person.fullName = "Ricky Bobby"
+
+console.log(person.firstName)
+// Ricky
+*/
+
+// Reassign a key within an object
+/*
+const person = {
+    name: "Phil"
+}
+
+const {name: firstName} = person
+console.log(firstName)
+// Phil
+*/
+
+// Polyfill Review
+/*
+if(Math.double == null){
+    Math.double = function(number){
+        console.log(number * 2)
+    }
+}
+
+Math.double(2)
+*/
+
+class Animal {
+    constructor(name){
+        this.name = name
+    }
+
+    speak(){
+        console.log(`It's ya boi, ${this.name}`)
+    }
+}
+
+class Dog extends Animal {
+    constructor(name, owner){
+        super(name)
+        this.owner = owner
+    }
+
+    speak(){
+        console.log(`Woof woof, bitch, I'm ${this.name}`)
+    }
+}
+
+const indy = new Dog("Indy", "Philly")
+
+indy.speak()
+console.log(indy.owner)
 
 
 
