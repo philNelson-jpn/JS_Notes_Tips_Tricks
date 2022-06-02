@@ -914,6 +914,8 @@ if(Math.double == null){
 Math.double(2)
 */
 
+/*
+// new class that extends another and assigns new properties + super() and modifies a function within
 class Animal {
     constructor(name){
         this.name = name
@@ -939,6 +941,7 @@ const indy = new Dog("Indy", "Philly")
 
 indy.speak()
 console.log(indy.owner)
+*/
 
 
 
