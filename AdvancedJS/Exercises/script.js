@@ -943,6 +943,7 @@ indy.speak()
 console.log(indy.owner)
 */
 
+/*
 // Use map to apply the double function to the array and then log out the result.
 
 const array = [1, 2, 3, 4, 5]
@@ -952,6 +953,7 @@ function double(element){
 }
 
 console.log(array.map(double))
+// [2, 4, 6, 8, 10]
 
 function plusOne(element){
     return element + 1
@@ -962,8 +964,17 @@ function plusOne(element){
 console.log(array.map(double).map(plusOne))
 // [3, 5, 7, 9, 11]
 
+// Combine both functions into one function (function composition) map it and log it out
+
 function doBoth(element){
     return plusOne(double(element))
 }
 
 console.log(array.map(doBoth))
+// [3, 5, 7, 9, 11]
+
+//NOTE Function composition is "backwards"
+// double is executed first, then plusOne
+*/
+
+
