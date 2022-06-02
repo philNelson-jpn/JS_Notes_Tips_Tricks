@@ -943,5 +943,27 @@ indy.speak()
 console.log(indy.owner)
 */
 
+// Use map to apply the double function to the array and then log out the result.
 
+const array = [1, 2, 3, 4, 5]
 
+function double(element){
+    return element * 2
+}
+
+console.log(array.map(double))
+
+function plusOne(element){
+    return element + 1
+}
+
+// Use map to apply BOTH the plusOne function and the double function to the array and then log out the result.
+
+console.log(array.map(double).map(plusOne))
+// [3, 5, 7, 9, 11]
+
+function doBoth(element){
+    return plusOne(double(element))
+}
+
+console.log(array.map(doBoth))
