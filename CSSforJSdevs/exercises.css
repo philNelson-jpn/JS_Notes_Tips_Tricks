@@ -1,0 +1,20 @@
+body {
+    --pink-hue: 320deg;
+    --intense: 100% 50%;
+
+    --primary-color: hsl(var(--pink-hue) var(--intense));
+}
+
+button {
+    background-color: var(--primary-color);
+}
+
+.img-parent {
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+}
+
+img {
+    scroll-snap-align: center;
+}
+
