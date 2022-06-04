@@ -977,4 +977,36 @@ console.log(array.map(doBoth))
 // double is executed first, then plusOne
 */
 
+// create a map with three arrays, each with an id and an object with two keys/values. Write a function that gets the id and returns the object contents:
+/*
+const testMap = new Map([
+    [1, {test: "test1", desc: "description1"}],
+    [2, {test: "test2", desc: "description2"}],
+    [3, {test: "test3", desc: "description3"}],
+])
+
+function getId(id){
+    return testMap.get(id)
+}
+
+console.log(getId(1))
+// {test: 'test1', desc: 'description1'}
+*/
+
+// get birth year with a getter function on an object
+/*
+const person = {
+    name: "Phil",
+    ageThisYear: 34,
+    get birthYear(){
+        const date = new Date()
+        return date.getFullYear() - this.ageThisYear
+    }
+}
+
+console.log(person.birthYear)
+*/
+
+
+
 

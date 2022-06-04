@@ -1,0 +1,16 @@
+.wrapper {
+    display: flex;
+}
+
+.item{
+    width: 200px;
+    height: 200px;
+    background-color: royalblue;
+    border: solid white 2px;
+}
+
+.item:nth-of-type(3){
+    width: 200px;
+    height: 200px;
+    background-color: deeppink;
+}
