@@ -132,3 +132,80 @@ const items = [
 
 const prices = items.forEach(item => console.log(item.price))
 */
+
+// 6-3-2022
+// Change this to use an anonymous function. 
+/* 
+function printVariable(variable){
+    console.log(variable)
+}
+
+function printName(name, callback){
+    callback(`Hello there, ${name}`)
+}
+
+printName("Phil", printVariable)
+// Hello there, Phil
+printName("Phil", function(variable){
+    console.log(variable)
+})
+// Hello there, Phil
+printName("Phil", variable => console.log(variable))
+// Hello there, Phil
+*/
+
+// 6-4-2022
+/*
+const a = [1, 2, 3, 4, 5]
+
+const b = a.filter((element) => {
+    return element <= 3
+})
+
+console.log(b)
+*/
+
+// Double an array in a new array w/ map
+/*
+const a = [1, 2, 3, 4, 5]
+
+const b = a.map(element => element * 2)
+
+console.log(b)
+*/
+
+// Create an anonymous arrow function that prints out the argument that we pass to func()
+/*
+function func(x, callback){
+    callback(x)
+}
+
+func(10, (value) => {
+    console.log(value)
+})
+*/
+// Print out only the prices (only the numbers) with forEach
+/*
+const items = [
+    { price: 10 },
+    { price: 20 },
+    { price: 16 },
+    { price: 100 },
+    { price: 130 }
+]
+
+const pricesOnly = items.forEach(item => console.log(item.price))
+// 10 20 16 100 130
+*/
+
+// Get the total of all the prices above with reduce:
+/*
+const total = items.reduce((previousValue, currentValue) => previousValue + currentValue.price, 0)
+
+console.log(`This is your total: ${total}`)
+*/
+
+
+
+
+
