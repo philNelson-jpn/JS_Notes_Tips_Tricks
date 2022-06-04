@@ -1006,7 +1006,31 @@ const person = {
 
 console.log(person.birthYear)
 */
+// Create a Person class with a name
 
+// Next, create a Janitor that inherits Person + takes an additional numberOfMops prop + creates a clean() function that prints 'I cleaned with numberOfMops mops'
+/*
+class Person {
+    constructor(name){
+        this.name = name
+    }
+}
+
+class Janitor extends Person {
+    constructor(name, numberOfMops){
+        super(name)
+        this.numberOfMops = numberOfMops
+    }
+
+    clean(){
+        console.log(`${this.name} just cleaned this whole muthaeffing building with ${this.numberOfMops} muthaeffing mops`)
+    }
+}
+
+const janitor = new Janitor("Jimmy", 25)
+janitor.clean()
+// Jimmy just cleaned this whole muthaeffing building with 25 muthaeffing mops
+*/
 
 
 
