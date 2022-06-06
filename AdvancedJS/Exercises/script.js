@@ -1032,5 +1032,85 @@ janitor.clean()
 // Jimmy just cleaned this whole muthaeffing building with 25 muthaeffing mops
 */
 
+// 6-6-2022
+// pure functions
+/*
+const person = {
+    name: "Phil",
+    friends: ["Simon", "Caleb"],
+}
 
+function addFriend(p, friendName){
+    return {...p, friends: [...p.friends, friendName]}
+}
 
+const newFriendList = addFriend(person, "Jimmy")
+console.log(newFriendList.friends)
+*/
+
+// double each index of an array with map
+/*
+const array = [1, 2, 3, 4, 5]
+
+const b = array.map(element => element * 2)
+console.log(b)
+*/
+
+// Destructure an object within another object
+/*
+const person = {
+    name: "Phil",
+    address: {
+        street: "Jose",
+        city: "Oxphord"
+    }
+}
+
+const { address: {street} } = person
+console.log(street)
+*/
+
+// double each index of an array with a for loop
+/*
+const array = [1, 2, 3, 4, 5]
+
+const newArray = []
+
+for(let i = 0; i < array.length; i++){
+    newArray.push(array[i] * 2)
+}
+
+console.log(newArray)
+*/
+// Compose two functions together:
+/*
+const array = [1, 2, 3, 4, 5]
+
+function double(element){
+    return element * 2
+}
+
+function plusOne(element){
+    return element + 1
+}
+
+function doublePlusOne(element){
+    return plusOne(double(element))
+}
+// Alternatives:
+// const newArray = array.map(element => doublePlusOne(element))
+// const newArray = array.map(doublePlusOne)
+// console.log(newArray)
+// [3, 5, 7, 9, 11]
+
+const newArray = array.map(double)
+console.log(newArray)
+*/
+
+/*
+function printName(firstName, lastName = "Nelson"){
+    console.log(`${firstName} ${lastName}`)
+}
+
+printName("Phil")
+*/
