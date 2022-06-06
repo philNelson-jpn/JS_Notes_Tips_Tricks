@@ -205,7 +205,83 @@ const total = items.reduce((previousValue, currentValue) => previousValue + curr
 console.log(`This is your total: ${total}`)
 */
 
+// 6-6-2022
+// Use the reduce method to get the total price of all of the items.
+/*
+const items = [
+    { price: 10 },
+    { price: 20 },
+    { price: 16 },
+    { price: 100 },
+    { price: 130 }
+]
+
+const total = items.reduce((sum, item) => sum + item.price, 0)
+console.log(total)
+
+const found = items.find(item => item.price > 10)
+console.log(found)
+// { price: 10 }
+const filtered = items.filter(item => item.price > 10)
+console.log(filtered)
+// { price: 10 },
+// { price: 20 },
+// { price: 16 },
+// { price: 100 },
+// { price: 130 }
+*/
+
+// Closures
+/*
+function closure(variable){
+    return function func(variable2){
+        console.log(variable)
+        console.log(variable + variable2)
+    }
+}
+
+const a = closure(7)
+a(4)
+
+*/
+
+// Create a function that takes in a name and uses printVariable as a callback to print out "Hello, (name)"
+/*
+function printVariable(variable){
+    console.log(variable)
+}
+
+function printName(name, callback){
+    callback(`Hello there, ${name}`)
+}
+
+printName("Phil", printVariable)
+*/
+
+// Convert this while loop into a recursive function.
+
+const person = {
+    name: "Phil",
+    friend: {
+        name: "Simon",
+        friend: {
+            name: "Caleb"
+        }
+    }
+}
 
 
 
+// while (currentPerson != null){
+//     console.log(currentPerson.name)
+//     currentPerson = currentPerson.friend
+// }
 
+
+function printName(currentPerson){
+    if (currentPerson == null) return
+    console.log(currentPerson.name)
+    printName(currentPerson.friend)
+}
+
+printName(person)
