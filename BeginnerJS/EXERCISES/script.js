@@ -259,13 +259,16 @@ printName("Phil", printVariable)
 */
 
 // Convert this while loop into a recursive function.
-
+/*
 const person = {
     name: "Phil",
     friend: {
         name: "Simon",
         friend: {
-            name: "Caleb"
+            name: "Caleb",
+            friend: {
+                name: "Sally"
+            }
         }
     }
 }
@@ -278,6 +281,7 @@ const person = {
 // }
 
 
+
 function printName(currentPerson){
     if (currentPerson == null) return
     console.log(currentPerson.name)
@@ -285,3 +289,17 @@ function printName(currentPerson){
 }
 
 printName(person)
+
+*/
+
+// Create a function that takes in a name and uses printVariable as a callback to print out "Hello, (name)"
+
+function printVariable(variable){
+    console.log(variable)
+}
+
+function greet(name, callback){
+    callback(`What's up, ${name}?`)
+}
+
+greet("Philly MacDonald", printVariable)
