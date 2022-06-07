@@ -304,3 +304,14 @@ function greet(name, callback){
 
 greet("Philly MacDonald", printVariable)
 */
+
+// Use filter to only return the first three values of an array
+const a = [1, 2, 3, 4, 5]
+
+// const b = a.filter(element => {
+//     return element <= 3
+// })
+
+const b = a.filter(element => element <= 3)
+
+console.log(b)
