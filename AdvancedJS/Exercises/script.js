@@ -1114,3 +1114,36 @@ function printName(firstName, lastName = "Nelson"){
 
 printName("Phil")
 */
+// String together multiple maps on an array to apply multiple functions and then create a function that does both
+/*
+const array = [1, 2, 3, 4, 5]
+
+function double(element){
+    return element * 2
+}
+
+function plusOne(element){
+    return element + 1
+}
+
+function doublePlusOne(element){
+    return plusOne(double(element))
+}
+
+const doubledArray = array.map(double)
+console.log(doubledArray)
+// [2, 4, 6, 8, 10]
+const doubledPlusOneArray = array.map(double).map(plusOne)
+console.log(doubledPlusOneArray)
+// [3, 5, 7, 9, 11]
+// OR
+const doubledPlusOneArray2 = array.map(doublePlusOne)
+console.log(doubledPlusOneArray2)
+// [3, 5, 7, 9, 11]
+*/
+// Use the reduce method in conjunction with a multiplier argument and the rest operator to take in any number of parameters
+function sum(multiplier, ...numbers){
+    return multiplier * numbers.reduce((sum, number) => sum + number, 0)
+}
+
+console.log(sum(10, 3, 5, 23))

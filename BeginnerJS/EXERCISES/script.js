@@ -293,7 +293,7 @@ printName(person)
 */
 
 // Create a function that takes in a name and uses printVariable as a callback to print out "Hello, (name)"
-
+/*
 function printVariable(variable){
     console.log(variable)
 }
@@ -303,3 +303,4 @@ function greet(name, callback){
 }
 
 greet("Philly MacDonald", printVariable)
+*/
