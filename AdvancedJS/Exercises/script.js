@@ -1141,9 +1141,23 @@ const doubledPlusOneArray2 = array.map(doublePlusOne)
 console.log(doubledPlusOneArray2)
 // [3, 5, 7, 9, 11]
 */
-// Use the reduce method in conjunction with a multiplier argument and the rest operator to take in any number of parameters
+// Use the reduce method in conjunction with a multiplier argument and the rest operator to take in any number of parameter
+/*
 function sum(multiplier, ...numbers){
     return multiplier * numbers.reduce((sum, number) => sum + number, 0)
 }
 
 console.log(sum(10, 3, 5, 23))
+*/
+
+function Person(name, age){
+    this.name = name,
+    this.age = age
+}
+
+Person.prototype.printName = function(){
+    console.log(this.name)
+}
+
+const person = new Person("Phil", 34)
+person.printName()
