@@ -14,22 +14,12 @@ export function createBoard(boardSize, numberOfMines){
     for (let x = 0; x < boardSize; x++) {
         const row = []
         for (let y = 0; y < boardSize; y++) {
-            const element = document.createElement("div")
-            element.dataset.status = TILE_STATUSES.HIDDEN
-
             const tile = {
-                element,
                 x,
                 y,
                 mine: minePositions.some(positionMatch.bind(null, { x, y })),
-                get status(){
-                    return element.dataset.status
-                },
-                set status(value){
-                    this.element.dataset.status = value
-                }
+                status: TILE_STATUSES.HIDDEN
             }
-
             row.push(tile)
         }
     board.push(row)
@@ -37,40 +27,54 @@ export function createBoard(boardSize, numberOfMines){
     return board
 }
 
-export function revealTile(board, tile){
+export function revealTile(board, { x, y }){
+    const tile = board[x][y]
     if (tile.status !== TILE_STATUSES.HIDDEN){
-        return
+        return board
     }
 
     if (tile.mine) {
-        tile.status = TILE_STATUSES.MINE
-        return
+        return replaceTile(board, { x, y }, {...tile, status: TILE_STATUSES.MINE})
     }
 
     tile.status = TILE_STATUSES.NUMBER
 
     const adjacentTiles = nearbyTiles(board, tile)
     const mines = adjacentTiles.filter(t => t.mine)
+    const newBoard = replaceTile(board, { x, y }, { ...tile, status: TILE_STATUSES.NUMBER, adjacentMinesCount: mines.length })
     if (mines.length === 0){
-        adjacentTiles.forEach(revealTile.bind(null, board))
-    } else {
-        tile.element.textContent = mines.length
-    }
+        return adjacentTiles.reduce((b, t) => {
+            return revealTile(b, t)
+        }, newBoard)
+    } 
+    return newBoard
 }
 
-export function markTile(tile){
+export function markTile(board, { x, y }){
+    const tile = board[x][y]
     if (
         tile.status !== TILE_STATUSES.HIDDEN && 
         tile.status !== TILE_STATUSES.MARKED
     ) {
-        return
+        return board
     }
 
     if (tile.status === TILE_STATUSES.MARKED){
-        tile.status = TILE_STATUSES.HIDDEN
+        return replaceTile(board, { x, y }, { ...tile, status: TILE_STATUSES.HIDDEN })
     } else {
-        tile.status = TILE_STATUSES.MARKED
+        return replaceTile(board, { x, y }, { ...tile, status: TILE_STATUSES.MARKED })
     }
+}
+
+function replaceTile(board, position, newTile){
+    return board.map((row, x) => {
+        return row.map((tile, y) => {
+            if (positionMatch(position, { x, y })){
+                return newTile
+            }
+            return tile
+        })
+    })
 }
 
 export function checkWin(board){
