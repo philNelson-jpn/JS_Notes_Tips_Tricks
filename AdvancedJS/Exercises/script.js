@@ -1222,7 +1222,7 @@ function sum(...numbers){
 
 console.log(sum(...addThese))
 */
-
+/*
 function printName(firstName, lastName){
     console.log(`${firstName} ${lastName}`)
 }
@@ -1230,9 +1230,76 @@ function printName(firstName, lastName){
 const name = ["Phil", "Nelson"]
 
 printName(...name)
+*/
 
+// 6-9-2022
 
+// Create a function on a prototype, create a new variable based on the prototype with arguments, use the function on the variable to log out the arguments, then create a new object based on variable (not the prototype)
+/*
+function Person(name, age){
+    this.name = name
+    this.age = age
+}
 
+Person.prototype.printGreeting = function(){
+    console.log(`Hello there. My name is ${this.name}. I am ${this.age} years old.`)
+}
 
+const person1 = new Person("Ricky Bobby", 322)
+const person2 = Object.create(person1)
+person2.name = "Obi-wan Kenobi"
+person2.age = 56
 
+person1.printGreeting()
+// Hello there. My name is Ricky Bobby. I am 322 years old.
+person2.printGreeting()
+// Hello there. My name is Obi-wan Kenobi. I am 56 years old.
+*/
+/*
+import { sum } from ("./scriptName.js")
+test("it's supposed to do this", () => {
+    const a = 1
+    const b = 2
+    expect(sum(a, b)).toBe(3)
+})
+*/
+// Default values in functions:
+/*
+function printFullName(firstName, lastName = "Nelson"){
+    console.log(`${firstName} ${lastName}`)
+}
 
+printFullName("Phil")
+*/
+// Add a describe block to a test:
+/*
+describe("#sum", () => {
+    test("it's supposed to do this", () => {
+        const a = 1
+        const b = 2
+        expect(sum(a, b)).toBe(3)
+    })
+})
+*/
+// Class + extends + modifying functions
+/*
+class Animal {
+    constructor(name){
+        this.name = name
+    }
+
+    speak(){
+        console.log(`${this.name} says what's up.`)
+    }
+}
+
+class Cat extends Animal {
+    speak(){
+        console.log(`${this.name} says 'MEOW.'`)
+    }
+}
+
+const cat = new Cat("Jimmy")
+cat.speak()
+// Jimmy says 'MEOW.'
+*/
