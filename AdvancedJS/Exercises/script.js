@@ -1149,7 +1149,7 @@ function sum(multiplier, ...numbers){
 
 console.log(sum(10, 3, 5, 23))
 */
-
+/*
 function Person(name, age){
     this.name = name,
     this.age = age
@@ -1161,3 +1161,78 @@ Person.prototype.printName = function(){
 
 const person = new Person("Phil", 34)
 person.printName()
+*/
+/*
+function Person(name, age){
+    this.name = name
+    this.age = age
+}
+
+Person.prototype.printGreeting = function(){
+    console.log(`Hello there, my name is ${this.name}. I am ${this.age} years old.`)
+}
+
+const person = new Person("Philly MacDonald", 3256)
+person.printGreeting()
+// Hello there, my name is Philly MacDonald. I am 3256 years old.
+
+const person2 = Object.create(person)
+person2.name = "Simon"
+
+person2.printGreeting()
+// Hello there, my name is Simon. I am 3256 years old.
+
+*/
+
+/*
+// Add an element to a new array with a pure function
+const array = [1, 2, 3, 4]
+
+function addElement(a, element){
+    return [...a, element]
+}
+
+console.log(array)
+
+console.log(addElement(array, 5))
+*/
+// Add a new friend to an array within an object with a pure function
+/*
+const person = {
+    name: "Phil",
+    friends: ["Simon", "Caleb"]
+}
+
+function addFriend(object, friendName){
+    return {...object, friends: [...object.friends, friendName]}
+}
+
+const newFriendObject = addFriend(person, "Jimmy")
+
+console.log(newFriendObject.friends)
+
+*/
+// Rest vs. Spread operator
+/*
+const addThese = [2, 3, 5, 6, 90, 23]
+
+function sum(...numbers){
+    return numbers.reduce((sum, number) => sum + number, 0)
+}
+
+console.log(sum(...addThese))
+*/
+
+function printName(firstName, lastName){
+    console.log(`${firstName} ${lastName}`)
+}
+
+const name = ["Phil", "Nelson"]
+
+printName(...name)
+
+
+
+
+
+
