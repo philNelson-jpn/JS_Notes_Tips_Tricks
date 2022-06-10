@@ -1303,3 +1303,60 @@ const cat = new Cat("Jimmy")
 cat.speak()
 // Jimmy says 'MEOW.'
 */
+
+// Remove Duplicates from an array
+/*
+const array = [1, 2, "beef", 4, 3, 2, "beef", 5, 6, 6, "beefy"]
+
+function removeDuplicates(array){
+    return [...new Set(array)]
+}
+
+console.log(removeDuplicates(array))
+// [1, 2, 'beef', 4, 3, 5, 6, 'beefy']
+*/
+
+// Prototype to Class
+/*
+class Person{
+    constructor(name, age){
+    this.name = name
+    this.age = age
+    }
+
+    printName(){
+        console.log(this.name)
+    }
+
+    printHi(){
+        console.log("Hi")
+    }
+
+    static goodName = "Philly"
+}
+
+const phil = new Person("Phillllllly", 33)
+console.log(phil.age)
+// 33
+console.log(phil.goodName)
+// undefined because static
+*/
+
+/*
+const array = [1, 2, 3, 4, 5]
+
+function double(element){
+    return element * 2
+}
+
+function plusOne(element){
+    return element + 1
+}
+
+function doublePlusOne(element){
+    return plusOne(double(element))
+}
+
+const doubledPlusOneArray = array.map(element => doublePlusOne(element))
+console.log(doubledPlusOneArray)
+*/
