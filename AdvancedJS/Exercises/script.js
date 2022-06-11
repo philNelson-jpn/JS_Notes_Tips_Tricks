@@ -1360,3 +1360,26 @@ function doublePlusOne(element){
 const doubledPlusOneArray = array.map(element => doublePlusOne(element))
 console.log(doubledPlusOneArray)
 */
+
+// 6-11-2022
+
+// Optional Chaining in place of if/else statements or shortcircuiting
+/*
+const person = {
+    name: "Philly MacDonald",
+    age: 34,
+    address: {
+        street: "Jose",
+        zip: 45344,
+    }
+}
+
+function printStreet(person){
+    console.log(person?.address?.street)
+}
+
+printStreet(person)
+// Jose
+*/
+
+

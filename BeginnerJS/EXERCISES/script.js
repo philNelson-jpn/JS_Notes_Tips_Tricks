@@ -304,7 +304,7 @@ function greet(name, callback){
 
 greet("Philly MacDonald", printVariable)
 */
-
+/*
 // Use filter to only return the first three values of an array
 const a = [1, 2, 3, 4, 5]
 
@@ -315,3 +315,31 @@ const a = [1, 2, 3, 4, 5]
 const b = a.filter(element => element <= 3)
 
 console.log(b)
+*/
+/*
+const person = {
+    name: "Phil",
+    friend: {
+        name: "Simon",
+        friend: {
+            name: "Caleb"
+        }
+    }
+}
+
+// let currentPerson = person
+// while(currentPerson !=null){
+//     console.log(currentPerson.name)
+//     currentPerson = currentPerson.friend
+// }
+
+function printFriends(currentPerson){
+    if(currentPerson == null) return
+    console.log(currentPerson.name)
+    printFriends(currentPerson.friend)
+}
+
+printFriends(person)
+//Phil Simon Caleb
+*/
+
