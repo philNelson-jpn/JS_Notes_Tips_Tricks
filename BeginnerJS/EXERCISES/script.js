@@ -342,4 +342,45 @@ function printFriends(currentPerson){
 printFriends(person)
 //Phil Simon Caleb
 */
+// Change this to use an anonymous function. 
 
+// Hint: define printVariable within printName instead of outside of it.
+/*
+function printVariable(variable){
+    console.log(variable)
+}
+
+function printName(name, callback){
+    callback(`Hello ${name}`)
+}
+
+printName("Phil", printVariable)
+// Hello Phil
+
+printName("Phil", function(value){
+    console.log(value)
+})
+// Hello Phil
+
+printName("Philly", value => console.log(value))
+// Hello Philly
+*/
+
+// Create a function that uses a closure (a function within another function) called closure() that takes in one argument (a variable).
+
+// The function within closure() (func()) will take in a separate argument (another variable) and log both the closure() arg. and the func() arg.
+
+// Hint: We need to assign closure() to a variable to be able to use the function within it when we call it again.
+/*
+function closure(variable){
+    return function func(variable2){
+        console.log(variable)
+        console.log(variable2)
+    }
+}
+
+const a = closure(2)
+a(3)
+// 2
+// 3
+*/
