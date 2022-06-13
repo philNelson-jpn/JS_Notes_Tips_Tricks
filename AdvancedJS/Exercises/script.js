@@ -1543,3 +1543,35 @@ console.log(newFriendList.friends)
 console.log(person.friends)
 // ['Simon', 'Caleb']
 */
+// 6-14-2022
+/*
+function printName(fullName){
+    ;[firstName, lastName] = fullName.split(' ')
+    return {
+        firstName,
+        lastName
+    }
+}
+
+const phil = printName("Phil Nelson")
+console.log(phil.firstName)
+// Phil
+*/
+// Jest test syntax
+/*
+test("this test should do this", ()=>{
+    const a = 1
+    const b = 2
+    expect(sum(a, b)).toBe(3)
+})
+*/
+// Use map to apply the double function to the array and then log out the result.
+/*
+const array = [1, 2, 3, 4, 5, 6]
+
+function double(element){
+    return element * 2
+}
+
+console.log(array.map(double))
+*/
