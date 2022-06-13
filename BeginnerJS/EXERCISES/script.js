@@ -384,3 +384,26 @@ a(3)
 // 2
 // 3
 */
+
+// 6-14-2022
+// Create an anonymous ARROW function as the callback that prints out 10.
+/*
+function func(x, callback){
+    callback(x)
+}
+
+func(10, variable => console.log(variable))
+*/
+// Create a function that creates an array of random numbers between 1 and 99
+/*
+let numbers = [1, 2, 3]
+let random = n => Math.floor(Math.random() * n)
+let randomNumbers = numbers.map(() => random(100))
+console.log(randomNumbers)
+*/
+// double an array with map
+/*
+const array = [1, 2, 3, 4, 5]
+const newArray = array.map(number => number * 2)
+console.log(newArray)
+*/
