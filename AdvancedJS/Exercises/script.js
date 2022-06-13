@@ -1382,4 +1382,164 @@ printStreet(person)
 // Jose
 */
 
+// 6-13-2022
+// Create a new Dog class that extends Animal, adds an "owner" property, and redfines the function speak() to say "Woof!"
+/*
+class Animal {
+    constructor(name){
+        this.name = name
+    }
 
+    speak(){
+        console.log(`Hello, my name is ${this.name}`)
+    }
+}
+
+class Dog extends Animal{
+    constructor(name, owner){
+        super(name)
+        this.owner = owner
+    }
+
+    speak(){
+        console.log("Woof, bitches")
+    }
+}
+
+const indy = new Dog("Indy", "Phil")
+
+console.log(indy.owner)
+// Phil
+indy.speak()
+// Woof, bitches
+*/
+
+// How do we create a function on a prototype?
+/*
+function Person(name, age){
+    this.name = name
+    this.age = age
+}
+
+Person.prototype.greet = function(){
+    console.log(`Hello, my name is ${this.name}`)
+}
+
+const person = new Person("Phil", 33)
+person.greet()
+// Hello, my name is Phil
+*/
+
+// Double each element of an array with a for loop.
+/*
+const array = [1, 2, 3, 4, 5]
+
+const newArray = []
+
+for(let i = 0; i < array.length; i++){
+    newArray.push(array[i] * 2)
+}
+
+console.log(newArray)
+// [2, 4, 6, 8, 10]
+*/
+
+// Add a setter to this code so that we can set an explicit fullName outside of the person object.
+/*
+const person = {
+    firstName: "Phil",
+    lastName: "Nelson",
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`
+    },
+    set fullName(value){
+        return [this.firstName, this.lastName] = value.split(' ')
+    }
+}
+
+person.fullName = "Philly MacDonald"
+console.log(person.fullName)
+// Philly MacDonald
+*/
+
+
+// Test syntax with Jest
+/*
+describe("#sum", ()=>{
+    test("the code is supposed to do this", ()=>{
+        // test
+    })
+})
+*/
+
+// Convert the following code to use both prototypes and classes
+/*
+function createUser(email, password, language){
+    return {
+        email,
+        password,
+        language,
+        printPassword(){
+            console.log(this.password)
+        }
+    }
+}
+
+console.log(createUser("test@test.com", "password76", "English"))
+*/
+// Prototype:
+/*
+function CreateUser(email, password, language){
+        this.email = email
+        this.password = password
+        this.language = language
+}
+
+CreateUser.prototype.printPassword = function(){
+    console.log(this.password)
+}
+
+const newUser = new CreateUser("test@test.com", "password76", "English")
+newUser.printPassword()
+*/
+// Class
+/*
+class CreateUser{
+    constructor(email, password, language){
+        this.email = email
+        this.password = password
+        this.language = language
+    }
+    printPassword(){
+        console.log(this.password)
+    }
+}
+
+const newUser = new CreateUser("test@test.com", "password76", "English")
+newUser.printPassword()
+*/
+
+// Change the function to a pure function
+/*
+const person = {
+    name: "Phil",
+    friends: ["Simon", "Caleb"],
+}
+// impure
+/*
+function addFriends(friendName){
+    person.friends.push(friendName)
+}
+*/
+/*
+function addFriends(object, friendName){
+    return {...object, friends: [...object.friends, friendName]}
+}
+
+
+const newFriendList = addFriends(person, "Bobby")
+console.log(newFriendList.friends)
+// ['Simon', 'Caleb', 'Bobby']
+console.log(person.friends)
+// ['Simon', 'Caleb']
+*/
