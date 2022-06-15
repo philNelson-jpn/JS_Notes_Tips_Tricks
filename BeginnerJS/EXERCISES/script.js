@@ -407,3 +407,15 @@ const array = [1, 2, 3, 4, 5]
 const newArray = array.map(number => number * 2)
 console.log(newArray)
 */
+
+const items = [
+    { price: 10 },
+    { price: 20 },
+    { price: 14 },
+    { price: 1 },
+    { price: 6 }
+]
+
+items.forEach(item => console.log(item.price))
+const total = items.reduce((sum, item) => sum + item.price, 0)
+console.log(total)
