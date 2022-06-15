@@ -1575,3 +1575,16 @@ function double(element){
 
 console.log(array.map(double))
 */
+// 6-15-2022
+// How do we write a polyfill for a function that doesn't yet exist or is not yet supported?
+
+// Hint: We should wrap our function in something to check if it exists yet or not.
+/*
+if(Math.double == null){
+    Math.double = function(value){
+        console.log(value * 2)
+    }
+}
+
+Math.double(2)
+*/
