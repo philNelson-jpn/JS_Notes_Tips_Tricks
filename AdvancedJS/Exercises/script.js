@@ -1588,3 +1588,31 @@ if(Math.double == null){
 
 Math.double(2)
 */
+// 6-16-2022
+// Calculate a person's age with a getter based on ageThisYear
+/*
+const person = { 
+    ageThisYear: 34,
+
+    get calcAge(){
+        const date = new Date()
+        return date.getFullYear() - this.ageThisYear
+    }
+}
+
+console.log(person.calcAge)
+*/
+// Change the key of an object with destructuring
+/*
+const person = {
+    name: "Phil",
+    age: 34,
+    address: {
+        street: "Joseph",
+        city: "Oxford"
+    }
+}
+
+const { name: firstName, address } = person
+console.log(firstName)
+*/
