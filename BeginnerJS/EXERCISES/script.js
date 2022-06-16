@@ -594,7 +594,7 @@ const recordCollection = {
       delete records[id][prop]
     }
   */
-
+/*
 const myArray = [];
 let i = 5
 
@@ -605,7 +605,43 @@ while(i >= 0){
 
 console.log(myArray)
 // [5, 4, 3, 2, 1, 0]
+*/
+// 6-17-2022
+// Update Album/Music collection
+/*
+  function updateRecords(records, id, prop, value){
+        if(prop !== "tracks" && value === ""){
+            records[id][prop] = value
+        }else if(prop === "tracks" && records[id].hasOwnProperty("tracks") === false){
+            records[id][prop] = value
+        }else if(prop === "tracks" && value !== ""){
+            records[id][prop].push(value)
+        }else if(value === ""){
+            delete records[id][prop]
+        }
+    return records
+  }
+*/
+// Use a WHILE loop to print out the result.
+/*
+const myArray = []
 
+let i = 5
+while(i >= 0){
+    myArray.push(i)
+    i--
+}
 
+console.log(myArray)
+// [5, 4, 3, 2, 1, 0]
+*/
+// Write a for loop that iterates through the array and returns the total of the sum of the items in the array
+/*
+const myArr = [2, 3, 4, 5, 6]
 
-    
+let total = 0
+for(let i = 0; i < myArr.length; i++){
+    total += myArr[i]
+}
+console.log(total)
+*/
