@@ -407,7 +407,7 @@ const array = [1, 2, 3, 4, 5]
 const newArray = array.map(number => number * 2)
 console.log(newArray)
 */
-
+/*
 const items = [
     { price: 10 },
     { price: 20 },
@@ -419,3 +419,125 @@ const items = [
 items.forEach(item => console.log(item.price))
 const total = items.reduce((sum, item) => sum + item.price, 0)
 console.log(total)
+*/
+// 6-16-2022
+// find vs. filter
+/*
+const a = [1, 2, 3, 4, 5]
+const b = a.find(number => number > 3)
+console.log(b)
+// 4
+const c = a.filter(number => number > 3)
+console.log(c)
+// [4, 5]
+const prices = [
+    { price: 10 },
+    { price: 20 },
+    { price: 30 },
+    { price: 16 },
+    { price: 23 },
+]
+const d = prices.filter(item => item.price > 20)
+console.log(d)
+// { price: 30 }
+// { price: 23 }
+*/
+// Change playerNumber to 16 and then use bracket notation to get the player associated with the playerNumber
+/*
+const testObject = {
+    12: "Namath",
+    16: "Montana",
+    19: "Unitas"
+}
+
+const playerNumber = 16
+const player = testObject[playerNumber]
+console.log(player)
+// Montana
+*/
+// How do you remove a property/value from an object?
+/*
+const testObject = {
+    12: "Namath",
+    16: "Montana",
+    19: "Unitas",
+    "bark": "bow-wow"
+}
+delete testObject[12]
+delete testObject.bark
+console.log(testObject)
+// {16: 'Montana', 19: 'Unitas'}
+*/
+// Convert the switch statement into an object called lookup. Use it to look up val and assign the associated string to the result variable.
+/*
+  switch(val) {
+    case "alpha":
+      result = "Adams";
+      break;
+    case "bravo":
+      result = "Boston";
+      break;
+    case "charlie":
+      result = "Chicago";
+      break;
+    case "delta":
+      result = "Denver";
+      break;
+    case "echo":
+      result = "Easy";
+      break;
+    case "foxtrot":
+      result = "Frank";
+  }
+ */ 
+
+/*
+function phoneticLookup(val) {
+    let result = ""
+  
+    const lookup = {
+        "alpha": "Adams",
+        "bravo": "Boston",
+        "charlie": "Chicago",
+        "delta": "Denver",
+        "echo": "Easy",
+        "foxtrot": "Frank"
+    }
+
+    result = lookup[val]
+    return result
+  }
+  
+console.log(phoneticLookup("foxtrot"))
+*/
+/*
+// What method can we use to determine if an object contains a property?
+const lookup = {
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie": "Chicago",
+    "delta": "Denver",
+    "echo": "Easy",
+    "foxtrot": "Frank"
+}
+console.log(lookup.hasOwnProperty("alpha"))
+// true
+
+function checkObject(obj, checkProp){
+    return obj.hasOwnProperty(checkProp)
+}
+console.log(checkObject(lookup, "bravo"))
+// true
+
+// return the value of the property if it exists or print "Not Found" if it does not:
+function returnProp(obj, prop){
+    if(obj.hasOwnProperty(prop)){
+        return obj[prop]
+    }
+        return "Not Found"
+}
+console.log(returnProp(lookup, "echo"))
+// Easy
+console.log(returnProp(lookup, "beebee"))
+// Not Found
+*/
