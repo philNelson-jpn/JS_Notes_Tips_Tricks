@@ -1616,3 +1616,62 @@ const person = {
 const { name: firstName, address } = person
 console.log(firstName)
 */
+// 6-17-2022
+// Null coalescing operator - who is your daddy and what does he do?
+/*
+function printName(firstName, lastName){
+    lastName = lastName ?? "Nelson"
+    return `${firstName} ${lastName}`
+}
+
+console.log(printName("Phil"))
+// Phil Nelson
+console.log(printName("Phil", null))
+// Phil Nelson
+console.log(printName("Phil", undefined))
+// Phil Nelson
+console.log(printName("Phil", "Poopers"))
+// Phil Poopers
+*/
+
+// Create a Person class with a name
+
+// Next, create a Janitor that inherits Person + takes an additional numberOfMops prop + creates a clean() function that prints 'I cleaned with numberOfMops mops'
+/*
+class Person{
+    constructor(name){
+        this.name = name
+    }
+}
+
+class Janitor extends Person{
+    constructor(name, numberOfMops){
+        super(name)
+        this.numberOfMops = numberOfMops
+    }
+
+    clean(){
+        console.log(`${this.name} just cleaned the whole damn school with ${this.numberOfMops} mops, homie.`)
+    }
+}
+
+const jim = new Janitor("Jim", 25)
+jim.clean()
+// Jim just cleaned the whole damn school with 25 mops, homie.
+*/
+
+function multiplyAll(arr) {
+    let product = 1
+    for(let i = 0; i < arr.length; i++){
+        for(let j = 0; j < arr[i].length; j++){
+            product *= arr[i][j]
+          }
+        }
+    return product
+  }
+  
+console.log(multiplyAll([[1, 2], [3, 4], [5, 6, 7]]))
+
+
+
+
