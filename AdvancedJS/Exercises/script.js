@@ -1659,7 +1659,8 @@ const jim = new Janitor("Jim", 25)
 jim.clean()
 // Jim just cleaned the whole damn school with 25 mops, homie.
 */
-
+// Use a nest for loop to interate through a nested array and return the product of all of the values within the arrays
+/*
 function multiplyAll(arr) {
     let product = 1
     for(let i = 0; i < arr.length; i++){
@@ -1671,7 +1672,86 @@ function multiplyAll(arr) {
   }
   
 console.log(multiplyAll([[1, 2], [3, 4], [5, 6, 7]]))
+*/
+/*
+
+The lookUpProfile() function should check if name is an actual contact's firstName and the given property (prop) is a property of that contact.
+
+If both are true, then return the "value" of that property.
+
+If name does not correspond to any contacts then return the string No such contact.
+
+If prop does not correspond to any valid properties of a contact found to match name then return the string No such property.
+
+Hint 1
+Use a for loop to cycle through the contacts list.
+
+Hint 2
+Use a nested if statement to first check if the firstName matches, and then checks if the prop matches.
+*/
+
+const contacts = [
+    {
+      firstName: "Akira",
+      lastName: "Laine",
+      number: "0543236543",
+      likes: ["Pizza", "Coding", "Brownie Points"],
+    },
+    {
+      firstName: "Harry",
+      lastName: "Potter",
+      number: "0994372684",
+      likes: ["Hogwarts", "Magic", "Hagrid"],
+    },
+    {
+      firstName: "Sherlock",
+      lastName: "Holmes",
+      number: "0487345643",
+      likes: ["Intriguing Cases", "Violin"],
+    },
+    {
+      firstName: "Kristian",
+      lastName: "Vos",
+      number: "unknown",
+      likes: ["JavaScript", "Gaming", "Foxes"],
+    },
+  ]
+
+  function lookUpProfile(name, prop) {
+    // loop through the array
+
+        // use a nested if statement to check if name matches a contact and then if the property exists
+
+                // else return "No such property"
+
+    // If the loop fails (is false), return "Profile does not exist"
+
+  }
+  
+  console.log(lookUpProfile("Akira", "likes"))
+//   ['Pizza', 'Coding', 'Brownie Points']
 
 
 
 
+
+
+
+
+
+
+
+
+
+/*
+    for(let i = 0; i < contacts.length; i++){
+        if(contacts[i].firstName === name){
+            if(contacts[i].hasOwnProperty(prop)){
+                return contacts[i][prop]
+            }else{
+                return "No such property"
+            }
+        }
+    }
+    return "No such contact"
+*/
