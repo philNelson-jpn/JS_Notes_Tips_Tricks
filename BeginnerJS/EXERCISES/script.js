@@ -684,3 +684,58 @@ do{
 
 console.log(array)
 */
+/*
+const contacts = [
+    {
+      firstName: "Akira",
+      lastName: "Laine",
+      number: "0543236543",
+      likes: ["Pizza", "Coding", "Brownie Points"],
+    },
+    {
+      firstName: "Harry",
+      lastName: "Potter",
+      number: "0994372684",
+      likes: ["Hogwarts", "Magic", "Hagrid"],
+    },
+    {
+      firstName: "Sherlock",
+      lastName: "Holmes",
+      number: "0487345643",
+      likes: ["Intriguing Cases", "Violin"],
+    },
+    {
+      firstName: "Kristian",
+      lastName: "Vos",
+      number: "unknown",
+      likes: ["JavaScript", "Gaming", "Foxes"],
+    },
+  ]
+
+  function lookUpProfile(name, prop) {
+    // loop through the array
+    for(let i = 0; i < contacts.length; i++){
+        if(name === contacts[i].firstName){
+            if(contacts[i].hasOwnProperty(prop)){
+                return contacts[i][prop]
+            }else{
+                return "No such property"
+            }
+        }
+    }
+    return "Profile does not exist"
+        // use a nested if statement to check if name matches a contact and then if the property exists
+
+                // else return "No such property"
+
+    // If the loop fails (is false), return "Profile does not exist"
+
+  }
+  
+  console.log(lookUpProfile("Akira", "likes"))
+//   ['Pizza', 'Coding', 'Brownie Points']
+
+*/
+// Random number between 0 and 10
+const num = Math.floor(Math.random() * 11)
+console.log(num)
