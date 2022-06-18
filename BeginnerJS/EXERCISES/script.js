@@ -645,3 +645,42 @@ for(let i = 0; i < myArr.length; i++){
 }
 console.log(total)
 */
+
+// 6-18-2022
+/*
+function multiplyAll(arr){
+    let product = 1
+    for(let i = 0; i < arr.length; i++){
+        for(let j = 0; j < arr[i].length; j++){
+            product *= arr[i][j]
+        }
+    }
+    return product
+}
+
+console.log(multiplyAll([[1,2], [3,4], [5,6,7]]))
+*/
+// first three values of an array with filter:
+/*
+const a = [1, 2, 3, 4, 5]
+const b = a.filter(value => value <= 3)
+console.log(b)
+*/
+
+// Do...while vs. while
+/* 
+const array = []
+let i = 0
+
+// while(i <= 5){
+//     array.push(i)
+//     i++
+// }
+
+do{
+    array.push(i)
+    i++
+} while(i <= 5)
+
+console.log(array)
+*/
