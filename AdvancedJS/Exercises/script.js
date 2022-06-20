@@ -1689,7 +1689,7 @@ Use a for loop to cycle through the contacts list.
 Hint 2
 Use a nested if statement to first check if the firstName matches, and then checks if the prop matches.
 */
-
+/*
 const contacts = [
     {
       firstName: "Akira",
@@ -1730,19 +1730,7 @@ const contacts = [
   
   console.log(lookUpProfile("Akira", "likes"))
 //   ['Pizza', 'Coding', 'Brownie Points']
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
 /*
     for(let i = 0; i < contacts.length; i++){
         if(contacts[i].firstName === name){
@@ -1754,4 +1742,123 @@ const contacts = [
         }
     }
     return "No such contact"
+*/
+// 6-20-2022
+// Write a function that takes a full name and splits it, destructure the full name into a first and last name
+/*
+function printFullName(fullName){
+    return fullName.split(' ')
+
+}
+
+const [firstName, lastName] = printFullName("Phil Nelson")
+console.log(firstName)
+*/
+// Change the following function from an impure function to a pure function:
+/*
+const array = [1, 2, 3, 4]
+function addElementImpure(element){
+    array.push(element)
+}
+
+function addElement(arr, element){
+    return [...arr, element]
+}
+console.log(addElement(array, 5))
+// [1, 2, 3, 4, 5]
+console.log(array)
+// [1, 2, 3, 4]
+*/
+// How do we create a function on a prototype?
+/*
+function Person(name, age){
+    this.name = name
+    this.age = age
+}
+
+Person.prototype.greet = function(){
+    console.log(`Hello there, ${this.name}`)
+}
+
+const phil = new Person("Phil", 34)
+phil.greet()
+*/
+/*
+const person = {
+    name: "Phil",
+    friends: ["Simon", "Caleb"]
+}
+
+function addFriendImpure(friendName){
+    person.friends.push(friendName)
+}
+
+function addFriendPure(obj, friendName){
+    return {...obj, friends: [...obj.friends, friendName]}
+}
+
+const newPerson = addFriendPure(person, "Bobby")
+console.log(newPerson.friends)
+// ['Simon', 'Caleb', 'Bobby']
+addFriendImpure("Ricky")
+console.log(person.friends)
+// ['Simon', 'Caleb', 'Ricky']
+*/
+
+// Use map (a higher order function) on this array to create a newArray that doubles each number in the array.
+/*
+const array = [1, 2, 3, 4, 5]
+
+const newArray = array.map(element => element * 2)
+console.log(newArray)
+// [2, 4, 6, 8, 10]
+*/
+
+// Combine two objects together with the spread operator by cloning one of the objects and then adding a new key/value pair.
+/*
+const obj1 = {
+    name: "Phil"
+}
+
+const obj2 = {
+    age: 33
+}
+
+const obj3 = {...obj1, ...obj2, favoriteFood: "spicy stuff"}
+
+console.log(obj3)
+*/
+// Use Function Composition to combine both the double function and the plusOne function into one function.
+
+// Careful, order matters.
+/*
+const array = [1, 2, 3, 4, 5]
+
+function double(element){
+    return element * 2
+}
+
+function plusOne(element){
+    return element + 1
+}
+
+function doubleAndOne(element){
+    return plusOne(double(element))
+}
+
+console.log(array.map(element => doubleAndOne(element)))
+*/
+// Apply both the double function and the plusOne function to the array with map chaining and log out the result.
+/*
+const array = [1, 2, 3, 4, 5]
+
+function double(element){
+    return element * 2
+}
+
+function plusOne(element){
+    return element + 1
+}
+
+console.log(array.map(double).map(plusOne))
 */
