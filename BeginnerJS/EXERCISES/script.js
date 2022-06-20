@@ -737,5 +737,191 @@ const contacts = [
 
 */
 // Random number between 0 and 10
+/*
 const num = Math.floor(Math.random() * 11)
 console.log(num)
+*/
+
+// 6-20-2022
+// Use a nested for loop to iterate through an array and multiply all of the values:
+/*
+function multiplyAll(arr){
+    let product = 1
+    for(let i = 0; i < arr.length; i++){
+        for(let j = 0; j < arr[i].length; j++){
+            product *= arr[i][j]
+        }
+    }
+    return product
+}
+
+console.log(multiplyAll([[1,2], [3,4], [5,6,7]]))
+// 5040
+*/
+
+// Use the .shift() function to remove the first item from myArray and assign the "shifted off" value to a new variable, removedFromMyArray.
+/*
+const myArray = [["John", 23], ["dog", 3]];
+
+const removedFromMyArray = myArray.shift()
+console.log(removedFromMyArray)
+// ["John", 23]
+*/
+/*
+const person = {
+    name: "Phil"
+}
+
+console.log(person.hasOwnProperty("name"))
+
+function checkObj(obj, prop){
+    if(obj.hasOwnProperty(prop)){
+        console.log(`The property name is "${obj[prop]}"`)
+    }else{
+        console.log(`This object does not contain the "${prop}" property.`)
+    }
+}
+
+checkObj(person, "name")
+// The property name is "Phil"
+checkObj(person, "age")
+// This object does not contain the "age" property.
+*/
+/*
+const contacts = [
+    {
+      firstName: "Akira",
+      lastName: "Laine",
+      number: "0543236543",
+      likes: ["Pizza", "Coding", "Brownie Points"],
+    },
+    {
+      firstName: "Harry",
+      lastName: "Potter",
+      number: "0994372684",
+      likes: ["Hogwarts", "Magic", "Hagrid"],
+    },
+    {
+      firstName: "Sherlock",
+      lastName: "Holmes",
+      number: "0487345643",
+      likes: ["Intriguing Cases", "Violin"],
+    },
+    {
+      firstName: "Kristian",
+      lastName: "Vos",
+      number: "unknown",
+      likes: ["JavaScript", "Gaming", "Foxes"],
+    },
+  ]
+
+  function lookUpProfile(name, prop) {
+    // loop through the array (contacts)
+        for(let i = 0; i < contacts.length; i++){
+            if(contacts[i].firstName === name){
+                if(contacts[i].hasOwnProperty(prop)){
+                    return contacts[i][prop]
+                }else{
+                    return "No such property"
+                }
+            }
+        }
+        // use a nested if statement to check if name matches a contact and then if the property exists
+
+                // else return "No such property"
+
+    // If the loop fails (is false), return "Profile does not exist"
+        return "Profile does not exist"
+  }
+
+  console.log(lookUpProfile("Akira", "likes"))
+//   ['Pizza', 'Coding', 'Brownie Points']
+*/
+
+// Create a function that takes in a name and uses printVariable as a callback to print out "Hello, (name)"
+/*
+function printVariable(variable){
+    console.log(variable)
+}
+
+function printSum(a, b){
+    console.log(a + b)
+}
+
+function sayHi(name, callback, callback2){
+    callback(`Hello, ${name}`)
+    callback2(2, 4)
+}
+
+sayHi("Phil", printVariable, printSum)
+// Hello, Phil
+// 6
+*/
+// Add ["Paul", 35] to the beginning of the myArray variable using unshift().
+/*
+const myArray = []
+myArray.unshift(["Paul", 35])
+console.log(myArray[0])
+// ['Paul', 35]
+*/
+// Change playerNumber to 16 and then use bracket notation to get the player associated with the playerNumber
+/*
+const testObj = {
+    12: "Namath",
+    16: "Montana",
+    19: "Unitas"
+}
+
+const playerNumber = 16
+const player = testObj[playerNumber]
+console.log(player)
+*/
+// Convert the switch statement into an object called lookup. Use it to look up val and assign the associated string to the result variable.
+/*
+function phoneticLookup(val) {
+    let result = "";
+  
+    const lookup = {"alpha":"Adams",
+    "bravo":"Boston",
+    "charlie":"Chicago",
+    "delta":"Denver",
+    "echo":"Easy",
+    "foxtrot":"Frank"
+    }
+
+    result = lookup[val]
+  
+    return result;
+  }
+  
+  console.log(phoneticLookup("charlie"))
+//   "Chicago"
+*/
+// Use the reduce method to get the total price of all of the items.
+/*
+const items = [
+    { price: 10 },
+    { price: 30 },
+    { price: 40 },
+    { price: 55 },
+    { price: 22 },
+]
+
+const total = items.reduce((sum, item) => {
+    return sum + item.price
+}, 0)
+// Rather than write the arrow function all on one line, it was better to write it out with the return statement and curly brackets so that I could remember the default value 0 on the end.
+console.log(total)
+*/
+// Use a WHILE loop to print out [5, 4, 3, 2, 1, 0]
+/*
+const myArray = []
+let i = 5
+while(i >= 0){
+    myArray.push(i)
+    i--
+}
+console.log(myArray)
+// [5, 4, 3, 2, 1, 0]
+*/
+
