@@ -925,3 +925,55 @@ console.log(myArray)
 // [5, 4, 3, 2, 1, 0]
 */
 
+// 6-21-2022
+// Create a closure function (a function within another function)
+/*
+function closure(variable){
+    return function func(variable2){
+        console.log(variable)
+        console.log(variable2)
+    }
+}
+
+const a = closure(2)
+a(3)
+*/
+// How do you remove a property/value from an object?
+/*
+const person = {
+    name: "Phil",
+    age: 34,
+    address: {
+        street: "Joseph",
+        town: "Oxford"
+    }
+}
+
+delete person.age
+console.log(person.age)
+// undefined
+*/
+// Using Math.floor and Math.random, return a random whole number that is >= myMin and <= myMax.
+/*
+function randomRange(myMin, myMax){
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin
+}
+
+console.log(randomRange(2, 26))
+*/
+// Use recursion to return an array that begins with startNum and ends with endNum.
+/*
+function rangeOfNumbers(startNum, endNum){
+    if(endNum - startNum === 0){
+        return [startNum]
+    }else{
+        const newArray = rangeOfNumbers(startNum, endNum -1)
+        newArray.push(endNum)
+        return newArray
+    }
+}
+console.log(rangeOfNumbers(2, 25))
+// [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+*/
+
+

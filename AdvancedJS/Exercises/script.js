@@ -1862,3 +1862,15 @@ function plusOne(element){
 
 console.log(array.map(double).map(plusOne))
 */
+// 6-21-2022
+// What is the difference between toBe and toEqual in Jest testing?
+/*
+test('equal vs tobe', () => {
+    const obj = { a: 1, b: 2 }
+
+    expect(obj).toBe({ a: 1, b: 2 })
+    // FAIL
+    expect(obj).toEqual({ a: 1, b: 2 })
+    // PASS
+})
+*/
