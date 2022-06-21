@@ -975,5 +975,68 @@ function rangeOfNumbers(startNum, endNum){
 console.log(rangeOfNumbers(2, 25))
 // [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
 */
+// 6-22-2022
+// Use recursion to return an array that begins with startNum and ends with endNum.
+/*
+function rangeOfNumbers(startNum, endNum){
+    if(endNum - startNum === 0){
+        return [startNum]
+    } else {
+        const array = rangeOfNumbers(startNum, endNum - 1)
+        array.push(endNum)
+        return array
+    }
 
+}
 
+console.log(rangeOfNumbers(2, 7))
+//  [2, 3, 4, 5, 6, 7]
+*/
+
+const contacts = [
+    {
+      firstName: "Akira",
+      lastName: "Laine",
+      number: "0543236543",
+      likes: ["Pizza", "Coding", "Brownie Points"],
+    },
+    {
+      firstName: "Harry",
+      lastName: "Potter",
+      number: "0994372684",
+      likes: ["Hogwarts", "Magic", "Hagrid"],
+    },
+    {
+      firstName: "Sherlock",
+      lastName: "Holmes",
+      number: "0487345643",
+      likes: ["Intriguing Cases", "Violin"],
+    },
+    {
+      firstName: "Kristian",
+      lastName: "Vos",
+      number: "unknown",
+      likes: ["JavaScript", "Gaming", "Foxes"],
+    },
+  ]
+
+  function lookUpProfile(name, prop) {
+    // loop through the array
+    for(let i = 0; i < contacts.length; i++){
+        if(name === contacts[i].firstName){
+            if(contacts[i].hasOwnProperty(prop)){
+                return contacts[i][prop]
+            }else{
+                return "No such property"
+            }
+        }
+    }
+    return "This contact does not exist"
+        // use a nested if statement to check if name matches a contact and then if the property exists
+
+                // else return "No such property"
+
+    // If the loop fails (is false), return "Profile does not exist"
+    }
+
+  console.log(lookUpProfile("Harry", "likes"))
