@@ -1066,6 +1066,7 @@ console.log(arr2)
 */
 
 // Write a for loop that iterates through the array and returns the total of the sum of the items in the array
+/*
 const myArr = [2, 3, 4, 5, 6]
 let total = 0
 
@@ -1074,3 +1075,56 @@ for(let i = 0; i < myArr.length; i++){
 }
 
 console.log(total)
+*/
+// 6-23-2022
+// Use a nested for loop to iterate through an array and multiply all of the values:
+/*
+function multiplyAll(arr){
+    let product = 1
+        for(let i = 0; i < arr.length; i++){
+            for(let j = 0; j < arr[i].length; j++){
+                product *= arr[i][j]
+            }
+        }
+    return product
+}
+
+console.log(multiplyAll([[1, 2], [3, 4], [5, 6, 7]]))
+*/
+// Generate a random whole number between 1 and 10
+// console.log(Math.floor(Math.random() * 11))
+
+// Convert a while loop into a recursive function
+/*
+const person = {
+    name: "Phil",
+    friend: {
+        name: "Simon",
+        friend: {
+            name: "Caleb"
+        }
+    }
+}
+// Print everyone's names with a while loop
+// let currentPerson = person
+// while(currentPerson != null){
+//     console.log(currentPerson.name)
+//     currentPerson = currentPerson.friend
+// }
+
+// function printNames(currentPerson){
+//     if(currentPerson != null){
+//         console.log(currentPerson.name)
+//         printNames(currentPerson.friend)
+//     }
+// }
+
+// OR
+function printNames(currentPerson){
+    if(currentPerson == null) return
+        console.log(currentPerson.name)
+        printNames(currentPerson.friend)
+}
+
+printNames(person)
+*/

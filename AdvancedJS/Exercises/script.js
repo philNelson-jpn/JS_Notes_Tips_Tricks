@@ -1895,3 +1895,62 @@ array2.push(44)
 console.log(array)
 console.log(array2)
 */
+/*
+// Assign list to a destructured array that is equal to the 3 through 10.
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list) {
+    const [a, b, ...arr] = list
+  return arr;
+}
+const arr = removeFirstTwo(source);
+console.log(arr)
+// [ 3, 4, 5, 6, 7, 8, 9, 10 ]
+*/
+// Create a function that loops through an array within a object and inserts each value of the array within some code using template literals
+/*
+const result = {
+    success: ["max-length", "no-amd", "prefer-arrow-functions"],
+    failure: ["no-var", "var-on-top", "linebreak"],
+    skipped: ["no-extra-semi", "no-dup-keys"]
+  }
+  
+  function makeList(arr) {
+    const failureItems = []
+        for(let i = 0; i < arr.length; i++){
+            failureItems.push(`<li class="text-warning">${arr[i]}</li>`)
+        }
+        return failureItems
+    }
+
+
+  const failuresList = makeList(result.failure)
+  console.log(failuresList)
+//   [ '<li class="text-warning">no-var</li>',
+//   '<li class="text-warning">var-on-top</li>',
+//   '<li class="text-warning">linebreak</li>' ]
+*/
+
+// Create a class called Thermostat that takes in 'fahrenheit' as an argument within the constructor
+// The Thermostat class should use a getter called 'temperature' to calculate and return celsius (C = 5/9 * (F - 32))
+// The Thermostat class should also use a setter that takes in celsius as an argument and sets 'fahrenheit' to C * 9.0 / 5 + 32
+/*
+class Thermostat{
+    constructor(fahrenheit){
+        this.fahrenheit = fahrenheit
+    }
+
+    get temperature(){
+        return 5 / 9 * (this.fahrenheit - 32)
+    }
+
+    set temperature(celsius){
+        this.fahrenheit = celsius * 9 / 5 + 32
+    }
+}
+
+const thermos = new Thermostat(86)
+console.log(thermos.temperature)
+// 30
+*/
+// 6-23-2022
+
