@@ -1874,3 +1874,24 @@ test('equal vs tobe', () => {
     // PASS
 })
 */
+// 6-22-2022
+// Prevent an object from being mutated
+/*
+const person = {
+    name: "Phil"
+}
+
+Object.freeze(person)
+person.name = "George"
+console.log(person.name)
+// Phil
+*/
+// How do we clone an array without modifying the reference of the original?
+/*
+const array = [1, 2, 3, 4, 5]
+const array2 = [...array]
+array.push(3)
+array2.push(44)
+console.log(array)
+console.log(array2)
+*/

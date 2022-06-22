@@ -1068,6 +1068,7 @@ console.log(arr2)
 // Write a for loop that iterates through the array and returns the total of the sum of the items in the array
 const myArr = [2, 3, 4, 5, 6]
 let total = 0
+
 for(let i = 0; i < myArr.length; i++){
     total += myArr[i]
 }
