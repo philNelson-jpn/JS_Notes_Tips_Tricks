@@ -992,7 +992,7 @@ function rangeOfNumbers(startNum, endNum){
 console.log(rangeOfNumbers(2, 7))
 //  [2, 3, 4, 5, 6, 7]
 */
-
+/*
 const contacts = [
     {
       firstName: "Akira",
@@ -1040,3 +1040,36 @@ const contacts = [
     }
 
   console.log(lookUpProfile("Harry", "likes"))
+  */
+
+// Do...while vs. while loops
+/*
+// Do while
+let arr = []
+let i = 5
+do{
+    arr.push(i)
+    i--
+} while(i > 0)
+console.log(arr)
+// [5, 4, 3, 2, 1]
+
+// While
+let arr2 = []
+let j = 0
+while(j < 5){
+    arr2.push(j)
+    j++
+}
+console.log(arr2)
+// [0, 1, 2, 3, 4]
+*/
+
+// Write a for loop that iterates through the array and returns the total of the sum of the items in the array
+const myArr = [2, 3, 4, 5, 6]
+let total = 0
+for(let i = 0; i < myArr.length; i++){
+    total += myArr[i]
+}
+
+console.log(total)
