@@ -2039,3 +2039,5 @@ export { functionName, functionName2 }
 // Propert syntax for importing functions from a js file
 import { functionName, functionName2 } from './index.js'
 */
+
+window.prompt("Hello")

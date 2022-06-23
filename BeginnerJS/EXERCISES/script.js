@@ -1128,14 +1128,3 @@ function printNames(currentPerson){
 
 printNames(person)
 */
-// 6-23-2022
-// Assign list to a destructured array that is equal to the 3 through 10.
-
-const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-function removeFirstTwo(list){
-    const [a, b, ...arr] = list
-    return arr
-}
-
-const arr = removeFirstTwo(source)
-console.log(arr)
