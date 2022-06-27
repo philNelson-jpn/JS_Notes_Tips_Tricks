@@ -1183,6 +1183,7 @@ function func(x, callback){
 func(10, (value) => console.log(value))
 */
 // Use recursion to return an array that begins with startNum and ends with endNum.
+/*
 function rangeOfNumbers(startNum, endNum){
     if(endNum - startNum === 0){
         return [startNum]
@@ -1193,3 +1194,110 @@ function rangeOfNumbers(startNum, endNum){
     }
 }
 console.log(rangeOfNumbers(2, 5))
+*/
+/*
+// Return a random number between 0 and 50
+function randomRange(){
+    return Math.floor(Math.random() * (50 - 2 + 1) + 2)
+}
+console.log(randomRange())
+// Make a min and max argument that the user can choose to specify a range of numbers from which a random number will be generated
+function randomRangeGenerator(minVal, maxVal){
+    return Math.floor(Math.random() * (maxVal - minVal + 1) + minVal)
+}
+console.log(randomRangeGenerator(2, 7))
+*/
+// Convert the switch statement into an object called lookup. Use it to look up val and assign the associated string to the result variable.
+/*
+  switch(val) {
+    case "alpha":
+      result = "Adams";
+      break;
+    case "bravo":
+      result = "Boston";
+      break;
+    case "charlie":
+      result = "Chicago";
+      break;
+    case "delta":
+      result = "Denver";
+      break;
+    case "echo":
+      result = "Easy";
+      break;
+    case "foxtrot":
+      result = "Frank";
+  }
+
+
+
+function phoneticLookup(val) {
+    let result = ""
+  
+    const list = {
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie": "Chicago",
+    "delta": "Denver",
+    "echo": "Easy",
+    "foxtrot": "Frank",
+      }
+
+    result = list[val]
+    return result
+  }
+  
+console.log(phoneticLookup("foxtrot"))
+ */ 
+
+// Use map to double the numbers of an array in a new array.
+/*
+const a = [1, 2, 3, 4, 5, 6]
+const b = a.map(val => val * 2)
+console.log(b)
+console.log(a)
+// [2, 4, 6, 8, 10, 12]
+*/
+
+// Use find and filter on an array of objects of prices
+/*
+const prices = [
+    { price: 12 },
+    { price: 120 },
+    { price: 122 },
+    { price: 102 },
+    { price: 19 },
+    { price: 39 }
+]
+
+const total = prices.reduce((sum, item) => sum + item.price, 0)
+console.log(total)
+
+const found = prices.find(item => item.price > 12 && item.price < 40)
+console.log(found)
+// {price: 19}
+const filtered = prices.filter(item => item.price > 12 && item.price < 40)
+console.log(filtered)
+// {price: 19}
+// {price: 39}
+*/
+
+// do...while and while loop
+
+const a = []
+let i = 0
+while(i < 5){
+    a.push(i)
+    i++
+}
+
+console.log(a)
+
+const b = []
+let j = 0
+do{
+    b.push(j)
+    j++
+}while(j < 5)
+
+console.log(b)
