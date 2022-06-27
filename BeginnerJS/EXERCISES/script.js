@@ -1182,4 +1182,14 @@ function func(x, callback){
 
 func(10, (value) => console.log(value))
 */
-
+// Use recursion to return an array that begins with startNum and ends with endNum.
+function rangeOfNumbers(startNum, endNum){
+    if(endNum - startNum === 0){
+        return [startNum]
+    }else{
+        const array = rangeOfNumbers(startNum, endNum - 1)
+        array.push(endNum)
+        return array
+    }
+}
+console.log(rangeOfNumbers(2, 5))
