@@ -2039,5 +2039,144 @@ export { functionName, functionName2 }
 // Propert syntax for importing functions from a js file
 import { functionName, functionName2 } from './index.js'
 */
+// 6-27-2022
+/*
+// Create a new Map that has an three ids with three an object made up of two key/value pairs for each. Write a function that returns the object's contents when we pass it the id from the Map we created:
+const testMap = new Map([
+    [1, {test: "test1", desc: "description1"}],
+    [2, {test: "test2", desc: "description2"}],
+    [3, {test: "test3", desc: "description3"}]
+])
 
-window.prompt("Hello")
+function getId(id){
+    return testMap.get(id)
+}
+
+console.log(getId(2))
+*/
+
+// Import EVERYTHING from a file
+// import * as moduleName from "./module_stuff.js"
+/*
+const starWarsMap = new Map([
+    ["A New Hope", "a classic"],
+    ["The Empire Strikes Back", "the best of the bunch"],
+    ["The Return of the Jedi", "a good time"]
+])
+
+starWarsMap.forEach((value, key) => {
+    console.log(`${key} is considered ${value} by everyone.`)
+})
+// A New Hope is considered a classic by everyone.
+// The Empire Strikes Back is considered the best of the bunch by everyone.
+// The Return of the Jedi is considered a good time by everyone.
+*/
+/*
+import * as moduleName from "./poopy.js"
+moduleName.functionName(arg, arg2)
+*/
+
+// Assign list to a destructured array that is equal to 3 through 10.
+/*
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+function removeFirstTwo(list){
+    const [a, b, ...arr] = [...list]
+    return arr
+}
+console.log(removeFirstTwo(source))
+*/
+/*
+// Tests in Jest
+test("this test should do this", ()=> {
+    const a = 1
+    const b = 2
+    expect(func(a, b)).toBe(3)
+})
+*/
+// Loop through the array to return each item and wrap it in an <li> tag with a class "text-warning" using string template literals.
+/*
+const result = {
+    success: ["max-length", "no-amd", "prefer-arrow-functions"],
+    failure: ["no-var", "var-on-top", "linebreak"],
+    skipped: ["no-extra-semi", "no-dup-keys"]
+    }
+    function makeList(arr) {
+    const failureItems = []
+        for(let i = 0; i < arr.length; i++){
+            failureItems.push(`<li class="text-warning">${arr[i]}</li>`)
+        }
+
+    return failureItems
+}
+    
+    
+    const failuresList = makeList(result.failure)
+    console.log(failuresList)
+    // [ '<li class="text-warning">no-var</li>',
+    // '<li class="text-warning">var-on-top</li>',
+    // '<li class="text-warning">linebreak</li>' ]
+    */
+
+    // How do we prevent an object from being changed/mutated?
+    
+    /*const person = {
+        name: "Phil"
+    }
+
+    Object.freeze(person)
+    person.name = "Dave"
+    console.log(person.name)
+    // Phil
+    */
+/*
+// Remove duplicates from an array with a function that uses Set
+    const arr = [1,1,2,3,3,3,4,5,6,6,7,7]
+    function removeDups(arr){
+        return [...new Set(arr)]
+    }
+    const newArr = removeDups(arr)
+    console.log(newArr)
+
+*/
+
+// Add a setter to this code so that we can set an explicit fullName outside of the person object.
+/*
+const person = {
+    firstName: "Phil",
+    lastName: "Nelson",
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`
+    },
+    set fullName(value){
+        ;[this.firstName, this.lastName] = value.split(' ')
+    }
+}
+
+person.fullName = "Ricky Bobby"
+console.log(person.fullName)
+*/
+// Create a class called Thermostat that takes in 'fahrenheit' as an argument within the constructor
+// The Thermostat class should use a getter called 'temperature' to calculate and return celsius (C = 5/9 * (F - 32))
+// The Thermostat class should also use a setter that takes in celsius as an argument and sets 'fahrenheit' to C * 9.0 / 5 + 32
+/*
+class Thermostat{
+    constructor(fahrenheit){
+        this.fahrenheit = fahrenheit
+    }
+    get temperature(){
+        return 5 / 9 * (this.fahrenheit - 32)
+    }
+    set temperature(celsius){
+        this.fahrenheit = celsius * 9 / 5 + 32
+    }
+}
+
+const thermos = new Thermostat(86)
+console.log(thermos.temperature)
+*/
+// How do we use the spread operator to change node lists into arrays (since they are already very similar)?
+/*
+const divs = [...document.querySelectorAll("div")]
+divs.forEach(div => console.log(div))
+*/
+
