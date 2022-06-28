@@ -1283,7 +1283,7 @@ console.log(filtered)
 */
 
 // do...while and while loop
-
+/*
 const a = []
 let i = 0
 while(i < 5){
@@ -1301,3 +1301,25 @@ do{
 }while(j < 5)
 
 console.log(b)
+*/
+// Change playerNumber to 16 and then use bracket notation to get the player associated with the playerNumber
+
+const testObj = {
+    12: "Namath",
+    16: "Montana",
+    19: "Unitas"
+}
+
+const playerNumber = 16
+const player = testObj[playerNumber]
+console.log(player)
+// Montana
+
+
+
+function getPlayer(obj, playerNumber){
+    console.log(obj[playerNumber])
+}
+
+getPlayer(testObj, 16)
+// Montana
