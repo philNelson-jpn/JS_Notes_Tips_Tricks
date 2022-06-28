@@ -2180,5 +2180,8 @@ const divs = [...document.querySelectorAll("div")]
 divs.forEach(div => console.log(div))
 */
 
+// 6-28-2022
 
+// What is the syntax for importing a js file into another js file?
 
+// import { variable, functionName } from "./index.js"
