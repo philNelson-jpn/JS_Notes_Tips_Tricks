@@ -2180,3 +2180,5 @@ const divs = [...document.querySelectorAll("div")]
 divs.forEach(div => console.log(div))
 */
 
+
+
