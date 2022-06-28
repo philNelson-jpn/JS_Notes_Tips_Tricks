@@ -61,3 +61,25 @@ console.log(baggyBugs.test(bugStr))
 console.log(baggyBugs.test(bagStr))
 // true
 */
+/*
+let quote = "<h1>Winter is coming</h1>"
+let regex = /<.*?>/
+let result = quote.match(regex)
+console.log(result)
+// <h1>
+*/
+
+// Check if a string is made up of either Phil Nelson or Jin Nelson
+let name1 = "Phil Nelson"
+let nameRegex1 = /(Phil|Jin) Nelson/
+console.log(nameRegex1.test(name1))
+// true
+
+// Now check if any middle names or initials are also included
+let name2 = "Jin Arthur Nelson"
+let nameRegex2 = /(Phil|Jin).*Nelson/
+console.log(nameRegex2.test(name2))
+// true
+
+
+
