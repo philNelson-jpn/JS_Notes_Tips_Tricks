@@ -154,3 +154,15 @@ let fullName = "Jin Arthur Nelson"
 let nameRegex = /(phil|jin).*nelson/i
 console.log(nameRegex.test(fullName))
 */
+// Flip the order of a string with capture groups
+/*
+let string = "one two three"
+let regex = /(\w+)\s(\w+)\s(\w+)/
+let newString = "$3 $2 $1"
+let result = string.replace(regex, newString)
+console.log(result)
+// three two one
+
+console.log("one two three four".replace(/(\w+)\s(\w+)\s(\w+)\s(\w+)/, '$4 $3 $2 $1'))
+// four three two one
+*/
