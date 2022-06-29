@@ -2185,3 +2185,31 @@ divs.forEach(div => console.log(div))
 // What is the syntax for importing a js file into another js file?
 
 // import { variable, functionName } from "./index.js"
+
+// 6-29-2022
+// Bind 'this' to person so that "Phil" is printed instead of "Global Name"
+/*
+window.name = "Global Name"
+
+const person = {
+    name: "Phil"
+}
+
+function printName(){
+    console.log(this.name)
+}
+
+printName.bind(person)()
+*/
+// Double each element of an array with a for loop.
+/*
+const array = [1, 2, 3, 4, 5]
+const newArray = []
+for(let i = 0; i < array.length; i++){
+    newArray.push(array[i] * 2)
+}
+// With map
+// const newArray = array.map(value => value * 2)
+
+console.log(newArray)
+*/
