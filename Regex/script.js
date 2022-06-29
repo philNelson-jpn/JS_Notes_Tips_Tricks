@@ -70,6 +70,7 @@ console.log(result)
 */
 
 // Check if a string is made up of either Phil Nelson or Jin Nelson
+/*
 let name1 = "Phil Nelson"
 let nameRegex1 = /(Phil|Jin) Nelson/
 console.log(nameRegex1.test(name1))
@@ -80,6 +81,76 @@ let name2 = "Jin Arthur Nelson"
 let nameRegex2 = /(Phil|Jin).*Nelson/
 console.log(nameRegex2.test(name2))
 // true
+*/
 
+// 6-29-2022
+// How do you select back-to-back characters like the ss' or pp's in Mississippi?
+/*
+const hardSpelling = "Mississippi"
+const doubleLetterRegex = /s+/gi
+const doubleLetterRegex = /s{2}/gi
+const result = hardSpelling.match(doubleLetterRegex)
+console.log(result)
+// ['ss', 'ss']
+*/
+// Create a single regex that matches all characters that are not a number or a vowel. Remember to include the appropriate flags in the regex.
+/*
+let quote = "3 blind mice"
+let quoteRegex = /[^aeiou0-9]/gi
+let result = quote.match(quoteRegex)
+console.log(result)
+// [' ', 'b', 'l', 'n', 'd', ' ', 'm', 'c']
+*/
+// How do we select 0 or more characters like all of the a's in Aaaaaaaaargh?
 
+// let argh = "Aaaaaaaaaaaargh"
+// let arghRegex = /a*/i
+// console.log(argh.match(arghRegex))
+// // Aaaaaaaaaaaa
 
+// Change regex so that only the first <h1> is logged.
+/*
+let quote = "<h1>Winter is coming</h1>"
+let quoteRegex = /<.*?>/
+console.log(quote.match(quoteRegex))
+// <h1>
+*/
+// What character do we use to select the first word in a string and what character do we use to select the last character in a string?
+// ^ for the first word and $ for the last
+
+// What is the shorthand character class of [A-Za-z0-9_]?
+// /\w/
+
+// What is the shorthand character class of [^A-Za-z0-9_]?
+// /\W/
+
+// What is the shorthand character class of [0-9]; only selecting digits?
+// /\d/
+
+// What is the shorthand character class of [^0-9]; only selecting NON-digits?
+// /\D/
+
+// How do you find all of the whitespaces in a sentence?
+// /\s/
+
+// What would the the regex be for ohRegex when we want to match the entire phrase Oh no only when it has 3 to 6 letter h's.
+/*
+let ohStr = "Ohhhhhh no"
+let ohRegex = /Oh{3,6} no/i
+console.log(ohRegex.test(ohStr))
+*/
+
+// What character can you use to match both the American and British spellings of words (favorite/favourite, color/colour, etc.)?
+/*
+let iro = "color"
+let iro2 = "colour"
+let iroRegex = /colou?r/
+console.log(iroRegex.test(iro), iroRegex.test(iro2))
+// true true
+*/
+// Check if a string is made up of either Phil Nelson or Jin Nelson. Then check if any middle names or initials are also included.
+/*
+let fullName = "Jin Arthur Nelson"
+let nameRegex = /(phil|jin).*nelson/i
+console.log(nameRegex.test(fullName))
+*/
