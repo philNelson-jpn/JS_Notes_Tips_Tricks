@@ -1336,6 +1336,7 @@ while(i >= 0){
 console.log(myArray)
 */
 // Use the .shift() function to remove the first item from myArray and assign the "shifted off" value to a new variable, removedFromMyArray.
+/*
 const myArray = [1, 2, 3, 4]
 const removedFromMyArray = myArray.shift()
 console.log(removedFromMyArray)
@@ -1344,3 +1345,43 @@ const myArray2 = [[1, 2], ["John", 32]]
 const removedFromMyArray2 = myArray2[1].shift()
 console.log(removedFromMyArray2)
 //John
+*/
+
+// Write a function that takes in an array, removes the first two items and replaces them with two others.
+/*
+function replaceFirstTwo(arr){
+    arr.splice(0, 2, "New item 1", "New item 2")
+    return arr
+}
+let itemArray = ["Humpty", "Dumbty", "Item 3", "Item4"]
+console.log(replaceFirstTwo(itemArray))
+// ['New item 1', 'New item 2', 'Item 3', 'Item4']
+*/
+
+// Write a function that takes in an array and returns a new array with only the third and fourth items in the original array.
+/*
+function pickAndChoose(arr){
+    const newArray = arr.slice(2,4)
+    return newArray
+}
+
+console.log(pickAndChoose(["rainy", "cloudy", "warm", "sunny", "tornados"]))
+// ['warm', 'sunny']
+*/
+
+// Write a function that takes an array and a number. Use a while loop to loop over the array and push a copy of the array to a new array the number of times specified by the number argument.
+/*
+function copyArrays(arr, number){
+    let newArray = []
+    while(number >= 1){
+        newArray.push([...arr])
+        number--
+    }
+    return newArray
+}
+
+console.log(copyArrays(["Yes", "Hello", "Goodbye"], 3))
+// [['Yes', 'Hello', 'Goodbye'],
+// ['Yes', 'Hello', 'Goodbye'],
+// ['Yes', 'Hello', 'Goodbye']]
+*/
