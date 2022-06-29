@@ -1303,7 +1303,7 @@ do{
 console.log(b)
 */
 // Change playerNumber to 16 and then use bracket notation to get the player associated with the playerNumber
-
+/*
 const testObj = {
     12: "Namath",
     16: "Montana",
@@ -1323,3 +1323,24 @@ function getPlayer(obj, playerNumber){
 
 getPlayer(testObj, 16)
 // Montana
+*/
+// 6-29-2022
+// Use a WHILE loop to print out [5, 4, 3, 2, 1, 0]
+/*
+const myArray = []
+let i = 5
+while(i >= 0){
+    myArray.push(i)
+    i--
+}
+console.log(myArray)
+*/
+// Use the .shift() function to remove the first item from myArray and assign the "shifted off" value to a new variable, removedFromMyArray.
+const myArray = [1, 2, 3, 4]
+const removedFromMyArray = myArray.shift()
+console.log(removedFromMyArray)
+//1
+const myArray2 = [[1, 2], ["John", 32]]
+const removedFromMyArray2 = myArray2[1].shift()
+console.log(removedFromMyArray2)
+//John
