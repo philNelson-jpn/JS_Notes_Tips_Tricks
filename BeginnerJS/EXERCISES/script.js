@@ -1422,9 +1422,4 @@ function copyMe(arr, num){
 console.log(copyMe(["Yes", "No", "Maybe"], 3))
 */
 
-function onlyThreeAndFour(arr){
-    let newArray = arr.slice(2,4)
-    return newArray
-}
-
-console.log(onlyThreeAndFour(["Yep", "Yesh", "Yosh", "Yippie"]))
+// import * as funcModule from "./index.js"

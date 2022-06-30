@@ -187,6 +187,12 @@ console.log(string.replace(regex, newString))
 // let result = string.match(regex)
 // console.log(result)
 // // Aaaaaaaaaa
-
-
+// 7-1-2022
+// Return all "twinkle"s
+/*
+let twinkleStar = "Twinkle, twinkle little star."
+let regex = /twinkle/gi
+let result = twinkleStar.match(regex)
+console.log(result)
+*/
 
