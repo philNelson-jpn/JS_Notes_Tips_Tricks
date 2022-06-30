@@ -1385,3 +1385,46 @@ console.log(copyArrays(["Yes", "Hello", "Goodbye"], 3))
 // ['Yes', 'Hello', 'Goodbye'],
 // ['Yes', 'Hello', 'Goodbye']]
 */
+
+// 6-30-2022
+/*
+// Write a function that takes in an array, removes the first two items and replaces them with two others.
+function replaceFirstTwo(arr){
+    arr.splice(0, 2, "grumpy", "dopey")
+    // or
+    // arr.splice(0, 2)
+    // arr.unshift("grumpy", "dopey")
+    return arr
+}
+
+console.log(replaceFirstTwo(["happy", "hungry", "sleepy"]))
+*/
+// Write a function that takes in an array and returns a new array with only the third and fourth items in the original array.
+/*
+function threeAndFour(arr){
+    let newArray = arr.slice(2,4)
+    return newArray
+}
+
+console.log(threeAndFour(["happy", "hungry", "sleepy", "dopey"]))
+*/
+// Write a function that takes an array and a number. Use a while loop to loop over the array and push a copy of the array to a new array the number of times specified by the number argument.
+/*
+function copyMe(arr, num){
+    let newArray =[]
+    while(num >= 1){
+        newArray.push([...arr])
+        num--
+    }
+    return newArray
+}
+
+console.log(copyMe(["Yes", "No", "Maybe"], 3))
+*/
+
+function onlyThreeAndFour(arr){
+    let newArray = arr.slice(2,4)
+    return newArray
+}
+
+console.log(onlyThreeAndFour(["Yep", "Yesh", "Yosh", "Yippie"]))
