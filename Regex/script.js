@@ -166,3 +166,27 @@ console.log(result)
 console.log("one two three four".replace(/(\w+)\s(\w+)\s(\w+)\s(\w+)/, '$4 $3 $2 $1'))
 // four three two one
 */
+
+// console.log("Phil".replace(/(\w+)(\w+)(\w+)(\w+)/, '$4$3$2$1'))
+// lihP
+
+
+// 6-30-2022
+// Use .replace() and a capture group to change the string "one two three" to "three two one"
+/*
+let string = "one two three"
+let regex = /(\w+)\s(\w+)\s(\w+)/gi
+let newString = "$3 $2 $1"
+console.log(string.replace(regex, newString))
+// three two one
+*/
+// How do we select 0 or more characters like all of the a's in Aaaaaaaaargh?
+
+// let string = "Aaaaaaaaaargh"
+// let regex = /a*/i
+// let result = string.match(regex)
+// console.log(result)
+// // Aaaaaaaaaa
+
+
+
