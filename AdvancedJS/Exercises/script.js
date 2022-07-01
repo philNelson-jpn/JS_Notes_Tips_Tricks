@@ -2265,3 +2265,30 @@ function double(element){
 
 console.log(array.map(double))
 */
+// Loop through an object and return the number of users that are online with a for...in loop
+/*
+const users = {
+    Alan: {
+      online: false
+    },
+    Jeff: {
+      online: true
+    },
+    Sarah: {
+      online: false
+    }
+  }
+  
+  function countOnline(usersObj) {
+    let total = 0
+    for(let user in usersObj){
+      if(usersObj[user].online === true){
+        total++
+      }
+    }
+      return total
+  }
+  
+  console.log(countOnline(users))
+*/
+
