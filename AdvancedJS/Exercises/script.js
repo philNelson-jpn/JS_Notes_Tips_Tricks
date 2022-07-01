@@ -2213,3 +2213,55 @@ for(let i = 0; i < array.length; i++){
 
 console.log(newArray)
 */
+
+// 7-1-2022
+/*
+class Thermostat {
+    constructor(fahrenheit){
+        this.fahrenheit = fahrenheit
+    }
+
+    get temperature(){
+        return 5/9 * (this.fahrenheit - 32)
+    }
+
+    set temperature(celsius){
+        this.fahrenheit = celsius * 9 / 5 + 32
+    }
+}
+
+const thermos = new Thermostat(86)
+console.log(thermos.temperature)
+// 30 (C)
+thermos.temperature = 37
+console.log(thermos.fahrenheit)
+// 98.6 (F)
+*/
+
+// How is the spread operator different from the rest operator?
+// Spread
+/*
+const array = [1, 2, 3, 4, 5]
+const newArray = [0, ...array]
+console.log(newArray)
+// Rest
+function arraySum(...numbers){
+    return numbers.reduce((sum, number) => sum + number, 0)
+}
+console.log(arraySum(...[1,2,3,4,5]))
+*/
+
+// import a default function from a js file
+// import poopers from "./index.js"
+// no {}, name it anything you like
+
+// Use map to apply the double function to the array and then log out the result.
+/*
+const array = [1,2,3,4,5]
+
+function double(element){
+    return element * 2
+}
+
+console.log(array.map(double))
+*/
