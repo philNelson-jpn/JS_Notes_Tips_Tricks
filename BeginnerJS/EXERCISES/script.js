@@ -1423,3 +1423,65 @@ console.log(copyMe(["Yes", "No", "Maybe"], 3))
 */
 
 // import * as funcModule from "./index.js"
+// 7-1-2022
+// Write a closure function that returns a function that logs out both its argument and the closure function's argument.
+/*
+function closure(variable){
+    return function func(variable2){
+        console.log(variable)
+        console.log(variable2)
+    }
+}
+
+let a = closure(1)
+a(2)
+*/
+// Use recursion to return an array that begins with startNum and ends with endNum.
+/*
+function rangeOfNums(startNum, endNum){
+    if(endNum - startNum === 0){
+        return [startNum]
+    }else{
+        let array = rangeOfNums(startNum, endNum - 1)
+        array.push(endNum)
+        return array
+    }
+}
+
+console.log(rangeOfNums(2, 8))
+*/
+// Write a function that takes in an array, removes the first two items and replaces them with two new ones.
+/*
+function removeFirstTwo(array){
+    array.splice(0, 2, "Merry", "Frodo")
+    return array
+}
+
+console.log(removeFirstTwo(["Bilbo", "Golem", "Pippin", "Sam"]))
+// ['Merry', 'Frodo', 'Pippin', 'Sam']
+*/
+// Use a nested for loop to iterate through an array and multiply all of the values:
+/*
+function multiplyAllTheThings(arr){
+    let product = 1
+        for(let i = 0; i < arr.length; i++){
+            for(let j = 0; j < arr[i].length; j++){
+                product *= arr[i][j]
+            }
+        }
+    return product
+}
+
+const array = [[1,2],[3,4],[5,6,7]]
+console.log(multiplyAllTheThings(array))
+// 5040
+*/
+
+// Write a function that takes in an array and returns a new array with only the third and fourth items in the original array.
+function onlyThirdAndFourth(arr){
+    const newArray = arr.slice(2,4)
+    return newArray
+}
+const originalGang = ["Merry", "Pippin", "Frodo", "Sam"]
+console.log(onlyThirdAndFourth(originalGang))
+// ['Frodo', 'Sam']
