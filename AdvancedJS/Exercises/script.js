@@ -2320,3 +2320,28 @@ let users = {
 //   [ 'Alan', 'Jeff', 'Sarah', 'Ryan' ]
 */
 
+// 7-2-2022
+
+// Create a new Cat class that extends Animal and redefines the speak() function to say "meow"
+/*
+class Animal {
+    constructor(name){
+        this.name = name
+    }
+
+    speak(){
+        console.log(`Hi, my name is ${this.name}`)
+    }
+}
+
+class Cat extends Animal {
+    speak(){
+        console.log(`Meow meow meow my name is ${this.name}`)
+    }
+}
+
+const kitty = new Cat("KittyKat")
+kitty.speak()
+// Meow meow meow my name is KittyKat
+*/
+
