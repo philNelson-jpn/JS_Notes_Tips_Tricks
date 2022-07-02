@@ -1478,6 +1478,7 @@ console.log(multiplyAllTheThings(array))
 */
 
 // Write a function that takes in an array and returns a new array with only the third and fourth items in the original array.
+/*
 function onlyThirdAndFourth(arr){
     const newArray = arr.slice(2,4)
     return newArray
@@ -1485,3 +1486,71 @@ function onlyThirdAndFourth(arr){
 const originalGang = ["Merry", "Pippin", "Frodo", "Sam"]
 console.log(onlyThirdAndFourth(originalGang))
 // ['Frodo', 'Sam']
+*/
+//7-2-2022
+// Loop through an object and return the number of users that are online with a for...in loop
+/*
+const users = {
+    Alan: {
+      online: false
+    },
+    Jeff: {
+      online: true
+    },
+    Sarah: {
+      online: true
+    }
+  }
+  
+  function countOnline(usersObj) {
+    let number = 0
+    for(user in usersObj){
+        if(usersObj[user].online === true){
+            number++
+        }
+
+    }
+    return number
+  }
+  
+  console.log(countOnline(users))
+//   2
+*/
+// Add ["Paul", 35] to the beginning of the myArray variable using unshift().
+/*
+const myArray = [["Phil", 34], ["Jin", 4]]
+myArray.unshift(["Paul", 35])
+console.log(myArray[0])
+// ["Paul", 35]
+*/
+
+// What method can you use on an object to return the keys of that object in an array?
+/*
+const users = {
+    Alan: {
+      online: false
+    },
+    Jeff: {
+      online: true
+    },
+    Sarah: {
+      online: true
+    }
+}
+
+function printKeys(obj){
+    return Object.keys(obj)
+}
+
+console.log(printKeys(users))
+// ['Alan', 'Jeff', 'Sarah']
+*/
+
+// Using Math.floor and Math.random, return a random whole number that is >= myMin and <= myMax.
+/*
+function randomRange(myMin, myMax){
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin
+}
+
+console.log(randomRange(2,26))
+*/
