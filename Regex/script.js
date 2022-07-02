@@ -196,3 +196,30 @@ let result = twinkleStar.match(regex)
 console.log(result)
 */
 
+//7-2-2022
+// How do we specify a lower/upper limit or an exact match of character length with {}?
+/*
+let string = "Ohhhhhh wow"
+let regex = /Oh{2,6} wow/
+console.log(regex.test(string))
+// true
+*/
+/*
+// What does the `.` do in Regex (also called the dot or period)?
+let string = "Ohhhhhh waw"
+let regex = /Ohhhhhh w.w/
+console.log(regex.test(string))
+// true
+*/
+// [0-9] shorthand = /\d/
+
+// What character do we use to select the first word in a string and what character do we use to select the last character in a string?
+// ^First and last$
+
+// Create a single regex that matches all characters that are not a number or a vowel. Remember to include the appropriate flags in the regex.
+/*
+let quote = "3 blind mice"
+let quoteRegex = /[^aeiou0-9]/gi
+console.log(quote.match(quoteRegex))
+//  [' ', 'b', 'l', 'n', 'd', ' ', 'm', 'c']
+*/
