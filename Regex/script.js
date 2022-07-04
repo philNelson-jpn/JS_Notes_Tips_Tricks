@@ -223,3 +223,9 @@ let quoteRegex = /[^aeiou0-9]/gi
 console.log(quote.match(quoteRegex))
 //  [' ', 'b', 'l', 'n', 'd', ' ', 'm', 'c']
 */
+
+// 7-4-2022
+
+let string = "Jin Arthur Nelson"
+let regex = /(Phil|Jin).*Nelson/
+console.log(string.match(regex))
