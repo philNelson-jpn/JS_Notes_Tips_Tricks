@@ -2345,3 +2345,33 @@ kitty.speak()
 // Meow meow meow my name is KittyKat
 */
 
+// 7-4-2022
+// Prevent an object from being mutated
+/*
+const person = {
+    name: "Phil"
+}
+
+Object.freeze(person)
+person.name = "George"
+console.log(person.name)
+*/
+
+// Change the function to a pure function
+/*
+const person = {
+    name: "Phil",
+    friends: ["Simon", "Caleb"]
+}
+function addFriendImpure(friendName){
+    person.friends.push(friendName)
+}
+addFriendImpure("Bobby")
+console.log(person.friends)
+
+function addFriendPure(obj, friendName){
+    return {...obj, friends: [...obj.friends, friendName]}
+}
+console.log(addFriendPure(person, "Kelly"))
+console.log(person.friends)
+*/

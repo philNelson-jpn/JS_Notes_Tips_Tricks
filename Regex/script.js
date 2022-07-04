@@ -225,7 +225,7 @@ console.log(quote.match(quoteRegex))
 */
 
 // 7-4-2022
-
+// Match a string as long as it has the correct last name (can take in two first names and any middle name)
 let string = "Jin Arthur Nelson"
 let regex = /(Phil|Jin).*Nelson/
 console.log(string.match(regex))
