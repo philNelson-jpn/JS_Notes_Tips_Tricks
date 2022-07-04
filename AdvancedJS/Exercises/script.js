@@ -2375,3 +2375,55 @@ function addFriendPure(obj, friendName){
 console.log(addFriendPure(person, "Kelly"))
 console.log(person.friends)
 */
+
+// Convert this code to use classes instead of prototype.
+/*
+function Person(name, age){
+    this.name = name,
+    this.age = age
+}
+
+Person.prototype.printName = function(){
+    console.log(this.name)
+}
+
+Person.prototype.printHi = function(){
+    console.log(`Hi, ${this.name}`)
+}
+*/
+/*
+class Person {
+    constructor(name, age){
+        this.name = name
+        this.age = age
+    }
+
+    printName(){
+        console.log(this.name)
+    }
+
+    printHi(){
+        console.log(`Hello there, ${this.name}`)
+    }
+}
+
+const person = new Person("Phil", 34)
+person.printName()
+person.printHi()
+*/
+// How do we changed the name of a key when destructuring an object?
+/*
+const person = {
+    name: "Phil",
+    age: 34,
+    address: {
+        street: "Joseph",
+        city: "Oxford"
+    }
+}
+
+const { name: firstName, age, address} = person 
+console.log(firstName, address.street)
+// Phil Joseph
+*/
+
