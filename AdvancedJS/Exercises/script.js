@@ -2427,3 +2427,17 @@ console.log(firstName, address.street)
 // Phil Joseph
 */
 
+//7-5-2022
+// What if we want to import everything from a js file? What is the syntax?
+// import * as mathModule from "./math.js"
+
+// Convert this code to use a getter instead of a function:
+/*
+const person = {
+    firstName: "Phil",
+    lastName: "Nelson",
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`
+    }
+}
+*/
