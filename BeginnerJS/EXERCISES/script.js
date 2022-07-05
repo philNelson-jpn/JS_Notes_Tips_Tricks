@@ -1610,3 +1610,82 @@ function removeFirstTwo(list){
 const arr = removeFirstTwo(source)
 console.log(arr)
 */
+
+// 7-5-2022
+// How do you remove a property/value from an object?
+/*
+const person = {
+    name: "Phil",
+    age: 34,
+    favoriteFood: "pizza"
+}
+
+delete person.favoriteFood
+console.log(person.favoriteFood)
+//undefined
+*/
+
+// How do we generate a random WHOLE number between 1-10?
+/*
+let randomWhole = Math.floor(Math.random() * 11)
+console.log(randomWhole)
+*/
+
+// Write a function that takes in an array, removes the first two items and replaces them with two new ones.
+// Hint: The array method you use can take in more than two arguments.
+/*
+let fellowship = ["Ron", "Hermione", "Pippin", "Merry"] 
+function replaceFirstTwo(arr){
+    arr.splice(0, 2, "Frodo", "Sam")
+    return arr
+}
+
+console.log(replaceFirstTwo(fellowship))
+// ['Frodo', 'Sam', 'Pippin', 'Merry']
+*/
+
+// Write a function that takes in an array and returns a new array with only the third and fourth items in the original array.
+/*
+function threeAndFour(arr){
+    let newArray = arr.slice(2,4)
+    return newArray
+}
+
+const array = [1,2,3,4,5,6]
+
+console.log(threeAndFour(array))
+// [3, 4]
+console.log(array)
+// [1,2,3,4,5,6]
+*/
+// Use the reduce method to get the total price of all of the items.
+/*
+const items = [
+    { price: 10 },
+    { price: 110 },
+    { price: 22 },
+    { price: 37 },
+    { price: 14 }
+]
+
+const total = items.reduce((sum, item) => sum + item.price, 0)
+console.log(total)
+// 193
+*/
+// Write a function that takes an array and a number. Use a while loop to loop over the array and push a copy of the array to a new array the number of times specified by the number argument.
+/*
+function copyMachine(arr, num){
+    let newArray = []
+    while(num >= 1){
+        newArray.push([...arr])
+        num--
+    }
+    return newArray
+}
+
+console.log(copyMachine([1,2,3,4], 4))
+// [1, 2, 3, 4] x 4
+*/
+
+
+
