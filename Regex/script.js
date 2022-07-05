@@ -226,6 +226,27 @@ console.log(quote.match(quoteRegex))
 
 // 7-4-2022
 // Match a string as long as it has the correct last name (can take in two first names and any middle name)
+/*
 let string = "Jin Arthur Nelson"
 let regex = /(Phil|Jin).*Nelson/
 console.log(string.match(regex))
+*/
+
+// 7-5-2022
+
+// Use .replace() and a capture group to change the string "one two three" to "three two one"
+/*
+let string = "one1 two2 three3"
+let regex = /(\w+)\s(\w+)\s(\w+)/
+let newString = "$3 $2 $1"
+console.log(string.replace(regex, newString))
+// three3 two2 one1
+*/
+
+// Retrieve all of the `twinkle`s from twinkleStar by checking to see if anything in twinkleStar matches starRegex globally and case insensitive (ignore case).
+/*
+let string = "Twinkle, twinkle little star"
+let regex = /twinkle/gi
+let result = string.match(regex)
+console.log(result)
+*/
