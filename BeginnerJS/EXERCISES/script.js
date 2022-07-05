@@ -1687,5 +1687,26 @@ console.log(copyMachine([1,2,3,4], 4))
 // [1, 2, 3, 4] x 4
 */
 
+// Write a function that reverses a string (for loop)
+/*
+function reverseAString(str){
+    reversedString = ""
+    for (let i = str.length - 1; i >= 0; i--){
+        reversedString += str[i]
+    }
+    return reversedString
+}
+
+console.log(reverseAString("Hello"))
+*/
+// Write a function that reverses a string (methods)
+
+function stringReverser(str){
+    return str.split('').reverse().join('')
+}
+
+console.log(stringReverser("Hello2"))
+
+
 
 
