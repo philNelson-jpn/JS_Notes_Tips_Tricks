@@ -2441,3 +2441,26 @@ const person = {
     }
 }
 */
+/*
+// How do we create a function on a prototype?
+function Person(name, age){
+    this.name = name
+    this.age = age
+}
+
+Person.prototype.printName = function(){
+    console.log(`Hello. My name is ${this.name}.`)
+}
+
+const will = new Person("Will", 45)
+const anotherPerson = Object.create(will)
+anotherPerson.name = "Philly Mac"
+will.printName()
+// Hello. My name is Will.
+anotherPerson.printName()
+// Hello. My name is Philly Mac.
+
+*/
+
+// How do we export functions so that we can use them in other js files?
+// export {uppercaseString, lowercaseString}
