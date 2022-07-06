@@ -1700,12 +1700,114 @@ function reverseAString(str){
 console.log(reverseAString("Hello"))
 */
 // Write a function that reverses a string (methods)
-
+/*
 function stringReverser(str){
     return str.split('').reverse().join('')
 }
 
 console.log(stringReverser("Hello2"))
+// 2olleH
+*/
+
+
+// Write a function that reverses a string with a for loop
+/*
+function reverseMe(str){
+    reversedStr = ""
+    for(let i = str.length - 1; i >= 0; i--){
+        reversedStr += str[i]
+    }
+    return reversedStr
+}
+
+console.log(reverseMe("hiiiiii"))
+// iiiiiih
+*/
+
+// Use recursion to return an array that begins with startNum and ends with endNum.
+/*
+function rangeOfNumbers(startNum, endNum){
+    if(endNum - startNum === 0){
+        return [startNum]
+    }else{
+        let array = rangeOfNumbers(startNum, endNum - 1)
+        array.push(endNum)
+        return array
+    }
+}
+
+console.log(rangeOfNumbers(2, 7))
+*/
+
+// Write a function that reverses a string (using methods)
+/*
+function reversoBot(str){
+    return str.split('').reverse().join('')
+}
+console.log(reversoBot("Hello"))
+// olleH
+*/
+
+// Convert this while loop into a recursive function.
+/*
+const person = {
+    name: "Phil",
+    friend: {
+        name: "Simon",
+        friend: {
+            name: "Caleb"
+        }
+    }
+}
+
+let currentPerson = person
+while(currentPerson != null){
+    console.log(currentPerson.name)
+    currentPerson = currentPerson.friend
+}
+
+function printNames(currentPerson){
+    if(currentPerson == null) return
+    console.log(currentPerson.name)
+    printNames(currentPerson.friend)
+}
+
+printNames(person)
+*/
+// Write a for loop that iterates through the array and returns the total of the sum of the items in the array
+/*
+const myArr = [2, 3, 4, 5, 6]
+
+let total = 0
+for(let i = 0; i < myArr.length; i++){
+    total += myArr[i]
+}
+
+console.log(total)
+*/
+
+// Loop through the array to return each item and wrap it in an <li> tag with a class "text-warning" using string template literals.
+/*
+const result = {
+    success: ["max-length", "no-amd", "prefer-arrow-functions"],
+    failure: ["no-var", "var-on-top", "linebreak"],
+    skipped: ["no-extra-semi", "no-dup-keys"]
+    }
+
+    function makeList(arr) {
+    const failureItems = []
+    for(let i = 0; i < arr.length; i++){
+        failureItems.push(`<li class="text-warning">${arr[i]}</li>`)
+    }
+    return failureItems
+    }
+    
+    const failuresList = makeList(result.failure)
+    console.log(failuresList)
+    // [ '<li class="text-warning">no-var</li>',
+    // '<li class="text-warning">var-on-top</li>',
+    // '<li class="text-warning">linebreak</li>' ]
+*/
 
 
 
