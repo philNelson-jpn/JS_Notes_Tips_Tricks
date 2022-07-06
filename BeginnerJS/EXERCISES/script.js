@@ -1709,6 +1709,7 @@ console.log(stringReverser("Hello2"))
 // 2olleH
 */
 
+//7-6-2022
 
 // Write a function that reverses a string with a for loop
 /*
@@ -1809,6 +1810,40 @@ const result = {
     // '<li class="text-warning">linebreak</li>' ]
 */
 
+// Find the longest word in a string and return the number of characters it has
+/*
+function findLongestWordLength(str) {
+    let words = str.split(' ')
+    let maxLength = 0
+    let maxWord = ""
+  
+    for(let i = 0; i < words.length; i++){
+      if(words[i].length > maxLength){
+        maxLength = words[i].length
+        if(maxLength === words[i].length){
+            maxWord = words[i]
+        }
+      }
+    }
+    return `The longest word in this string is ${maxLength} letters long. The word is "${maxWord}."`
+  }
+  
+  console.log(findLongestWordLength("Phil is finally beginning to grasp how to use JavaScript"));
+//   The longest word in this string is 10 letters long. The word is "JavaScript."
+*/
 
 
+function findLongestWordLength(str) {
+    let words = str.split(' ')
+    let maxLength = 0
+  
+    for(let i = 0; i < words.length; i++){
+      if(words[i].length > maxLength){
+        maxLength = words[i].length
+      }
+    }
+    return `The longest word in this string is ${maxLength} letters long."`
+  }
+
+console.log(findLongestWordLength("Hello there, General Kenobi"))
 
