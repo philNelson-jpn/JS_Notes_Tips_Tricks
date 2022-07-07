@@ -1886,7 +1886,7 @@ countAndPrintOnline(users)
 // Sarah
 // 2
 */
-
+/*
 // Write a function that reverses a string with a for loop
 function reverseString(string){
     let reversedStr = ""
@@ -1898,3 +1898,73 @@ function reverseString(string){
 
 console.log(reverseString("Yoooooo"))
 // ooooooY
+*/
+
+/*
+function findLongestWordLength(str) {
+    let words = str.split(' ')
+    let maxLength = 0
+    let maxWord = ""
+  
+    for(let i = 0; i < words.length; i++){
+      if(words[i].length > maxLength){
+        maxLength = words[i].length
+        maxWord = words[i]
+      }
+    }
+    return `The longest word in this string is ${maxLength} letters long. The word is "${maxWord}."`
+  }
+  
+  console.log(findLongestWordLength("Phil is finally beginning to grasp how to use JavaScript"));
+//   The longest word in this string is 10 letters long. The word is "JavaScript."
+*/
+// Change this to use an anonymous function. 
+
+// Hint: define printVariable within printName instead of outside of it.
+/*function printVariable(variable){
+    console.log(variable)
+}
+
+function printName(name, callback){
+    callback(`Hello there, ${name}`)
+}
+
+printName("Phil", printVariable)
+*/
+/*
+function printName(name, callback){
+    callback(`Hello there, ${name}`)
+}
+
+printName("Phil", function(variable){
+    console.log(variable)
+})
+*/
+
+// What method can you use on an object to return the keys of that object in an array?
+/*
+const person = {
+    name: "Phil",
+    age: 34,
+    favoriteIceCream: "chocolate"
+}
+
+console.log(Object.keys(person))
+// ['name', 'age', 'favoriteIceCream']
+*/
+
+// Find the longest word in a string and print the length of that word (a number).
+/*
+function findTheLongestWord(str){
+    let words = str.split(' ')
+    let maxWordLength = 0
+    for(let i = 0; i < words.length; i++){
+        if(words[i].length > maxWordLength){
+            maxWordLength = words[i].length
+        }
+    }
+    return maxWordLength
+}
+
+console.log(findTheLongestWord("Jello hats are large and fluffy poopernickles"))
+*/
