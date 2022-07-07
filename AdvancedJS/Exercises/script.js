@@ -2464,3 +2464,48 @@ anotherPerson.printName()
 
 // How do we export functions so that we can use them in other js files?
 // export {uppercaseString, lowercaseString}
+
+// Create a new Dog class that extends Animal, adds an "owner" property, and redfines the function speak() to say "Woof!"
+/*
+class Animal {
+    constructor(name){
+        this.name = name
+    }
+
+    speak(){
+        console.log(`Yo, it's ya boi ${name}`)
+    }
+}
+
+class Dog extends Animal {
+    constructor(name, owner){
+        super(name)
+        this.owner = owner
+    }
+
+    speak(){
+        console.log(`This is ${this.name} saying "Woof!"`)
+    }
+}
+
+const puppers = new Dog("Indy", "Phil")
+puppers.speak()
+*/
+// How do you set default values in JavaScript?
+
+// const DEFAULT_NUMBER = 5
+
+// How do we ensure that default parameters get passed to our function even when they are within an object and no arguments are given when the function is called?
+/*
+const person = {
+    name: "Phil",
+    age: 34,
+    likes: "dogs"
+}
+
+function printInfo(name, age = 34){
+    console.log(`Hi, my name is ${name} and I am ${age} years old. I like ${person.likes}.`)
+}
+
+printInfo("Phil")
+*/
