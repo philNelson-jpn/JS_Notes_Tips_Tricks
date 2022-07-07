@@ -1832,18 +1832,69 @@ function findLongestWordLength(str) {
 //   The longest word in this string is 10 letters long. The word is "JavaScript."
 */
 
+// 7-7-2022
 
-function findLongestWordLength(str) {
-    let words = str.split(' ')
-    let maxLength = 0
-  
-    for(let i = 0; i < words.length; i++){
-      if(words[i].length > maxLength){
-        maxLength = words[i].length
-      }
+// Create a function that loops through an object and returns the number of users where their online status is equal to true.
+/*
+const users = {
+    Alan: {
+        online: false
+    },
+    Jeff: {
+        online: true
+    },
+    Sarah: {
+        online: true
     }
-    return `The longest word in this string is ${maxLength} letters long."`
-  }
+}
 
-console.log(findLongestWordLength("Hello there, General Kenobi"))
+function whosOnline(usersObj){
+    for(let user in usersObj){
+        if(usersObj[user].online === true){
+            console.log(user)
+        }
+    }
+}
+whosOnline(users)
+// Jeff
+// Sarah
 
+function onlineCount(userObj){
+    total = 0
+    for(user in userObj){
+        if(userObj[user].online === true){
+            total++
+        }
+    }
+    return total
+}
+console.log(onlineCount(users))
+// 2
+
+function countAndPrintOnline(userObj){
+    let total = 0
+    for(user in userObj){
+        if(userObj[user].online === true){
+            console.log(user)
+            total++
+        }
+    }
+    console.log(total)
+}
+countAndPrintOnline(users)
+// Jeff
+// Sarah
+// 2
+*/
+
+// Write a function that reverses a string with a for loop
+function reverseString(string){
+    let reversedStr = ""
+    for(let i = string.length - 1; i >= 0; i--){
+        reversedStr += string[i]
+    }
+    return reversedStr
+}
+
+console.log(reverseString("Yoooooo"))
+// ooooooY
