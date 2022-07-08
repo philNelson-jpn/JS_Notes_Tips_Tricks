@@ -1968,3 +1968,20 @@ function findTheLongestWord(str){
 
 console.log(findTheLongestWord("Jello hats are large and fluffy poopernickles"))
 */
+
+// 7-8-2022
+// Create a single regex that matches all characters that are not a number or a vowel. Remember to include the appropriate flags in the regex.
+/*
+let quote = "3 blind mice"
+let quoteRegex = /[^aeiou0-9]/gi
+let result = quote.match(quoteRegex)
+console.log(result)
+*/
+/*
+// Using Math.floor and Math.random, return a random whole number that is >= myMin and <= myMax.
+function randomRange(min, max){
+    return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+console.log(randomRange(1,5))
+*/
