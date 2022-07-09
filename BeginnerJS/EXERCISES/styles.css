@@ -1,25 +1,13 @@
-.wrapper-wrapper{
-    overflow: auto;
-}
-
 .wrapper {
-    display: flex;
-    width: 1000px;
-    scroll-snap-type: x mandatory;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
 }
 
 .item{
-    width: 200px;
-    height: 200px;
     background-color: royalblue;
     border: solid white 2px;
-    scroll-snap-align: center;
-}
-
-.item:nth-of-type(3){
-    width: 200px;
-    height: 200px;
-    background-color: deeppink;
 }
 
 h1{
