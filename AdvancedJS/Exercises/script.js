@@ -2509,3 +2509,63 @@ function printInfo(name, age = 34){
 
 printInfo("Phil")
 */
+
+// 7-8-2022
+// Write a function that takes a full name, splits the first name into an array, and returns it. Then destructure the array so that both the first name and last name are accessible as separate variables (assign the destructured array to the function).
+/*
+function printName(fullName){
+    return fullName.split(' ')
+}
+
+const [firstName, lastName] = printName("Phil Nelson")
+console.log(firstName)
+*/
+
+// Write a function that checks if the second argument is the last part of the first argument (a string).
+
+// confirmEnding("Bastian", "n") should return true.
+/*
+function confirmEnding(str, target){
+    return str.slice(str.length - target.length) === target
+}
+
+console.log(confirmEnding("This is a beach ball, bitch", "bith"))
+// false
+console.log(confirmEnding("This is a beach ball, bitch", "bitch"))
+// true
+*/
+/*
+function repeatString(str, num){
+    let repeatedString = ""
+    for(let i = 0; i < num; i++){
+        repeatedString += str
+    }
+    return repeatedString
+}
+
+console.log(repeatString("Happy", 4))
+// HappyHappyHappyHappy
+*/
+
+// 7-9-2022
+// Return a boolean if the end of a string matches a target we pass to it.
+/*
+function confirmEnding(string, target){
+    return string.slice(string.length - target.length) === target
+}
+
+console.log(confirmEnding("Fee fi foo fum", "n"))
+*/
+
+// Write a function that takes in a string and a number. The string should be repeated the number of times specified in the number parameter. Use a for loop and not the .repeat() method.
+/*
+function repeatString(string, number){
+    let repeatedString = ""
+    for(let i = 0; i < number; i++){
+        repeatedString += string
+    }
+    return repeatedString
+}
+console.log(repeatString("Hello", 3))
+// HelloHelloHello
+*/
