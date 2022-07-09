@@ -2569,3 +2569,39 @@ function repeatString(string, number){
 console.log(repeatString("Hello", 3))
 // HelloHelloHello
 */
+
+// 4 methods used with Map
+// set get has delete (clear to remove all)
+/*
+const currencyMap = new Map([
+    ["United States of America", "USD"],
+    ["Japan", "Yen"],
+    ["India", "Ruppee"],
+    ["Mexico", "Peso"]
+])
+currencyMap.forEach((currency) => {
+    console.log(currency)
+})
+currencyMap.set("Russia", "Broke as fuck")
+console.log(currencyMap.get("Russia"))
+console.log(currencyMap.has("USD"))
+*/
+/*
+const person = {
+    name: "Phil"
+}
+
+const person2 = Object.create(person)
+console.log(person2.name)
+*/
+
+// Polyfill
+/*
+if(Math.double == null){
+Math.double = function(value){
+    return value * 2
+}
+}
+
+console.log(Math.double(2))
+*/
