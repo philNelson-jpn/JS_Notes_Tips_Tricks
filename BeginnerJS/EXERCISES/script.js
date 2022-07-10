@@ -1985,3 +1985,95 @@ function randomRange(min, max){
 
 console.log(randomRange(1,5))
 */
+
+// 7-10-2022
+
+// Write a function that takes in an array and returns a new array with only the third and fourth items in the original array.
+/*
+function threeAndFour(array){
+    return array.slice(2,4)
+}
+
+console.log(threeAndFour([1,2,3,4,5]))
+// [3,4]
+*/
+
+// Use the forEach method to only print out the price of each item (only the number)
+/*
+const items = [
+    { price: 10 },
+    { price: 12 },
+    { price: 14 },
+    { price: 16 },
+    { price: 18 },
+]
+
+items.forEach((item) => console.log(item.price))
+// 10,12,14,16,18
+*/
+
+// Find the longest word in a string and print the length of that word (a number).
+/*
+function longestWord(string){
+    let words = string.split(' ')
+    let maxLength = 0
+    for(let i = 0; i < words.length; i++){
+        if(words[i].length > maxLength){
+            maxLength = words[i].length
+        }
+    }
+    return maxLength
+}
+
+console.log(longestWord("This is a test to see if sixteenpeople is the longest word"))
+*/
+
+// Write a function that reverses a string with a for loop
+/*
+function reverseMe(string){
+    let reversedString = ""
+    for(let i = string.length - 1; i >= 0; i--){
+        reversedString += string[i]
+    }
+    return reversedString
+}
+
+console.log(reverseMe("Hello"))
+*/
+
+// What method can we use to determine if an object contains a property?
+/*
+const person = {
+    name: "Phil"
+}
+
+function checkProp(obj, prop){
+    if(obj.hasOwnProperty(prop)){
+        console.log(obj[prop])
+    }else{
+        console.log("No such prop")
+    }
+}
+
+checkProp(person, "name")
+// Phil
+checkProp(person, "age")
+// No such prop
+*/
+
+// What is the difference between a do...while loop and a while loop?
+/*
+let i = 5
+do{
+    console.log(i)
+    i--
+}while(i > 0)
+// 5,4,3,2,1
+*/
+/*
+let i = 0
+while(i <= 5){
+    console.log(i)
+    i++
+}
+*/
