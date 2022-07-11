@@ -2077,3 +2077,6 @@ while(i <= 5){
     i++
 }
 */
+
+// import * as multiComponent from "./index.js"
+// multiComponent.add(2,3)

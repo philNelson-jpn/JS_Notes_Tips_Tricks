@@ -250,3 +250,42 @@ let regex = /twinkle/gi
 let result = string.match(regex)
 console.log(result)
 */
+
+// 7-11-2022
+// Check if two or more first names + any combination of middle names and a specific last name match a string.
+/*
+const stringToCheck = "Jim Nelson"
+const regex = /(Phil|Jin).*Nelson/
+console.log(regex.test(stringToCheck))
+*/
+
+// Use .replace() and a capture group to change the string "one two three" to "three two one"
+/*
+const string = "one two three"
+const regex = /(\w+)\s(\w+)\s(\w+)/
+const newString = "$3 $2 $1"
+console.log(string.replace(regex, newString))
+*/
+
+// How do we specify a lower/upper limit or an exact match of character length with {}?
+/*
+const string = "This is a pppph"
+const regex = /This is a p{4}/
+console.log(regex.test(string))
+// true
+*/
+
+// What character do we use to select the first word in a string and what character do we use to select the last character in a string?
+/*
+const string = "First part of the train is the engine, the last part is the caboose"
+const firstRegex = /^First/
+const lastRegex = /caboose$/
+console.log(firstRegex.test(string))
+console.log(lastRegex.test(string))
+// true true
+*/
+
+// What is the shorthand character class of [0-9]; only selecting digits?
+/*
+const digitRegex = /\d/
+*/
