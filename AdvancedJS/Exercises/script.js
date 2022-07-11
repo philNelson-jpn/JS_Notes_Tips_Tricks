@@ -2605,3 +2605,58 @@ Math.double = function(value){
 
 console.log(Math.double(2))
 */
+
+// 7-11-2022
+
+// Assign list to a destructured array that is equal to 3 through 10.
+/*
+const source = [1,2,3,4,5,6,7,8,9,10]
+function removeFirstTwo(list){
+    ;[a, b, ...arr] = list
+    return arr
+}
+console.log(removeFirstTwo(source))
+*/
+
+// Use a getter to calculate a person's birth year based on { ageThisYear: 34 }
+/*
+class Person {
+    constructor(name, ageThisYear){
+        this.name = name
+        this.ageThisYear = ageThisYear
+    }
+    get calcBirthYear(){
+        const date = new Date()
+        return date.getFullYear() - this.ageThisYear
+    }
+}
+
+const phil = new Person("Phil", 37)
+console.log(phil.calcBirthYear)
+// 1985
+*/
+
+// Create a class called Thermostat that takes in 'fahrenheit' as an argument within the constructor
+// The Thermostat class should use a getter called 'temperature' to calculate and return celsius (C = 5/9 * (F - 32))
+// The Thermostat class should also use a setter that takes in celsius as an argument and sets 'fahrenheit' to C * 9.0 / 5 + 32
+//Log a celsius value by passing a fahrenheit value to Thermostat and then set a celsius value and log a fahrenheit value
+/*
+class Thermostat{
+    constructor(fahrenheit){
+        this.fahrenheit = fahrenheit
+    }
+
+    get temperature(){
+        return 5/9 * (this.fahrenheit - 32)
+    }
+
+    set temperature(celsius){
+        return this.fahrenheit = celsius * 9 / 5 + 32
+    }
+}
+
+const thermos = new Thermostat(32)
+thermos.temperature = 35
+console.log(thermos.fahrenheit)
+// 95
+*/
