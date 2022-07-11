@@ -2080,3 +2080,72 @@ while(i <= 5){
 
 // import * as multiComponent from "./index.js"
 // multiComponent.add(2,3)
+
+// 7-11-2022
+// Convert the switch statement into an object called lookup. Use it to look up val and assign the associated string to the result variable.
+/*
+  switch(val) {
+    case "alpha":
+      result = "Adams";
+      break;
+    case "bravo":
+      result = "Boston";
+      break;
+    case "charlie":
+      result = "Chicago";
+      break;
+    case "delta":
+      result = "Denver";
+      break;
+    case "echo":
+      result = "Easy";
+      break;
+    case "foxtrot":
+      result = "Frank";
+  }
+ */ 
+/*
+function phoneticLookup(val) {
+    let result = ""
+    const obj = {
+        alpha: "Adams",
+        bravo: "Boston",
+        charlie: "Chicago",
+        delta: "Denver",
+        echo: "Easy",
+        foxtrot: "Frank"
+      }
+      result = obj[val]
+
+      return result
+  }
+  
+console.log(phoneticLookup("alpha"))
+// Adams
+*/
+
+// Write a function that reverses a string (using methods)
+/*
+function reverseMe(str){
+    return str.split('').reverse().join('')
+}
+console.log(reverseMe("Hello there"))
+*/
+
+/*
+  function lookUpProfile(name, prop) {
+    for(let i = 0; i < contacts.length; i++){
+        if(contacts[i].firstName === name){
+            if(contacts[i].hasOwnProperty(prop))
+            return contacts[i][prop]
+        }else{
+            return "No such property"
+        }
+    }
+    return "Profile does not exist"
+  }
+  
+  console.log(lookUpProfile("Akira", "likes"))
+//   ['Pizza', 'Coding', 'Brownie Points']
+*/
+
