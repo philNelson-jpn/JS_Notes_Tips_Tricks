@@ -2149,3 +2149,39 @@ console.log(reverseMe("Hello there"))
 //   ['Pizza', 'Coding', 'Brownie Points']
 */
 
+// 7-12-2022
+
+// Write a function that checks if the second argument is the last part of the first argument (a string).
+
+// confirmEnding("Bastian", "n") should return true.
+/*
+function confirmEnding(str, ending){
+    return str.slice(str.length - ending.length) === ending
+}
+
+console.log(confirmEnding("Hello", "o"))
+*/
+
+// Use filter to return only the first three numbers of an array on a new array.
+/*
+const a = [1,2,3,4,5]
+const b = a.filter(value => value < 4)
+console.log(b)
+*/
+
+// Write a function that takes an array and a number. Use a while loop to loop over the array and push a copy of the array to a new array the number of times specified by the number argument.
+/*
+function copyMachine(array, number){
+    const newArray = []
+    while(number >= 1){
+        newArray.push([...array])
+        number--
+    }
+
+    return newArray
+}
+
+console.log(copyMachine([1,2,3], 5))
+
+*/
+
