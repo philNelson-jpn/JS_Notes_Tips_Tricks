@@ -2185,3 +2185,40 @@ console.log(copyMachine([1,2,3], 5))
 
 */
 
+// 7-13-2022
+
+// Retrieve all of the `twinkle`s from twinkleStar by checking to see if anything in twinkleStar matches starRegex globally and case insensitive (ignore case).
+/*
+let twinkleStar = "Twinkle, twinkle little star"
+let regex = /twinkle/gi
+console.log(twinkleStar.match(regex))
+// ['Twinkle', 'twinkle']
+*/
+
+// Write a function that takes in a string and a number. The string should be repeated the number of times specified in the number parameter. Use a for loop and not the .repeat() method.
+/*
+function copyStr(str, num){
+    let newStr = ""
+    for(let i = 0; i < num; i++){
+        newStr += str
+    }
+    return newStr
+}
+
+console.log(copyStr("Hello", 3))
+// HelloHelloHello
+*/
+
+// Write a function that takes in an array, removes the first two items and replaces them with two new ones.
+// Hint: The array method you use can take in more than two arguments.
+/*
+function removeAndReplace(array){
+    array.splice(0, 2, "Bilbo", "Jimmy")
+    return array
+}
+
+let arraybianNights = ["Happy", "Hungry", "Sleepy", "Sneezy"]
+console.log(removeAndReplace(arraybianNights))
+// ['Bilbo', 'Jimmy', 'Sleepy', 'Sneezy']
+*/
+
