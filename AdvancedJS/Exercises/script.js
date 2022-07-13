@@ -2660,3 +2660,29 @@ thermos.temperature = 35
 console.log(thermos.fahrenheit)
 // 95
 */
+
+// 7-13-2022
+// Change the following function from an impure function to a pure function:
+/*
+const array = [1,2,3,4]
+
+function addElement(element){
+    array.push(element)
+}
+addElement(5)
+console.log(array)
+//[1, 2, 3, 4, 5]
+
+function addElementPure(array, element){
+    const newArray = [...array]
+    newArray.push(element)
+    return newArray
+    // or
+    return [...array, element]
+}
+
+console.log(addElementPure(array, 7))
+console.log(array)
+*/
+
+
