@@ -2267,5 +2267,31 @@ function findLongestWord(str){
 console.log(findLongestWord("A bee Ceeee"))
 */
 
+// mixins
+/*
+let bird = {
+    name: "Donald",
+    numLegs: 2
+  }
+  
+  let boat = {
+    name: "Warrior",
+    type: "race-boat"
+  }
+  
+  let glideMixin = function(obj){
+    obj.glide = function(){
+      console.log("Gliding, baby")
+    }
+  }
+  glideMixin(bird)
+  glideMixin(boat)
+  bird.glide()
+  boat.glide()
+// Gliding, baby
+// Gliding, baby
+*/
+
+
 
 
