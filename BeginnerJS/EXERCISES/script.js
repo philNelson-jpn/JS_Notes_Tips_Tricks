@@ -2222,3 +2222,50 @@ console.log(removeAndReplace(arraybianNights))
 // ['Bilbo', 'Jimmy', 'Sleepy', 'Sneezy']
 */
 
+// 7-14-2022
+// Create a function that loops through an object and returns the number of users where their online status is equal to true.
+/*
+const users = {
+    Alan: {
+      online: true
+    },
+    Jeff: {
+      online: true
+    },
+    Sarah: {
+      online: false
+    }
+  }
+
+  function onlineUsers(userObj){
+    let numberOnline = 0
+    for(user in userObj){
+        if(userObj[user].online)
+        numberOnline++
+    }
+    return numberOnline
+  }
+
+  console.log(onlineUsers(users))
+//   2
+*/
+
+// Find the longest word in a string and print the length of that word (a number).
+/*
+function findLongestWord(str){
+    let word = str.split(' ')
+    let maxLength = 0
+    console.log(word)
+    for(let i = 0; i < word.length; i++){
+        if(word[i].length > maxLength){
+            maxLength = word[i].length
+        }
+    }
+    return maxLength
+}
+
+console.log(findLongestWord("A bee Ceeee"))
+*/
+
+
+
