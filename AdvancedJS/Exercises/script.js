@@ -2685,4 +2685,24 @@ console.log(addElementPure(array, 7))
 console.log(array)
 */
 
+// 7-15-2022
 
+// Use Function Composition to combine both a doubling function and an addition function into one.
+/*
+const array = [1,2,3,4,5]
+
+function double(element){
+    return element * 2
+}
+
+function plusOne(element){
+    return element + 1
+}
+
+function doubleAndOne(element){
+    return plusOne(double(element))
+}
+
+const result = array.map(doubleAndOne)
+console.log(result)
+*/
