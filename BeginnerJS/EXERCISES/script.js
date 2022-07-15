@@ -2292,6 +2292,61 @@ let bird = {
 // Gliding, baby
 */
 
+// 7-15-2022
 
+// How do you select back-to-back characters like the ss' or pp's in Mississippi with Regex?
+/*
+let string = "Mississppi"
+let regex = /s+/ig
+console.log(string.match(regex))
+*/
 
+// Create a function that uses a closure (a function within another function) called closure() that takes in one argument (a variable).
+
+// The function within closure() (func()) will take in a separate argument (another variable) and log both the closure() arg. and the func() arg.
+
+// Hint: We need to assign closure() to a variable to be able to use the function within it when we call it again.
+/*
+function closure(variable){
+    return function func(variable2){
+        console.log(variable)
+        console.log(variable2)
+    }
+}
+
+let a = closure(2)
+a(4)
+// 2, 4
+*/
+
+// Using Math.floor and Math.random, return a random whole number that is >= min and <= max.
+/*
+function randomRange(min, max){
+    return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+console.log(randomRange(2,300))
+*/
+// What is a mixin and how can we use it?
+/*
+const dog = {
+    name: "Bravo",
+    age: 13
+}
+
+const bird = {
+    name: "Doper",
+    age: 3
+}
+
+function talkMixin(obj){
+    obj.talk = function(){
+        console.log(`Hello, my name is ${obj.name}`)
+    }
+}
+
+talkMixin(dog)
+dog.talk()
+// Hello, my name is Bravo.
+*/
 
