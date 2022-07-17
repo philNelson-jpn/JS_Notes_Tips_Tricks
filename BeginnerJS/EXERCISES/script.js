@@ -2350,3 +2350,61 @@ dog.talk()
 // Hello, my name is Bravo.
 */
 
+// 7-16-2022
+
+// Write a function that checks if the second argument is the last part of the first argument (a string).
+
+// confirmEnding("Bastian", "n") should return true.
+/*
+function confirmEnding(string, target){
+    return string.slice(string.length - target.length) === target
+}
+
+console.log(confirmEnding("happy", "ppy"))
+// true
+*/
+
+// Write a function that takes in an array and returns a new array with only the third and fourth items in the original array.
+/*
+function thirdAndFourth(array){
+    const newArray = array.slice(2,4)
+    return newArray
+}
+
+console.log(thirdAndFourth([1,2,3,4,5]))
+*/
+
+// 7-17-2022
+// Only match the first <h1> tag
+/*
+let quote = "<h1>Winter is coming</h1>"
+let regex = /<.*?>/
+console.log(quote.match(regex))
+*/
+
+// Write a function that reverses a string (using methods)
+// First break up the string into individual characters, reverse them, then join them back together
+/*
+function reverseMe(string){
+    return string.split('').reverse().join('')
+}
+
+console.log(reverseMe("Hello me"))
+// em olleH
+*/
+
+// What method can you use on an object to return the keys of that object in an array?
+/*
+const person = {
+    name: "Phil",
+    age: 34,
+    favoriteFood: "Pizza"
+}
+
+function returnKeys(obj){
+    return Object.keys(obj)
+}
+
+console.log(returnKeys(person))
+*/
+
