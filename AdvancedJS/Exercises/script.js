@@ -2706,3 +2706,13 @@ function doubleAndOne(element){
 const result = array.map(doubleAndOne)
 console.log(result)
 */
+
+// 7-17-2022
+// Create an function that removes duplicates from an array using Set:
+
+function removeDups(array){
+    return [...new Set(array)]
+}
+
+const array = [1,2,3,3,3,4,5,5,5]
+console.log(removeDups(array))
