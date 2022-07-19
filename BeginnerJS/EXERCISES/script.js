@@ -2410,7 +2410,7 @@ console.log(returnKeys(person))
 
 // 7-19-2022
 
-// Use .replace() and a capture group to change the string "one two three" to "three two one"
+// Use .replace() and a capture group to change the string one two three to three two one
 
 // Remember, replace() takes two parameters.
 /*
@@ -2420,3 +2420,70 @@ const reversedStr = "$3 $2 $1"
 console.log(string.replace(regex, reversedStr))
 */
 
+// What is a mixin and how can we use it?
+/*
+let dog = {
+    name: "Indy",
+    age: 14,
+    favoriteFood: "streak bones"
+}
+
+function animalMixin(obj){
+    obj.speak = function(){
+        console.log(`Yo, my name is ${obj.name}. I am ${obj.age} years old. I love ${obj.favoriteFood}!`)
+    }
+}
+
+animalMixin(dog)
+dog.speak()
+// Yo, my name is Indy. I am 14 years old. I love streak bones!
+*/
+
+// Write a function that reverses a string with a for loop
+/*
+function reverseStr(string){
+    let reversedString = ""
+    for(let i = string.length - 1; i >= 0; i--){
+        reversedString += string[i]
+    }
+    return reversedString
+    
+}
+
+console.log(reverseStr("Hello there"))
+// ereht olleH
+*/
+
+// Use recursion to return an array that begins with startNum and ends with endNum.
+/*
+function rangeOfNumbers(start, end){
+    if(end - start === 0){
+        return [start]
+    }else{
+        let array = rangeOfNumbers(start, end - 1)
+        array.push(end)
+        return array
+    }
+}
+
+console.log(rangeOfNumbers(2,7))
+// [2, 3, 4, 5, 6, 7]
+*/
+
+// Change playerNumber to 16 and then use bracket notation to get the player associated with the playerNumber.
+
+// Bonus: Create a function that takes in an object and a playerNumber. Call the function so that "Montana" is logged to the console.
+/*
+const testObj = {
+    12: "Namath",
+    16: "Montana",
+    19: "Unitas"
+}
+
+function getPlayerName(obj, playerNum){
+    console.log(obj[playerNum])
+}
+
+getPlayerName(testObj, 16)
+// Montana
+*/
