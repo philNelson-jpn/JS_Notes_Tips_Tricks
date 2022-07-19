@@ -2708,7 +2708,7 @@ console.log(result)
 */
 
 // 7-17-2022
-// Create an function that removes duplicates from an array using Set:
+// Create an function that removes duplicates from an array using Set and return a new array
 
 function removeDups(array){
     return [...new Set(array)]

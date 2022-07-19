@@ -1,0 +1,21 @@
+
+h1{
+    font-size: 5rem;
+    background-color: hsl(208, 97%, 73%);
+    width: fit-content;
+    padding: 20px;
+    border-radius: 16px;
+    font-family: "Poppins";
+}
+
+h1:hover{
+    color: hsl(208, 97%, 73%);
+    background-color: black;
+}
+
+@media (max-width: 800px){
+    h1{
+        color: orangered;
+        background-color: black;
+    }
+}
