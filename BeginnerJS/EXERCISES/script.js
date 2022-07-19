@@ -2408,3 +2408,15 @@ function returnKeys(obj){
 console.log(returnKeys(person))
 */
 
+// 7-19-2022
+
+// Use .replace() and a capture group to change the string "one two three" to "three two one"
+
+// Remember, replace() takes two parameters.
+/*
+const string = "one two three"
+const regex = /(\w+)\s(\w+)\s(\w+)/
+const reversedStr = "$3 $2 $1"
+console.log(string.replace(regex, reversedStr))
+*/
+
