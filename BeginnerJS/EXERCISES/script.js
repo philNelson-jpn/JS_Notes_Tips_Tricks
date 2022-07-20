@@ -2487,3 +2487,36 @@ function getPlayerName(obj, playerNum){
 getPlayerName(testObj, 16)
 // Montana
 */
+
+// 7-20-2022
+// Create a function that takes in a name and uses printVariable as a callback to print out "Hello, (name)"
+/*
+function printVariable(variable){
+    console.log(variable)
+}
+
+function printName(name, callback){
+    callback(`Hello, my name is ${name}`)
+}
+
+printName("Phil", printVariable)
+// Hello, my name is Phil
+*/
+
+// Write a function that takes an array and a number. Use a while loop to loop over the array and push a copy of the array to a new array the number of times specified by the number argument.
+/*
+function copyMachine(array, number){
+    const newArray = []
+    while(number >= 1){
+        newArray.push([...array])
+        number--
+    }
+    return newArray
+}
+
+console.log(copyMachine([1,2,3,4], 3))
+// [1,2,3,4]
+// [1,2,3,4]
+// [1,2,3,4]
+*/
+
