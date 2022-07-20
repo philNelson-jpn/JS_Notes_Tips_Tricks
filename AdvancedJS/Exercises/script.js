@@ -2709,10 +2709,167 @@ console.log(result)
 
 // 7-17-2022
 // Create an function that removes duplicates from an array using Set and return a new array
-
+/*
 function removeDups(array){
     return [...new Set(array)]
 }
 
 const array = [1,2,3,3,3,4,5,5,5]
 console.log(removeDups(array))
+*/
+
+// 7-20-2022
+
+// Create a Person class with a name
+
+// Next, create a Janitor that inherits Person + takes an additional numberOfMops prop + creates a clean() function that prints 'I cleaned with numberOfMops mops'
+/*
+class Person {
+    constructor(name){
+        this.name = name
+    }
+}
+
+class Janitor extends Person{
+    constructor(name, numberOfMops){
+        super(name)
+        this.numberOfMops = numberOfMops
+    }
+
+    clean(){
+        console.log(`${this.name} cleaned the whole school with ${this.numberOfMops} mops`)
+    }    
+}
+
+const jeff = new Janitor("Jeff", 25)
+jeff.clean()
+// Jeff cleaned the whole school with 25 mops
+*/
+
+// Convert the following code to use both prototypes and classes
+/*
+function createUser(email, password, language){
+    return {
+        email,
+        password,
+        language,
+        printPassword(){
+            console.log(this.password)
+        }
+    }
+}
+*/
+/*
+// Class
+class CreateUser{
+    constructor(email, password,language){
+        this.email = email
+        this.password = password
+        this.language = language
+        }
+
+        printPassword(){
+            console.log(this.password)
+    }
+}
+
+const newUser = new CreateUser("this@this.com", "mypass123", "Japanese")
+newUser.printPassword()
+*/
+// Prototype
+/*
+function CreateUser(email, password,language){
+        this.email = email
+        this.password = password
+        this.language = language
+}
+
+CreateUser.prototype.printPassword = function(){
+    console.log(this.password)
+}
+        
+*/
+
+// Add a setter to this code so that we can set an explicit fullName outside of the person object.
+/*
+const person = {
+    firstName: "Phil",
+    lastName: "Nelson",
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`
+    },
+    set fullName(value){
+        ;[this.firstName, this.lastName] = value.split(' ')
+    }
+}
+
+person.fullName = "Ricky Bobby"
+console.log(person.fullName)
+// Ricky Bobby
+*/
+
+// Change the function to a pure function
+/*
+const person = {
+    name: "Phil",
+    friends: ["Simon", "Caleb"]
+}
+
+function addImpureFriend(friendName){
+    person.friends.push(friendName)
+}
+
+function addPureFriend(obj, friendName){
+    const newPerson = {...obj, friends: [...obj.friends, friendName]}
+    return newPerson
+}
+
+const newPerson = addPureFriend(person, "Johnny")
+console.log(newPerson.friends)
+// ['Simon', 'Caleb', 'Johnny']
+
+addImpureFriend("Jim")
+console.log(person.friends)
+// ['Simon', 'Caleb', 'Jim']
+*/
+
+// Jest description and test syntax
+/*
+describe("#functionName", () = > {
+    test("This test should do this", () => {
+
+    })
+})
+*/
+// How do we prevent an object from being changed/mutated?
+/*
+const person = {
+    name: "Phil",
+    friends: ["Simon", "Caleb"]
+}
+
+Object.freeze(person)
+person.name = "Jimmy"
+console.log(person.name)
+// Phil
+*/
+
+// What if we want to import everything from a js file? What is the syntax?
+
+// import * as nameOfModuleModule from "./module.js"
+
+// How do we destructure an object within another object, i.e. how do we get only the keys/values that we want from an object within another object?
+/*
+const person = {
+    name: "Phil",
+    personObj: {
+        objName: "Jim",
+        objFavFood: "jelly beans"
+    }
+}
+
+const { personObj: { objName, objFavFood } } = person
+console.log(objFavFood)
+// jelly beans
+
+*/
