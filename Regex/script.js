@@ -290,4 +290,93 @@ console.log(lastRegex.test(string))
 const digitRegex = /\d/
 */
 
-// This is an update test
+// 8-29-2022
+
+// Check if a string is made up of either Phil Nelson or Jin Nelson.
+// Now check if any middle names or initials are also included.
+/*
+let name = "Phi Nelson"
+let nameRegex = /(Phil|Jin).*Nelson/
+let test = nameRegex.test(name)
+console.log(test)
+*/
+// What is the shorthand character class of [0-9]; only selecting digits?
+///\d/
+
+// What is the shorthand character class of [A-Za-z0-9_]?
+// /\w/
+
+// How do you find all of the whitespaces in a sentence?
+// /\s/g
+
+// Retrieve all of the `twinkle`s from twinkleStar by checking to see if anything in twinkleStar matches starRegex globally and case insensitive (ignore case).
+/*
+let twinkleStar = "Twinkle, twinkle, little start"
+let twinkleGex = /twinkle/gi
+let result = twinkleStar.match(twinkleGex)
+console.log(result)
+
+// Twinkle twinkle
+*/
+
+// What is the shorthand for all non digits? [^0-9]
+// /\D/
+
+// What if we want to match a letter appearing between a range (say 3-6 times)?
+/*
+let ohStr = "Ohhhhhh no"
+let ohRegex = /oh{3,6} no/i
+console.log(ohRegex.test(ohStr))
+// true
+*/
+
+// 8-31-2022
+/*
+Use .replace() and a capture group to change the string "one two three" to "three two one"
+Create "one two three" string
+Create regex that maps to string (word, space, word, space, etc.)
+Create capture group string (newString) with reverse order
+Use replace() with two values
+*/
+/*
+let string = "one two three"
+let regex = /(\w+)\s(\w+)\s(\w+)/
+let newString = "$3 $2 $1"
+let result = string.replace(regex, newString)
+console.log(result)
+// three two one
+*/
+
+// How would you use a character class to extract ALL of the vowels from a sentence, ignoring case?
+/*
+let sentence = "The quick brown fox jumped over the lazy dog"
+let vowelRegex = /[aeiou]/ig
+let returnVowels = sentence.match(vowelRegex)
+console.log(returnVowels)
+*/
+
+// What is the shorthand character class for [^A-Za-z0-9_]?
+// /\W/
+
+// How to accept both British and American spellings
+/*
+let americanExample = "color"
+let britishExample = "colour"
+let regex = /colou?r/
+console.log(regex.test(britishExample))
+// true
+console.log(regex.test(americanExample))
+// true
+*/
+/*
+// Change regex so that only "<h1>"" is logged.
+let quote = "<h1>Winter is coming</h1>"
+let regex = /<.*?>/
+let result = quote.match(regex)
+console.log(result)
+// <h1>
+
+// . wild card
+// * select all
+// ? lazy matching
+*/
