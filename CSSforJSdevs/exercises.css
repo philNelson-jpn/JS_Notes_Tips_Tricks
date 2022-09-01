@@ -18,3 +18,8 @@ img {
     scroll-snap-align: center;
 }
 
+/* Set font size of 24px but convert to rem with calc */
+
+body{
+    font-size: calc(24/16 * 1rem);
+}
