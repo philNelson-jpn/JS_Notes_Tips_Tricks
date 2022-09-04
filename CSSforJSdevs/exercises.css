@@ -23,3 +23,18 @@ img {
 body{
     font-size: calc(24/16 * 1rem);
 }
+
+.box{
+    width: 400px;
+    height: 400px;
+    border: solid 4px red;
+    padding: min(64px, 4vw);
+    background-color: black;
+}
+
+.another-box{
+    width: 350px;
+    height: 350px;
+    border: solid 2px pink;
+    background-color: white;
+}
