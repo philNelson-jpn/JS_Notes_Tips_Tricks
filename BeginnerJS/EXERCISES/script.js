@@ -2520,3 +2520,94 @@ console.log(copyMachine([1,2,3,4], 3))
 // [1,2,3,4]
 */
 
+// 9-4-2022
+/*
+function repeatString(string, number){
+    let repeatedString = ""
+    for(let i = 0; i < number; i++){
+        repeatedString += string
+    }
+    return repeatedString
+}
+
+console.log(repeatString("effy", 2))
+// effyeffy
+*/
+/*
+// Use a WHILE loop to print out the result.
+const myArray = []
+
+let i = 5
+while(i >= 0){
+    myArray.push(i)
+    i--
+}
+
+console.log(myArray)
+//[5,4,3,2,1,0]
+*/
+/*
+// Write a function that checks if the second argument is the last part of the first argument (a string).
+
+// confirmEnding("Bastian", "n") should return true.
+
+function confirmEnding(begStr, endStr){
+    return begStr.slice(begStr.length - endStr.length) === endStr
+}
+
+console.log(confirmEnding("hillbilly", "billy"))
+//true
+*/
+/*
+// Write a function that takes in an array, removes the last two items and replaces them with two new ones.
+// Hint: The array method you use can take in more than two arguments.
+
+const anArray = [1,2,3,4]
+
+function removeReplace(array, new1, new2){
+    array.splice(2,4,new1,new2)
+    return array
+}
+console.log(removeReplace(anArray, 5, 6))
+//[1,2,5,6]
+*/
+// What are mixins?
+/*
+let bird = {
+    name: "Donald",
+    numberLegs: 2
+}
+
+let boat = {
+    name: "Viking",
+    type: "racer"
+}
+
+let glideMixin = function(obj){
+    obj.glide = function(){
+        console.log("We glidin', homie")
+    }
+}
+
+glideMixin(bird)
+bird.glide()
+*/
+/*
+function longestWord(string){
+    let words = string.split(' ')
+    let longest = 0
+    let longestWord = ""
+    
+    for(let i = 0; i < words.length; i++){
+        if(words[i].length > longest){
+            longest = words[i].length
+            longestWord = words[i]
+        }
+    }
+
+    return `The longest word in your sentence is ${longestWord} at ${longest} characters long.`
+}
+
+console.log(longestWord("What is the longest word going to be, I just can't supercalifrajiIdontknowhowtospellthis"))
+// The longest word in your sentence is supercalifrajiIdontknowhowtospellthis at 37 characters long.
+*/
