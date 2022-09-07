@@ -2611,3 +2611,182 @@ function longestWord(string){
 console.log(longestWord("What is the longest word going to be, I just can't supercalifrajiIdontknowhowtospellthis"))
 // The longest word in your sentence is supercalifrajiIdontknowhowtospellthis at 37 characters long.
 */
+
+// 9-7-2022
+// Use a nested for loop to iterate through an array and multiply all of the values:
+/*
+function multiplyAll(arr){
+    let product = 1
+    for(let i = 0; i < arr.length; i++){
+        for(let j = 0; j < arr[i].length; j++){
+            product *= arr[i][j]
+        }
+    }
+
+    return product
+}
+
+console.log(multiplyAll([[1,2], [3,4], [5,6,7]]))
+//5040
+*/
+/*
+// Use the .shift() function to remove the first item from myArray and assign the "shifted off" value to a new variable, removedFromMyArray.
+const myArray = [["John", 23], ["dog", 3]]
+
+let removedFromMyArray = myArray.shift()
+console.log(removedFromMyArray)
+// ['John', 23]
+*/
+/*
+// Using Math.floor and Math.random, return a random whole number that is >= myMin and <= myMax.
+
+function randomRange(myMin, myMax){
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin
+}
+
+console.log(randomRange(19, 26))
+// generates a random number between 19 and 26 (adding 19 at the end (myMin) ensures that the number is above 19, multiplying myMax - myMin + 1 ensures that the number is never higher than 26 (myMax))
+*/
+/*
+// Use map to double the numbers of an array in a new array.
+const singleArray = [1,2,3,4,5]
+const doubleArray = singleArray.map((num)=> num*2)
+console.log(doubleArray)
+// [2, 4, 6, 8, 10]
+*/
+/*
+const contacts = [
+    {
+      firstName: "Akira",
+      lastName: "Laine",
+      number: "0543236543",
+      likes: ["Pizza", "Coding", "Brownie Points"],
+    },
+    {
+      firstName: "Harry",
+      lastName: "Potter",
+      number: "0994372684",
+      likes: ["Hogwarts", "Magic", "Hagrid"],
+    },
+    {
+      firstName: "Sherlock",
+      lastName: "Holmes",
+      number: "0487345643",
+      likes: ["Intriguing Cases", "Violin"],
+    },
+    {
+      firstName: "Kristian",
+      lastName: "Vos",
+      number: "unknown",
+      likes: ["JavaScript", "Gaming", "Foxes"],
+    },
+  ]
+
+  function lookUpProfile(name, prop) {
+    // loop through the array
+        for(let i = 0; i < contacts.length; i++){
+            if(contacts[i].firstName === name){
+                if(contacts[i].hasOwnProperty(prop)){
+                    return contacts[i][prop]
+                }else{
+                    return "No such property"
+                }
+            }
+        }
+    return "Profile does not exist"
+
+  }
+  
+  console.log(lookUpProfile("Akira", "likes"))
+//   ['Pizza', 'Coding', 'Brownie Points']
+
+*/
+/*
+// Create an anonymous ARROW function as the callback that prints out 10.
+function func(x, callback){
+    callback(x)
+}
+
+func(10, (prop) => console.log(prop))
+// 10
+*/
+
+// Write a function that reverses a string (using methods)
+// First break up the string into individual characters, reverse them, then join them back together
+/*
+const str = "Hello there, general kenobi"
+
+function stringReverser(str){
+    return str.split('').reverse().join('')
+}
+
+console.log(stringReverser(str))
+// ibonek lareneg ,ereht olleH
+*/
+
+// Create a function that loops through an object and returns the number of users where their online status is equal to true.
+/*
+const users = {
+    Alan: {
+        online: true
+    },
+    Jim: {
+        online: true
+    },
+    Kimberly: {
+        online: true
+    },
+    Alango: {
+        online: true
+    },
+}
+
+function whosOnline(userObj){
+    let numberOnline = 0
+    for(user in userObj){
+        if(userObj[user].online){
+            numberOnline++
+        }
+    }
+
+    return numberOnline
+}
+
+console.log(whosOnline(users))
+*/
+/*
+// Generate a random whole number between 1 and 10
+console.log(Math.floor(Math.random() * 10) + 1)
+*/
+
+// Write a function that reverses a string with a for loop
+/*
+let str = "Hello there, General Kenobi"
+function reversoStringo(str){
+    let reversedStr = ""
+    for(let i = str.length - 1; i >= 0; i--){
+        reversedStr += str[i]
+    }
+    return reversedStr
+}
+
+console.log(reversoStringo(str))
+// iboneK lareneG ,ereht olleH
+*/
+
+// Write a function that takes in an array and returns a new array with only the third and fourth items in the original array.
+/*
+const orgArray = ["Bob", "Tim", "Sally", "Kelly"]
+function thirdAndFourth(array){
+    return array.slice(2,4)
+}
+console.log(thirdAndFourth(orgArray))
+// ['Sally', 'Kelly']
+*/
+/*
+let myArray = [["Jim", 24]]
+myArray.unshift(["Paul", 35])
+console.log(myArray[0])
+// ['Paul', 35]
+*/
+
