@@ -1,13 +1,46 @@
-.wrapper {
+.wrapper{
     display: grid;
-    height: 100vh;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    justify-items: center;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(8px);
+    }
+    to {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes shadow {
+    from {
+        width: 150px;
+        opacity: 1;
+    }
+    to {
+        width: 100px;
+        opacity: .5;
+    }
 }
 
 .item{
+    height: 200px;
+    aspect-ratio: 1;
+    border-radius: 50%;
     background-color: royalblue;
     border: solid white 2px;
+    animation: float 2500ms infinite alternate ease-in-out;
+}
+
+.item2{
+    height: 3px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: gray;
+    align-self: center;
+    transform: translateY(10px);
+    animation: shadow 2500ms infinite alternate ease-in-out;
+
 }
 
 h1{
