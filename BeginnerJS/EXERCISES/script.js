@@ -2,6 +2,7 @@
 //     console.log(variable)
 // }
 
+
 // function func(x) {
 //     x("Hello world")
 // }
@@ -2790,3 +2791,130 @@ console.log(myArray[0])
 // ['Paul', 35]
 */
 
+// 9-9-2022
+
+// Use recursion to return an array that begins with startNum and ends with endNum.
+/*
+function rangeOfNumbers(startNum, endNum){
+    if(endNum - startNum === 0){
+        return [startNum]
+    }else{
+        let recursiveArray = rangeOfNumbers(startNum, endNum - 1)
+        recursiveArray.push(endNum)
+        return recursiveArray
+    }
+}
+
+console.log(rangeOfNumbers(2,20))
+// [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+*/
+
+// Change this to use an anonymous function. 
+/*
+function printVariable(variable){
+    console.log(variable)
+}
+
+function printName(name, callback){
+    callback(`Hello ${name}`)
+}
+
+printName("Phil", printVariable)
+// Hello Phil
+
+printName("Phil", function(variable){
+    console.log(variable)
+})
+// Hello Phil
+
+printName("Phil", variable => console.log(variable))
+// Hello Phil
+*/
+
+// Write a function that takes an array and a number. Use a while loop to loop over the array and push a copy of the array to a new array the number of times specified by the number argument.
+/*
+function copyMachine(array, number){
+    let copiedArray = []
+    while(number >= 1){
+        copiedArray.push([...array])
+        number--
+    }
+    return copiedArray
+}
+
+console.log(copyMachine([1,2], 3))
+// [[1,2],[1,2],[1,2]]
+*/
+
+// Convert this while loop into a recursive function.
+/*
+const person = {
+    name: "Phil",
+    friend: {
+        name: "Simon",
+        friend: {
+            name: "Caleb"
+        }
+    }
+}
+
+let currentPerson = person
+while(currentPerson != null){
+    console.log(currentPerson.name)
+    currentPerson = currentPerson.friend
+}
+// Phil
+// Simon
+// Caleb
+
+function printPeople(currentPerson){
+    if(currentPerson == null){
+        return
+    }else{
+        console.log(currentPerson.name)
+        printPeople(currentPerson.friend)
+    }
+}
+
+printPeople(person)
+// Phil
+// Simon
+// Caleb
+*/
+
+// Convert this object into an array of names. You can use a while loop or recursion to achieve this.
+/*
+const person = {
+    name: "Phil",
+    friend: {
+        name: "Simon",
+        friend: {
+            name: "Caleb"
+        }
+    }
+}
+
+// let personArray = []
+
+function printNames(currentPerson){
+    if(currentPerson == null) return
+    personArray.push(currentPerson.name)
+    printNames(currentPerson.friend)
+    return personArray
+}
+
+console.log(printNames(person))
+// ['Phil', 'Simon', 'Caleb']
+
+
+let currentPerson = person
+let personArray = []
+while(currentPerson != null){
+    personArray.push(currentPerson.name)
+    currentPerson = currentPerson.friend
+}
+
+console.log(personArray)
+// ['Phil', 'Simon', 'Caleb']
+
+*/
