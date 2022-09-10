@@ -2918,3 +2918,156 @@ console.log(personArray)
 // ['Phil', 'Simon', 'Caleb']
 
 */
+
+// 9-10-2022
+// find vs. filter
+/*
+const array = [1,2,3,4,5]
+console.log(array.find(number => number > 3))
+// 4
+console.log(array.filter(number => number > 3))
+// [4,5]
+
+// reduce method
+const objectArray = [
+    {price: 10},
+    {price: 20},
+    {price: 30},
+    {price: 40},
+    {price: 50},
+    {price: 60},
+]
+
+const total = objectArray.reduce((sum, item) => sum + item.price, 0)
+console.log(total)
+// 210
+
+const firstPriceAbove20 = objectArray.find(item => item.price > 20)
+console.log(firstPriceAbove20)
+// {price: 30}
+
+const allAbove20 = objectArray.filter(item => item.price > 20)
+console.log(allAbove20)
+// {price: 30}
+// {price: 40}
+// {price: 50}
+// {price: 60}
+*/
+
+// Use the reduce method to get the total price of all of the items.
+/*
+const items = [
+    {price: 20},
+    {price: 28},
+    {price: 23},
+    {price: 32},
+    {price: 24}
+]
+
+const total = items.reduce((sum, item) => sum + item.price, 0)
+console.log(total)
+// 127
+*/
+
+// Object.keys()
+/*
+const obj = {
+    Alan: {
+        age: 27,
+        online: false
+    },
+    John: {
+        age: 37,
+        online: true
+    },
+    James: {
+        age: 24,
+        online: false
+    },
+    Kelly: {
+        age: 47,
+        online: true
+    },
+}
+
+function getArrayOfUsers(object){
+    return Object.keys(object)
+}
+
+console.log(getArrayOfUsers(obj))
+// ['Alan', 'John', 'James', 'Kelly']
+console.log(Object.keys(obj))
+// ['Alan', 'John', 'James', 'Kelly']
+*/
+// What method can we use to determine if an object contains a property?
+/*
+const obj = {
+    Alan: {
+        age: 27,
+        online: false
+    },
+    John: {
+        age: 37,
+        online: true
+    },
+    James: {
+        age: 24,
+        online: false
+    },
+    Kelly: {
+        age: 47,
+        online: true
+    },
+}
+
+function checkProps(obj, prop){
+    if(obj.hasOwnProperty([prop])){
+        return obj[prop]
+    }else{
+        return "No such property"
+    }
+}
+
+console.log(checkProps(obj, "John"))
+// {age: 37, online: true}
+*/
+/*
+function closure(variable){
+    return function func(variable2){
+        console.log(variable)
+        console.log(variable2)
+    }
+}
+
+let a = closure(1)
+a(2)
+*/
+
+// Convert this object into an array of names. You can use a while loop or recursion to achieve this.
+/*
+const person = {
+    name: "Phil",
+    friend: {
+        name: "Simon",
+        friend: {
+            name: "Caleb"
+        }
+    }
+}
+
+let names = []
+let currentPerson = person
+while(currentPerson != null){
+    names.push(currentPerson.name)
+    currentPerson = currentPerson.friend
+}
+
+console.log(names)
+// ['Phil', 'Simon', 'Caleb']
+*/
+
+
+
+
+
+
