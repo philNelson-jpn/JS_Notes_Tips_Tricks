@@ -3066,6 +3066,229 @@ console.log(names)
 // ['Phil', 'Simon', 'Caleb']
 */
 
+// 9-12-2022
+
+// Write a for loop that iterates through the array and returns the total of the sum of the items in the array
+/*
+const myArr = [2,3,4,5,6]
+
+let total = 0
+for(let i = 0; i < myArr.length; i++){
+    total += myArr[i]
+}
+
+console.log(total)
+// 20
+*/
+
+// do...while vs. while loops
+/*
+const myArray = []
+let i = 10
+
+while(i < 10){
+    myArray.push(i)
+    i++
+}
+console.log(myArray)
+// []
+do{
+    myArray.push(i)
+    i++
+}while(i < 10)
+
+console.log(myArray)
+// [10]
+*/
+
+// Convert the switch statement into an object called lookup. Use it to look up val and assign the associated string to the result variable.
+/*
+  switch(val) {
+    case "alpha":
+      result = "Adams";
+      break;
+    case "bravo":
+      result = "Boston";
+      break;
+    case "charlie":
+      result = "Chicago";
+      break;
+    case "delta":
+      result = "Denver";
+      break;
+    case "echo":
+      result = "Easy";
+      break;
+    case "foxtrot":
+      result = "Frank";
+  }
+ */ 
+/*
+  const lookup = {
+    "alpha":"Adams",
+    "bravo":"Boston",
+    "charlie":"Chicago",
+    "delta":"Denver",
+    "echo":"Easy",
+    "foxtrot":"Frank"
+}
+
+function phoneticLookup(val) {
+    const result = lookup[val]
+    return result
+  }
+  
+console.log(phoneticLookup("alpha"))
+// Adams
+*/
+
+// Use filter to return only the first three numbers of an array on a new array
+/*
+const a = [1,2,3,4,5]
+
+const b = a.filter(number => number <= a[2])
+console.log(b)
+// [1,2,3]
+*/
+
+// Use the forEach method to only print out the price of each item (only the number)
+/*
+const items = [
+    {price: 10},
+    {price: 40},
+    {price: 60},
+    {price: 100},
+    {price: 1021}
+]
+
+const prices = items.forEach(item => console.log(item.price))
+// 10
+// 40
+// 60
+// 100
+// 1021
+*/
+/*
+const items = [
+    {price: 10},
+    {price: 40},
+    {price: 60},
+    {price: 100},
+    {price: 1024}
+]
+
+const total = items.reduce((sum, item) => sum + item.price, 0)
+console.log(total)
+// 1234
+*/
+/*
+let bird = {
+    name: "eagle",
+    wings: 2
+}
+
+let dragonFly = {
+    name: "oniyama",
+    wings: 4
+}
+
+let flyMixin = function(obj){
+    obj.glide = function(){
+        console.log("I'm king of the world!")
+    }
+}
+
+flyMixin(bird)
+bird.glide()
+// I'm king of the world!
+*/
+
+// Change playerNumber to 16 and then use bracket notation to get the player associated with the playerNumber.
+
+// Bonus: Create a function that takes in an object and a playerNumber. Call the function so that "Montana" is logged to the console.
+/*
+const testObj = {
+    12: "Namath",
+    16: "Montana",
+    19: "Unitas"
+}
+
+const playerNumber = 16
+const player = testObj[playerNumber]
+console.log(player)
+// "Montana"
+
+function getPlayer(obj, playerNumber){
+    console.log(obj[playerNumber])
+}
+
+getPlayer(testObj, 16)
+// "Montana"
+*/
+
+// 9-13-2022
+
+// Convert this object into an array of names. You can use a while loop or recursion to achieve this.
+/*
+const person = {
+    name: "Phil",
+    friend: {
+        name: "Simon",
+        friend: {
+            name: "Caleb"
+        }
+    }
+}
+
+const namesWhile = []
+let currentPerson = person
+while(currentPerson != null){
+    namesWhile.push(currentPerson.name)
+    currentPerson = currentPerson.friend
+}
+
+console.log(namesWhile)
+// ['Phil', 'Simon', 'Caleb']
+const namesRecursive = []
+function getNames(currentPerson){
+    if(currentPerson == null) return
+    namesRecursive.push(currentPerson.name)
+    getNames(currentPerson.friend)
+    return namesRecursive
+}
+
+console.log(getNames(person))
+// ['Phil', 'Simon', 'Caleb']
+*/
+
+// Write a function that checks if the second argument is the last part of the first argument (a string).
+
+// confirmEnding("Bastian", "n") should return true.
+/*
+function confirmEnding(string, target){
+    let slicedString = string.slice(string.length - target.length)
+    console.log(slicedString)
+    // py
+    return slicedString === target
+}
+
+console.log(confirmEnding("Happy", "py"))
+// true
+*/
+
+// Write a function that takes in a string and a number. The string should be repeated the number of times specified in the number parameter. Use a for loop and not the .repeat() method.
+/*
+function repeatString(string, number){
+    let repeatedString = ""
+    for(let i = 0; i < number; i++){
+        repeatedString += string + " "
+    }
+    return repeatedString
+}
+
+console.log(repeatString("Hello", 3))
+// Hello Hello Hello 
+*/
 
 
 
