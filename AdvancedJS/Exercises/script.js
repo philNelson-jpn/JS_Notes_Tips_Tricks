@@ -2873,3 +2873,150 @@ console.log(objFavFood)
 // jelly beans
 
 */
+
+// 9-13-2022
+
+// How do we create a new object based off of an already existing object?
+// Option 1: Destructuring
+/*
+const person = {
+    name: "Phil",
+    age: 34,
+    friends: {
+        name: "Simon",
+        age: 40
+    },
+    favoriteCookie: "Chocolate Chip"
+}
+
+const person2 = {...person}
+person2.name = "Jimmy"
+console.log(person2)
+// {name: 'Jimmy', age: 34, friends: {…}, favoriteCookie: 'Chocolate Chip'}
+*/
+/*
+// Option 2: Prototypes/Object.create
+function Person(name, age){
+    this.name = name
+    this.age = age
+}
+
+Person.prototype.printName = function(){
+    console.log(`Hello there. My name is ${this.name}.`)
+}
+
+const phil = new Person("Phil", 34)
+phil.printName()
+// Hello there. My name is Phil.
+const newPerson = Object.create(phil)
+newPerson.name = "Simon"
+newPerson.printName()
+// Hello there. My name is Simon.
+*/
+/*
+const testMap = new Map([
+    [1, {test: "Test 1", description: "Desc 1"}],
+    [2, {test: "Test 2", description: "Desc 2"}],
+    [3, {test: "Test 3", description: "Desc 3"}]
+])
+
+function getId(id){
+    return testMap.get(id)
+}
+
+console.log(getId(3))
+// {test: 'Test 3', description: 'Desc 3'}
+*/
+// Rest operator review
+/*
+function sum(...numbers){
+    return numbers.reduce((sum, number) => sum + number, 0)
+}
+
+console.log(sum(2,3,4,5,6,7,8))
+// 35
+
+function multiplyAndAdd(multiplier, ...numbers){
+    return multiplier * numbers.reduce((sum, number) => sum + number, 0)
+}
+
+console.log(multiplyAndAdd(3, 5, 6, 5, 20))
+// 3 * (5+6+5+20) = 108
+*/
+/*
+// Default params
+function greet(firstName, lastName, greeting = "Hello there,"){
+    console.log(`${greeting} ${firstName} ${lastName}`)
+}
+
+greet("Phil", "Nelson", "Greetings,")
+// specified param:
+// Greetings, Phil Nelson
+greet("Phil", "Nelson")
+// default param:
+// Hello there, Phil Nelson
+*/
+
+// Use map (a higher order function) on this array to create a newArray that doubles each number in the array.
+/*
+const array = [1, 2, 3, 4, 5, 6]
+
+const doubledArray = array.map(number => number * 2)
+console.log(doubledArray)
+// [2, 4, 6, 8, 10, 12]
+*/
+
+// Apply both the double function and the plusOne function to the array with map chaining and log out the result.
+/*
+const array = [1, 2, 3, 4, 5, 6]
+
+function double(element){
+    return element * 2
+}
+
+function plusOne(element){
+    return element + 1
+}
+
+const doubledAndAdded = array.map(double).map(plusOne)
+console.log(doubledAndAdded)
+// [3, 5, 7, 9, 11, 13]
+*/
+
+// spread vs. rest operators
+/*
+// spread (values already known/defined)
+function confirmFullName(firstName, middleName, lastName){
+    return `Is your name ${firstName} ${middleName} ${lastName}?`
+}
+
+const fullName = ["Phil", "Andrew", "Nelson"]
+console.log(confirmFullName(...fullName))
+
+// rest (values unknown/undefined)
+
+function multiplyNums(...nums){
+    return nums.reduce((product, number) => product * number,1)
+}
+
+const arrayOfNums = [1,2,3,4]
+console.log(multiplyNums(...arrayOfNums))
+// 24
+*/
+
+// Destructure an object so that both the first name and last name are accessible as separate variables.
+/*
+function splitFullName(fullName){
+    const [firstName, lastName] = fullName.split(" ")
+    return {
+        firstName,
+        lastName
+    }
+}
+
+const { firstName, lastName } = splitFullName("Phil Nelson")
+
+console.log(firstName)
+// Phil
+*/
+
