@@ -3197,6 +3197,7 @@ coffeeMap.forEach((value, key) => console.log(`${key} coffee is ${value}.`))
 */
 
 // prototypes to classes
+/*
 class Person {
     constructor(name, age){
         this.name = name,
@@ -3217,3 +3218,4 @@ class Person {
 const phil = new Person("Phil", 34)
 phil.printName()
 phil.printHi()
+*/
