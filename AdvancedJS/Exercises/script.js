@@ -3020,3 +3020,50 @@ console.log(firstName)
 // Phil
 */
 
+// 9-14-2022
+
+// Find the longest word in a string and print the length of that word (a number).
+
+// Hints
+// 1. Create two variables
+// 2. Check if the length of the string is longer than our variable
+// 3. Don't forget to use i in the if statement
+/*
+function longestWord(string){
+    let length = 0
+    let longestWord = ""
+    let words = string.split(' ')
+
+    for(let i = 0; i < words.length; i++){
+        if(words[i].length > length){
+            length = words[i].length
+            longestWord = words[i]
+        }
+    }
+    return `The longest word in your sentence is ${longestWord} at ${length} characters.`
+}
+
+console.log(longestWord("Simon is a huge Marvel fan."))
+*/
+
+// Find the longest word in a string and print the length of that word (a number). Bonus: print out the word itself.
+/*
+function findLongestWord(string){
+    let length = 0
+    let words = string.split(' ')
+    let longestWord = ""
+
+    for(let i = 0; i < words.length; i++){
+        if(words[i].length > length){
+            length = words[i].length
+            longestWord = words[i]
+        }
+    }
+
+    return `The longest word in your sentence is ${longestWord} at ${length} characters long.`
+}
+
+console.log(findLongestWord("Simon loves Marvel very much."))
+// The longest word in your sentence is Marvel at 6 characters long.
+*/
+
