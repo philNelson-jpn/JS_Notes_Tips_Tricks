@@ -3067,3 +3067,90 @@ console.log(findLongestWord("Simon loves Marvel very much."))
 // The longest word in your sentence is Marvel at 6 characters long.
 */
 
+// Write a function that takes a full name, splits the first name into an array, and returns it. Then destructure the array so that both the first name and last name are accessible as separate variables (assign the destructured array to the function).
+/*
+function splitFullName(fullName){
+    return fullName.split(' ')
+
+}
+
+const [firstName, lastName] = splitFullName("Phil Nelson")
+console.log(firstName)
+// Phil
+console.log(lastName)
+// Nelson
+*/
+
+// null coalescing operator
+/*
+function printFullName(firstName, lastName){
+    lastName = lastName ?? "Nelson"
+    console.log(`${firstName} ${lastName}`)
+}
+
+printFullName("Phil", null)
+// Phil Nelson
+*/
+
+// How do we export functions so that we can use them in other js files?
+
+// export { upperCaseString, lowerCaseString }
+/*
+// Assign list to a destructured array that is equal to index 2 and up.
+const source = ["apples", "pears", "oranges", "strawberries", "watermelon", "lemons", "peaches"];
+function removeFirstTwo(arr) {
+    const [indexZero, indexOne, ...indexTwoAndUp] = arr
+    return indexTwoAndUp;
+}
+const arr = removeFirstTwo(source);
+console.log(arr)
+// ['oranges', 'strawberries', 'watermelon', 'lemons', 'peaches']
+*/
+
+// Optional chaining vs. if/else
+/*
+const person = {
+    name: "Phil",
+    age: 34,
+    friend: {
+        name: "Simon",
+        age: 36
+    },
+    hobbies: [
+        "programming", "training", "language learning"
+    ]
+}
+
+function printFriendName(object){
+    console.log(object?.friend?.name)
+}
+printFriendName(person)
+// Simon
+
+function printThirdHobby(object){
+    console.log(object?.hobbies?.[2])
+}
+printThirdHobby(person)
+// language learning
+*/
+// Loop through the array to return each item and wrap it in an <li> tag with a class "text-warning" using string template literals.
+/*
+const result = {
+    success: ["max-length", "no-amd", "prefer-arrow-functions"],
+    failure: ["no-var", "var-on-top", "linebreak"],
+    skipped: ["no-extra-semi", "no-dup-keys"]
+    }
+    function makeList(arr) {
+    const successItems = []
+    for(let i = 0; i < arr.length; i++){
+        successItems.push(`<li class="text-warning">${arr[i]}</li>`)
+    }
+
+    return successItems
+    }
+    
+    const successList = makeList(result.success)
+    console.log(successList)
+// ['<li class="text-warning">max-length</li>', '<li class="text-warning">no-amd</li>', '<li class="text-warning">prefer-arrow-functions</li>']
+*/
+
