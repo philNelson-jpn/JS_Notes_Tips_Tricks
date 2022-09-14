@@ -3154,3 +3154,66 @@ const result = {
 // ['<li class="text-warning">max-length</li>', '<li class="text-warning">no-amd</li>', '<li class="text-warning">prefer-arrow-functions</li>']
 */
 
+// Create a class called Thermostat that takes in 'fahrenheit' as an argument within the constructor
+// The Thermostat class should use a getter called 'temperature' to calculate and return celsius (C = 5/9 * (F - 32))
+// The Thermostat class should also use a setter that takes in celsius as an argument and sets 'fahrenheit' to C * 9.0 / 5 + 32
+//Log a celsius value by passing a fahrenheit value to Thermostat and then set a celsius value and log a fahrenheit value
+/*
+class Thermostat {
+    constructor(fahrenheit){
+        this.fahrenheit = fahrenheit
+    }
+
+    get temperature(){
+        return `${5/9 * (this.fahrenheit - 32)}°C`
+    }
+
+    set temperature(celsius){
+        this.fahrenheit = `${celsius * 9 / 5 + 32}°F`
+    }
+}
+
+const thermos = new Thermostat(86)
+console.log(thermos.temperature)
+// 30°C
+
+thermos.temperature = 800
+console.log(thermos.fahrenheit)
+// 1472°F
+
+*/
+// maps
+/*
+const coffeeMap = new Map([
+    ["Komeda", "pretty darn good"],
+    ["Boss", "alright"],
+    ["Guatemalan", "the best in the world"],
+])
+
+coffeeMap.forEach((value, key) => console.log(`${key} coffee is ${value}.`))
+// Komeda coffee is pretty darn good.
+// Boss coffee is alright.
+// Guatemalan coffee is the best in the world.
+*/
+
+// prototypes to classes
+class Person {
+    constructor(name, age){
+        this.name = name,
+        this.age = age
+    }
+
+    goodName = "Philly"
+
+    printName = function(){
+        console.log(this.name)
+    }
+
+    printHi = function(){
+        console.log("Hi")
+    }
+}
+
+const phil = new Person("Phil", 34)
+phil.printName()
+phil.printHi()
