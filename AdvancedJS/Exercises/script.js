@@ -3363,6 +3363,213 @@ console.log(peeps.friends)
 // ['Simon', 'Caleb'] (unchanged)
 */
 
+// Double each element of an array with a for loop.
+/*
+const array = [1,2,3,4,5]
+
+const doubled = array.map(number => number * 2)
+console.log(doubled)
+// [2, 4, 6, 8, 10]
+
+function doubleMyArray(arr){
+    let doubledArray = []
+    for(let i = 0; i < arr.length; i++){
+        doubledArray.push(arr[i] * 2)
+    }
+    return doubledArray
+}
+
+console.log(doubleMyArray(array))
+// [2, 4, 6, 8, 10]
+*/
+/*
+const array = [1,2,3,4,5]
+
+function double(element){
+    return element * 2
+}
+
+const doubledArray = array.map(double)
+console.log(doubledArray)
+// // [2, 4, 6, 8, 10]
+*/
+
+// 9-15-2022 Pt. 2
+// Create a new Cat class that extends Animal and redefines the speak() function to say "meow"
+/*
+class Animal {
+    constructor(name){
+        this.name = name
+    }
+
+    speak(){
+        console.log(`Hi, my name is ${this.name}`)
+    }
+}
+
+class Cat extends Animal {
+    speak(){
+        console.log("meow")
+    }
+}
+
+const cat = new Cat("Meowmers")
+cat.speak()
+// meow
+console.log(cat.name)
+// Meowmers
+*/
+
+// Create an function that removes duplicates from an array using Set.
+
+// Return an array (not an object)
+/*
+const setTest = new Set([1,2,3,2,3,4])
+console.log(setTest)
+// {1, 2, 3, 4} (an object)
+console.log([...setTest])
+// [1, 2, 3, 4] (an array)
+
+function removeDupsWithSet(array){
+    return [...new Set(array)]
+}
+
+const array = [1,2,3,2,2,3,4,5,6]
+console.log(removeDupsWithSet(array))
+// [1, 2, 3, 4, 5, 6]
+*/
+
+// Create a Person class with a name
+
+// Next, create a Janitor that extends Person + takes an additional numberOfMops prop + creates a clean() function that prints 'I cleaned with numberOfMops mops'
+/*
+class Person {
+    constructor(name){
+        this.name = name
+    }
+}
+
+class Janitor extends Person {
+    constructor(name, numberOfMops){
+        super(name),
+        this.numberOfMops = numberOfMops
+    }
+
+    clean(){
+        console.log(`${this.name} cleaned the whole school with ${this.numberOfMops} mops today. How about that?`)
+    }
+}
+
+const jim = new Janitor("Jim", 22)
+jim.clean()
+*/
+
+// Clone an array without modifying the original
+/*
+const array = ["Billy", "Bobby", "Borpy"]
+const clonedArray = [...array]
+clonedArray.push("Burpy")
+console.log(array)
+console.log(clonedArray)
+*/
+/*
+const objOne = {
+    name: "Phil"
+}
+
+const objTwo = {
+    favoriteFood: "pizza"
+}
+
+const objThree = {...objOne, ...objTwo, favDessert: "ice cream"}
+console.log(objThree)
+*/
+
+// How do we write a polyfill for a function that doesn't yet exist or is not yet supported?
+
+// Hint: We should wrap our function in something to check if it exists yet or not.
+/*
+if(Math.add == null){
+    Math.add = function(a, b){
+        return a + b
+    }
+}
+
+console.log(Math.add(2,3))
+// 5
+*/
+// Change the following function from an impure function to a pure function:
+/*
+const array = [1,2,3,4,5]
+function addElement(element){
+    array.push(element)
+}
+
+function addElementPure(arr, element){
+    return [...arr, element]
+}
+
+console.log(addElementPure(array, 6))
+// [1, 2, 3, 4, 5, 6]
+*/
+
+// Use Function Composition to combine both the double function and the plusOne function into one function.
+/*
+const array = [1,2,3,4,5]
+
+function double(element){
+    return element * 2
+}
+
+function plusOne(element){
+    return element + 1
+}
+
+function doublePlusOne(element){
+    return plusOne(double(element))
+}
+
+console.log(doublePlusOne(2))
+
+const doubledAndPlused = array.map(doublePlusOne)
+console.log(doubledAndPlused)
+// [3, 5, 7, 9, 11]
+*/
+
+// Bind 'this' to person so that "Phil" is printed instead of "Global Name"
+/*
+window.name = "Global Name"
+
+const person = {
+    name: "Phil"
+}
+
+function printName(){
+    console.log(this.name)
+}
+
+printName.bind(person)()
+*/
+
+// How do we destructure an object within another object, i.e. how do we get only the keys/values that we want from an object within another object?
+/*
+const person = {
+    friend: {
+        name: "Simon",
+        friend: {
+            name: "Caleb"
+        }
+    }
+}
+
+const { friend: { friend: { name: SimonsFriend} } } = person
+console.log(SimonsFriend)
+*/
+// Use the spread operator to convert node lists to arrays so that you can use array methods on them.
+/*
+const divs = [...document.querySelectorAll('div')]
+divs.map(div => console.log(div))
+*/
 
 
 
