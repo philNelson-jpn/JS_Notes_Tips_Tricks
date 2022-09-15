@@ -3219,3 +3219,151 @@ const phil = new Person("Phil", 34)
 phil.printName()
 phil.printHi()
 */
+
+// 9-15-2022
+// Create a single regex that matches all characters that are not a number or a vowel. Remember to include the appropriate flags in the regex.
+/*
+let quote = "3 blind mice"
+let quoteRegex = /[^aeiou0-9]/gi
+let result = quote.match(quoteRegex)
+console.log(result)
+// [' ', 'b', 'l', 'n', 'd', ' ', 'm', 'c']
+*/
+/*
+// What if we want to import everything from a js file? What is the syntax?
+import * as myMathModule from "./mathModule.js"
+
+myMathModule.add(2,3)
+// 5
+myMathModule.subtract(2,3)
+// -1
+*/
+
+// Create a prototype with name and age parameters in the constructor function
+// Add a function to the prototype that prints both name and age using string template literals
+// Create two new prototypes
+/*
+function Person(name, age){
+    this.name = name,
+    this.age = age
+}
+
+Person.prototype.printGreeting = function(){
+    console.log(`Hello. My name is ${this.name}. I am ${this.age} years old.`)
+}
+
+const phil = new Person("Phil", 34)
+phil.printGreeting()
+// Hello. My name is Phil. I am 34 years old.
+const simon = Object.create(phil)
+simon.name = "Simon"
+simon.age = 40
+simon.printGreeting()
+// Hello. My name is Simon. I am 40 years old.
+*/
+
+// Create a new Dog class that extends Animal, adds an "owner" property, and redfines the function speak() to say "Woof!"
+/*
+class Animal {
+    constructor(name){
+        this.name = name
+    }
+
+    speak(){
+        console.log(`Hey, my name name is ${this.name}`)
+    }
+}
+
+class Dog extends Animal {
+    constructor(name, owner){
+        super(name),
+        this.owner = owner
+    }
+
+    speak(){
+        console.log(`Woof! My name is ${this.name}. My owner is ${this.owner}.`)
+    }
+}
+
+const indy = new Dog("Indy", "Phil")
+indy.speak()
+// Woof! My name is Indy. My owner is Phil.
+*/
+
+// Use a getter to calculate a person's birth year based on { ageThisYear: 34 }
+/*
+const person = {
+    ageThisYear: 34,
+    get printBirthYear(){
+        let date = new Date()
+        return date.getFullYear() - this.ageThisYear
+    }
+}
+
+
+console.log(person.printBirthYear)
+// 1988
+
+class Person {
+    constructor(ageThisYear){
+        this.ageThisYear = ageThisYear
+    }
+
+    get printBirthYear(){
+        let date = new Date()
+        return date.getFullYear() - this.ageThisYear
+    }
+}
+
+const phil = new Person(34)
+console.log(phil.printBirthYear)
+// 1988
+*/
+
+// Change the function to a pure function
+/*
+const person = {
+    name: "Phil",
+    friends: ["Simon", "Caleb"]
+}
+
+// impure function
+function addFriend(friendName){
+    person.friends.push(friendName)
+}
+// pure function
+function addFriendPure(object, friendName){
+    return {...object, friends: [...object.friends, friendName]}
+}
+
+addFriend("Kelly")
+console.log(person.friends)
+// ['Simon', 'Caleb', 'Kelly']
+const newPhil = addFriendPure(person, "Jimmy")
+console.log(newPhil.friends)
+// ['Simon', 'Caleb', 'Kelly', 'Jimmy']
+console.log(person.friends)
+// ['Simon', 'Caleb', 'Kelly']
+*/
+/*
+function addFriendsPure(object, newFriendName){
+    return {...object, friends: [...object.friends, newFriendName]}
+}
+
+const peeps = {
+    name: "Phil",
+    friends: [
+        "Simon",
+        "Caleb"
+    ]
+}
+
+console.log(addFriendsPure(peeps, "Johnny"))
+console.log(peeps.friends)
+// ['Simon', 'Caleb'] (unchanged)
+*/
+
+
+
+
+
