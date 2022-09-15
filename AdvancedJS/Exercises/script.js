@@ -3571,6 +3571,63 @@ const divs = [...document.querySelectorAll('div')]
 divs.map(div => console.log(div))
 */
 
+// 9-16-2022
+
+// How do we select 0 or more characters like all of the a's in Aaaaaaaaargh?
+
+// let string = "Aaaaaaaaargh"
+// let regex = /a*/i
+// let result = string.match(regex)
+// console.log(result)
+// 'Aaaaaaaaa', index: 0, input: 'Aaaaaaaaargh'
+
+// Convert an object into an array of names using a while loop and recursion
+/*
+const person = {
+    name: "Phil",
+    friend: {
+        name: "Simon",
+        friend: {
+            name: "Caleb"
+        }
+    }
+}
+
+// while loop
+
+let nameArray = []
+
+let currentPerson = person
+while(currentPerson != null){
+    nameArray.push(currentPerson.name)
+    currentPerson = currentPerson.friend
+}
+console.log(nameArray)
+// ['Phil', 'Simon', 'Caleb']
+
+// recursion
+function printNames(obj){
+    if(obj == null) return
+    nameArray.push(obj.name)
+    printNames(obj.friend)
+    return nameArray
+}
+
+console.log(printNames(person))
+*/
+
+// Check if a string is made up of either Phil Nelson or Jin Nelson.
+// Now check if any middle names or initials are also included.
+/*
+let string = "Phil Andrew Nelson"
+let regex = /(Jin|Phil).*Nelson/gi
+let check = regex.test(string)
+console.log(check)
+// true
+*/
+
+
+
 
 
 
