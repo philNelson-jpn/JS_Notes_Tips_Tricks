@@ -3626,7 +3626,14 @@ console.log(check)
 // true
 */
 
+// 9-17-2022
+// Using Math.floor and Math.random, return a random whole number that is >= myMin and <= myMax.
 
+function randomRange(myMin, myMax){
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin
+}
+
+console.log(randomRange(40,80))
 
 
 
