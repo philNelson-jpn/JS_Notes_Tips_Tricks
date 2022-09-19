@@ -3628,13 +3628,122 @@ console.log(check)
 
 // 9-17-2022
 // Using Math.floor and Math.random, return a random whole number that is >= myMin and <= myMax.
-
+/*
 function randomRange(myMin, myMax){
     return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin
 }
 
 console.log(randomRange(40,80))
+*/
 
+// Create a function that loops through an array and checks to see if a function that gets passed to our function as an argument returns an item from the array or else prints out undefined.
+/*
+function findElement(arr, func) {
+    let num = 0;
+    for(let i = 0; i < arr.length; i++){
+      num = arr[i]
+      if(func(num)){
+        return num
+      }
+    }
+      return undefined
+  }
+  
+  console.log(findElement([1, 3, 3, 5], num => num % 2 === 0))
+// undefined
+console.log(findElement([1, 3, 4, 5], num => num % 2 === 0))
+// 4
+*/
 
+// 9-19-2022
+// Mixins
+/*
+const bird = {
+    name: "Donald",
+    wings: 2
+}
 
+const plane = {
+    name: "Boeing",
+    wings: 2
+}
+
+const flightMixin = function(obj){
+    obj.flying = function(){
+        console.log(`${obj.name} is soaring through the air`)
+    }
+}
+
+flightMixin(plane)
+plane.flying()
+// Boeing is soaring through the air
+flightMixin(bird)
+bird.flying()
+// Donald is soaring through the air
+*/
+
+// Use .replace() and a capture group to change the string "one two three" to "three two one"
+
+// Remember, replace() takes two parameters.
+/*
+let string = "one two three"
+let regex = /(\w+)\s(\w+)\s(\w+)/
+let newString = "$3 $2 $1"
+let result = string.replace(regex, newString)
+console.log(result)
+// three two one
+*/
+
+// Create a function that looks through an array arr and returns the first element in it that passes a 'truth test'. This means that given an element x, the 'truth test' is passed if func(x) is true. If no element passes the test, return undefined.
+/*
+function findElement(arr, func){
+    let num = 0
+    for(let i = 0; i < arr.length; i++){
+        num = arr[i]
+        if(func(num)){
+            return num
+        }
+    }
+    return undefined
+}
+
+console.log(findElement([1,3,4,5], num => num % 2 === 0))
+// 4
+*/
+
+// Find the longest word in a string and print the length of that word (a number). Bonus: print out the word itself.
+/*
+function findLongestWord(string){
+    let words = string.split(' ')
+    let numberOfChars = 0
+    let longestWord = ""
+    for(let i = 0; i < words.length; i++){
+        if(numberOfChars < words[i].length){
+            numberOfChars += words[i].length
+            longestWord = words[i]
+        }
+    }
+
+    return `The word, "${longestWord}," is the longest word in the sentence "${string}" at ${numberOfChars} characters long.`
+}
+
+console.log(findLongestWord("Hello there, General Kenobi"))
+*/
+
+// Create a function that looks through an array arr and returns the first element in it that passes a 'truth test'. This means that given an element x, the 'truth test' is passed if func(x) is true. If no element passes the test, return undefined.
+/*
+function findElement(arr, func){
+    let num = 0
+    for(let i = 0; i < arr.length; i++){
+        num = arr[i]
+        if(func(num)){
+            return num
+        }
+    }
+    return undefined
+}
+
+console.log(findElement([1,2,3,4], num => num % 2 === 0))
+// 2
+*/
 
