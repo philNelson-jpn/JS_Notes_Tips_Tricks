@@ -3804,3 +3804,46 @@ console.log(reverseString("Hello"))
 // olleH
 */
 
+// Create a function that title cases a string (every word's first letter is capitalized)
+// Hints: First split the string into multiple words
+// Loop over the words
+// Make each character (each index) lower case and split the words into characters
+// set the first index (character) to upper case
+// join all of the indexes (set str[i] to be joined on '')
+// lastly return the full string joined on a space
+/*
+function titleCaseMe(str){
+    str = str.split(' ')
+    for(let i = 0; i < str.length; i++){
+
+        str[i] = str[i].toLowerCase().split('')
+        str[i][0] = str[i][0].toUpperCase()
+        str[i] = str[i].join('')
+    }
+
+    return str.join(' ')
+}
+
+console.log(titleCaseMe("Hello there general kenobler of genosis"))
+// Hello There General Kenobler Of Genosis
+
+// Alernate Solution:
+
+function titleCase(str) {
+    return str
+      .toLowerCase()
+      .split(" ")
+      .map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()))
+      .join(" ")
+  }
+  
+  console.log(titleCase("I'm a little tea pot"))
+//   I'm A Little Tea Pot
+*/
+
+let str = "Hello"
+console.log(str
+    .toLowerCase()
+    .split(" ")
+    .map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()))
+    .join(" "))
