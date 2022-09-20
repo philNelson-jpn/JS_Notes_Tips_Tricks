@@ -8,6 +8,7 @@
 //     }
 // }
 
+
 /*
 Remove duplicates from an array:
 const array = [1, 2, 3, 4, 4, 3, 2, 5]
@@ -3747,4 +3748,59 @@ console.log(findElement([1,2,3,4], num => num % 2 === 0))
 // 2
 */
 
-console.log("Hello")
+// 9-20-2022
+
+// Create a function that looks through an array arr and returns the first element in it that passes a 'truth test'. This means that given an element x, the 'truth test' is passed if func(x) is true. If no element passes the test, return undefined.
+
+// If the function we pass to the array is true, return the number. If not, return undefined.
+/*
+function truthTest(arr, func){
+    let num = 0
+    for(let i = 0; i < arr.length; i++){
+        num = arr[i]
+        if(func(num)){
+            return num
+        }
+    }
+    return undefined
+}
+
+console.log(truthTest([1,3,3,5], num => num % 2 === 0))
+// undefined
+console.log(truthTest([1,2,3,5], num => num % 2 === 0))
+// 2
+*/
+
+// Write a function that checks if the second argument (target) is the last part of the first argument (a string).
+
+// confirmEnding("Bastian", "n") should return true.
+
+// Hint: slice off the target's length from the string's length and see if it equals the target itself.
+/*
+function confirmEnding(string, target){
+    let ending = string.slice(string.length - target.length)
+    if(ending === target){
+        return `Your target matches the end of the string.`
+    }else {
+        return `Your target, "${target}", does not match the end of the string, "${ending}"`
+    }
+}
+
+console.log(confirmEnding("beebee", "ie"))
+// Your target, "ie", does not match the end of the string, "ee"
+*/
+
+// Write a function that reverses a string with a for loop
+/*
+function reverseString(string){
+    let reversedString = ""
+    for(let i = string.length - 1; i >= 0; i--){
+        reversedString += string[i]
+    }
+    return reversedString
+}
+
+console.log(reverseString("Hello"))
+// olleH
+*/
+
