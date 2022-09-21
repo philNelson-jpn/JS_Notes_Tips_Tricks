@@ -3927,7 +3927,7 @@ console.log(removeFalsy([7, "", 0, "ate", undefined, 9]))
 /*
 Create a new object from an array of objects that only displays two keys from the original object
 */
-
+/*
 const movies = [
     {
         "Title": "Inception",
@@ -3960,3 +3960,57 @@ let titleAndRating = movies.map(item => ({
     imbdRating: item["imbdRating"] 
 }))
 console.log(JSON.stringify(titleAndRating))
+*/
+/*
+const array = ["Yes", "No", "Maybe"]
+array.splice(1, 0, "Definitely", "No way")
+console.log(array)
+// ['Yes', 'Definitely', 'No way', 'No', 'Maybe']
+*/
+
+// Create a function that removes all falsy values from an array.
+/*
+function removeFalsyBits(array){
+    let trueArray = []
+    for(let i = 0; i < array.length; i++){
+        if(array[i]){
+            trueArray.push(array[i])
+        }
+    }
+    return trueArray
+}
+
+console.log(removeFalsyBits([null, "this", false, "is", undefined, "a", true, 0, "array", NaN, ""]))
+// ['this', 'is', 'a', true, 'array']
+*/
+
+// Create a new object from an array of objects that only displays two keys from each of the original objects using map.
+
+const movies = [
+    {
+        "Title": "Inception",
+        "Released": "July 16, 2010",
+        "Director": "Christopher Nolan",
+        "imbdRating": "8.8"
+    },
+    {
+        "Title": "Interstellar",
+        "Released": "November 4, 2014",
+        "Director": "Christopher Nolan",
+        "imbdRating": "8.6"
+    },
+    {
+        "Title": "The Dark Knight",
+        "Released": "July 18, 2008",
+        "Director": "Christopher Nolan",
+        "imbdRating": "9.0"
+    }
+]
+
+let releasedAndRating = movies.map(item => ({
+    "Release Date": item["Released"],
+    "IMBD Rating": item["imbdRating"]
+}))
+
+console.log(JSON.stringify(releasedAndRating))
+// [{"Release Date":"July 16, 2010","IMBD Rating":"8.8"},{"Release Date":"November 4, 2014","IMBD Rating":"8.6"},{"Release Date":"July 18, 2008","IMBD Rating":"9.0"}]
