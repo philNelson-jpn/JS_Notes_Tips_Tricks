@@ -3893,4 +3893,70 @@ console.log(titleCaseMe("wut wut in the butt"))
 // Wut Wut In The Butt
 */
 
+// array.splice() review
+/*
+const months = ['Jan', 'March', 'April', 'June'];
+months.splice(1, 0, 'Feb');
+// inserts at index 1
+console.log(months);
+// expected output: Array ["Jan", "Feb", "March", "April", "June"]
 
+months.splice(4, 1, 'May');
+// replaces 1 element at index 4
+console.log(months);
+// expected output: Array ["Jan", "Feb", "March", "April", "May"]
+*/
+// Create a function that removes all falsy values from an array.
+/*
+function removeFalsy(array){
+    let newArray = []
+    for(let i = 0; i < array.length; i++){
+        if(array[i]){
+            newArray.push(array[i])
+        }
+    }
+    return newArray
+}
+
+console.log(removeFalsy([1, 0, "", undefined, null, "what"]))
+// [1, 'what']
+console.log(removeFalsy([7, "", 0, "ate", undefined, 9]))
+// [7, 'ate', 9]
+*/
+
+/*
+Create a new object from an array of objects that only displays two keys from the original object
+*/
+
+const movies = [
+    {
+        "Title": "Inception",
+        "Released": "July 16, 2010",
+        "Director": "Christopher Nolan",
+        "imbdRating": "8.8"
+    },
+    {
+        "Title": "Interstellar",
+        "Released": "November 4, 2014",
+        "Director": "Christopher Nolan",
+        "imbdRating": "8.6"
+    },
+    {
+        "Title": "The Dark Knight",
+        "Released": "July 18, 2008",
+        "Director": "Christopher Nolan",
+        "imbdRating": "9.0"
+    }
+]
+
+let titleAndReleaseDate = movies.map(item => ({
+    title: item["Title"],
+    releaseDate: item["Released"] 
+}))
+console.log(JSON.stringify(titleAndReleaseDate))
+
+let titleAndRating = movies.map(item => ({
+    title: item["Title"],
+    imbdRating: item["imbdRating"] 
+}))
+console.log(JSON.stringify(titleAndRating))
