@@ -3985,7 +3985,7 @@ console.log(removeFalsyBits([null, "this", false, "is", undefined, "a", true, 0,
 */
 
 // Create a new object from an array of objects that only displays two keys from each of the original objects using map.
-
+/*
 const movies = [
     {
         "Title": "Inception",
@@ -4014,3 +4014,13 @@ let releasedAndRating = movies.map(item => ({
 
 console.log(JSON.stringify(releasedAndRating))
 // [{"Release Date":"July 16, 2010","IMBD Rating":"8.8"},{"Release Date":"November 4, 2014","IMBD Rating":"8.6"},{"Release Date":"July 18, 2008","IMBD Rating":"9.0"}]
+*/
+
+// 9-22-2022
+// How do we dynamically change the TAG that the styled-component renders, BUT only if it has a certain property (href)?
+/*
+<Link as={href ? 'a' : 'button'} href={href}>
+    {children}
+</Link>
+*/
+

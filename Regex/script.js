@@ -380,3 +380,11 @@ console.log(result)
 // * select all
 // ? lazy matching
 */
+
+// 9-22-2022
+
+// What is the shorthand character class of [A-Za-z0-9_]?
+// /\w/
+
+// How do you find all of the whitespaces in a sentence?
+// /\s/g
