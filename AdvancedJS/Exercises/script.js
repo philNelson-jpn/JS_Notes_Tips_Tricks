@@ -3841,9 +3841,56 @@ function titleCase(str) {
 //   I'm A Little Tea Pot
 */
 
-let str = "Hello"
-console.log(str
+// 9-21-2022
+
+// Create a function that title cases a string (every word's first letter is capitalized)
+/*
+Hints:
+
+・First split the string into multiple words
+・Loop over the words
+・Make each character (each index) lower case and split the words into characters
+・Set the first index (character) to upper case
+・Join all of the indexes (set str[i] to be joined on '')
+・Lastly return the full string joined on a space
+*/
+/*
+function titleCase(string){
+    string = string.split(" ")
+    for(let i = 0; i < string.length; i++){
+        string[i] = string[i].toLowerCase().split('')
+        string[i][0] = string[i][0].toUpperCase()
+        string[i] = string[i].join('')
+    }
+    return string.join(' ')
+}
+
+console.log(titleCase("Hello there puny man"))
+// Hello There Puny Man
+
+function titleCaseMap(string){
+    return string
     .toLowerCase()
-    .split(" ")
+    .split(' ')
     .map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()))
-    .join(" "))
+    .join(' ')
+}
+
+console.log(titleCaseMap("Hello thEre pUny mAn"))
+// Hello There Puny Man
+*/
+
+/*
+function titleCaseMe(string){
+    return string
+    .toLowerCase()
+    .split(' ')
+    .map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()))
+    .join(' ')
+}
+
+console.log(titleCaseMe("wut wut in the butt"))
+// Wut Wut In The Butt
+*/
+
+
