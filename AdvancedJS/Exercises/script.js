@@ -8,7 +8,6 @@
 //     }
 // }
 
-
 /*
 Remove duplicates from an array:
 const array = [1, 2, 3, 4, 4, 3, 2, 5]
@@ -4023,4 +4022,34 @@ console.log(JSON.stringify(releasedAndRating))
     {children}
 </Link>
 */
+
+// Create a function that title cases a string (every word's first letter is capitalized)
+/*
+function titleCase(string){
+    string = string.split(' ')
+    for(let i = 0; i < string.length; i++){
+        string[i] = string[i].toLowerCase().split('')
+        string[i][0] = string[i][0].toUpperCase()
+        string[i] = string[i].join('')
+    }
+    return string.join(' ')
+}
+
+console.log(titleCase("what is this nonsense?"))
+// What Is This Nonsense?
+*/
+
+// Create a function that changes a string to title case (only the first letter of each word is capitalized) using map.
+/*
+function titleCaseMap(string){
+    return string
+    .toLowerCase()
+    .split(' ')
+    .map(item => item.replace(item.charAt(0), item.charAt(0).toUpperCase()))
+    .join(' ')
+}
+
+console.log(titleCaseMap("this is madness"))
+*/
+
 
