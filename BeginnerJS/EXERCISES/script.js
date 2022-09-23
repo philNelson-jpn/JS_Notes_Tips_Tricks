@@ -2790,6 +2790,39 @@ myArray.unshift(["Paul", 35])
 console.log(myArray[0])
 // ['Paul', 35]
 */
+/*
+const frontEnd =['html','css','js','tailwind','react','git','gitHub']
+
+for(key in frontEnd){
+console.log(frontEnd[key])
+}
+*/
+
+let nestedArr = [[1, 2], [3, 4], [5, 6]];
+
+function sumMe(arr){
+    let sum = 0
+    for(let i = 0; i < arr.length; i++){
+        for(let j = 0; j < arr[i].length; j++){
+        sum += arr[i][j]
+    }
+}
+    return sum
+}
+
+console.log(sumMe(nestedArr))
+// nestedArr.forEach(inner=>inner.forEach(num => sum += num))
+
+
+function multiplyAll(arr){
+    let product = 0
+    for(let i = 0; i < arr.length; i++){
+        for(let j = 0; j < arr[i].length; j++){
+            product += arr[i][j]
+        }
+    }
+    return product
+}
 
 // 9-9-2022
 
