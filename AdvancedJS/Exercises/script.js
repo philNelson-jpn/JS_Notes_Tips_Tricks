@@ -4052,4 +4052,24 @@ function titleCaseMap(string){
 console.log(titleCaseMap("this is madness"))
 */
 
+// Create the map function from scratch
+
+const s = [42, 33, 97, 23]
+
+Array.prototype.myMap = function(callback){
+    const newArray = []
+    this.forEach(item => newArray.push(callback(item)))
+    return newArray
+}
+
+const sMap = s.myMap(function(item){
+    return item * 2
+})
+console.log(sMap)
+// [84, 66, 194, 46]
+
+const t = s.map(item => item * 2)
+console.log(t)
+// [84, 66, 194, 46]
+
 
