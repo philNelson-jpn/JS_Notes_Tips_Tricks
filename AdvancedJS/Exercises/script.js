@@ -4053,7 +4053,7 @@ console.log(titleCaseMap("this is madness"))
 */
 
 // Create the map function from scratch
-
+/*
 const s = [42, 33, 97, 23]
 
 Array.prototype.myMap = function(callback){
@@ -4074,3 +4074,62 @@ console.log(t)
 
 
 console.log("Yo")
+*/
+
+// 9-23-2022
+
+// Create a function that looks through an array arr and returns the first element in it that passes a 'truth test'. This means that given an element x, the 'truth test' is passed if func(x) is true. If no element passes the test, return undefined.
+
+// If the function we pass to the array is true, return the number. If not, return undefined.
+/*
+function findElement(arr, func){
+    let num = 0
+    for(let i = 0; i < arr.length; i++){
+        num = arr[i]
+        if(func(num)){
+            return num
+        }
+    }
+    return undefined
+}
+
+console.log(findElement([1,2,4,6], num => num % 2 === 0))
+// 2
+console.log(findElement([1,3,3,6], num => num % 2 === 0))
+// 6
+console.log(findElement([1,3,3,5], num => num % 2 === 0))
+// undefined
+*/
+
+// What's a good practice for setting default values in JS?
+/*
+const BOARD_SIZE = 5
+const NUMBER_OF_PIPES = 10
+// Use uppercase and underlines
+*/
+
+// Create the map function from scratch (on Array.prototype)
+/*
+const array = [24, 55, 67, 22]
+
+Array.prototype.customMap = function(callback){
+    let newArray = []
+    this.forEach(item => newArray.push(callback(item)))
+    return newArray
+}
+
+console.log(array.customMap(item => item * 2))
+// [48, 110, 134, 44]
+*/
+/*
+Array.prototype.myMap = function(callback){
+    let newArray = []
+    this.forEach(item => newArray.push(callback(item)))
+    return newArray
+}
+
+const ranArray = [22, 44, 68, 800]
+
+console.log(ranArray.myMap(item => item * 2))
+// [44, 88, 136, 1600]
+*/
