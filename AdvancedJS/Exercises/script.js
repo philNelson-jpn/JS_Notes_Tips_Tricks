@@ -4133,3 +4133,56 @@ const ranArray = [22, 44, 68, 800]
 console.log(ranArray.myMap(item => item * 2))
 // [44, 88, 136, 1600]
 */
+// 9-24-2022
+
+// Truth test function
+/*
+function findElement(arr, func){
+    let num = 0
+    for(let i = 0; i < arr.length; i++){
+        num = arr[i]
+        if(func(num)){
+            return num
+        }
+    }
+    return undefined
+}
+
+console.log(findElement([1,2,3,4], item => item % 2 === 0))
+// 2
+*/
+
+// Create the map function from scratch (on Array.prototype)
+/*
+const s = [23, 44, 33, 20034]
+
+Array.prototype.myMap = function(callback){
+    let newArray = []
+    this.forEach(item => newArray.push(callback(item)))
+    return newArray
+}
+
+const t = s.myMap(item => item * 2)
+console.log(t)
+*/
+
+// Default values in js
+// const NUMBER_DRINKS = 7
+
+// Create a function that removes all falsy values from an array.
+/*
+function removeFalsy(arr){
+    let newArr = []
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i]){
+            newArr.push(arr[i])
+        }
+    }
+    return newArr
+}
+
+console.log(removeFalsy([1,2,3, 0, false, true, ""]))
+// [1, 2, 3, true]
+*/
+
+
