@@ -4184,5 +4184,26 @@ function removeFalsy(arr){
 console.log(removeFalsy([1,2,3, 0, false, true, ""]))
 // [1, 2, 3, true]
 */
+/*
+const person = {
+    name: "Phil",
+    friend: {
+        name: "Simon",
+        friend: {
+            name: "Caleb"
+        }
+    }
+}
+
+const nameArray = []
+let currentPerson = person
+while(currentPerson != null){
+    nameArray.push(currentPerson.name)
+    currentPerson = currentPerson.friend
+}
+
+console.log(nameArray)
+// ['Phil', 'Simon', 'Caleb']
+*/
 
 
