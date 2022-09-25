@@ -4306,5 +4306,30 @@ let arrayObjMap = arrayObj.map(item => ({
 
 console.log(arrayObjMap)
 */
+/*
+const users = {
+    Alan: {
+      online: false
+    },
+    Jeff: {
+      online: true
+    },
+    Sarah: {
+      online: false
+    }
+  }
+  
+  function countOnline(usersObj) {
+    let total = 0
+    for(let user in usersObj){
+      if(usersObj[user].online === true){
+        total++
+      }
+    }
+      return total
+  }
+  
+  console.log(countOnline(users))
+*/
 
 
