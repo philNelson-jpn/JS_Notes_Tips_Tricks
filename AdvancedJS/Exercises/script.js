@@ -4206,4 +4206,105 @@ console.log(nameArray)
 // ['Phil', 'Simon', 'Caleb']
 */
 
+//9-25-2022
+
+// Create a function that changes a string to title case (only the first letter of each word is capitalized) using map.
+
+// Lowercase the string, split the words up, use map with replace on character at index 0, rejoin the words with a space.
+/*
+function lowerCaseThisThing(string){
+    return string.toLowerCase()
+    .split(' ')
+    .map(index => index.replace(index.charAt(0), index.charAt(0).toUpperCase()))
+    .join(' ')
+}
+
+console.log(lowerCaseThisThing("hello there poopy butt"))
+// Hello There Poopy Butt
+*/
+/*
+function titleCaseLoop(string){
+    string = string.split(' ')
+    for(let i = 0; i < string.length; i++){
+        string[i] = string[i].toLowerCase().split('')
+        string[i][0] = string[i][0].toUpperCase()
+        string[i] = string[i].join('')
+    }
+    return string.join(' ')
+}
+
+console.log(titleCaseLoop("yeah yeah what what"))
+// Yeah Yeah What What
+*/
+/*
+const contacts = [
+    {
+      firstName: "Akira",
+      lastName: "Laine",
+      number: "0543236543",
+      likes: ["Pizza", "Coding", "Brownie Points"],
+    },
+    {
+      firstName: "Harry",
+      lastName: "Potter",
+      number: "0994372684",
+      likes: ["Hogwarts", "Magic", "Hagrid"],
+    },
+    {
+      firstName: "Sherlock",
+      lastName: "Holmes",
+      number: "0487345643",
+      likes: ["Intriguing Cases", "Violin"],
+    },
+    {
+      firstName: "Kristian",
+      lastName: "Vos",
+      number: "unknown",
+      likes: ["JavaScript", "Gaming", "Foxes"],
+    },
+  ]
+
+  function lookUpProfile(name, prop) {
+    for(let i = 0; i < contacts.length; i++){
+        if(contacts[i].firstName === name){
+            if(contacts[i].hasOwnProperty(prop)){
+                return contacts[i][prop]
+            }else{
+                return "No such prop"
+            }
+        }
+    }
+    return "Profile does not exist"
+
+  }
+
+  console.log(lookUpProfile("Akira", "likes"))
+//   ['Pizza', 'Coding', 'Brownie Points']
+*/
+
+// Create a new object from an array of objects that only displays two keys from the original object
+/*
+const arrayObj = [
+    {name: "Philly",
+    age: 37,
+    job: "Unemployed"
+    },    
+    {name: "Jimbo",
+    age: 27,
+    job: "employed"
+    },
+    {name: "Carly",
+    age: 22,
+    job: "It's complicated"
+    }
+]
+
+let arrayObjMap = arrayObj.map(item => ({
+    name: item["name"],
+    job: item["job"]
+}))
+
+console.log(arrayObjMap)
+*/
+
 
