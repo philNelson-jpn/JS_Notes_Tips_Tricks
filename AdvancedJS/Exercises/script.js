@@ -4306,6 +4306,8 @@ let arrayObjMap = arrayObj.map(item => ({
 
 console.log(arrayObjMap)
 */
+// 9-26-2022
+
 /*
 const users = {
     Alan: {
@@ -4332,4 +4334,52 @@ const users = {
   console.log(countOnline(users))
 */
 
+// Create the filter function from scratch with Array.prototype
+/*
+const array = [23, 33, 22, 4, 7, 80]
+
+Array.prototype.myFilter = function(callback){
+    let newArray = []
+    for(let i = 0; i < this.length; i++){
+        if(callback(this[i])){
+            newArray.push(this[i])
+        }
+    }
+    return newArray
+}
+
+const evenFilter = array.myFilter(function(item){
+    return item % 2 === 0
+})
+
+const oddFilter = array.myFilter(function(item){
+    return item % 2 === 1
+})
+
+console.log(evenFilter)
+// [22, 4, 80]
+console.log(oddFilter)
+// [23, 33, 7]
+*/
+/*
+const array = [23, 33, 22, 4, 7, 80]
+
+Array.prototype.myFilter = function(callback){
+    let newArray = []
+    this.forEach(function(item){
+        if(callback(item)){
+            console.log(newArray, item)
+            newArray.push(item)
+        }
+    })
+    return newArray
+}
+
+const evenFilter = array.myFilter(function(item){
+    return item % 2 === 0
+})
+
+console.log(evenFilter)
+// [22, 4, 80]
+*/
 
