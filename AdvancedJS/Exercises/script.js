@@ -4383,3 +4383,73 @@ console.log(evenFilter)
 // [22, 4, 80]
 */
 
+// Create a function that concats two arrays together (the arguments provided to the function).
+/*
+function concatTwo(first, second){
+    return first.concat(second)
+}
+
+let arrayOne = [1,2,3]
+let arrayTwo = [4,5,6]
+console.log(concatTwo(arrayOne, arrayTwo))
+// [1, 2, 3, 4, 5, 6]
+
+*/
+
+// 9-27-2022
+
+// Create the filter function from scratch with Array.prototype
+/*
+const array = [1,2,3,4,5,6,7]
+
+Array.prototype.myFilt = function(callback){
+    let newArray = []
+    for(let i = 0; i < this.length; i++){
+        if(callback(this[i])){
+            newArray.push(this[i])
+        }
+    }
+
+    return newArray
+}
+
+const evenFilter = array.myFilt(function(item){
+    return item % 2 === 0
+})
+console.log(evenFilter)
+// [2, 4, 6]
+*/
+
+// What if we want to match a letter appearing between a range (say 3-6 times)?
+/*
+let ohStr = "Ohhhhhh no"
+let ohRegex = /oh{7,8}/gi
+console.log(ohRegex.test(ohStr))
+// false (there are not between 7 and 8 h's in the string)
+*/
+
+// Use recursion to return an array that begins with startNum and ends with endNum.
+/*
+function rangeOfNumbers(startNum, endNum){
+    if(endNum - startNum === 0) return [startNum]
+    let array = rangeOfNumbers(startNum, endNum - 1)
+    array.push(endNum)
+    return array
+}
+
+console.log(rangeOfNumbers(1,6))
+// [1, 2, 3, 4, 5, 6]
+*/
+
+// Create a function that concats two arrays together (the arguments provided to the function).
+/*
+function concatMe(firstThing, secondThing){
+    return firstThing.concat(secondThing)
+}
+let firstArray = [1,2,3]
+let secondArray = [4,5,6]
+
+console.log(concatMe(firstArray,secondArray))
+// [1, 2, 3, 4, 5, 6]
+*/
+
