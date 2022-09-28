@@ -4623,4 +4623,31 @@ console.log(squaredIntegers);
 // [6, 3, 4]
 */
 
+//9-28-2022
+// Write a function that returns the average rating for films only by a certain director using filter, map, and reduce.
+/*
+function getAvgRating(watchList){
+    return watchList
+    .filter(film => film.Director === "Christopher Nolan")
+    .map(film => Number(film.imdbRating))
+    .reduce((sumOfRatings, rating) => sumOfRatings + rating) / watchList.filter(film => film.Director === "Christopher Nolan").length
+}
+
+console.log(getAvgRating(watchList))
+
+function getAvgDirectorRating(watchList, director){
+    let films = watchList.filter(film => film.Director === `${director}`)
+    let ratings = films.map(film => Number(film.imdbRating))
+    let sumOfRatings = ratings.reduce((sumOfRatings, rating) => sumOfRatings + rating)
+    let averageRating = sumOfRatings / films.length
+    return `${director} has an average rating of ${averageRating}`
+}
+
+console.log(getAvgDirectorRating(watchList, "James Cameron"))
+// James Cameron has an average rating of 7.9
+console.log(getAvgDirectorRating(watchList, "Christopher Nolan"))
+// Christopher Nolan has an average rating of 8.675
+*/
+
+
 
