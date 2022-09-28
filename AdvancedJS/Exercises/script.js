@@ -4649,5 +4649,12 @@ console.log(getAvgDirectorRating(watchList, "Christopher Nolan"))
 // Christopher Nolan has an average rating of 8.675
 */
 
+const numberArray = [22.3, 44.6, 3.23, 5.675]
+
+function decToWhole(array){
+    return array.map(number => parseInt(number))
+}
+
+console.log(decToWhole(numberArray))
 
 
