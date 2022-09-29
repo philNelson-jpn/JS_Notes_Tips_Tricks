@@ -1,11 +1,76 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+	margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+	height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
 
+
+/*
 h1{
-    font-size: 5rem;
+    font-size: 2rem;
     background-color: hsl(208, 97%, 73%);
     width: fit-content;
     padding: 20px;
     border-radius: 16px;
     font-family: "Poppins";
+    transition: ease-in-out 500ms;
 }
 
 h1:hover{
@@ -21,21 +86,58 @@ h1:hover{
 }
 
 /* scroll snapping at center of element on horizontal scroll*/
+/*
 .wrapper {
     /* wrapper / section*/
+    /*
     overflow: auto;
     scroll-snap-type: x mandatory;
 }
 
 .card {
     /* image/article within wrapper */
+    /*
     scroll-snap-align: center;
 }
 
 /* clamp */
+/*
 
 .clamped-img {
     width: clamp(500px, 60%, 800px);
     /* min, ideal, max width */
+    /*
 }
 
+.randomPic {
+    filter: grayscale(100%) blur(1rem);
+    transition: ease-in-out 500ms;
+}
+
+.randomPic:hover {
+    filter: grayscale(0%) blur(0);
+}
+*/
+
+.wrapper {
+    --gap: 16px;
+    display: grid;
+    grid-template-columns: 1fr min(65ch, 100%) 1fr;
+}
+
+.wrapper > * {
+    grid-column: 2;
+    padding: var(--gap);
+}
+
+.full-bleed {
+    grid-column: 1 / -1;
+    margin-inline-start: calc(var(--gap) * -1);
+    margin-inline-end: calc(var(--gap) * -1);
+}
+
+.random-pic {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
