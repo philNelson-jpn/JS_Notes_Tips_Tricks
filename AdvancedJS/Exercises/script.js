@@ -4845,3 +4845,29 @@ console.log(returnRange([1,4]))
 // 10
 */
 
+// ["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]
+
+// Create a function that compares two arrays and only returns an element that both arrays share
+// Hint: combine the two arrays, filter out items that are not included in array1 or array2, return
+/*
+function sameElement(arr1, arr2){
+    return arr1
+    .concat(arr2)
+    .filter(item => !arr1.includes(item) || !arr2.includes(item))
+}
+
+console.log(sameElement(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]))
+// ['pink wool']
+*/
+
+// Create a function that takes an array and an unspecified number of arguments. The function should compare the arguments with the elements in the array. If any of the arguments match an element in the array, the element should be deleted from the array.
+// Hint: Use the spread operator when defining params, filter the array by checking for things that should not be included (spread operator param)
+/*
+function pruneArray(arr, ...thingsToRemoveFromArray){
+    return arr.filter(elem => !thingsToRemoveFromArray.includes(elem))
+}
+
+console.log(pruneArray([1,2,3,2,3,4,5], 2, 4))
+// [1, 3, 3, 5]
+*/
+
