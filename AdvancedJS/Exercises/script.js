@@ -4648,7 +4648,7 @@ console.log(getAvgDirectorRating(watchList, "James Cameron"))
 console.log(getAvgDirectorRating(watchList, "Christopher Nolan"))
 // Christopher Nolan has an average rating of 8.675
 */
-
+/*
 const numberArray = [22.3, 44.6, 3.23, 5.675]
 
 function decToWhole(array){
@@ -4656,5 +4656,192 @@ function decToWhole(array){
 }
 
 console.log(decToWhole(numberArray))
+// [22, 44, 3, 5]
+*/
+// sort an array without mutating the original
+/*
+const numberArray = [2,3,1,5,6,7,4]
 
+function sortMe(array){
+    return array.concat([]).sort(function(a,b){
+        return a - b
+    })
+}
+
+console.log(sortMe(numberArray))
+// [1, 2, 3, 4, 5, 6, 7]
+*/
+/*
+function splitify(str) {
+    const split = str.split(/\W/)
+    return split
+  }
+  
+console.log(splitify("Hello World,I-am code"))
+// [ 'Hello', 'World', 'I', 'am', 'code' ]
+*/
+/*
+function removeSpecChar(string){
+    return string.split(/\W/).join(' ')
+}
+
+console.log(removeSpecChar("May-the-force-be-with-you"))
+// May the force be with you
+*/
+/*
+function titleToSlug(title){
+    return title
+    .toLowerCase()
+    .trim() //remove white spaces from either side of a string
+    .split(/\s+/) //remove any space(s) between the string
+    .join('-')
+}
+
+console.log(titleToSlug("How To Make  Slugs Out    Of Strings"))
+// how-to-make-slugs-out-of-strings
+*/
+
+// 9-29-2022
+
+// Create a function that returns the sum of a range of an array of two numbers ([1,4] would return 10 (1+2+3+4))
+/*
+function sumOfRange(array){
+    let sum = 0
+    let min = Math.min(array[0], array[1])
+    let max = Math.max(array[0], array[1])
+    for(let i = min; i <= max; i++){
+        sum += i
+    }
+    return sum
+}
+
+console.log(sumOfRange([5,10]))
+// 45
+*/
+
+// Using Math.floor and Math.random, return a random whole number that is >= myMin and <= myMax.
+/*
+function randomRange(myMin, myMax){
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin
+}
+
+console.log(randomRange(2, 45))
+// floor is 2 (will never be lower than 2) random * myMax sets ceiling for max (45)
+console.log(Math.floor(Math.random() * 10) + 2)
+// floor is 2, ceiling is 10
+*/
+
+// How can you sort an array without mutating the original array? Bonus: What is the function that sorts numbers?
+/*
+function sortNumbers(array){
+    return array.concat([]).sort(function(a,b){
+        return a - b
+    })
+}
+const myArray = [1,4,5,2,3,4]
+console.log(sortNumbers(myArray))
+// [1, 2, 3, 4, 4, 5]
+console.log(myArray)
+// [1,4,5,2,3,4]
+*/
+
+// How do we create a new object based off of an already existing object?
+/*
+const person = {
+    name: "Phil",
+    age: 34,
+    address: {
+        street: "Joseph",
+        city: "Oxford"
+    }
+}
+
+const p2 = Object.create(person)
+console.log(p2.age)
+*/
+/*
+const person = {
+    name: "Phil",
+    age: 34,
+    skill: "JavaScript"
+}
+
+const p1 = {...person, skill:'React'}
+const p2 = {skill:'React',...person}
+console.log(p1.skill)
+// React
+console.log(p2.skill)
+// JavaScript (React gets overridden when we use the spread operator to map person to p2 (there can only be one skill))
+*/
+
+// Use split and regex to return an array of words without any spaces or special characters.
+/*
+function noSpecialChars(string){
+    return string.split(/\W/)
+}
+console.log(noSpecialChars("This-cannot!be~happening"))
+*/
+
+// Create the map function from scratch (on Array.prototype)
+/*
+const array = [1,2,4,66,77]
+Array.prototype.myMap = function(callback){
+    const newArray = []
+    this.forEach(item => newArray.push(callback(item)))
+    return newArray
+}
+
+console.log(array.myMap(item => item * 2))
+*/
+
+// Create a function that removes the dashes from the string "May-the-force-be-with-you".
+/*
+function removeDashes(string){
+    return string.split('-').join(' ')
+}
+
+console.log(removeDashes("May-the-force-be-with-you"))
+*/
+
+// Write a function that takes an array and a number. Use a while loop to loop over the array and push a copy of the array to a new array the number of times specified by the number argument.
+/*
+function copyMachine(array, number){
+    let newArray = []
+    let i = 0
+    while(i < number){
+        newArray.push([...array])
+        i++
+    }
+    return newArray
+}
+
+console.log(copyMachine([1,2,3], 3))
+// [[1,2,3],[1,2,3],[1,2,3]]
+*/
+
+// What is a url slug and how do we create one from a title/heading on our page?
+/*
+function makeMeASlug(title){
+    return title.toLowerCase().split(' ').join('-')
+}
+
+console.log(makeMeASlug("This is the end my only friend"))
+// this-is-the-end-my-only-friend
+*/
+
+// Create a function that returns the sum of a range of an array of two numbers ([1,4] would return 10 (1+2+3+4))
+/*
+function returnRange(array){
+    let sum = 0
+    let min = Math.min(array[0],array[1])
+    let max = Math.max(array[0],array[1])
+    for(let i = min; i <= max; i++){
+        sum += i
+    }
+    return sum
+}
+
+console.log(returnRange([1,4]))
+// 10
+*/
 
