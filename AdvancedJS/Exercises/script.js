@@ -4871,3 +4871,121 @@ console.log(pruneArray([1,2,3,2,3,4,5], 2, 4))
 // [1, 3, 3, 5]
 */
 
+// 9-30-2022
+// Create a function that title cases a string (every word's first letter is capitalized)
+/*
+// With a forLoop
+function titleCaseIt(string){
+    string = string.split(' ')
+    for(let i = 0; i < string.length; i++){
+        string[i] = string[i].toLowerCase().split('')
+        string[i][0] = string[i][0].toUpperCase()
+        string[i] = string[i].join('')
+    }
+    return string.join(' ')
+}
+console.log(titleCaseIt("this is a test"))
+// This Is A Test
+*/
+
+// With Map
+/*
+function titleCaseIt(string){
+    return string
+    .toLowerCase()
+    .split(' ')
+    .map(item => item.replace(item.charAt(0), item.charAt(0).toUpperCase()))
+    .join(' ')
+}
+
+console.log(titleCaseIt("this is a test"))
+// This Is A Test
+*/
+/*
+function removeFalsy(array){
+    let newArray = []
+    for(let i = 0; i < array.length; i++){
+        if(array[i]){
+            newArray.push(array[i])
+        }
+    }
+
+    return newArray
+}
+
+console.log(removeFalsy(["yes", "", NaN, undefined, 7, 0]))
+*/
+
+// Create a function that changes a string to title case (only the first letter of each word is capitalized) using map.
+/*
+function titleCaseMap(string){
+    return string
+    .toLowerCase()
+    .split(' ')
+    .map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()))
+    .join(' ')
+}
+
+console.log(titleCaseMap("what is going on here"))
+*/
+
+// Find the longest word in a string and print the length of that word (a number). Bonus: print out the word itself.
+/*
+function longestWord(string){
+    let words = string.split(' ')
+    let lengthOfWord = 0
+    let numberOfWords = 0
+    let longestWord = ""
+    for(let i = 0; i < words.length; i++){
+        if(words[i].length > lengthOfWord){
+            lengthOfWord = words[i].length
+            longestWord = words[i]
+        }if(words.length > numberOfWords){
+            numberOfWords++
+        }
+    }
+    return `Your string is ${numberOfWords} words long. The longest word in your string is "${longestWord}" at ${lengthOfWord} characters long.`
+}
+
+console.log(longestWord("this is a test yoooooo"))
+// Your string is 5 words long. The longest word in your string is "yoooooo" at 7 characters long.
+
+function wordCount(string){
+    let words = string.split(' ')
+    let numberOfWords = 0
+    for(let i = 0; i < words.length; i++){
+        if(words.length > numberOfWords){
+            numberOfWords++
+        }
+    }
+    return numberOfWords
+}
+
+console.log(wordCount("how to eat a bagel properly dammit"))
+// 7
+*/
+
+// Create a new object from an array of objects that only displays two keys from the original object using map.
+/*
+function specificObjects(array){
+    return array.map(movie => ({
+        title: movie["Title"],
+        releaseDate: movie["Released"]
+    }))
+}
+
+console.log(JSON.stringify(specificObjects(watchList)))
+*/
+
+// Create a function that compares two arrays and only returns an element that both arrays share
+/*
+function compareArrays(arr1, arr2){
+    return arr1
+    .concat(arr2)
+    .filter(element => !arr1.includes(element) || !arr2.includes(element))
+
+}
+
+console.log(compareArrays([1,2,3], [4,3,5]))
+*/
+
