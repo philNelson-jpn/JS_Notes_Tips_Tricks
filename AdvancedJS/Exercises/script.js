@@ -8,6 +8,8 @@
 //     }
 // }
 
+
+
 /*
 Remove duplicates from an array:
 const array = [1, 2, 3, 4, 4, 3, 2, 5]
@@ -4987,5 +4989,86 @@ function compareArrays(arr1, arr2){
 }
 
 console.log(compareArrays([1,2,3], [4,3,5]))
+*/
+
+// 10-1-2022
+
+// Create a function that concats two arrays together (the arguments provided to the function).
+/*
+function concatArrays(arr1, arr2){
+    return arr1.concat(arr2)
+}
+console.log(concatArrays([1,2,3],[4,5,6]))
+// [1, 2, 3, 4, 5, 6]
+*/
+
+// What is a mixin and how can we use it?
+/*
+const bird = {
+    ability: "fly",
+    wings: 2
+}
+
+const plane = {
+    ability: "fly",
+    wings: 2
+}
+
+const myMix = function(object){
+    return object.flying = function(){
+        console.log("We are soaring, homie")
+    }
+}
+
+myMix(bird)
+bird.flying()
+// We are soaring, homie
+*/
+
+// Write a function that checks if the second argument is the last part of the first argument (a string).
+
+// confirmEnding("Bastian", "n") should return true.
+/*
+function confirmEnding(string, target){
+    return string.slice(string.length - target.length) === target
+}
+
+console.log(confirmEnding("hello", "lo"))
+*/
+
+// Create a function that compares two arrays and only returns an element that both arrays DO NOT share
+/*
+function notInBoth(arr1, arr2){
+    return arr1.concat(arr2).filter(element => !arr1.includes(element) || !arr2.includes(element))
+}
+
+console.log(notInBoth([1,2,3,4,5,6], [1,2,4,5,6,7]))
+// [3, 7]
+*/
+
+// Write a function that returns the average rating for films only by a certain director using filter, map, and reduce.
+/*
+function avgRating(watchList){
+    let averageRating = watchList
+        .filter(film => film.Director === "Christopher Nolan")
+        .map(film => Number(film.imdbRating))
+        .reduce((sumOfRatings, rating) => sumOfRatings + rating) / watchList.filter(film => film.Director === "Christopher Nolan").length
+        return averageRating
+}
+
+console.log(avgRating(watchList))
+// 8.675
+
+function avgRatingDirector(watchList, director){
+    let films = watchList.filter(film => film.Director === `${director}`)
+    let ratings = films.map(film => Number(film.imdbRating))
+    let sumOfRatings = ratings.reduce((sum, rating) => sum + rating)
+    let averageRating = sumOfRatings / films.length
+    return `${director} has an average rating of ${averageRating}`
+
+}
+
+console.log(avgRatingDirector(watchList, "Christopher Nolan"))
+// Christopher Nolan has an average rating of 8.675
 */
 
