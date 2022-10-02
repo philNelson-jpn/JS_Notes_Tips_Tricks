@@ -5072,3 +5072,76 @@ console.log(avgRatingDirector(watchList, "Christopher Nolan"))
 // Christopher Nolan has an average rating of 8.675
 */
 
+// 10-3-2022
+
+// JSX Dom rendering
+
+// ReactDOM.render(JSX, document.getElementById("fidgy"))
+
+// Create a function that takes in a name and uses printVariable as a callback to print out "Hello, (name)"
+/*
+function printVariable(variable){
+    console.log(variable)
+}
+
+const hello = function(name, func){
+    return func(`Hello, ${name}`)
+}
+
+hello("Phil", printVariable)
+// Hello, Phil
+*/
+
+// What is a url slug and how do we create one from a title/heading on our page?
+/*
+function createSlug(string){
+    return string
+        .toLowerCase()
+        .split(' ')
+        .join('-')
+}
+
+console.log(createSlug("ThiS Is A tEst"))
+// this-is-a-test
+*/
+
+// Create the filter function from scratch with Array.prototype
+/*
+const array = [1,2,3,4,5,6,7,8]
+
+Array.prototype.myFilter = function(callback){
+    let newArray = []
+    for(let i = 0; i < this.length; i++){
+        if(callback(this[i])){
+            newArray.push(this[i])
+        }
+    }
+    return newArray
+}
+
+const evenFilter = array.myFilter(function(item){
+    return item % 2 === 0
+})
+console.log(evenFilter)
+
+const oddFilter = array.myFilter(function(item){
+    return item % 2 === 1
+})
+console.log(oddFilter)
+*/
+
+// Create a function that returns the sum of a range of an array of two numbers ([1,4] would return 10 (1+2+3+4))
+/*
+function rangeSum(array){
+    let min = Math.min(array[0], array[1])
+    let max = Math.max(array[0], array[1])
+    let sum = 0
+    for(let i = min; i <= max; i++){
+        sum += i
+    }
+    return sum
+}
+
+console.log(rangeSum([5,10]))
+*/
+
