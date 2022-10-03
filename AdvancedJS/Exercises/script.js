@@ -5145,3 +5145,94 @@ function rangeSum(array){
 console.log(rangeSum([5,10]))
 */
 
+// Assign list to a destructured array that is equal to 3 through 10.
+/*
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list) {
+    let [a, b, ...arr] = list
+    return arr; 
+}
+const arr = removeFirstTwo(source);
+console.log(arr)
+// [3, 4, 5, 6, 7, 8, 9, 10]
+*/
+
+// Create a function that removes the dashes from the string "May-the-force-be-with-you".
+/*
+function removeDashes(string){
+    return string.split('-').join(' ')
+}
+
+console.log(removeDashes("May-the-force-be-with-you"))
+// May the force be with you
+*/
+
+// Import everything from a js file
+
+//import * as modalModules from "./index.js"
+
+// Create a function that looks through an array arr and returns the first element in it that passes a 'truth test'. This means that given an element x, the 'truth test' is passed if func(x) is true. If no element passes the test, return undefined.
+/*
+function truthTest(arr, func){
+    let num = 0
+    for(let i = 0; i < arr.length; i++){
+        num = arr[i]
+        if(func(num)){
+            return num
+        }
+    }
+    return undefined
+}
+
+console.log(truthTest([1,2,3,4], num => num % 2 === 0))
+*/
+/*
+let numArray = [1,3,2,6,4,7,5]
+
+function numberSorter(arr){
+    return arr.concat().sort(function(a, b){
+        return a - b
+    })
+}
+
+console.log(numberSorter(numArray))
+*/
+
+// Create a single regex that matches all characters that are not a number or a vowel. Remember to include the appropriate flags in the regex.
+/*
+let quote = "3 blind mice"
+let quoteRegex = /[^aeiou0-9]/gi
+let result = quote.match(quoteRegex)
+console.log(result)
+// [' ', 'b', 'l', 'n', 'd', ' ', 'm', 'c']
+*/
+
+// Find the longest word in a string and print the length of that word (a number).
+/*
+function findLongest(string){
+    let words = string.split(' ')
+    let numberOfChars = 0
+    let longestWord = ""
+    for(let i = 0; i < words.length; i++){
+        if(words[i].length > numberOfChars){
+            numberOfChars += words[i].length
+            longestWord = words[i]
+        }
+    }
+    return `The longest word is ${longestWord} at ${numberOfChars} characters`
+}
+
+console.log(findLongest("What is the longest word?"))
+// The longest word is longest at 11 characters
+*/
+
+// Create a function that uses map to convert decimal numbers to whole numbers using parseInt()
+/*
+function decToWhole(array){
+    return array.map(element => parseInt(element))
+}
+
+console.log(decToWhole([22.4,33.5,25.7]))
+// [22, 33, 25]
+*/
+
