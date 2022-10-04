@@ -5236,3 +5236,36 @@ console.log(decToWhole([22.4,33.5,25.7]))
 // [22, 33, 25]
 */
 
+// 10-4-2022
+
+// Create a function that compares two arrays and only returns an element that both arrays DO NOT share
+/*
+function compareArrays(arr1, arr2){
+    return arr1.concat(arr2).filter(element => !arr1.includes(element) || !arr2.includes(element))
+}
+
+console.log(compareArrays([1,2,3],[1,2,4]))
+// [3, 4]
+*/
+
+// Write a function that takes in a string and a number. The string should be repeated the number of times specified in the number parameter.
+/*
+function copyString(string, number){
+    return string.repeat(number)
+}
+console.log(copyString("Hi", 2))
+// HiHi
+*/
+
+// Split a string and use regex to return an array of words that contains no spaces or special characters.
+/*
+function combineArray(string){
+    return string.split(/\W/)
+}
+
+console.log(combineArray("hello there my old friend"))
+// ['hello', 'there', 'my', 'old', 'friend']
+*/
+
+
+

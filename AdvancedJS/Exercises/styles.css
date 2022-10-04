@@ -137,7 +137,7 @@ h1:hover{
 }
 
 .random-pic {
-    display: block;
+    display: inline-block;
     object-fit: cover;
     width: 100%;
 }
