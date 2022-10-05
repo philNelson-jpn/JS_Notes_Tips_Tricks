@@ -5267,5 +5267,67 @@ console.log(combineArray("hello there my old friend"))
 // ['hello', 'there', 'my', 'old', 'friend']
 */
 
+// 10-5-2022
 
+// Create the map function from scratch (on Array.prototype)
+/*
+Array.prototype.myMap = function(callback){
+    let newArray = []
+    this.forEach(item => newArray.push(callback(item)))
+    return newArray
+}
 
+let array = [1,2,3,4,5]
+let doubled = array.myMap(item => item * 2)
+console.log(doubled)
+// [2, 4, 6, 8, 10]
+*/
+
+// Write a function that returns the average rating for films only by a certain director using filter, map, and reduce.
+/*
+function avgRating(watchList){
+    let averageRating = watchList
+        .filter(film => film.Director === "Christopher Nolan")
+        .map(film => Number(film.imdbRating))
+        .reduce((sumOfRatings, sum) => sumOfRatings + sum) / watchList.filter(film => film.Director === "Christopher Nolan").length
+        return averageRating
+}
+
+console.log(avgRating(watchList))
+*/
+
+// Write a function that reverses a string with a for loop
+/*
+function reverseMe(string){
+    let newString = ""
+    for(let i = string.length - 1; i >= 0; i--){
+        newString += string[i]
+    }
+    return newString
+}
+
+console.log(reverseMe("Hello"))
+//elloH
+*/
+
+// REGEX
+// Check if a string is made up of either Phil Nelson or Jin Nelson.
+// Now check if any middle names or initials are also included.
+/*
+let string = "Jin Nelson"
+let regex = /(Phil|Jin).*Nelson/
+let result = regex.test(string)
+console.log(result)
+// true
+*/
+
+// Write a function that takes a full name, splits the first name into an array, and returns it. Then destructure the array so that both the first name and last name are accessible as separate variables (assign the destructured array to the function).
+/*
+function splitFullName(fullName){
+    return fullName.split(' ')
+}
+
+let [firstName, lastName] = splitFullName("Phil Nelson")
+console.log(firstName)
+// Phil
+*/
