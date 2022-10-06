@@ -5331,3 +5331,37 @@ let [firstName, lastName] = splitFullName("Phil Nelson")
 console.log(firstName)
 // Phil
 */
+
+// 10-6-2022
+
+// How can we create an array within a component, access it with props, and apply JS methods to it?
+/*
+const MyComponent = (props) => {
+    return <p>{props.items.join(', ')}</p>
+}
+
+<Fruits items={["oranges", "apples"]} />
+*/
+
+// How do you render JSX components to the DOM? Hint: the method requires two arguments; component to render and the target node.
+/*
+ReactDOM.render(MyComponent, document.getElementById('poop'))
+*/
+
+// What are the three arguments/params that we can pass to array.splice()?
+/*
+array.splice(indexToMakeReplacement, NumItemsToBeRemoved, itemsToReplaceRemoved)
+*/
+
+// REGEX
+// How do we select 0 or more characters like all of the a's in Aaaaaaaaargh?
+
+// const string = "Aaaaaaaaaaargh"
+// const regex = /a*/i
+// const result = string.match(regex)
+
+// console.log(result)
+
+
+
+
