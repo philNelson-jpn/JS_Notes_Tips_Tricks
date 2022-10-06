@@ -5362,6 +5362,71 @@ array.splice(indexToMakeReplacement, NumItemsToBeRemoved, itemsToReplaceRemoved)
 
 // console.log(result)
 
+// How do we ensure that a property type is required before the value is displayed with React components?
+/*
+const Items = (props) => {
+    return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
+  }
+  
+  Items.propTypes = {
+    quantity: PropTypes.number.isRequired
+  }
+  
+  Items.defaultProps = {
+    quantity: 0
+  }
+*/
 
+// Create a function that title cases a string (every word's first letter is capitalized)
+/*
+function titleCaseIt(string){
+    string = string.split(' ')
+    for(let i = 0; i < string.length; i++){
+        string[i] = string[i].toLowerCase().split('')
+        string[i][0] = string[i][0].toUpperCase()
+        string[i] = string[i].join('')
+    }
+    return string.join(' ')
+}
 
+console.log(titleCaseIt("Hello there dingle butt"))
+// Hello There Dingle Butt
+*/
+
+/*
+function titleCaseIt(string){
+    let titledString = string
+    .toLowerCase()
+    .split(' ')
+    .map(elem => elem.replace(elem.charAt(0), elem.charAt(0).toUpperCase()))
+    .join(' ')
+    return titledString
+}
+
+console.log(titleCaseIt("Hello there dingle butt"))
+// Hello There Dingle Butt
+*/
+/*
+class MyComponent extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            name: "Philly Mac"
+        }
+    }
+}
+
+render(){
+    return (
+        <div>
+            <h1>{this.state.name}</h1>
+        </div>
+    )
+}
+*/
+/*
+Item.propTypes = {
+    name: PropTypes.string.isRequired
+}
+*/
 
