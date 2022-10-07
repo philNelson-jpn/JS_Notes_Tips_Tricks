@@ -123,6 +123,7 @@ h1:hover{
     --gap: 16px;
     display: grid;
     grid-template-columns: 1fr min(65ch, 100%) 1fr;
+    overflow: hidden;
 }
 
 .wrapper > * {
@@ -137,7 +138,7 @@ h1:hover{
 }
 
 .random-pic {
-    display: inline-block;
+    display: block;
     object-fit: cover;
     width: 100%;
 }

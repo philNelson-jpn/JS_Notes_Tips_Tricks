@@ -5429,4 +5429,165 @@ Item.propTypes = {
     name: PropTypes.string.isRequired
 }
 */
+/*
+class Counter extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        count: 0
+      };
+    this.increment = this.increment.bind(this)
+    this.decrement = this.decrement.bind(this)
+    this.reset = this.reset.bind(this)
+    }
+  
+  increment(){
+    this.setState(state => ({
+      count: state.count + 1
+    }))
+  }
+  decrement(){
+    this.setState(state => ({
+      count: state.count - 1
+    }))
+  }
+  reset(){
+    this.setState(state => ({
+      count: state.count = 0
+    }))
+  }
+    render() {
+      return (
+        <div>
+          <button className='inc' onClick={this.increment}>Increment!</button>
+          <button className='dec' onClick={this.decrement}>Decrement!</button>
+          <button className='reset' onClick={this.reset}>Reset</button>
+          <h1>Current Count: {this.state.count}</h1>
+        </div>
+      );
+    }
+  };
+*/
+
+//10-7-2022
+
+// How do you render React components to the DOM? (Different from how you pass JSX elements to the render).
+/*
+ReactDOM.render(<MyComponent />, document.getElementById("jobs"))
+*/
+
+// Impure function to a pure function
+/*
+const person = {
+    name: "Phil",
+    friends: ["Simon", "Caleb"]
+}
+
+function addFriend(friendName){
+    person.friends.push(friendName)
+}
+
+addFriend("Jill")
+
+function addFriendPure(obj, friendName){
+    return {...obj, friends: [...obj.friends, friendName]}
+}
+
+const person2 = addFriendPure(person, "Jimmy")
+console.log(person2.friends)
+// ['Simon', 'Caleb', 'Jill', 'Jimmy']
+console.log(person.friends)
+// ['Simon', 'Caleb', 'Jill']
+*/
+
+// React - ensure that a property type is required before the value is displayed
+/*
+Items.propTypes = {
+    name: PropTypes.string.isRequired
+}
+*/
+
+// How do you make a component stateful and then how do you access the props defined in the constructor?
+/*
+class People extends React.Component {
+    constructor(props){
+        super(props)
+    
+    this.state = {
+        name: 'Philly Mac'
+    }
+}
+
+    render(){
+        return(
+            <div>
+                <h1>{this.state.name}</h1>
+            </div>
+        )
+    }
+}
+*/
+/*
+const List = props => {
+    return <p>{props.array.join(', ')}</p>
+}
+
+class People extends React.Component {
+    constructor(props){
+        super(props)
+}
+    render(){
+        return(
+            <div>
+                <List array={[1,2,3,4]}></List>
+            </div>
+        )
+    }
+}
+*/
+
+// Create a new object from an array of objects that only displays two keys from the original object using map.
+/*
+const movies = [
+    {
+        "Title": "Inception",
+        "Released": "July 16, 2010",
+        "Director": "Christopher Nolan",
+        "imbdRating": "8.8"
+    },
+    {
+        "Title": "Interstellar",
+        "Released": "November 4, 2014",
+        "Director": "Christopher Nolan",
+        "imbdRating": "8.6"
+    },
+    {
+        "Title": "The Dark Knight",
+        "Released": "July 18, 2008",
+        "Director": "Christopher Nolan",
+        "imbdRating": "9.0"
+    }
+]
+const ratingAndDirector = movies.map(item => ({
+    rating: item["imbdRating"],
+    director: item["Director"]
+}))
+
+console.log(JSON.stringify(ratingAndDirector))
+*/
+
+// Create a function that returns the sum of a range of an array of two numbers ([1,4] would return 10 (1+2+3+4))
+/*
+function sumOfRange(array){
+    let min = Math.min(array[0], array[1])
+    let max = Math.max(array[0], array[1])
+    let sum = 0
+    for(let i = min; i <= max; i++){
+        sum += i
+    }
+    return sum
+}
+
+console.log(sumOfRange([4,1]))
+*/
 
