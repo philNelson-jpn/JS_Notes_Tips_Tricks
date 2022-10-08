@@ -5591,3 +5591,88 @@ function sumOfRange(array){
 console.log(sumOfRange([4,1]))
 */
 
+// 10-8-2022
+
+// Write a React component from scratch
+/*
+class MyComponent extends React.Component{
+    constructor(props){
+        super(props)
+    }
+
+    render(){
+      return(
+        <div>
+          <h1>My First React Component!</h1>
+        </div>
+      )
+    }
+}
+
+ReactDOM.render(<MyComponent />, document.getElementById('challenge-node'))
+// h1 rendered to the DOM
+*/
+/*
+// Use regext and .replace() and a capture group to change the string "one two three" to "three two one"
+let string = "You are strong with the force"
+let regex = /(\w+)\s(\w+)\s(\w+)\s(\w+)\s(\w+)\s(\w+)/
+let newString = "$3 $1 $2 $4 $5 $6"
+let result = string.toLowerCase().replace(regex, newString)
+console.log(result)
+// strong you are with the force
+*/
+
+// How can you sort an array without mutating the original array? Bonus: What is the function that sorts numbers?
+/*
+function sortArray(array){
+    return array.concat([]).sort(function(a,b){
+        return a - b
+    })
+}
+
+const numberArray = [6,4,3,2,1,5]
+console.log(sortArray(numberArray))
+*/
+/*
+class Counter extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+        count: 0
+    }
+    this.increment = this.increment.bind(this)
+    this.decrement = this.decrement.bind(this)
+    this.reset = this.reset.bind(this)
+    }
+
+    increment(){
+        this.setState(state => ({
+            count: state.count + 1
+        }))
+    }
+
+    decrement(){
+        this.setState(state => ({
+            count: state.count - 1
+        }))
+    }
+
+    reset(){
+        this.setState(state => ({
+            count: state.count = 0
+        }))
+    }
+
+    render() {
+        return (
+            <div>
+                <button className='inc' onClick={this.increment}>Increment!</button>
+                <button className='dec' onClick={this.decrement}>Decrement!</button>
+                <button className='reset' onClick={this.reset}>Reset</button>
+                <h1>Current Count: {this.state.count}</h1>
+            </div>
+        )
+    }
+}
+*/
+
