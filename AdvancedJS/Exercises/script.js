@@ -5676,3 +5676,84 @@ class Counter extends React.Component {
 }
 */
 
+// 10-10-2022
+
+// How can we create an array within a component, access it with props, and apply JS methods to it?
+/*
+const List = props => {
+    return <p>{props.items.join(', ')}</p>
+}
+
+class MyComponent extends React.Component {
+    constructor(props){
+        super(props)
+    }
+    render(){
+        return(
+            <div>
+                <h1>Hello there</h1>
+                <List items={["tree", "bear", "honey"]}/>
+            </div>
+        )
+    }
+}
+*/
+
+// Create a component called Camper with an arrow function that contains a paragraph that includes a name value passed to props.
+/*
+const Camper = props => {
+    return <p>{props.name}</p>
+}
+
+Camper.defaultProps = {
+    name: "CamperBot"
+}
+
+Camper.propTypes = {
+    name: PropTypes.string.isRequired
+}
+*/
+
+// Create a component that uses three functions: increment, decrement, and reset. The component should return three buttons with onClicks that trigger each function ({this.increment}, etc.) and an h1 with a current count set to {this.state.count}.
+/*
+class Counter extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+        count: 0
+        }
+        this.increment = this.increment.bind(this)
+        this.decrement = this.decrement.bind(this)
+        this.reset = this.reset.bind(this)
+    }
+        increment(){
+            this.setState(state => ({
+                count: state.count + 1
+            }))
+        }
+
+        decrement(){
+            this.setState(state => ({
+                count: state.count - 1
+            }))
+        }
+
+        reset(){
+            this.setState(state => ({
+                count: state.count = 0
+            }))
+        }
+        render() {
+            return (
+                <div>
+                    <button className='inc' onClick={this.increment}>Increment!</button>
+                    <button className='dec' onClick={this.decrement}>Decrement!</button>
+                    <button className='reset' onClick={this.reset}>Reset</button>
+                    <h1>Current Count: {this.state.count}</h1>
+                </div>
+            )
+        }
+}
+*/
+
+// Create a function that compares two arrays and only returns an element that both arrays DO NOT share

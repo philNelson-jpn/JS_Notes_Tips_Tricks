@@ -141,5 +141,6 @@ h1:hover{
     display: block;
     object-fit: cover;
     width: 100%;
-    /* random comment */
+    /* width: calc(100% / 7); 1/7 of the space */
+
 }
