@@ -5757,3 +5757,60 @@ class Counter extends React.Component {
 */
 
 // Create a function that compares two arrays and only returns an element that both arrays DO NOT share
+/*
+function compareArrays(arr1, arr2){
+    return arr1.concat(arr2).filter(element => !arr1.includes(element) || !arr2.includes(element))
+}
+
+console.log(compareArrays([1,2,3], [2,3,4]))
+*/
+
+/*
+Array.prototype.myFilter = function(callback){
+    const newArray = []
+    console.log(this)
+    for(let i = 0; i < this.length; i++){
+        if(callback(this[i])){
+            newArray.push(this[i])
+        }
+    }
+    return newArray
+}
+
+const array = [1,2,3,4,5,6]
+
+const evenFilter = array.myFilter(function(item){
+    return item % 2 === 0
+})
+
+const oddFilter = array.myFilter(function(item){
+    return item % 2 === 1
+})
+
+console.log(evenFilter)
+// [22, 4, 80]
+console.log(oddFilter)
+// [23, 33, 7]
+*/
+/*
+class Thermostat {
+    constructor(fahrenheit){
+        this.fahrenheit = fahrenheit
+    }
+    get temperature(){
+        return `${5/9 * (this.fahrenheit - 32)}°C`
+    }
+
+    set temperature(celsius){
+        this.fahrenheit = `${celsius * 9 / 5 + 32}°F`
+    }
+}
+
+const thermos = new Thermostat(86)
+console.log(thermos.temperature)
+
+thermos.temperature = 800
+console.log(thermos.fahrenheit)
+*/
+
+
