@@ -5963,5 +5963,17 @@ class MyComponent extends React.Component {
     }
   }
   */
+/*
+  function printVariable(variable){
+    console.log(variable)
+  }
 
-  
+  function printName(name, callback){
+    callback(`Hello, ${name}`)
+  }
+
+printName("Phil", (variable) => console.log(variable))
+// Hello, Phil
+*/
+
+
