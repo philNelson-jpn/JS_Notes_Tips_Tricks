@@ -8,8 +8,6 @@
 //     }
 // }
 
-
-
 /*
 Remove duplicates from an array:
 const array = [1, 2, 3, 4, 4, 3, 2, 5]
@@ -5813,4 +5811,97 @@ thermos.temperature = 800
 console.log(thermos.fahrenheit)
 */
 
+// 10-11-2022
+// Create a function that changes a string to title case (only the first letter of each word is capitalized) using map.
+/*
+function toTitleCase(string){
+    return string
+    .toLowerCase()
+    .split(' ')
+    .map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()))
+    .join(' ')
+}
+// forgot to use "val" in val.replace()
+
+console.log(toTitleCase("hello there buffalo"))
+// Hello There Buffalo
+*/
+
+// What is a url slug and how do we create one from a title/heading on our page?
+/*
+function createSlug(string){
+    return string
+    .toLowerCase()
+    .split(' ')
+    .join('-')
+}
+
+console.log(createSlug("this Is a TESt"))
+// this-is-a-test
+*/
+
+// Create a function that uses map to convert decimal numbers to whole numbers using parseInt()
+/*
+function decToWhole(arrayOfNumbers){
+    return arrayOfNumbers.map(val => parseInt(val))
+}
+
+console.log(decToWhole([22.3, 44.232, 55.6]))
+// [22, 44, 55]
+*/
+
+// Write a function that returns the average rating for films only by a certain director using filter, map, and reduce.
+/*
+function getAvgRating(watchList, director){
+    let filmDirector = watchList.filter(film => film.Director === `${director}`)
+    let ratings = filmDirector.map(film => Number(film.imdbRating))
+    let sumOfRatings = ratings.reduce((sumOfRatings, rating) => sumOfRatings + rating)
+    let averageRating = sumOfRatings / filmDirector.length
+    return `${director}'s films have an average rating of ${averageRating}.`
+}
+
+console.log(getAvgRating(watchList, "James Cameron"))
+// James Cameron's films have an average rating of 7.9.
+console.log(getAvgRating(watchList, "Christopher Nolan"))
+// Christopher Nolan's films have an average rating of 8.675.
+*/
+/*
+const result = {
+    success: ["max-length", "no-amd", "prefer-arrow-functions"],
+    failure: ["no-var", "var-on-top", "linebreak"],
+    skipped: ["no-extra-semi", "no-dup-keys"]
+    }
+    function makeList(arr) {
+    const failureItems = []
+    for(let i = 0; i < arr.length; i++){
+        failureItems.push(`<li class="text-warning">${arr[i]}</li>`)
+    }
+    return failureItems
+    }
+    
+    const failuresList = makeList(result.failure)
+    console.log(failuresList)
+    // [ '<li class="text-warning">no-var</li>',
+    // '<li class="text-warning">var-on-top</li>',
+    // '<li class="text-warning">linebreak</li>' ]
+    */
+
+// How do you render JSX components to the DOM? Hint: the method requires two arguments; component to render and the target node.
+    // ReactDOM.render(MyComponent, document.getElementById('target-node'))
+
+
+// Create a map that contains three arrays with the keys 1, 2, 3 (as placeholders for ids). Each key should have a test AND a description value assigned to it. Next, create a function that gets an id (1, 2, or 3) from our map and returns it.
+/*
+const idMap = new Map([
+    [1, {test: "test1", description: "dec1"}],
+    [2, {test: "test2", description: "dec2"}],
+    [3, {test: "test3", description: "dec3"}],
+])
+
+function getId(id){
+    return idMap.get(id)
+}
+
+console.log(getId(2))
+*/
 
