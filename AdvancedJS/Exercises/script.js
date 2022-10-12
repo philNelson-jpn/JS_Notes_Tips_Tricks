@@ -5963,6 +5963,8 @@ class MyComponent extends React.Component {
     }
   }
   */
+
+// 10-12-2022
 /*
   function printVariable(variable){
     console.log(variable)
@@ -5975,5 +5977,45 @@ class MyComponent extends React.Component {
 printName("Phil", (variable) => console.log(variable))
 // Hello, Phil
 */
+// Remove dashes/special chars from a string
+/*
+function removeDashes(string){
+    return `${string.split(/[\W]/).join(' ')}.`
+}
 
+console.log(removeDashes("this-is?the-end-my!only(friend"))
+*/
+
+// Using Math.floor and Math.random, return a random whole number that is >= myMin and <= myMax.
+/*
+function returnRandomRange(min, max){
+    return Math.floor(Math.random() * (max - min) + 1) + min
+}
+
+console.log(returnRandomRange(2,24))
+*/
+
+// Create the map function from scratch (on Array.prototype)
+/*
+Array.prototype.myMap = function(callback){
+    let newArray = []
+    for(let i = 0; i < this.length; i++){
+        newArray.push(callback(this[i]))
+    }
+    return newArray
+}
+*/
+/*
+Array.prototype.myMap = function(callback){
+    let newArray = []
+    this.forEach(item => newArray.push(callback(item)))
+    return newArray
+}
+
+
+const array = [2,3,4,5,6]
+const mapped = array.myMap(value => value * 2)
+console.log(mapped)
+// [4, 6, 8, 10, 12]
+*/
 
