@@ -6018,4 +6018,105 @@ const mapped = array.myMap(value => value * 2)
 console.log(mapped)
 // [4, 6, 8, 10, 12]
 */
+/*
+class Colorful extends React.Component {
+    render() {
+      return (
+        <div></div>
+      )
+    }
+  }
+*/
+/*
+// Inline styles in JSX
+const STYLES = {
+    titleStyles: {
+      color: "purple",
+      fontSize: 40,
+      border: "2px solid purple",
+      width: "fit-content",
+      padding: 14
+      },
+    paragraphStyles: {
+      color: "rebeccapurple",
+      fontSize: 20,
+      border: "2px solid hotpink",
+      width: "fit-content",
+      padding: 12
+      }      
+
+    }
+
+class Colorful extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1 style={STYLES.titleStyles}>I'm a title</h1>
+        <p style={STYLES.paragraphStyles}>I'm a paragraph</p>
+      </div>
+    )
+  }
+}
+*/
+
+// Toggle the display of an element with an if/else statement within our render
+/*
+class MyComponent extends React.Component {
+    constructor(props) {
+      super(props)
+      this.state = {
+        display: true
+      }
+      this.toggleDisplay = this.toggleDisplay.bind(this);
+    }
+    toggleDisplay() {
+      this.setState((state) => ({
+        display: !state.display
+      }))
+    }
+    render() {
+      if(this.state.display){
+      return (
+         <div>
+           <button onClick={this.toggleDisplay}>Toggle Display</button>
+           <h1>Displayed!</h1>
+         </div>
+      )
+      }else{
+        return (
+          <div>
+            <button onClick={this.toggleDisplay}>Toggle Display</button>
+          </div>
+        )
+      }
+    }
+  }
+  */
+
+//   Same if/else on one line:
+/*
+  class MyComponent extends React.Component {
+    constructor(props) {
+      super(props)
+      this.state = {
+        display: true
+      }
+      this.toggleDisplay = this.toggleDisplay.bind(this);
+    }
+    toggleDisplay() {
+      this.setState((state) => ({
+        display: !state.display
+      }))
+    }
+    render() {
+        return (
+           <div>
+             <button onClick={this.toggleDisplay}>Toggle Display</button>
+             {this.state.display && <h1>Displayed!</h1>}
+           </div>
+        )
+      }
+  }
+*/
+
 
