@@ -118,7 +118,7 @@ font-family: 'Roboto', sans-serif;
  }
 
  .intro__title {
-    font-size: calc(60 / 16 * 1rem);
+    font-size: calc(50 / 16 * 1rem);
  }
 
  .section-three {
@@ -129,4 +129,22 @@ font-family: 'Roboto', sans-serif;
  .section-four {
     background-color: hsl(15, 41%, 36%);
     color: hsl(0, 0%, 100%);
+ }
+
+ @media (min-width: 800px) {
+    .row {
+        display: flex;
+    }
+
+    .col {
+        width: 100%;
+    }
+
+    .col + .col {
+        margin-inline-start: 3em;
+    }
+
+    .intro__title {
+        font-size: calc(60 / 16 * 1rem);
+    }
  }
