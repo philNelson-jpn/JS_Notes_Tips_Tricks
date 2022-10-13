@@ -61,3 +61,72 @@ h6 {
 	overflow-wrap: break-word;
 }
 
+/* 
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto', sans-serif;
+ */
+
+ body{
+    font-family: 'Roboto', sans-serif;
+    font-size: calc(21 / 16 * 1rem);
+    line-height: 1.6;
+    color: hsl(168, 13%, 15%);
+ }
+
+ img{
+    max-width: 100%;
+ }
+
+ h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    margin-block-start: 0;
+ }
+
+ section {
+    padding: 4em 0;
+ }
+
+ .container {
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1128px;
+ }
+
+ .section-title {
+    font-size: calc(34 / 16 * 1rem);
+    color: hsl(48, 52%, 90%);
+ }
+
+ .section-title--dark {
+    color: hsl(15, 41%, 36%);
+ }
+
+ .intro {
+    background: hsl(48, 52%, 90%);
+    padding: 200px 0;
+    text-align: center;
+    color: hsl(15, 41%, 36%);
+ }
+
+ .intro__text {
+    text-transform: uppercase;
+    font-size: calc(18 / 16 * 1rem);
+    letter-spacing: 10px;
+    color: hsl(168, 13%, 15%);
+    margin: 0 0 .25em;
+ }
+
+ .intro__title {
+    font-size: calc(60 / 16 * 1rem);
+ }
+
+ .section-three {
+    background-color: hsl(168, 13%, 15%);
+    color: hsl(0, 0%, 100%);
+ }
+
+ .section-four {
+    background-color: hsl(15, 41%, 36%);
+    color: hsl(0, 0%, 100%);
+ }
