@@ -8,6 +8,8 @@
 //     }
 // }
 
+const { divide } = require("lodash")
+
 /*
 Remove duplicates from an array:
 const array = [1, 2, 3, 4, 4, 3, 2, 5]
@@ -6119,4 +6121,81 @@ class MyComponent extends React.Component {
   }
 */
 
+// 10-13-2022
+
+// Create a function that looks through an array arr and returns the first element in it that passes a 'truth test'. This means that given an element x, the 'truth test' is passed if func(x) is true. If no element passes the test, return undefined.
+/*
+function truthTest(arr, func){
+    let num = 0
+    for(let i = 0; i < arr.length; i++){
+        num = arr[i]
+        if(func(num)){
+            return num
+        }
+    }
+    return undefined
+}
+
+let numArray = [1,2,3,4,5,6,7]
+
+console.log(truthTest(numArray, num => num % 2 === 0))
+// 2
+*/
+
+// Find the longest word in a string and print the length of that word (a number). Bonus: print out the word itself. Bonus bonus: get a word count of the whole string.
+/*
+function findLongestWord(string){
+    let words = string.split(' ')
+    let wordLength = 0
+    let longestWord = ""
+
+    for(let i = 0; i < words.length; i++){
+        if(words[i].length > wordLength){
+            wordLength = words[i].length
+            longestWord = words[i]
+            console.log(longestWord)
+            // this
+            // longest
+        }
+    }
+    return `The longest word in your string is "${longestWord}", at ${wordLength} characters long.`
+}
+
+console.log(findLongestWord("this is the longest word"))
+// The longest word in your string is "longest", at 7 characters long.
+*/
+
+// Create a function that concats two arrays together (the arguments provided to the function).
+/*
+function concatMe(arr1, arr2){
+    return arr1.concat(arr2)
+}
+
+let arrayOne = [1,2,3,4,5]
+let arrayTwo = [6,7,8,9,10]
+
+console.log(concatMe(arrayOne, arrayTwo))
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+*/
+// How do you create inline styles in JSX? Create a div that has the color of red and the font size of 72px in rem.
+/*
+class Colorful extends React.Component {
+    render() {
+        return (
+            <div style={{color: "red", fontSize: "calc(72 / 16 * 1rem)"}}>Some big, red text</div>
+        )
+    }
+}
+*/
+// Replace an if/else statement with &&
+/*
+render(){
+    return (
+        <div>
+            <button onClick={this.toggleDisplay}>Toggle Display</button>
+            {this.state.display && <h1>Displayed!</h1>}
+        </div>
+    )
+}
+*/
 
