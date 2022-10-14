@@ -6198,3 +6198,137 @@ render(){
 }
 */
 
+// 10-14-2022
+/*
+// sort an array without mutating the original
+function sortArray(array){
+    return array.concat([]).sort(function(a,b){
+        return a - b
+    })
+}
+
+let array = [1,4,2,5,3,7,4,9,10]
+console.log(sortArray(array))
+// [1, 2, 3, 4, 4, 5, 7, 9, 10]
+*/
+
+// What is a mixin and how can we use it?
+/*
+let bird = {
+    name: "Donald",
+    wings: 2
+}
+
+let plane = {
+    name: "DC3",
+    wings: 2,
+    flying(){
+        console.log(`${this.name} is flying!`)
+    }
+}
+
+let flyMixin = function(obj){
+    obj.flying = function(){
+        console.log(`${obj.name} is flying!`)
+    }
+    obj.age = 44
+}
+
+flyMixin(bird)
+bird.flying()
+console.log(bird.age)
+
+plane.flying()
+*/
+
+// How do you make a component stateful and then how do you access the props defined in the constructor?
+/*
+class MyComponent extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            name: "Philly"
+        }
+    }
+
+    render(){
+        return (
+            <div>
+                <h1>{this.state.name}</h1>
+            </div>
+        )
+    }
+}
+*/
+/*
+class Counter extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+        count: 0
+        }
+    this.increment = this.increment.bind(this)
+    this.decrement = this.decrement.bind(this)
+    this.reset = this.reset.bind(this)
+    }
+    increment(){
+        this.setState(state => ({
+            count: state.count + 1
+        }))
+    }
+    // ↓ Also is valid
+    // increment(){
+    //     this.setState({
+    //         count: this.state.count + 1
+    //     })
+    // }
+    decrement(){
+        this.setState(state => ({
+            count: state.count - 1
+        }))
+    }
+    reset(){
+        this.setState(state => ({
+            count: state.count = 0
+        }))
+    }
+    render() {
+        return (
+            <div>
+                <button className='inc' onClick={this.increment}>Increment!</button>
+                <button className='dec' onClick={this.decrement}>Decrement!</button>
+                <button className='reset' onClick={this.reset}>Reset</button>
+                <h1>Current Count: {this.state.count}</h1>
+            </div>
+        )
+    }
+}
+*/
+// Pass array props to a component and perform an array method on them
+/*
+const List = props => {
+    return <h1>{props.array.join(', ')}</h1>
+}
+
+class Todo extends React.Component {
+    constructor(props){
+        super(props)
+    }
+
+    render(){
+        return (
+            <div>
+                <h1>Todo Lists</h1>
+                <h2>Today:</h2>
+                <List array={["walk the dog", "eat pizza", "workout"]} />
+            </div>
+        )
+    }
+}
+*/
+
+// How do you render React components to the DOM? (Different from how you pass JSX elements to the render).
+/*
+ReactDOM.render(<ComponentName />, document.getElementById("node-item"))
+*/
+
