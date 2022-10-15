@@ -9,6 +9,7 @@
 // }
 
 
+
 /*
 Remove duplicates from an array:
 const array = [1, 2, 3, 4, 4, 3, 2, 5]
@@ -6330,5 +6331,258 @@ class Todo extends React.Component {
 // How do you render React components to the DOM? (Different from how you pass JSX elements to the render).
 /*
 ReactDOM.render(<ComponentName />, document.getElementById("node-item"))
+*/
+
+// Update a todo list based on user input with map()
+/*
+const textAreaStyles = {
+    maxWidth: "100%",
+    margin: 5
+  };
+//   cosmedic styles:
+  const wrapperStyles = {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center"
+  }
+  
+  const buttonStyles = {
+    color: "white",
+    background: "black",
+    border: "none",
+    padding: "10px 20px",
+    borderRadius: "20px"
+  }
+  
+  const textStyles = {
+    textAlign: "center"
+  }
+
+  class MyToDoList extends React.Component {
+    constructor(props) {
+      super(props);
+      // Change code below this line
+      this.state = {
+        userInput: "",
+        toDoList: []
+      }
+      // Change code above this line
+      this.handleSubmit = this.handleSubmit.bind(this);
+      this.handleChange = this.handleChange.bind(this);
+    }
+    handleSubmit() {
+      const itemsArray = this.state.userInput.split(',');
+      this.setState({
+        toDoList: itemsArray
+      });
+    }
+    handleChange(e) {
+      this.setState({
+        userInput: e.target.value
+      });
+    }
+    render() {
+      const items = this.state.toDoList.map(item => <li>{item}</li>)
+      return (
+        <div style={wrapperStyles}>
+          <textarea
+            onChange={this.handleChange}
+            value={this.state.userInput}
+            style={textAreaStyles}
+            placeholder='Separate Items With Commas'
+          />
+          <br />
+          <button style={buttonStyles} onClick={this.handleSubmit}>Create List</button>
+          <h1 style={textStyles}>My "To Do" List:</h1>
+          <ul>{items}</ul>
+        </div>
+      );
+    }
+  }
+  */
+
+//   Adding keys to <li>s when mapping lists
+/*
+const frontEndFrameworks = [
+    'React',
+    'Angular',
+    'Ember',
+    'Knockout',
+    'Backbone',
+    'Vue'
+  ];
+//   Avoid using the array's index as the key for each item.
+  function Frameworks() {
+    const renderFrameworks = frontEndFrameworks.map(item => <li key={item}>{item}</li>)
+    return (
+      <div>
+        <h1>Popular Front End JavaScript Frameworks</h1>
+        <ul>
+          {renderFrameworks}
+        </ul>
+      </div>
+    );
+  };
+*/
+
+// Filter out only users that are online
+/*
+class MyComponent extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        users: [
+          {
+            username: 'Jeff',
+            online: true
+          },
+          {
+            username: 'Alan',
+            online: false
+          },
+          {
+            username: 'Mary',
+            online: true
+          },
+          {
+            username: 'Jim',
+            online: false
+          },
+          {
+            username: 'Sara',
+            online: true
+          },
+          {
+            username: 'Laura',
+            online: true
+          }
+        ]
+      };
+    }
+    // Again, make sure that you add a key to your array when using map
+    render() {
+      const usersOnline = this.state.users.filter(user => user.online)
+      const renderOnline = usersOnline.map(user => <li key={user.username}>{user.username}</li>)
+      return (
+        <div>
+          <h1>Current Online Users:</h1>
+          <ul>{renderOnline}</ul>
+        </div>
+      );
+    }
+  }
+  */
+
+// 10-15-2022
+/*
+const contacts = [
+    {
+      firstName: "Akira",
+      lastName: "Laine",
+      number: "0543236543",
+      likes: ["Pizza", "Coding", "Brownie Points"],
+    },
+    {
+      firstName: "Harry",
+      lastName: "Potter",
+      number: "0994372684",
+      likes: ["Hogwarts", "Magic", "Hagrid"],
+    },
+    {
+      firstName: "Sherlock",
+      lastName: "Holmes",
+      number: "0487345643",
+      likes: ["Intriguing Cases", "Violin"],
+    },
+    {
+      firstName: "Kristian",
+      lastName: "Vos",
+      number: "unknown",
+      likes: ["JavaScript", "Gaming", "Foxes"],
+    },
+  ]
+  */
+
+/*
+The lookUpProfile() function should check if name is an actual contact's firstName and the given property (prop) is a property of that contact.
+
+If both are true, then return the "value" of that property.
+
+If name does not correspond to any contacts then return the string No such contact.
+
+If prop does not correspond to any valid properties of a contact found to match name then return the string No such property.
+
+Hint 1
+Use a for loop to cycle through the contacts list.
+
+Hint 2
+Use a nested if statement to first check if the firstName matches, and then checks if the prop matches.
+*/
+/*
+function lookUpProfile(name, prop){
+    for(let i = 0; i < contacts.length; i++){
+        if(contacts[i].firstName === name){
+            if(contacts[i].hasOwnProperty(prop)){
+                return contacts[i][prop]
+            }else{
+                return "no such property"
+            }
+        }
+    }
+    return "Profile does not exist"
+}
+
+console.log(lookUpProfile("Akira", "likes"))
+//['Pizza', 'Coding', 'Brownie Points']
+*/
+
+// Create a new object from an array of objects that only displays two keys from the original object using map.
+/*
+const objArray = [
+    {
+        name: "Billy",
+        age: 52,
+        birthdate: 1965
+    },
+    {
+        name: "Jill",
+        age: 246,
+        birthdate: 1776
+    }
+]
+
+const newObj = objArray.map(item => ({
+    name: item.name,
+    age: item.age
+}))
+
+console.log(JSON.stringify(newObj))
+// [{"name":"Billy","age":52},{"name":"Jill","age":246}]
+*/
+
+// titlecase a string
+/*
+function titleCaseThisShit(string){
+    string = string.split(' ')
+    for(let i = 0; i < string.length; i++){
+        string[i] = string[i].toLowerCase().split('')
+        string[i][0] = string[i][0].toUpperCase()
+        string[i] = string[i].join('')
+    }
+    return string.join(' ')
+}
+
+console.log(titleCaseThisShit("yo yo what what in the butt"))
+// Yo Yo What What In The Butt
+*/
+/*
+function titleCaseThisShit(string){
+    return string.toLowerCase()
+        .split(' ')
+        .map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()))
+        .join(' ')
+}
+
+console.log(titleCaseThisShit("yo yo what what in the butt"))
 */
 
