@@ -6586,3 +6586,111 @@ function titleCaseThisShit(string){
 console.log(titleCaseThisShit("yo yo what what in the butt"))
 */
 
+// 10-17-2022
+// Testing with Jest review
+/*
+// const { sum, getLargest } = require('./script.js')
+test('code adds two numbers correctly', () => {
+    const a = 1
+    const b = 2
+    expect(sum(1,2)).toBe(3)
+})
+
+test('code finds the largest element in an array', () => {
+    const array = [1,2,3,4]
+    expect(getLargest(array)).toBe(4)
+})
+*/
+
+// Write a function that checks if the second argument is the last part of the first argument (a string).
+
+// confirmEnding("Bastian", "n") should return true.
+/*
+function confirmEnding(string, target){
+    return string.slice(string.length - target.length) === target
+}
+
+console.log(confirmEnding("Bastian", "n"))
+// true
+*/
+
+// Create a function that returns the sum of a range of an array of two numbers ([1,4] would return 10 (1+2+3+4))
+/*
+function sumOfRange(array){
+    let sum = 0
+    let min = Math.min(array[0], array[1])
+    let max = Math.max(array[0], array[1])
+
+    for(let i = min; i <= max; i++){
+        sum += i
+    }
+
+    return sum
+}
+
+console.log(sumOfRange([4,10]))
+// 49
+// 4+5+6+7+8+9+10 = 49
+*/
+
+// Split a string and use regex to return an array of words that contains no spaces or special characters.
+/*
+function stringToArray(string){
+    return string.split(/\W/)
+}
+
+console.log(stringToArray("hello-there?fellow&coder writer"))
+// ['hello', 'there', 'fellow', 'coder', 'writer']
+*/
+/*
+// Inline styles in JSX
+class Colorful extends React.Component {
+    render() {
+        return (
+            <div style={{color: "red", fontSize: "calc(72 / 16 * 1rem)"}}></div>
+        )
+    }
+}
+*/
+
+// Create a function that removes all falsy values from an array.
+/*
+function removeFalsy(array){
+    const truthyArray = []
+    for(let i = 0; i < array.length; i++){
+        if(array[i]){
+            truthyArray.push(array[i])
+        }
+    }
+    return truthyArray
+}
+
+console.log(removeFalsy([0, true, 7, false, undefined, "yes", 8, null]))
+// [true, 7, 'yes', 8]
+*/
+
+// Convert this object into an array of names. You can use a while loop or recursion to achieve this.
+/*
+const person = {
+    name: "Phil",
+    friend: {
+        name: "Simon",
+        friend: {
+            name: "Caleb"
+        }
+    }
+}
+
+let currentPerson = person
+let personArray = []
+
+while(currentPerson != null){
+    personArray.push(currentPerson.name)
+    currentPerson = currentPerson.friend
+}
+
+console.log(personArray)
+// ['Phil', 'Simon', 'Caleb']
+*/
+
+
