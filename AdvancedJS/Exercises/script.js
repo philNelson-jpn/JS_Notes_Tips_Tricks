@@ -6693,4 +6693,46 @@ console.log(personArray)
 // ['Phil', 'Simon', 'Caleb']
 */
 
+/*
+const person = {
+    name: "Phil",
+    friend: {
+        name: "Simon",
+        friend: {
+            name: "Caleb"
+        }
+    }
+}
+
+let friendArray = []
+
+function printNames(object){
+    if(object == null) return
+    friendArray.push(object.name)
+    printNames(object.friend)
+    return friendArray
+}
+
+console.log(printNames(person))
+*/
+/*
+const array = [1,2,3,4,5,6,7,8,9,10]
+
+Array.prototype.myFilter = function(callback){
+    let newArray = []
+    for(let i = 0; i < this.length; i++){
+        if(callback(this[i])){
+            newArray.push(this[i])
+        }
+    }
+    return newArray
+}
+
+const evenFilter = array.myFilter(function(item){
+    return item % 2 === 0
+})
+
+console.log(evenFilter)
+// [2, 4, 6, 8, 10]
+*/
 
