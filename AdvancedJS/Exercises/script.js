@@ -6736,3 +6736,61 @@ console.log(evenFilter)
 // [2, 4, 6, 8, 10]
 */
 
+// 10-18-2022
+// Convert an if/else statement to use &&. 
+// Hint: You only need one return statement and one <h1> tag.
+/*
+render(){
+    return(
+        <div>
+            <button onClick={this.toggleDisplay}>Toggle Display</button>
+            {this.state.display && <h1>Displayed!</h1>}
+        </div>
+    )
+}
+*/
+
+// find vs. filter
+/*
+const array = [1,2,3,4,5]
+const a = array.filter(item => item % 2 === 0)
+console.log(a)
+// [2,4]
+const b = array.find(item => item % 2 === 0)
+console.log(b)
+// 2
+*/
+
+// What is the shorthand character class of [A-Za-z0-9_]?
+///\w/
+
+// Convert code to use both prototypes and classes
+/*
+function CreateUser(email, password, language){
+    this.email = email
+    this.password = password
+    this.language = language
+}
+
+CreateUser.prototype.printPassword = function(){
+    console.log(this.password)
+}
+*/
+/*
+class CreateUser {
+    constructor(email, password, language){
+        this.email = email
+        this.password = password
+        this.language = language
+    }
+
+    printPassword(){
+        console.log(this.password)
+    }
+}
+*/
+/*
+const newUser = new CreateUser("hello@there.com", "GeneralKenobi", "Japanese")
+newUser.printPassword()
+// GeneralKenobi
+*/
