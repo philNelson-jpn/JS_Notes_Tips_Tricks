@@ -6794,3 +6794,95 @@ const newUser = new CreateUser("hello@there.com", "GeneralKenobi", "Japanese")
 newUser.printPassword()
 // GeneralKenobi
 */
+/*
+// Create a component that takes in array props and applies array methods to them
+const List = (props) => {
+    return <p>{props.item.join(', ')}</p>
+}
+
+<List item={["this", "that", "the other"]} />
+// this, that, the other
+*/
+// Make a component stateful and render the state
+/*
+class MyComponent extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            name: 'Philly'
+        }
+    }
+    render(){
+        return (
+            <>
+                <p>{this.state.name}</p>
+            </>
+        )
+    }
+}
+*/
+// How do we ensure that a property type is required before the value is displayed?
+/*
+const propTypes = {
+    name: PropTypes.string.isRequired
+}
+*/
+
+// How do we create a component that uses destructuring to house props? Create a component called Employee with firstName, lastName, and age as props.
+// import React from 'react'
+/*
+const Employee = (props) => {
+    const [ firstName, lastName, age ] = props
+
+    return (
+        <>
+            <h1>This is the name of the employee</h1>
+            <p>{firstName} {lastName}</p>
+            <h2>This is the age of the employee</h2>
+            <p>{age}</p>
+        </>
+    )
+}
+// export default Employee
+*/
+
+// How do you find all of the whitespaces in a sentence? Regex
+// /\s/g
+// while vs. do...while loops
+/*
+const myArray = []
+let i = 10
+
+while(i < 5){
+    myArray.push(i)
+    i++
+}
+
+console.log(myArray)
+// []
+
+do{
+    myArray.push(i)
+    i++
+}while(
+    i < 5
+)
+console.log(myArray)
+// [10]
+*/
+
+// How do we create a new object based off of an already existing object?
+/*
+const person = {
+    name: "Phil",
+    age: 34,
+    favFood: "pizza",
+    favDessert: "ice cream"
+}
+
+const person2 = Object.create(person)
+person2.name = "Jerry"
+console.log(person2.age)
+// 34
+*/
+
