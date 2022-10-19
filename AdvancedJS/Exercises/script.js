@@ -6794,6 +6794,8 @@ const newUser = new CreateUser("hello@there.com", "GeneralKenobi", "Japanese")
 newUser.printPassword()
 // GeneralKenobi
 */
+
+// 10-19-2022
 /*
 // Create a component that takes in array props and applies array methods to them
 const List = (props) => {
@@ -6832,7 +6834,7 @@ const propTypes = {
 // import React from 'react'
 /*
 const Employee = (props) => {
-    const [ firstName, lastName, age ] = props
+    const { firstName, lastName, age } = props
 
     return (
         <>
@@ -6885,4 +6887,49 @@ person2.name = "Jerry"
 console.log(person2.age)
 // 34
 */
+
+//10-20-2022
+// Create the map function from scratch with Array.prototype
+/*
+const array = [2,3,4,5,1,2,6,7]
+
+Array.prototype.myMap = function(callback){
+    const newArray = []
+    this.forEach(item => newArray.push(callback(item)))
+    return newArray
+}
+
+const doubledArray = array.myMap(item => item * 2)
+console.log(doubledArray)
+*/
+
+// JSX commenting = {/* */}
+
+// Destructuring deeply nested objects and creating aliases for them
+
+// Create a function that loops through an object and returns the number of users where their online status is equal to true.
+
+const users = {
+    Alan: {
+        online: false,
+    },
+    Jim: {
+        online: true,
+    },
+    Kelly: {
+        online: false,
+    },
+}
+
+function checkOnline(object){
+    let numberOnline = 0
+    for(let user in object){
+        if(object[user].online){
+            numberOnline++
+        }
+    }
+    return numberOnline
+}
+
+console.log(checkOnline(users))
 
