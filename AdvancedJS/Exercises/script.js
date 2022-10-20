@@ -6908,7 +6908,7 @@ console.log(doubledArray)
 // Destructuring deeply nested objects and creating aliases for them
 
 // Create a function that loops through an object and returns the number of users where their online status is equal to true.
-
+/*
 const users = {
     Alan: {
         online: false,
@@ -6932,4 +6932,42 @@ function checkOnline(object){
 }
 
 console.log(checkOnline(users))
+*/
+//destructuring to variables
+/*
+const [Jimmy, b, ...rest] = [10, 20, 30, 40, 50]
+console.log(Jimmy, rest)
+*/
+
+// 10-21-2022
+
+/*
+const person = {
+    name: "Phil",
+    friend: {
+        name: "Simon",
+        friend: {
+            name: "Caleb"
+        }
+    }
+}
+
+function getNames(currentPerson){
+    if(currentPerson == null) return
+    console.log(currentPerson.name)
+    getNames(currentPerson.friend)
+}
+
+getNames(person)
+// Phil, Simon, Caleb
+*/
+
+// Create a function that uses map to convert decimal numbers to whole numbers using parseInt()
+/*
+function decToWhole(array){
+    return array.map(item => parseInt(item))
+}
+console.log(decToWhole([1.2, 3.4, 5.4434]))
+// [1, 3, 5]
+*/
 
