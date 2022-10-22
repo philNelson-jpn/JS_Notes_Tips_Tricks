@@ -10,6 +10,7 @@
 
 
 
+
 /*
 Remove duplicates from an array:
 const array = [1, 2, 3, 4, 4, 3, 2, 5]
@@ -6970,4 +6971,49 @@ function decToWhole(array){
 console.log(decToWhole([1.2, 3.4, 5.4434]))
 // [1, 3, 5]
 */
+
+// How do you remove a property/value from an object?
+/*
+const person = {
+    name: "Phil",
+    friend: "Simon",
+    hobby: "wakeboarding"
+}
+
+delete person.hobby
+console.log(person)
+// {name: 'Phil', friend: 'Simon'}
+*/
+
+// Use recursion to return an array that begins with startNum and ends with endNum.
+/*
+function rangeOfNumbers(startNum, endNum){
+    if(endNum - startNum === 0){
+        return [startNum]
+    } 
+        let array = rangeOfNumbers(startNum, endNum - 1)
+        array.push(endNum)
+        return array
+}
+
+console.log(rangeOfNumbers(2, 7))
+// [2, 3, 4, 5, 6, 7]
+*/
+
+// Create a function that changes a string to title case (only the first letter of each word is capitalized) using map.
+/*
+function toTitleCase(string){
+    return string.toLowerCase()
+    .split(' ')
+    .map(word => word.replace(word.charAt(0), word.charAt(0).toUpperCase()))
+    .join(' ')
+}
+
+console.log(toTitleCase("hello brandon"))
+// Hello Brandon
+*/
+
+// 10-22-2022
+
+
 
