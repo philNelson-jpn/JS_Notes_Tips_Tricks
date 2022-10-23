@@ -7014,6 +7014,21 @@ console.log(toTitleCase("hello brandon"))
 */
 
 // 10-22-2022
+/*
+import React, { useState } from "react";
 
+export default function Login() {
+  const [loggedIn, setLoggedIn] = useState(false);
+  return (
+    <div>
+      <h1>Welcome</h1>
+      <button onClick={() => setLoggedIn(!loggedIn)}>
+        {loggedIn ? "Log out" : "Login"}
+      </button>
+      {loggedIn ? <h3>Hello there!</h3> : <h3>Please log in</h3>}
+    </div>
+  );
+}
+*/
 
 
