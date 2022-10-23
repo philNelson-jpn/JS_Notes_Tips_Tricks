@@ -1,0 +1,10 @@
+{
+    "name": "Phil",
+    "address": {
+        "street": "Jose",
+        "number": "6208",
+        "zone": {
+            "phantazone": "4B"
+        }
+    }
+}

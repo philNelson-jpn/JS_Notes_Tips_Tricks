@@ -7030,5 +7030,14 @@ export default function Login() {
   );
 }
 */
+// 10-23-2022
+
+// What if we want to import everything from a js file? What is the syntax?
+// import * as myModule from './myModules.js'
+
+// Render JSX components:
+// ReactDOM.render(<Component />, document.getElementById("target-node"))
+
+
 
 
