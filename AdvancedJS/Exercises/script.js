@@ -7131,4 +7131,32 @@ console.log(sortArray([2,1,7,3,5]))
 //  [1, 2, 3, 5, 7]
 */
 
+// 10-26-2022
+// Create a slug from a title/heading of the page
+/*
+function createSlug(title){
+    return title.toLowerCase().split(' ').join('-')
+}
+
+console.log(createSlug("this is a test"))
+// this-is-a-test
+*/
+
+// Create a function that looks through an array arr and returns the first element in it that passes a 'truth test'. This means that given an element x, the 'truth test' is passed if func(x) is true. If no element passes the test, return undefined.
+/*
+function findElement(arr, func){
+    let num = 0
+    for(let i = 0; i < arr.length; i++){
+        num = arr[i]
+        if(func(num)){
+            return num
+        }
+    }
+    return undefined
+}
+
+console.log(findElement([1,7,3,4,5], num => num % 2 === 0))
+// 4
+*/
+
 
