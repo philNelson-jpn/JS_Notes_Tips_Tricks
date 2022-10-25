@@ -7074,6 +7074,61 @@ console.log(compareArrays(arr1, arr2))
 // [3, 4, 7, 8]
 */
 
+// 10-25-2022
 
+// Create a function that title cases a string (every word's first letter is capitalized)
+/*
+function titleCase(string){
+    return string
+    .toLowerCase()
+    .split(' ')
+    .map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()))
+    .join(' ')
+}
+
+console.log(titleCase("this is a test with no capitalization"))
+// This Is A Test With No Capitalization
+*/
+
+// Create the filter function from scratch with Array.prototype
+// with forEach()
+/*
+const array = [0, 1, 2, 3, 4, 5, 6]
+
+Array.prototype.myFilter = function(callback){
+    const filteredArray = []
+    this.forEach(item => callback(this[item]) ? filteredArray.push(this[item]) : undefined)
+    return filteredArray
+}
+
+const evenFilter = array.myFilter(function(item){
+    return item % 2 === 0
+})
+
+console.log(evenFilter)
+// [0, 2, 4, 6]
+*/
+
+// Check if a string is made up of either Phil Nelson or Jin Nelson.
+// Now check if any middle names or initials are also included.
+/*
+let string = "Jio Nelson"
+let regex = /(Phil|Jin).*Nelson/i
+let result = regex.test(string)
+console.log(result)
+// false
+*/
+
+// How can you sort an array without mutating the original array? Bonus: What is the function that sorts numbers?
+/*
+function sortArray(array){
+    return array.concat([]).sort(function(a,b){
+        return a - b
+    })
+}
+
+console.log(sortArray([2,1,7,3,5]))
+//  [1, 2, 3, 5, 7]
+*/
 
 
