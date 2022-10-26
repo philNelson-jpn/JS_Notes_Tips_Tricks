@@ -7159,4 +7159,30 @@ console.log(findElement([1,7,3,4,5], num => num % 2 === 0))
 // 4
 */
 
+// 10-27-2022
+
+// What if we want to match a letter appearing between a range (say 3-6 times)?
+/*
+let ohStr = "Ohhhhhh no"
+let ohRegex = /Oh{7,8} no/i
+console.log(ohRegex.test(ohStr))
+// false
+*/
+
+// Apply both the double function and the plusOne function to the array with map chaining and log out the result.
+/*
+const array = [1,2,3,4,5]
+
+function double(element){
+    return element * 2
+}
+
+function plusOne(element){
+    return element + 1
+}
+
+const doubledPlusOne = array.map(double).map(plusOne)
+console.log(doubledPlusOne)
+// [3, 5, 7, 9, 11]
+*/
 
