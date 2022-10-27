@@ -165,13 +165,20 @@ body {
 p {
     overflow-wrap: break-word;
     hyphens: auto;
+    color: rgb(187, 187, 187);
 }
 
 .space{
-    opacity: .6;
-    transition: opacity 400ms ease-in-out;
+    display: inline-block;
+    transform: scale(1);
+    color: rgb(187, 187, 187);
+    opacity: .7;
+    transition: opacity 400ms ease-in-out, color 400ms ease-in-out,
+    transform 500ms ease-in-out;
 }
 
 p:hover .space{
+    color: rgb(255, 255, 255);
     opacity: 1;
+    transform: scale(1.1);
 }
