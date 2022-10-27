@@ -119,6 +119,14 @@ h1:hover{
 }
 */
 
+body {
+    background-color: black;
+    color: hsla(0, 0%, 90%, 1);
+    font-family: "Poppins";
+    line-height: 2;
+    font-weight: 500;
+}
+
 .wrapper {
     --gap: 16px;
     display: grid;
@@ -135,6 +143,8 @@ h1:hover{
     grid-column: 1 / -1;
     margin-inline-start: calc(var(--gap) * -1);
     margin-inline-end: calc(var(--gap) * -1);
+    overflow: hidden;
+    height: 333px;
 }
 
 .random-pic {
@@ -142,5 +152,26 @@ h1:hover{
     object-fit: cover;
     width: 100%;
     /* width: calc(100% / 7); 1/7 of the space */
+    opacity: .7;
+    transform: scale(1);
+    transition: opacity 1300ms ease-in-out, transform 1400ms ease-in-out;
+}
 
+.random-pic:hover {
+    opacity: 1;
+    transform: scale(1.8);
+}
+
+p {
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.space{
+    opacity: .6;
+    transition: opacity 400ms ease-in-out;
+}
+
+p:hover .space{
+    opacity: 1;
 }
