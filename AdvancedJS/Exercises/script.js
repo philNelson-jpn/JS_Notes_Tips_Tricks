@@ -7186,3 +7186,17 @@ console.log(doubledPlusOne)
 // [3, 5, 7, 9, 11]
 */
 
+// Inline styles in JSX
+// <h1 style={{color: "white"}}></h1>
+
+// When using Redux in your project, what are the three things that you need to set up a store for your state?
+
+// Redux is 'ard! Actions, Reducer(s), Dispatch 
+
+// REDUX: When you have multiple reducers what is something that you can do so that you do not have to import each reducer individually?
+
+// Import combineReducers from redux
+
+// How does the file name and the selector of a class in CSS modules in React appear (in dev tools)?
+
+// <div class='file-name_class-name'>
