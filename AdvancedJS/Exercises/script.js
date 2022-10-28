@@ -7200,3 +7200,93 @@ console.log(doubledPlusOne)
 // How does the file name and the selector of a class in CSS modules in React appear (in dev tools)?
 
 // <div class='file-name_class-name'>
+
+// 10-28-2022
+
+// Write a function that takes a full name, takes the first name and the last name, and saves them as separate variables in an object. Then destructure the object so that both the first name and last name are accessible as separate variables.
+/*
+function fullToFirstLast(fullname){
+    const [firstName, lastName] = fullname.split(' ')
+    return {
+        firstName,
+        lastName
+    }
+}
+
+const philObj = fullToFirstLast("Phil Nelson")
+console.log(philObj.firstName)
+*/
+/*
+function printLongestWord(string){
+    let num = 0
+    let longestWord = ''
+    let words = string.split(' ')
+    for(let i = 0; i < words.length; i++){
+        if(words[i].length > num){
+            num = words[i].length
+            longestWord = words[i]
+        }
+    }
+    return `The longest word in your string is ${longestWord} at ${num} characters long.`
+}
+
+console.log(printLongestWord("hello there finickyfoop fuckerduckery"))
+// The longest word in your string is fuckerduckery at 13 characters long.
+*/
+
+// Using Math.floor and Math.random, return a random whole number that is >= myMin and <= myMax.
+/*
+function randomRange(myMin, myMax){
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin
+}
+
+console.log(randomRange(2,4))
+*/
+
+// How do we create a component that uses destructuring to house props? Create a component called Employee with firstName, lastName, and age as props.
+/*
+const Employee = (props) => {
+    const {firstName, lastName, age} = props
+}
+*/
+
+// Mixins
+/*
+const bird = {
+    name: "Donald",
+    wings: 2
+}
+
+const plane = {
+    name: "Boeing",
+    wings: 2
+}
+
+const flyMixin = (obj) => {
+    obj.flying = function(){
+        console.log("I'm flying, bitches!")
+    }
+}
+
+flyMixin(bird)
+bird.flying()
+// I'm flying, bitches!
+*/
+
+// How does the file name and the selector of a class in CSS modules in React appear (in dev tools)?
+// <h1 class="file-name_class-name"></h1>
+
+// Write a function that takes in a string and a number. The string should be repeated the number of times specified in the number parameter. Use a for loop and not the .repeat() method.
+/*
+function copyMachine(string, number){
+    let repeatedString = ""
+    for(let i = 0; i < number; i++){
+        repeatedString += string
+    }
+    return repeatedString
+}
+
+console.log(copyMachine("hello", 5))
+// hellohellohellohellohello
+*/
+

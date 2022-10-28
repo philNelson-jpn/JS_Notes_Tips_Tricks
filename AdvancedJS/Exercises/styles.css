@@ -120,8 +120,8 @@ h1:hover{
 */
 
 body {
-    background-color: black;
-    color: hsla(0, 0%, 90%, 1);
+    background-color: hsla(0, 0%, 0%, .9);
+    color: hsla(0, 0%, 90%, .9);
     font-family: "Poppins";
     line-height: 2;
     font-weight: 500;
@@ -173,6 +173,7 @@ p {
     transform: scale(1);
     color: rgb(187, 187, 187);
     opacity: .7;
+    margin: 0px 3px;
     transition: opacity 400ms ease-in-out, color 400ms ease-in-out,
     transform 500ms ease-in-out;
 }
