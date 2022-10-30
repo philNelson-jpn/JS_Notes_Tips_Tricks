@@ -7290,3 +7290,70 @@ console.log(copyMachine("hello", 5))
 // hellohellohellohellohello
 */
 
+// 10-29-2022
+// Inline styles in React
+// Create a div that has the color of red and the font size of 72px in rem.
+/*
+const Component = () => {
+    <div style={{color: "red", fontSize: "calc(72/16 * 1rem)"}}>
+        <h1></h1>
+    </div>
+}
+*/
+
+// Create a new object from an array of objects that only displays two keys from the original object using map.
+/*
+const arrayOfObjs = [
+    {
+        name: "Phil",
+        age: 34,
+        hobby: "programming"
+    },
+    {
+        name: "Simone",
+        age: 44,
+        hobby: "studying Japanese"
+    },
+    {
+        name: "Caleb",
+        age: 35,
+        hobby: "tennis"
+    }
+]
+
+const newObj = arrayOfObjs.map(item => ({
+    newName: item["name"],
+    newAge: item["age"]
+}))
+
+console.log(newObj[0].newName)
+// Phil
+*/
+
+// Write a function that takes a full name, splits the first name into an array, and returns it. Then destructure the array so that both the first name and last name are accessible as separate variables (assign the destructured array to the function).
+/*
+function splitFullName(fullname){
+    return fullname.split(' ')
+}
+
+const [firstName, lastName] = splitFullName("Phil Nelson")
+console.log(firstName)
+// Phil
+*/
+
+// Change the function to a pure function
+/*
+const person = {
+    name: "Phil",
+    friends: ["Simon", "Caleb"]
+}
+
+function addFriend(obj, friendName){
+    const newPerson = {...obj, friends: [...obj.friends, friendName]}
+    return newPerson
+}
+
+console.log(addFriend(person, "Jack"))
+// friends + Jack
+*/
+
