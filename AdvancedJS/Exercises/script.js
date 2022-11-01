@@ -7301,6 +7301,8 @@ const Component = () => {
 }
 */
 
+// 10-31-2022
+
 // Create a new object from an array of objects that only displays two keys from the original object using map.
 /*
 const arrayOfObjs = [
@@ -7320,6 +7322,7 @@ const arrayOfObjs = [
         hobby: "tennis"
     }
 ]
+
 
 const newObj = arrayOfObjs.map(item => ({
     newName: item["name"],
@@ -7355,5 +7358,28 @@ function addFriend(obj, friendName){
 
 console.log(addFriend(person, "Jack"))
 // friends + Jack
+*/
+
+// null coalescence 
+/*
+function nullCoalTester(firstName, lastName){
+    lastName ??= "Nelson"
+    console.log(`${firstName} ${lastName}`)
+}
+
+nullCoalTester("Phil")
+// Phil Nelson
+nullCoalTester("Phil", 0)
+// Phil 0
+
+*/
+/*
+// Imperative programming:
+const header = document.createElement('h1')
+header.textContent = "I love fish"
+header.className = "fish-sticks"
+document.getElementById("id").append(header)
+// declarative programming:
+ReactDOM.render(<Header className='fish-sticks'/>, document.getElementById("id"))
 */
 
