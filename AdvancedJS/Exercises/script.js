@@ -7383,3 +7383,39 @@ document.getElementById("id").append(header)
 ReactDOM.render(<Header className='fish-sticks'/>, document.getElementById("id"))
 */
 
+// 11-2-2022
+
+// Create a welcome page with an <h1> for Welcome, a login button, and a <h3> greeting. The button and the greeting text should display differently depending on the state (logged in or not). Use useState() and the ternary operator to toggle loggedIn and setLoggedIn.
+/*
+const Login = () => {
+    const [loggedIn, setLoggedIn] = useState(false)
+
+    return (
+        <div>
+            <h1>Welcome</h1>
+            <button onClick={() => setLoggedIn(!loggedIn)}>{
+                loggedIn ? "Log out" : "Login"
+            }</button>
+            <h3>{loggedIn ? "Welcome to our site" : "Please login"}</h3>
+        </div>
+    )
+}
+*/
+
+// Set up a quick React project from scratch
+
+// React: Create an array of employees. In the return statement first use a conditional statement to check if there are any employees and that the array has more than 0 items in it. Render an <h1> of Employee List and an <h5> of all of the employees using map(). The <h1> and the names of the employees should only show if there is at least one employee in the array.
+/*
+const employees = ["Jim", "Carl", "Homer", "Moe"]
+
+{employees && employees.length > 0 && (
+    <div>
+        <h1>Employee List</h1>
+        {employees.map(employee => (
+            <h4>{employee}</h4>
+        ))}
+    </div>
+)}
+*/
+
+
