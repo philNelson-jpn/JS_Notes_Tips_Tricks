@@ -7445,4 +7445,38 @@ console.log(removeDashes("this-is-a-test"))
 // this is a test.
 */
 
+// 11-4-2022
+
+// Create the map function from scratch (on Array.prototype)
+
+// Array.prototype.myMap = function(callback){
+//     let newArray = []
+//     for(let i = 0; i < this.length; i++){
+//         newArray.push(callback(this[i]))
+//     }
+//     return newArray
+// }
+/*
+Array.prototype.myMap = function(callback){
+    let newArray = []
+    this.forEach(item => newArray.push(callback(item)))
+    return newArray
+}
+
+const array = [1,2,3,4,5,6]
+const arrayTwo = array.map(item => item * 2)
+console.log(arrayTwo)
+console.log(array.myMap(item => item * 2))
+*/
+
+// Create a function that changes a string to title case (only the first letter of each word is capitalized) using map.
+/*
+function toUpperCase(string){
+    return string.toLowerCase().split(' ').map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase())).join(' ')
+}
+
+let string = "Hello there you monster"
+console.log(toUpperCase(string))
+*/
+
 
