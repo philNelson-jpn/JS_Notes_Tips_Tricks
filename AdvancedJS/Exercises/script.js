@@ -7418,4 +7418,31 @@ const employees = ["Jim", "Carl", "Homer", "Moe"]
 )}
 */
 
+// 11-3-2022
+
+// How can you compare React props to something in HTML? How about something in JS?
+// HTML attributes like an image's src="" and an input's type (radio, text, date, etc.), 
+
+// JS - passing params to a function instead of not passing anything.
+// 
+// For example: f we just had a function that added 1 and 2 together, it would always produce 3. However, if we changed the function to take in two parameters (a and b), then we can add virtually any two numbers together.
+
+// What is a React component?
+// A function that allows us to compose JSX elements that can be reused across our site. Alt: a function that returns UI (React elements) that look very much like HTML. Components are composable, like lego bricks or puzzle pieces that you can use to build larger/greater things.
+
+// Can you pass custom props into native DOM elements? - React
+// No, you can only pass custom props to custom components. 
+
+// Create a function that removes the dashes from the string "May-the-force-be-with-you". 
+
+// Bonus: Remove ALL special characters + Add a period at the end.
+/*
+function removeDashes(string){
+    return string.split(/\W/).join(' ') + "."
+}
+
+console.log(removeDashes("this-is-a-test"))
+// this is a test.
+*/
+
 
