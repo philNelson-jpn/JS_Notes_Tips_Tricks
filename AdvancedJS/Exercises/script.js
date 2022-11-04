@@ -7479,4 +7479,17 @@ let string = "Hello there you monster"
 console.log(toUpperCase(string))
 */
 
+// Write a function that reverses a string with a for loop
+/*
+function reverseLoop(string){
+    let reversedString = ""
+    for(let i = string.length - 1; i >= 0; i--){
+        reversedString += string[i]
+    }
+    return reversedString
+}
+
+console.log(reverseLoop("hello there"))
+*/
+
 
