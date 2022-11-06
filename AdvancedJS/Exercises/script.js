@@ -7493,3 +7493,13 @@ console.log(reverseLoop("hello there"))
 */
 
 
+// 11-7-2022
+/*
+const header = document.createElement('h1')
+header.textContent = "What are those???"
+header.className = "header-element"
+document.getElementById('root').append(header)
+*/
+
+// Remember to use the useEffect() hook in place of didComponentMount() etc. for API calls/calls to a server
+
