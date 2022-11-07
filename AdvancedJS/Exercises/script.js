@@ -7492,6 +7492,16 @@ function reverseLoop(string){
 console.log(reverseLoop("hello there"))
 */
 
+// 11-6-2022
+/*
+function greetPerson(name, {salutation = "Hello there,", suffix = "Mr."} = {}){
+    console.log(`${salutation} ${suffix} ${name}`)
+}
+
+greetPerson("Phil", {salutation: "Good day,", suffix: "Master"})
+// Good day, Master Phil
+*/
+
 
 // 11-7-2022
 /*
