@@ -7513,3 +7513,60 @@ document.getElementById('root').append(header)
 
 // Remember to use the useEffect() hook in place of didComponentMount() etc. for API calls/calls to a server
 
+// 11-8-2022
+// Write a function that returns the average rating for films only by a certain director using filter, map, and reduce.
+
+// Hints:
+// set a variable to watchList called averageRating
+
+// get only films by Christopher Nolan (filter)
+
+// map the ratings so that they are numbers and not strings
+// (can use the Number() function)
+
+// use reduce to add the sum of ratings with ratings, then divide the length of only films by Christopher Nolan
+
+// return averageRating
+/*
+function avgRating(watchList, director){
+    const films = watchList.filter(film => film.Director === director)
+    const ratings = films.map(film => Number(film.imdbRating))
+    const sumOfRatings = ratings.reduce((sum, ratingSum) => sum + ratingSum)
+    const averageRating = sumOfRatings / films.length
+    return `${director}'s films have an average rating of ${averageRating}`
+}
+
+console.log(avgRating(watchList, "Christopher Nolan"))
+*/
+
+// Create a function that removes all falsy values from an array.
+/*
+const arr = [0, 2, false, true, undefined, "hello", "", null, "goodbye"]
+
+function removeFalsy(array){
+    const truthyArray = []
+    array.forEach(item => item ? truthyArray.push(item) : truthyArray)
+    return truthyArray
+}
+
+console.log(removeFalsy(arr))
+// [2, true, 'hello', 'goodbye']
+*/
+
+// Create a function that returns the sum of a range of an array of two numbers ([1,4] would return 10 (1+2+3+4))
+
+// Note: be carerful, if the first index is a larger number than the second, you need to account for that too.
+/*
+function sumOfRange(array){
+    let min = Math.min(array[0], array[1])
+    let max = Math.max(array[0], array[1])
+    let sum = 0
+    for(let i = min; i <= max; i++){
+        sum += i
+    }
+    return sum
+}
+
+console.log(sumOfRange([1,4]))
+*/
+
