@@ -7570,3 +7570,67 @@ function sumOfRange(array){
 console.log(sumOfRange([1,4]))
 */
 
+// 11-9-2022
+// Create a function that gets a random url from an array of objects. Assign the function to the onClick of the button.
+/*
+function handleClick(){
+    const memeArray = memesData.data.memes
+    const randomNumber = Math.floor(Math.random() * memeArray.length)
+    const url = memeArray[randomNumber].url
+    console.log(url)
+}
+*/
+
+// Regex - What character do we use to select the first word in a string and what character do we use to select the last character in a string?
+/*
+let string = "The last car on a train is the caboose"
+let firstWord = /^The/
+let lastWord = /caboose$/
+let regex = firstWord.test(string)
+let regexLast = lastWord.test(string)
+
+console.log(regex, regexLast)
+// true true
+*/
+
+// How would you describe the concept of "state"?
+// State is the tracking and updating of changes made by the user. It is also a way for React to remember saved values from within a component. This is similar to declaring variables from within a component, with a few added bonuses.
+
+// Assign list to a destructured array that is equal to 3 through 10.
+/*
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list) {
+    const [a, b, ...arr] = list
+return arr;
+}
+const arr = removeFirstTwo(source);
+console.log(arr)
+*/
+
+// Create the filter function from scratch with Array.prototype
+/*
+Array.prototype.myFilter = function(callback){
+    let filteredArray = []
+    this.forEach(item => callback(this[item]) ? filteredArray.push(this[item]) : undefined)
+    return filteredArray
+}
+
+const array2 = [1,2,3,4,5,6,7,8]
+
+const evenArray = array2.myFilter(item => item % 2 === 0)
+console.log(evenArray)
+*/
+
+
+/*
+
+// When we create a function that updates the previous state of an element, what is the best practice for updating that state?
+
+// Create a callback function within our setState function
+const [ count, setCount ] = React.useState(0)
+
+function increaseCount(){
+    setCount(prevCount => prevCount + 1)
+}
+*/
+
