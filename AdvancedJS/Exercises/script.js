@@ -11,6 +11,7 @@
 
 
 
+
 /*
 Remove duplicates from an array:
 const array = [1, 2, 3, 4, 4, 3, 2, 5]
@@ -7632,5 +7633,63 @@ const [ count, setCount ] = React.useState(0)
 function increaseCount(){
     setCount(prevCount => prevCount + 1)
 }
+*/
+
+// 11-10-2022
+
+// Update the JSX so that the Star component can toggle the favorite star.
+/*
+export default function Star(props) {
+    const starIcon = props.isFilled ? "star-filled.png" : "star-empty.png"
+    return (
+        <img 
+            src={`../images/${starIcon}`} 
+            className="card--favorite"
+            
+        />
+    )
+}
+
+// ↓
+// Star component
+// onClick={props.handleClick}
+// App
+// handleClick={toggleFavorite}
+*/
+
+// Convert this object into an array of names. You can use a while loop or recursion to achieve this.
+/*
+const person = {
+    name: "Phil",
+    friend: {
+        name: "Simon",
+        friend: {
+            name: "Caleb"
+        }
+    }
+}
+
+let currentPerson = person
+let nameArray = []
+
+while(currentPerson != null){
+    nameArray.push(currentPerson.name)
+    currentPerson = currentPerson.friend
+}
+
+console.log(nameArray)
+// ['Phil', 'Simon', 'Caleb']
+
+*/
+
+// Create a function that concats two arrays together (the arguments provided to the function).
+/*
+function concatArrays(arr1, arr2){
+    return arr1.concat(arr2)
+}
+
+const array1 = [1,2,3,4]
+const array2 = [5,6,7,8]
+console.log(concatArrays(array1, array2))
 */
 
