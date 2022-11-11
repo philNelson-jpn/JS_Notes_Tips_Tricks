@@ -7712,3 +7712,59 @@ console.log(findElement([1,2,3,4,5], num => num % 2 === 0))
 // 2
 */
 
+// 11-11-2022
+
+// Find the longest word in a string and print the length of that word (a number).
+/*
+function findLongestWord(string){
+    let words = string.split(' ')
+    let num = 0
+    for(let i = 0; i < words.length; i++){
+        if(words[i].length > num){
+            num = words[i].length
+        }
+    }
+    return num
+}
+
+console.log(findLongestWord("hello there misterpoopy"))
+// 11
+*/
+
+// Write a function that takes an array and a number. Use a while loop to loop over the array and push a copy of the array to a new array the number of times specified by the number argument.
+/*
+function copyArray(array, number){
+    let newArray = []
+    while(number >= 1){
+        newArray.push([...array])
+        number--
+    }
+    return newArray
+}
+
+console.log(copyArray(["hey", "hello", "goodbye"], 4))
+// ["hey", "hello", "goodbye"] x 4
+*/
+
+// Create a function that compares two arrays and only returns an element that both arrays DO NOT share
+/*
+function notTheSame(arr1, arr2){
+    return arr1.concat(arr2).filter(item => !arr1.includes(item) || !arr2.includes(item))
+}
+
+console.log(notTheSame([2,3,4], [2,4,5]))
+// [3, 5]
+*/
+
+// Use .replace() and a capture group to change the string "one two three" to "three two one"
+/*
+let string = "one two three"
+let captureGroup = /(\w+)\s(\w+)\s(\w+)/
+let newString = "$3 $2 $1"
+
+let reversedString = string.replace(captureGroup, newString)
+console.log(reversedString)
+// three two one
+*/
+
+
