@@ -7767,4 +7767,84 @@ console.log(reversedString)
 // three two one
 */
 
+// 11-12-2022
 
+// Retrieve all of the `twinkle`s from twinkleStar by checking to see if anything in twinkleStar matches starRegex globally and case insensitive (ignore case).
+/*
+let twinkleStar = "Twinkle twinkle little star"
+let regex = /twinkle/gi
+let result = twinkleStar.match(regex)
+console.log(result)
+// ['Twinkle', 'twinkle']
+
+*/
+
+// Write a function that checks if the second argument is the last part of the first argument (a string).
+/*
+function confirmEnding(string, letter){
+    return string.slice(string.length - letter.length) === letter
+}
+
+console.log(confirmEnding("Bastian", "n"))
+// true
+*/
+/*
+const contacts = [
+    {
+      firstName: "Akira",
+      lastName: "Laine",
+      number: "0543236543",
+      likes: ["Pizza", "Coding", "Brownie Points"],
+    },
+    {
+      firstName: "Harry",
+      lastName: "Potter",
+      number: "0994372684",
+      likes: ["Hogwarts", "Magic", "Hagrid"],
+    },
+    {
+      firstName: "Sherlock",
+      lastName: "Holmes",
+      number: "0487345643",
+      likes: ["Intriguing Cases", "Violin"],
+    },
+    {
+      firstName: "Kristian",
+      lastName: "Vos",
+      number: "unknown",
+      likes: ["JavaScript", "Gaming", "Foxes"],
+    },
+  ]
+
+function lookupProfile(name, prop){
+    for(let i = 0; i < contacts.length; i++){
+        if(contacts[i].firstName === name){
+            if(contacts[i].hasOwnProperty(prop)){
+                return contacts[i][prop]
+            }else{
+                return "no such property"
+            }
+        }
+    }
+    return "no profile exists"
+}
+
+console.log(lookupProfile("Akira", "likes"))
+// ['Pizza', 'Coding', 'Brownie Points']
+*/
+
+// use map to convert decimal numbers to whole numbers using parseInt()
+/*
+const numArray = [22.34, 44.342, 64.2341, 77.3243]
+
+const wholeNums = numArray.map(num => parseInt(num))
+console.log(wholeNums)
+[22, 44, 64, 77]
+*/
+/*
+// Function:
+const numArray = [22.34, 44.342, 64.2341, 77.3243]
+const decToWhole = (array) => array.map(num => parseInt(num))
+console.log(decToWhole(numArray)) 
+[22, 44, 64, 77]
+*/
