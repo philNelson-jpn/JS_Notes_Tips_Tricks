@@ -7895,3 +7895,95 @@ export default function App() {
     )
 }
 */
+
+// 11-14-2022
+
+// Create a function that loops through an object and returns the number of users where their online status is equal to true.
+/*
+const users = {
+    Alan: {
+        online: true
+    },
+    Jim: {
+        online: true
+    },
+    Kim: {
+        online: false
+    },
+    Kelly: {
+        online: true
+    },
+}
+
+function numOnline(object){
+    let numOnline = 0
+    for(let user in object){
+        if(object[user].online){
+            numOnline++
+        }
+    }
+    return numOnline
+}
+
+console.log(numOnline(users))
+*/
+
+// Find the longest word in a string and print the length of that word (a number). Bonus: print out the word itself. Bonus bonus: get a word count of the whole string.
+/*
+function findLongestWord(string){
+    let wordLength = 0
+    let words = string.split(' ')
+    let longestWord = ""
+    let stringWordCount = 0
+
+    for(let i = 0; i < words.length; i++){
+        if(words[i].length > wordLength){
+            wordLength = words[i].length
+            longestWord = words[i]
+            stringWordCount = words.length
+        }
+    }
+    return `Hello. Your string has a total word count of ${stringWordCount}. The longest word in your string is "${longestWord}" at ${wordLength} characters long.`
+}
+
+let string = "This is a test for giggles and gaggligoop"
+console.log(findLongestWord(string))
+// Hello. Your string has a total word count of 8. The longest word in your string is "gaggligoop" at 10 characters long.
+*/
+
+// Create a function that title cases a string (every word's first letter is capitalized)
+/*
+function titleCase(string){
+    return string
+    .toLowerCase()
+    .split(' ')
+    .map(word => word.replace(word.charAt(0), word.charAt(0).toUpperCase()))
+    .join(' ')
+}
+
+console.log(titleCase("hello there mr kenobs"))
+*/
+
+// How do we create a new object based off of an already existing object?
+/*
+const users = {
+    Alan: {
+        online: true
+    },
+    Jim: {
+        online: true
+    },
+    Kim: {
+        online: false
+    },
+    Kelly: {
+        online: true
+    },
+}
+
+// const users2 = Object.create(users)
+// or
+const users2 = {...users}
+console.log(users2.Alan.online)
+*/
+
