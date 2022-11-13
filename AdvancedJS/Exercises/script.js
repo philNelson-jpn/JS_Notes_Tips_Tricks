@@ -7848,3 +7848,50 @@ const decToWhole = (array) => array.map(num => parseInt(num))
 console.log(decToWhole(numArray)) 
 [22, 44, 64, 77]
 */
+
+//11-13-2022
+/*
+const person = {
+    name: "Phil",
+    address: {
+        street: "Jose",
+        zones: {
+            zipcode: 43212,
+            carlos: 332211
+        }
+    }
+}
+
+const {zones} = person.address
+console.log(zones)
+// {zipcode: 43212, carlos: 332211}
+*/
+
+
+// Toggle function
+/*
+export default function App() {
+    const [squares, setSquares] = React.useState(boxes)
+        
+    function toggle(id){
+        setSquares(prevState => {
+            return prevState.map(square => {
+                return square.id === id ? {...square, on: !square.on} : square
+            })
+        })
+    }    
+    const squareElements = squares.map(square => (
+        <Box 
+            key={square.id} 
+            on={square.on} 
+            toggle={() => toggle(square.id)}
+        />
+    ))
+    
+    return (
+        <main>
+            {squareElements}
+        </main>
+    )
+}
+*/
