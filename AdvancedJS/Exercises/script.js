@@ -7987,3 +7987,13 @@ const users2 = {...users}
 console.log(users2.Alan.online)
 */
 
+// Split a string and use regex to return an array of words that contains no spaces or special characters.
+/*
+function splitToArray(string){
+    return string.split(/\W/)
+}
+
+console.log(splitToArray("what&you$doing#man ho"))
+// ['what', 'you', 'doing', 'man', 'ho']
+*/
+
