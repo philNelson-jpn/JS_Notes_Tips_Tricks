@@ -7997,3 +7997,23 @@ console.log(splitToArray("what&you$doing#man ho"))
 // ['what', 'you', 'doing', 'man', 'ho']
 */
 
+// 11-15-2022
+
+// Import a "json file" into a react app, destructure the object to the lowest level and add an alias to one of the names within an object.
+/*
+const person = {
+    name: "Phil",
+    address: {
+        street: {
+            name: "Jose",
+            number: 7762
+        }
+    }
+}
+
+const {address: {street: {number: streetNumber}}} = person
+console.log(streetNumber)
+// 7762
+*/
+
+
