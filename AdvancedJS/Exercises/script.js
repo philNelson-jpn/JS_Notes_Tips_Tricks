@@ -8051,4 +8051,21 @@ export default function WindowTracker() {
 }
 */
 
+// 11-17-2022
+
+// Regex: What character can you use to match both the American and British spellings of words (favorite/favourite, color/colour, etc.)?
+/*
+const AmerString = "color"
+const BritString = "colour"
+
+const regex = /colou?r/
+console.log(regex.test(BritString))
+// true
+*/
+
+// What is the shorthand character class of [A-Za-z0-9_]?
+// let regex = /\w/
+
+
+
 
