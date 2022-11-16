@@ -8066,6 +8066,35 @@ console.log(regex.test(BritString))
 // What is the shorthand character class of [A-Za-z0-9_]?
 // let regex = /\w/
 
+// Write a function that reverses a string (using methods)
+/*
+const string = "fooey"
+function reverseString(string){
+    return string.split('').reverse().join('')
+}
 
+console.log(reverseString(string))
+// yeoof
+*/
+
+// Using Math.floor and Math.random, return a random whole number that is >= myMin and <= myMax.
+/*
+function randomRange(myMin, myMax){
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin
+}
+
+console.log(randomRange(2, 10))
+*/
+
+// Write a function that takes in an array, removes the first two items and replaces them with two new ones.
+
+function replaceTwo(array){
+    array.splice(0, 2, "Dillan", "Brandon")
+    return array
+}
+
+const array = ["Bobby", "Rando", "Kelly", "Jimbo"]
+
+console.log(replaceTwo(array))
 
 
