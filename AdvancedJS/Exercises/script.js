@@ -8016,4 +8016,39 @@ console.log(streetNumber)
 // 7762
 */
 
+// 11-16-2022
+// Clean up functions in React
+/*
+import React, {useState, useEffect} from "react"
+
+export default function WindowTracker() {
+        /**
+     * Challenge:
+     * 1. Create an useEffect() that listens for a resize event
+     * 2. Create state called `windowWidth`, default to 
+     *    `window.innerWidth`
+     * 3. When the window width changes, update the state
+     * 4. Display the window width in the h1 so it updates
+     *    every time it changes
+
+    const [ windowWidth, setWindowWidth ] = useState(window.innerWidth)
+
+    React.useEffect(() => {
+        function windowWatcher(){
+            setWindowWidth(window.innerWidth)
+            }
+            
+            window.addEventListener("resize", windowWatcher)
+            
+            return function(){
+                window.removeEventListener("resize", windowWatcher)
+            }
+    }, [])
+    
+    return (
+        <h1>Window width: {windowWidth}</h1>
+    )
+}
+*/
+
 
