@@ -8087,7 +8087,7 @@ console.log(randomRange(2, 10))
 */
 
 // Write a function that takes in an array, removes the first two items and replaces them with two new ones.
-
+/*
 function replaceTwo(array){
     array.splice(0, 2, "Dillan", "Brandon")
     return array
@@ -8096,5 +8096,20 @@ function replaceTwo(array){
 const array = ["Bobby", "Rando", "Kelly", "Jimbo"]
 
 console.log(replaceTwo(array))
+*/
 
+// Create a map that contains three arrays with the keys 1, 2, 3 (as placeholders for ids). Each key should have a test AND a description value assigned to it. Next, create a function that gets an id (1, 2, or 3) from our map and returns it.
+/*
+const testMap = new Map([
+    [1, {test: "test 1", description: "description 1"}],
+    [2, {test: "test 2", description: "description 2"}],
+    [3, {test: "test 3", description: "description 3"}]
+])
 
+function getId(map, id){
+    return map.get(id)
+}
+
+console.log(getId(testMap, 1))
+// {test: 'test 1', description: 'description 1'}
+*/
