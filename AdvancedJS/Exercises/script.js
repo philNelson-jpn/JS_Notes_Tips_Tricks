@@ -8113,3 +8113,22 @@ function getId(map, id){
 console.log(getId(testMap, 1))
 // {test: 'test 1', description: 'description 1'}
 */
+
+// 11-18-2022
+
+// Create a new object from an array of objects that only displays two keys from the original object using map.
+/*
+const objArray = [
+    {name: "Phil", "age": 34, favcolor: "blue"},
+    {name: "Jim", "age": 56, favcolor: "red"},
+    {name: "Kelly", "age": 24, favcolor: "purple"}
+]
+
+const twoKeys = objArray.map(item => ({
+    name: item.name,
+    age: item["age"]
+}))
+console.log(twoKeys[0].name, twoKeys[1].age)
+// Phil 56
+*/
+
