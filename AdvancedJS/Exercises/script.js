@@ -8132,3 +8132,20 @@ console.log(twoKeys[0].name, twoKeys[1].age)
 // Phil 56
 */
 
+// 11-19-2022
+
+// Change this to use an anonymous function. 
+/*
+// function printVariable(variable){
+//     console.log(variable)
+// }
+
+function printName(name, callback){
+    callback(`Hello ${name}`)
+}
+
+printName("Phil", (greeting) => {
+    console.log(greeting)
+})
+*/
+
