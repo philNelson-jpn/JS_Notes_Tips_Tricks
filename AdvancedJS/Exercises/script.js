@@ -8149,3 +8149,36 @@ printName("Phil", (greeting) => {
 })
 */
 
+// 11-22-2022
+
+// REGEX: How do we select 0 or more characters like all of the a's in Aaaaaaaaargh?
+
+// let string = "AAAAAAaaaaarrrgh"
+// let regex = /a*/i
+// let result = string.match(regex)
+// console.log(result)
+// // AAAAAAaaaaa
+
+// What is a mixin and how can we use it?
+/*
+const bird = {
+    name: "Donald",
+    numWings: 2
+}
+
+const plane = {
+    name: "DC3",
+    numWings: 2
+}
+
+const flyMix = function(obj){
+    obj.flying = function(){
+        console.log(`${obj.name} is flying`)
+    }
+}
+
+flyMix(plane)
+plane.flying()
+// DC3 is flying
+*/
+
