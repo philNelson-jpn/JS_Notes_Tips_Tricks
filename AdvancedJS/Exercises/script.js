@@ -8182,3 +8182,61 @@ plane.flying()
 // DC3 is flying
 */
 
+// 11-24-2022
+
+// Regex: What is the shorthand character class of [0-9]; only selecting digits?
+/*
+let string = "9 out of 10 people are 1000 years old"
+let regex = /\d/g
+let result = string.match(regex)
+console.log(result)
+// Array of 9 1 0 1 0 0 0
+*/
+
+// What does the `.` do in Regex (also called the dot or period)?
+
+// let string = "fix"
+// let regex = /f.x/g
+// let result = regex.test(string)
+// console.log(result)
+// true
+// Kind of like a placeholder that will check an unknown letter
+
+// What is the shorthand for all non digits? [^0-9]
+// let string = "9 out of 10 people are 1000 years old"
+// let regex = /\D/g
+// let result = string.match(regex)
+// console.log(result)
+// [' ', 'o', 'u', 't', ' ', 'o', 'f', ' ', ' ', 'p', 'e', 'o', 'p', 'l', 'e', ' ', 'a', 'r', 'e', ' ', ' ', 'y', 'e', 'a', 'r', 's', ' ', 'o', 'l', 'd']
+
+// Use the forEach method to only print out the price of each item (only the number)
+/*
+const items = [
+    { price: 10 },
+    { price: 13 },
+    { price: 12 },
+    { price: 17 },
+    { price: 1 }
+]
+
+items.forEach(item => console.log(item.price))
+*/
+
+// How can you sort an array without mutating the original array? Bonus: What is the function that sorts numbers?
+/*
+const array = [6, 2, 5, 1, 4, 9, 3, 7, 10, 8]
+
+function sortArray(array){
+    const newArray = array.slice().sort(function(a,b){
+        return a - b
+    })
+    return newArray
+}
+
+console.log(sortArray(array))
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+console.log(array)
+// [6, 2, 5, 1, 4, 9, 3, 7, 10, 8]
+*/
+
+
