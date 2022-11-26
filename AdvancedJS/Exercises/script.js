@@ -8239,4 +8239,11 @@ console.log(array)
 // [6, 2, 5, 1, 4, 9, 3, 7, 10, 8]
 */
 
+// 11-26-2022
+// How do we add a test to our script.test.js file and how do we use the expect() and toBe() functions within those tests? (Using Jest)
+// test("this should do this", () => {
+//     const a = 1
+//     const b = 2
+//     expect(sum(a + b)).toBe(3)
+// })
 
