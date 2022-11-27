@@ -8247,3 +8247,35 @@ console.log(array)
 //     expect(sum(a + b)).toBe(3)
 // })
 
+
+// Create a function that uses a closure (a function within another function) called closure() that takes in one argument (a variable).
+
+// The function within closure() (func()) will take in a separate argument (another variable) and log both the closure() arg. and the func() arg.
+
+// Hint: We need to assign closure() to a variable to be able to use the function within it when we call it again.
+/*
+function closure(variable1){
+    return function func(variable2){
+        console.log(variable1, variable2)
+    }
+}
+
+const a = closure(2)
+a(3)
+2  3
+*/
+
+// Write a function that takes in a string and a number. The string should be repeated the number of times specified in the number parameter. Use a for loop and not the .repeat() method.
+/*
+function copyMachine(string, number){
+    let newString = ""
+    for(let i = 0; i < number; i++){
+        newString += string + " "
+    }
+    return newString
+}
+
+console.log(copyMachine("this is insane", 3))
+// this is insane this is insane this is insane 
+*/
+
