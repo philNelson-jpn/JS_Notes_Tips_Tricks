@@ -8281,7 +8281,7 @@ console.log(copyMachine("this is insane", 3))
 
 // 11-28-2022
 // Generate new dice while holding dice that have been clicked
-export default function App() {
+// export default function App() {
     /**
      * Challenge: Create a function `holdDice` that takes
      * `id` as a parameter. For now, just have the function
@@ -8344,4 +8344,38 @@ export default function App() {
     }
     */
 
-    
+// 11-29-2022
+
+// Write a function that takes in an array and returns a new array with only the third and fourth items in the original array.
+/*
+const array = ["Happy", "Dopey", "Sleepy", "Doc", "Grumpy", "Bashful", "Sneezy"]
+
+const thirdAndFourth = (array) => {
+    return array.slice(2, 4)
+}
+
+console.log(thirdAndFourth(array))
+// ['Sleepy', 'Doc']
+*/
+
+// Create the filter function from scratch with Array.prototype
+/*
+Array.prototype.myFilter = function(callback){
+    const newArray = []
+    for(let i = 0; i < this.length; i++){
+        if(callback(this[i])){
+            newArray.push(this[i])
+        }
+    }
+    return newArray
+}
+
+const array = [1,22,3,43,54,60,72]
+const evenFilter = array.myFilter(item => item % 2 === 0)
+const oddFilter = array.myFilter(item => item % 2 === 1)
+console.log(evenFilter)
+// [22, 54, 60, 72]
+console.log(oddFilter)
+// [1, 3, 43]
+*/
+
