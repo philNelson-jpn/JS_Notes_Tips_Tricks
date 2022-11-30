@@ -8379,3 +8379,36 @@ console.log(oddFilter)
 // [1, 3, 43]
 */
 
+// 11-30-2022
+
+// REGEX
+// Change regex so that only the first <h1> is logged (lazy matching).
+
+// Now, regex is returning everything between <> which includes the ending tag as well.
+/*
+let quote = "<h1>Winter is coming</h1>"
+let regex = /<.*?>/
+let result = quote.match(regex)
+console.log(result)
+// <h1>
+*/
+
+// Create a function that looks through an array arr and returns the first element in it that passes a 'truth test'. This means that given an element x, the 'truth test' is passed if func(x) is true. If no element passes the test, return undefined.
+
+/*
+const numArray = [1,2,3,4,5,6]
+function findElement(arr, func){
+    let num = 0
+    for(let i = 0; i < arr.length; i++){
+        if(func(arr[i])){
+            num = arr[i]
+            return num
+        }
+    }
+    return undefined
+}
+
+console.log(findElement(numArray, num => num % 2 !== 0))
+// 1
+*/
+
