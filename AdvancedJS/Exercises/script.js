@@ -8412,3 +8412,21 @@ console.log(findElement(numArray, num => num % 2 !== 0))
 // 1
 */
 
+// import everything from a js file
+// import * as mathModules from './index.js'
+
+// Create a function that changes a string to title case (only the first letter of each word is capitalized) using map.
+/*
+function toTitleCase(string){
+    return string
+    .toLowerCase()
+    .split(' ')
+    .map(word => word.replace(word.charAt(0), word.charAt(0).toUpperCase()))
+    .join(' ')
+}
+
+console.log(toTitleCase("can't touch this"))
+// Can't Touch This
+*/
+
+
