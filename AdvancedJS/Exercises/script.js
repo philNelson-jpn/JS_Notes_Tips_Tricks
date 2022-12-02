@@ -8429,4 +8429,16 @@ console.log(toTitleCase("can't touch this"))
 // Can't Touch This
 */
 
+// Create an function that returns an array of 10 random numbers that correspond to a die face (1-6)
+/*
+function allNewDice(){
+    const randomNumArray = []
+    for(let i = 0; i < 10; i++){
+        randomNumArray.push(Math.ceil(Math.random() * 6))
+    }
+    return randomNumArray
+}
+
+*/
+
 
