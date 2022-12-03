@@ -8470,5 +8470,27 @@ console.log(regex.test(name))
 // false
 */
 
+// impure to pure functions
 
+const person = {
+    name: "Phil",
+    friends: ["Simon", "Caleb"]
+}
+
+// impure function
+// function addFriends(friendName){
+//     person.friends.push(friendName)
+// }
+
+// pure function
+
+function addFriends(obj, friendName){
+    return {...obj, friends: [...obj.friends, friendName]}
+}
+
+const newPerson = addFriends(person, "Philly Mac")
+console.log(newPerson.friends)
+// ['Simon', 'Caleb', 'Philly Mac']
+console.log(person.friends)
+// ['Simon', 'Caleb']
 
