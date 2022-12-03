@@ -8441,4 +8441,34 @@ function allNewDice(){
 
 */
 
+// 12-3-2022
+// REGEX
+// How would you use a character class to extract ALL of the vowels from this sentence, ignoring case?
+/*
+let quote = "The quick brown fox jumped over the lazy dog"
+let regex = /[aeiou]/ig
+let result = quote.match(regex)
+console.log(result)
+// ['e', 'u', 'i', 'o', 'o', 'u', 'e', 'o', 'e', 'e', 'a', 'o']
+*/
+
+// How do you select back-to-back characters like the ss' or pp's in Mississippi?
+/*
+let string = "Mississippppi"
+let regex = /p+/gi
+let result = string.match(regex)
+console.log(result)
+// ['pppp']
+*/
+
+// Check if a string is made up of either Phil Nelson or Jin Nelson.
+// Now check if any middle names or initials are also included.
+/*
+let name = "John Andrew Nelson"
+let regex = /(Phil|Jin).*Nelson/gi
+console.log(regex.test(name))
+// false
+*/
+
+
 
