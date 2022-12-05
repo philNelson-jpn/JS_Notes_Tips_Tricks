@@ -8531,3 +8531,18 @@ console.log(thermos.fahrenheit)
 // 212°F
 */
 
+// Create a function that returns the sum of a range of an array of two numbers ([1,4] would return 10 (1+2+3+4))
+/*
+function sumOfRange(array){
+    const min = Math.min(array[0], array[1])
+    const max = Math.max(array[0], array[1])
+    let sum = 0
+    for(let i = min; i <= max; i++){
+        sum += i
+    }
+    return sum
+}
+
+console.log(sumOfRange([1,4]))
+// 10
+*/
