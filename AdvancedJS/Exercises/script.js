@@ -8471,11 +8471,12 @@ console.log(regex.test(name))
 */
 
 // impure to pure functions
-
+/*
 const person = {
     name: "Phil",
     friends: ["Simon", "Caleb"]
 }
+*/
 
 // impure function
 // function addFriends(friendName){
@@ -8546,3 +8547,38 @@ function sumOfRange(array){
 console.log(sumOfRange([1,4]))
 // 10
 */
+
+//12-6-2022
+
+// Use recursion to return an array that begins with startNum and ends with endNum.
+/*
+function rangeOfNumbers(startNum, endNum){
+    if(endNum - startNum === 0) return [startNum]
+    console.log(endNum)
+    const newRange = rangeOfNumbers(startNum, endNum - 1)
+
+    newRange.push(endNum)
+    
+    return newRange
+}
+
+console.log(rangeOfNumbers(2, 7))
+//[2, 3, 4, 5, 6, 7]
+
+*/
+
+// Create the map function from scratch (on Array.prototype)
+/*
+const arr = [1,2,3,4,5]
+
+Array.prototype.myMap = function(func){
+    const newArray = []
+    this.forEach(item => newArray.push(func(item)))
+    return newArray
+}
+
+const doubled = arr.myMap(item => item * 2)
+console.log(doubled)
+*/
+
+
