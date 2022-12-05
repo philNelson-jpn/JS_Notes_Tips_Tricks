@@ -8483,7 +8483,7 @@ const person = {
 // }
 
 // pure function
-
+/*
 function addFriends(obj, friendName){
     return {...obj, friends: [...obj.friends, friendName]}
 }
@@ -8493,4 +8493,41 @@ console.log(newPerson.friends)
 // ['Simon', 'Caleb', 'Philly Mac']
 console.log(person.friends)
 // ['Simon', 'Caleb']
+*/
+
+// Create a single regex that matches all characters that are not a number or a vowel. Remember to include the appropriate flags in the regex.
+/*
+let quote = "3 blind mice"
+let regex = /[^aeiou0-9]/gi
+let result = quote.match(regex)
+console.log(result)
+// [' ', 'b', 'l', 'n', 'd', ' ', 'm', 'c']
+*/
+
+// ・Create a class called Thermostat that takes in 'fahrenheit' as an argument within the constructor
+// ・The Thermostat class should use a getter called 'temperature' to calculate and return celsius (C = 5/9 * (F - 32))
+// ・The Thermostat class should also use a setter that takes in celsius as an argument and sets 'fahrenheit' to C * 9.0 / 5 + 32
+// ・Log a celsius value by passing a fahrenheit value to Thermostat and then set a celsius value and log a fahrenheit value
+// Bonus: Add °C and °F to the results accordingly.
+/*
+class Thermostat{
+    constructor(fahrenheit){
+        this.fahrenheit = fahrenheit
+    }
+    get temperature(){
+        return `${5/9 * (this.fahrenheit - 32)}°C`
+    }
+
+    set temperature(celsius){
+        this.fahrenheit = `${celsius * 9 / 5 + 32}°F`
+    }
+}
+
+const thermos = new Thermostat(32)
+console.log(thermos.temperature)
+// 0°C
+thermos.temperature = 100
+console.log(thermos.fahrenheit)
+// 212°F
+*/
 
