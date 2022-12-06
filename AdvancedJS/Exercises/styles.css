@@ -183,3 +183,22 @@ p:hover .space{
     opacity: 1;
     transform: scale(1.1);
 }
+
+/* World famous grid layout */
+
+.element-wrapper{
+    --min-column-width: min(320px, 100%);
+    display: grid;
+    padding: 16px;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(var(--min-column-width), 1fr));
+
+    /* cosmetic */
+    filter: drop-shadow(0px 2px 8px hsl(0deg 0% 0% / 0.25))
+}
+
+.element{
+    height: 75px;
+    background: white;
+    border-radius: 4px;
+}
