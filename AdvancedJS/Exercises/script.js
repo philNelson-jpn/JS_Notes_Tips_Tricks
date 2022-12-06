@@ -8583,9 +8583,12 @@ console.log(doubled)
 
 // What is a url slug and how do we create one from a title/heading on our page?
 // A: A dash separated string that appears in the address bar and is associated with a specific page or anchor on a page
-
+/*
 function createSlug(string){
     return string.toLowerCase().split(' ').join('-')
 }
 
 console.log(createSlug("this is an Amazing AchiEveMent by ScienTists"))
+// this-is-an-amazing-achievement-by-scientists
+*/
+
