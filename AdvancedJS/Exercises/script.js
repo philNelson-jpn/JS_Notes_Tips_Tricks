@@ -6936,7 +6936,7 @@ let result = quote.match(quoteRegex)
 console.log(result)
 */
 
-/*
+
 const watchList = [
     {
       "Title": "Inception",
@@ -7049,7 +7049,7 @@ const watchList = [
       "Response": "True"
     }
   ]
-
+/*
   function getAvgRating(watchList, director){
     let directorFilms = watchList.filter(film => film.Director === director)
     let ratings = directorFilms.map(film => Number(film.imdbRating))
@@ -8591,4 +8591,39 @@ function createSlug(string){
 console.log(createSlug("this is an Amazing AchiEveMent by ScienTists"))
 // this-is-an-amazing-achievement-by-scientists
 */
+
+// 12-9-2022
+
+// Remove a property/value from an object
+/*
+const person = {
+    name: "Phil",
+    age: 42,
+    hobbies: [
+        "rock climbing",
+        "training",
+        "programming"
+    ]
+}
+delete(person.age)
+delete person.hobbies[0]
+console.log(person.age)
+// undefined
+console.log(person.hobbies)
+// [empty, 'training', 'programming']
+*/
+/*
+function avgRating(watchList, director){
+
+    const directorFilms = watchList.filter(film => film.Director === director)
+    const ratings = directorFilms.map(film => Number(film.imdbRating))
+    const summedRatings = ratings.reduce((rating, ratingSum) => rating + ratingSum)
+    const averageRating = summedRatings / directorFilms.length
+    return averageRating
+}
+
+console.log(avgRating(watchList, "Christopher Nolan"))
+// 8.675
+*/
+
 
