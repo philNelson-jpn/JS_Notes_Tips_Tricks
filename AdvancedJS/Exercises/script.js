@@ -8626,4 +8626,20 @@ console.log(avgRating(watchList, "Christopher Nolan"))
 // 8.675
 */
 
+// Create two sets of state one to hold form input and other to convert that input into data displayed on the screen. Handle the the onChange property to keep track of what is being typed in the form, handle the submit by updating the state to hold an array of everything typed plus everything that was submitted before. Lastly display the output in the DOM
+/*
+const [inputData, setInputData] = useState({firstName: "", lastName: ""})
+const [contactsData, setContactsData] = useState([])
 
+function handleChange(event) {
+    const {name, value} = event.target
+    setInputData(prevInputData => ({...prevInputData, [name]: value}))
+}
+
+function handleSubmit(event) {
+    event.preventDefault()
+    setContactsData(prevContacts => [...prevContacts, inputData])
+}
+
+const contacts = contactsData.map(contact => <h2 key={contact.firstName + contact.lastName}>{contact.firstName} {contact.lastName}</h2>)
+*/
