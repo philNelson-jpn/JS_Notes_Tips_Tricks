@@ -8744,4 +8744,43 @@ console.log(newArrayOfObjs)
 // arrayOfObjs - age
 */
 
+// 12-13-2022
+// Create a function that loops through an object and returns the number of users where their online status is equal to true.
+/*
+const users = {
+    Alan: {
+        online: true
+    },
+    Phil: {
+        online: false
+    },
+    Gwen: {
+        online: true
+    },
+    Gwong: {
+        online: true
+    }
+}
+
+function onlineUsers(obj){
+    let numberOnline = 0
+    for(let user in obj){
+        if(obj[user].online){
+            numberOnline++
+        }
+    }
+    return numberOnline
+}
+
+console.log(onlineUsers(users))
+*/
+
+// REGEX: How do we specify a lower/upper limit or an exact match of character length with {}?
+/*
+let string = "Ohhhhhh wow"
+let regex = /Oh{1,5}h wow/
+let result = regex.test(string)
+console.log(result)
+// true
+*/
 
