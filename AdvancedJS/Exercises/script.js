@@ -8690,3 +8690,58 @@ console.log(reverseString(hello))
   console.log(lookUpProfile("Laine", "likes"))
 */
 
+// Write a function that takes a full name, splits the first name into an array, and returns it. Then destructure the array so that both the first name and last name are accessible as separate variables (assign the destructured array to the function).
+/*
+function splitFullName(fullName){
+    return fullName.split(' ')
+}
+
+const [firstName, lastName] = splitFullName("Phil Nelson")
+console.log(firstName)
+// Phil
+*/
+
+// Create a new object from an array of objects that only displays two keys from the original object using map.
+/*
+const arrayOfObjs = [
+    {
+        name: "Phil",
+        age: 34,
+        hobbies: [
+            "rock climbing",
+            "eating pizza",
+            "training",
+            "playing with children"
+        ]
+    },
+    {
+        name: "John",
+        age: 34,
+        hobbies: [
+            "rocking",
+            "eating gyoza",
+            "training pilates",
+            "playing games"
+        ]
+    },
+    {
+        name: "Kyle",
+        age: 34,
+        hobbies: [
+            "running",
+            "eating ice cream",
+            "track and field",
+            "playing soccer"
+        ]
+    }
+]
+
+const newArrayOfObjs = arrayOfObjs.map(obj => ({
+    name: obj.name,
+    hobbies: obj.hobbies
+}))
+console.log(newArrayOfObjs)
+// arrayOfObjs - age
+*/
+
+
