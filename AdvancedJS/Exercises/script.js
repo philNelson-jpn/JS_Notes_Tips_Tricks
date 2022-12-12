@@ -8643,3 +8643,50 @@ function handleSubmit(event) {
 
 const contacts = contactsData.map(contact => <h2 key={contact.firstName + contact.lastName}>{contact.firstName} {contact.lastName}</h2>)
 */
+
+// 12-12-2022
+
+// Write a function that reverses a string with a for loop
+/*
+const hello = "hello"
+
+function reverseString(string){
+    let reversedString = ""
+    for(let i = string.length - 1; i >= 0; i--){
+        reversedString += string[i]
+    }
+    return reversedString
+}
+
+console.log(reverseString(hello))
+// olleh
+
+function reverseStringMethod(string){
+    return string.split('').reverse().join('')
+}
+
+console.log(reverseString(hello))
+// olleh
+*/
+
+// Search through an array of objects and return a property of one of the objects based on the name of the object and if that prop exists or not.
+/*
+  function lookUpProfile(name, prop){
+    for(let i = 0; i < contacts.length; i++){
+        const contact = contacts[i]
+        const {firstName, lastName} = contact
+
+        if(name === firstName || lastName){
+            if(contact.hasOwnProperty(prop)){
+                return contact[prop]
+            }else{
+                return "No such prop"
+            }
+        }
+    }
+    return "Profile does not exist"
+  }
+
+  console.log(lookUpProfile("Laine", "likes"))
+*/
+
