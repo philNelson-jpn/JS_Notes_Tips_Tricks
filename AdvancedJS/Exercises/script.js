@@ -8784,3 +8784,31 @@ console.log(result)
 // true
 */
 
+// 12-14-2022
+// Convert a while loop into a recursive function
+/*
+const person = {
+    name: "Phil",
+    friend: {
+        name: "Simon",
+        friend: {
+            name: "Caleb"
+        }
+    }
+}
+
+let currentPerson = person
+while(currentPerson != null){
+    console.log(currentPerson.name)
+    currentPerson = currentPerson.friend
+}
+
+function printName(currentPerson){
+    if(currentPerson == null) return
+    console.log(currentPerson.name)
+    printName(currentPerson.friend)
+}
+
+printName(person)
+*/
+
