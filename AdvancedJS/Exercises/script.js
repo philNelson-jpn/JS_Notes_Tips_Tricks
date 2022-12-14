@@ -8811,7 +8811,8 @@ function printName(currentPerson){
 
 printName(person)
 */
-
+// Loop through an array to return each item and wrap it in an <li> tag with a class "text-warning" using string template literals.
+/*
 const result = {
         success: ["max-length", "no-amd", "prefer-arrow-functions"],
         failure: ["no-var", "var-on-top", "linebreak"],
@@ -8831,3 +8832,15 @@ const failuresList = makeList(result.failure)
     // [ '<li class="text-warning">no-var</li>',
     // '<li class="text-warning">var-on-top</li>',
     // '<li class="text-warning">linebreak</li>' ]
+*/
+
+// Regex find all of the whitespaces in a sentence
+/*
+let string = "hello      there my old friend"
+let regex = /\s+/g
+let result = string.match(regex)
+console.log(result)
+// Add the plus to get multiple spaces in a row
+// ['       ', ' ', ' ', ' ']
+*/
+
