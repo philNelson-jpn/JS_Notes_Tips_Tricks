@@ -8844,3 +8844,26 @@ console.log(result)
 // ['       ', ' ', ' ', ' ']
 */
 
+// Write a function that checks if the second argument is the last part of the first argument (a string).
+
+// confirmEnding("Bastian", "n") should return true.
+/*
+let string = "Kenobi"
+
+function confirmEnding(string, character){
+    return string.slice(string.length - character.length) === character
+}
+
+console.log(confirmEnding(string, "obi"))
+// true
+*/
+
+// Using Math.floor and Math.random, return a random whole number that is >= myMin and <= myMax.
+/*
+function randomRange(myMin, myMax){
+    return Math.floor(Math.random() * myMax - myMin + 1) + myMin
+}
+
+console.log(randomRange(2, 4))
+*/
+

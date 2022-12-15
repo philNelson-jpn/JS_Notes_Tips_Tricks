@@ -157,6 +157,7 @@ body {
     transition: opacity 1300ms ease-in-out, transform 1400ms ease-in-out;
     -webkit-mask-image: linear-gradient(transparent, 20%, black, 50%, transparent);
     mask-image: linear-gradient(transparent, 20%, black, 50%, transparent);
+    background-position: bottom;
 }
 
 .random-pic:hover {
