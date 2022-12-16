@@ -8867,3 +8867,47 @@ function randomRange(myMin, myMax){
 console.log(randomRange(2, 4))
 */
 
+// 12-16-2022
+
+// Find the longest word in a string and print the length of that word (a number). Bonus: print out the word itself. Bonus bonus: get a word count of the whole string.
+/*
+const string = "She sells seashells by the seashore"
+
+function findLongestWord(string){
+    const words = string.split(' ')
+    let letterCount = 0
+    let longestWord = ""
+    let stringLength = words.length
+
+    for(let i = 0; i < words.length; i++){
+        if(words[i].length > letterCount){
+            letterCount = words[i].length
+            longestWord = words[i]
+        }
+    }
+
+    return `The longest word in your sentence is "${longestWord.toUpperCase()}" at ${letterCount} characters long. Your sentence has ${stringLength} words.`
+}
+
+console.log(findLongestWord(string))
+// The longest word in your sentence is "SEASHELLS" at 9 characters long. Your sentence has 6 words.
+*/
+
+// Use a getter to calculate a person's birth year based on { ageThisYear: 34 }
+/*
+const person = {
+    name: "Phil",
+    ageThisYear: 34,
+    get birthYear(){
+        const date = new Date()
+        const birthDate = date.getFullYear() - this.ageThisYear
+        return birthDate
+    }
+}
+
+console.log(person.birthYear)
+// 1988
+*/
+
+
+
