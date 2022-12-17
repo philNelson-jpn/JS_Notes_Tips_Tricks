@@ -8,10 +8,6 @@
 //     }
 // }
 
-
-
-
-
 /*
 Remove duplicates from an array:
 const array = [1, 2, 3, 4, 4, 3, 2, 5]
@@ -8909,5 +8905,19 @@ console.log(person.birthYear)
 // 1988
 */
 
+// 12-17-2022
+
+// Create an function that removes duplicates from an array using Set.
+
+// Return an array (not an object)
+/*
+function removeDups(array){
+    const newArray = [...new Set(array)]
+    return newArray
+}
+
+console.log(removeDups([1,2,3,3,4,3,5]))
+// [1, 2, 3, 4, 5]
+*/
 
 
