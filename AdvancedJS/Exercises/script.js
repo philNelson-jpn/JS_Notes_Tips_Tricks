@@ -8936,4 +8936,30 @@ console.log(result2)
 // /\W/
 */
 
+// What method can you use on an object to return the keys of that object in an array?
+/*
+let obj = {
+    name: "Phil",
+    age: 34,
+    occupation: "teacher",
+    hobbies: [
+        "training",
+        "coding",
+        "spending time with family"
+    ]
+}
+
+const objKeys = Object.keys(obj)
+console.log(objKeys)
+// ['name', 'age', 'occupation', 'hobbies']
+
+// With a function
+
+function returnKeys(obj){
+    return Object.keys(obj)
+}
+
+console.log(returnKeys(obj))
+// ['name', 'age', 'occupation', 'hobbies']
+*/
 
