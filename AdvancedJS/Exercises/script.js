@@ -8920,4 +8920,20 @@ console.log(removeDups([1,2,3,3,4,3,5]))
 // [1, 2, 3, 4, 5]
 */
 
+// 12-20-2022
+
+/*
+// What is the shorthand character class for [^A-Za-z0-9]?
+let quote = "Hello 456! Where is your bottom?"
+let regex = /[^A-Za-z0-9]/g
+let regexShort = /\W/g
+let result = quote.match(regex)
+let result2 = quote.match(regexShort)
+console.log(result)
+// [' ', '!', ' ', ' ', ' ', ' ', '?']
+console.log(result2)
+// [' ', '!', ' ', ' ', ' ', ' ', '?']
+// /\W/
+*/
+
 
