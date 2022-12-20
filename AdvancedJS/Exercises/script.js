@@ -8963,3 +8963,39 @@ console.log(returnKeys(obj))
 // ['name', 'age', 'occupation', 'hobbies']
 */
 
+// Add a setter to this code so that we can set an explicit fullName outside of the person object.
+/*
+const person = {
+    firstName: "Phil",
+    lastName: "Nelson",
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`
+    },
+    set fullName(name){
+        [this.firstName, this.lastName] = name.split(' ')
+    }
+}
+
+person.fullName = "Kelly Clarkson"
+console.log(person.firstName)
+// Kelly
+*/
+
+// Apply both the double function and the plusOne function to the array with map chaining and log out the result.
+/*
+const array = [1,2,3,4,5]
+
+function double(element){
+    return element * 2
+}
+
+function plusOne(element){
+    return element + 1
+}
+
+const doubledPlusOne = array.map(element => double(element)).map(element => plusOne(element))
+
+// or the shorthand: const doubledPlusOne = array.map(double).map(plusOne)
+console.log(doubledPlusOne)
+*/
+
