@@ -8999,3 +8999,16 @@ const doubledPlusOne = array.map(element => double(element)).map(element => plus
 console.log(doubledPlusOne)
 */
 
+// Create a function that compares two arrays and only returns an element that both arrays DO NOT share
+/*
+const arr1 = [1,2,3,4,5,6,7]
+const arr2 = [2,3,4,5,6,7,8]
+
+function compareArrays(arr1, arr2){
+    return arr1.concat(arr2).filter(item=> !arr1.includes(item) || !arr2.includes(item))
+}
+
+console.log(compareArrays(arr1, arr2))
+// [1, 8]
+*/
+
