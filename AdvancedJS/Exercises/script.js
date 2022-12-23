@@ -9012,3 +9012,51 @@ console.log(compareArrays(arr1, arr2))
 // [1, 8]
 */
 
+
+// Write a function that takes a full name, takes the first name and the last name, and saves them as separate variables in an object. Then destructure the object so that both the first name and last name are accessible as separate variables.
+/*
+function splitFullName(fullName){
+    const [firstName, lastName] = fullName.split(' ')
+    return {
+        firstName,
+        lastName
+    }
+}
+
+const { firstName, lastName } = splitFullName("Phil Nelson")
+console.log(lastName)
+// Nelson
+*/
+
+// How do we change the name of a key when destructuring an object?
+/*
+const person = {
+    name: "Phil"
+}
+
+const {name: firstName} = person
+console.log(firstName)
+// Phil
+
+*/
+
+// Create the filter function from scratch with Array.prototype
+/*
+Array.prototype.myFilter = function(callback){
+    const newArray = []
+    for(let i = 0; i < this.length; i++){
+        let truthyValue = this[i]
+        if(callback(truthyValue)){
+            newArray.push(truthyValue)
+        }
+    }
+    return newArray
+}
+
+const array = [1,2,3,4,5,6]
+
+const evenFilter = array.myFilter(item => item % 2 === 0)
+const oddFilter = array.myFilter(item => item % 2 === 1)
+console.log(evenFilter)
+console.log(oddFilter)
+*/
