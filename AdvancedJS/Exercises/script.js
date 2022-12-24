@@ -9060,3 +9060,15 @@ const oddFilter = array.myFilter(item => item % 2 === 1)
 console.log(evenFilter)
 console.log(oddFilter)
 */
+
+// 12-24-2022
+// Use .replace() and a capture group to change the string "one two three" to "three two one"
+/*
+const string = "one two three"
+const regex = /(\w+)\s(\w+)\s(\w+)/
+const reverser = "$2 $1 $3"
+const reversedString = string.replace(regex, reverser)
+console.log(reversedString)
+// two one three
+*/
+
