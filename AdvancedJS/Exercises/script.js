@@ -8,8 +8,6 @@
 //     }
 // }
 
-const { templateSettings } = require("lodash")
-
 /*
 Remove duplicates from an array:
 const array = [1, 2, 3, 4, 4, 3, 2, 5]
@@ -9131,5 +9129,19 @@ describe('#sum', () => {
         expect(sum(a, b)).toBe(3)
     })
 })
+*/
+
+// Create a function that removes the dashes from the string "May-the-force-be-with-you". 
+
+// Bonus: Remove ALL special characters + Add a period at the end.
+/*
+const string = "May-the-force$be&with?you"
+
+function removeDashes(string){
+    return string.split(/\W/).join(' ') + "."
+}
+
+console.log(removeDashes(string))
+// May the force be with you.
 */
 
