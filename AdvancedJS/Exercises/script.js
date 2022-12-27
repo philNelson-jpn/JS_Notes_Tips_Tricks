@@ -8,6 +8,8 @@
 //     }
 // }
 
+const { templateSettings } = require("lodash")
+
 /*
 Remove duplicates from an array:
 const array = [1, 2, 3, 4, 4, 3, 2, 5]
@@ -9070,5 +9072,64 @@ const reverser = "$2 $1 $3"
 const reversedString = string.replace(regex, reverser)
 console.log(reversedString)
 // two one three
+*/
+
+// 12-27-2022
+// Use map to double the numbers of an array in a new array.
+/*
+const array = [1,2,3,4,5]
+function doubleArray(array){
+    return array.map(item => item * 2)
+}
+
+const doubledArray = doubleArray(array)
+console.log(doubledArray)
+// [2, 4, 6, 8, 10]
+*/
+
+// Use a WHILE loop to print out the result.
+/*
+const myArray = []
+
+let i = 5
+while(i >= 0){
+    myArray.push(i)
+    i--
+}
+
+console.log(myArray)
+// [5, 4, 3, 2, 1, 0]
+*/
+
+// What is the null coalescing operator, where is it used, and what does it do?
+/*
+function printName(firstName, lastName){
+    lastName = lastName ?? "Nelson"
+    console.log(firstName, lastName)
+}
+printName("Phil")
+// Phil Nelson
+*/
+
+// Create a function that uses map to convert decimal numbers to whole numbers using parseInt()
+/*
+function decToWhole(array){
+    return array.map(item => parseInt(item))
+}
+
+console.log(decToWhole([22.2, 33.4, 77.33234, 55.2311]))
+// [22, 33, 77, 55]
+*/
+
+// What do we surround our tests with in Jest to add more detailed desriptions? What is the syntax?
+// BONUS: What is a convention for functions?
+/*
+describe('#sum', () => {
+    test('it adds numbers correctly', () => {
+        const a = 1
+        const b = 2
+        expect(sum(a, b)).toBe(3)
+    })
+})
 */
 
