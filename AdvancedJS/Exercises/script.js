@@ -9145,3 +9145,38 @@ console.log(removeDashes(string))
 // May the force be with you.
 */
 
+// 12-28-2022
+// What method can we use to determine if an object contains a property?
+/*
+const person = {
+    name: "Phil",
+    age: 34,
+    hobbies: [
+        "training",
+        "music",
+        "programming",
+        "movies"
+    ]
+}
+
+function findProp(obj, prop){
+    if(obj.hasOwnProperty(prop)){
+        return obj[prop]
+    }
+    return "Not Found"
+}
+
+console.log(findProp(person, "name"))
+// Phil
+*/
+
+// How do we generate a random WHOLE number between 1-10?
+/*
+function generateRandomNumber(){
+    return Math.ceil(Math.random() * 10)
+}
+
+const randomNumber = generateRandomNumber()
+console.log(randomNumber)
+// random number between 1-10
+*/
