@@ -9180,3 +9180,61 @@ const randomNumber = generateRandomNumber()
 console.log(randomNumber)
 // random number between 1-10
 */
+
+// 12-30-2022
+// What if we want to match a letter appearing between a range (say 3-6 times)?
+/*
+let ohStr = "Ohhhhh no"
+let ohRegex = /Oh{2,5} no/
+let result = ohRegex.test(ohStr)
+console.log(result)
+// true
+*/
+
+// What is a mixin and how can we use it?
+/*
+const plane = {
+    name: "A DC3",
+    numOfWings: 2,
+    capableOfFlight: true
+}
+
+const penguin = {
+    name: "Pen Pen",
+    numOfWings: 2,
+    capableOfFlight: false
+}
+
+const flyingMixin = function(obj){
+    obj.flight = function(){
+        console.log(`${obj.name} has ${obj.numOfWings} wings. ${obj.capableOfFlight ? "" : "However, "}${obj.name} is ${obj.capableOfFlight ? "quite" : "not"} capable of flight.`)
+    }
+}
+
+flyingMixin(penguin)
+penguin.flight()
+// Pen Pen has 2 wings. However, Pen Pen is not capable of flight.
+
+flyingMixin(plane)
+plane.flight()
+// DC3 has 2 wings. DC3 is quite capable of flight.
+*/
+
+// Use a nested for loop to iterate through an array and multiply all of the values:
+/*
+function multiplyAll(arr){
+    let product = 1
+    for(let i = 0; i < arr.length; i++){
+        for(let j = 0; j < arr[i].length; j++){
+            console.log(arr[i][j])
+            console.log(product)
+            product *= arr[i][j]
+        }
+    }
+    return product
+}
+
+let productOfArrays = multiplyAll([[1,2], [3,4], [5,6,7]])
+console.log(productOfArrays)
+*/
+
