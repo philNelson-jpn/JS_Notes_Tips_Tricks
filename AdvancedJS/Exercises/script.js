@@ -9238,3 +9238,16 @@ let productOfArrays = multiplyAll([[1,2], [3,4], [5,6,7]])
 console.log(productOfArrays)
 */
 
+// 12-31-2022
+// Difference between find and filter
+// find finds the first item that meets the criteria outlined in the function while filter finds all instances
+/*
+const array = [1,2,3,4,5,6]
+const found = array.find(item => item % 2 === 0)
+const filtered = array.filter(item => item % 2 === 0)
+console.log(found)
+// 2
+console.log(filtered)
+// [2, 4, 6]
+*/
+
