@@ -9251,3 +9251,11 @@ console.log(filtered)
 // [2, 4, 6]
 */
 
+// Create a function that title cases a string (every word's first letter is capitalized)
+
+function titleCaseIt(string){
+    return string.toLowerCase().split(' ').map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase())).join(' ')
+}
+
+const string = "this is A funKy WaY to TESt if ThiS IS woRking"
+console.log(titleCaseIt(string))
