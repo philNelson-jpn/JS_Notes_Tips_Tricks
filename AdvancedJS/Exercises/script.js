@@ -9252,10 +9252,29 @@ console.log(filtered)
 */
 
 // Create a function that title cases a string (every word's first letter is capitalized)
-
+/*
 function titleCaseIt(string){
     return string.toLowerCase().split(' ').map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase())).join(' ')
 }
 
 const string = "this is A funKy WaY to TESt if ThiS IS woRking"
 console.log(titleCaseIt(string))
+// This Is A Funky Way To Test If This Is Working
+*/
+
+// 1-1-2023
+// Create a function that removes all falsy values from an array.
+/*
+function removeFalsy(array){
+    return array.filter(item => {
+        if(item){
+            return item
+        }
+    })
+}
+
+console.log(removeFalsy([1, "this", undefined, null, 0]))
+// [1, 'this']
+*/
+
+
