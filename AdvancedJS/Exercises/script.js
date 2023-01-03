@@ -9277,4 +9277,62 @@ console.log(removeFalsy([1, "this", undefined, null, 0]))
 // [1, 'this']
 */
 
+// 1-2-2023
+
+// Create an anonymous ARROW function as the callback that prints out 10.
+/*
+function func(x, callback){
+    callback(x)
+}
+
+func(10, (x) => console.log(x))
+// 10
+*/
+
+// How do we prevent an object from being changed/mutated?
+/*
+const person = {
+    name: "Phil"
+}
+
+Object.freeze(person)
+
+person.name = "Bob"
+console.log(person.name)
+// TypeError
+*/
+
+// 1-3-2023
+// Write a function that takes an array and a number. Use a while loop to loop over the array and push a copy of the array to a new array the number of times specified by the number argument.
+/*
+function multiplyArray(array, number){
+    const newArray = []
+    while(number >= 1 ){
+        newArray.push([...array])
+        number--
+    }
+    return newArray
+}
+
+const array1 = [1,2,3,4]
+console.log(multiplyArray(array1, 4))
+*/
+
+// Create a function that looks through an array arr and returns the first element in it that passes a 'truth test'.
+/*
+function findElement(arr, func){
+    for(let i = 0; i < arr.length; i++){
+        let num = arr[i]
+        if(func(num)){
+            return num
+        }
+    }
+    return undefined
+}
+
+console.log(findElement([1,5,3,3,5], num => num % 2 === 0))
+// undefined
+console.log(findElement([1,2,3,3,5], num => num % 2 === 0))
+// 2
+*/
 
