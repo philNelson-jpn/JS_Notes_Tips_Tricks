@@ -9336,3 +9336,88 @@ console.log(findElement([1,2,3,3,5], num => num % 2 === 0))
 // 2
 */
 
+// 1-6-2023
+
+// When using Redux in your project, what are the three things that you need to set up a store for your state?
+// actions, reducers, dispatch
+// Redux is very 'ARD - Action Reducer Dispatch
+
+// Convert this object into an array of names. You can use a while loop or recursion to achieve this.
+/*
+const person = {
+    name: "Phil",
+    friend: {
+        name: "Simon",
+        friend: {
+            name: "Caleb"
+        }
+    }
+}
+
+const personArray = []
+
+function createPersonArray(currentPerson){
+    if(currentPerson == null) return
+    personArray.push(currentPerson.name)
+    createPersonArray(currentPerson.friend)
+    return personArray
+}
+console.log(createPersonArray(person))
+// ['Phil', 'Simon', 'Caleb']
+*/
+
+/*
+let currentPerson = person
+const personArray = []
+
+while(currentPerson != null){
+    personArray.push(currentPerson.name)
+    currentPerson = currentPerson.friend
+}
+
+console.log(personArray)
+// ['Phil', 'Simon', 'Caleb']
+*/
+
+// How do we create a new object based off of an already existing object?
+/*
+const person = {
+    name: "Phil",
+    friend: {
+        name: "Simon",
+        friend: {
+            name: "Caleb"
+        }
+    }
+}
+
+const person2 = Object.create(person)
+console.log(person2.name)
+*/
+
+// Create a Person class with a name
+
+// Next, create a Janitor that inherits Person + takes an additional numberOfMops prop + creates a clean() function that prints 'I cleaned with numberOfMops mops'
+/*
+class Person{
+    constructor(name){
+        this.name = name
+    }
+}
+
+class Janitor extends Person{
+    constructor(name, numberOfMops){
+        super(name)
+        this.numberOfMops = numberOfMops
+    }
+
+    clean(){
+        console.log(`${this.name} just cleaned the whole school with ${this.numberOfMops} mops!`)
+    }
+}
+
+const jerry = new Janitor("Jerry", 23)
+jerry.clean()
+// Jerry just cleaned the whole school with 23 mops!
+*/
+
