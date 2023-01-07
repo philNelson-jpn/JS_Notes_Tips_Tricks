@@ -9421,3 +9421,83 @@ jerry.clean()
 // Jerry just cleaned the whole school with 23 mops!
 */
 
+// 1-7-2023
+/*
+const myArray = []
+let i = 10
+
+while(i < 10){
+    myArray.push(i)
+    i++
+}
+console.log(myArray)
+// []
+
+do{
+    myArray.push(i)
+    i++
+}while(i < 10)
+
+console.log(myArray)
+// [10]
+*/
+
+// Change this to use an anonymous function. 
+/*
+function printVariable(variable){
+    console.log(variable)
+}
+
+function printName(name, callback){
+    callback(`Hello ${name}`)
+}
+
+printName("Phil", (variable)=>{
+    console.log(variable)
+})
+
+*/
+
+// Use the reduce method to get the total price of all of the items.
+/*
+const items = [
+    { price: 10 },
+    { price: 12 },
+    { price: 17 },
+    { price: 250 },
+    { price: 121 }
+]
+
+const totalPrice = items.reduce((sum, item) => sum + item.price, 0)
+console.log(totalPrice)
+// 410
+*/
+
+// Create a new Dog class that extends Animal, adds an "owner" property, and redfines the function speak() to say "Woof!"
+/*
+class Animal {
+    constructor(name){
+        this.name = name
+    }
+
+    speak(){
+        console.log(`${name} says "hello"`)
+    }
+}
+
+class Dog extends Animal {
+    constructor(name, owner){
+        super(name)
+        this.owner = owner
+    }
+
+    speak(){
+        console.log(`${this.owner} told ${this.name} to say "woof!"`)
+    }
+}
+
+const indy = new Dog("Indy", "Phil")
+indy.speak()
+// Phil told Indy to say "woof!"
+*/
+
