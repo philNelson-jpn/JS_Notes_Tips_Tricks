@@ -144,15 +144,16 @@ body {
     margin-inline-start: calc(var(--gap) * -1);
     margin-inline-end: calc(var(--gap) * -1);
     overflow: hidden;
-    height: 333px;
+    /* height: 333px; */
 }
 
 .random-pic {
     display: block;
     object-fit: cover;
+    object-position: 0% -50%;
     /* width: 100%; */
     /* width: calc(100% / 7); 1/7 of the space */
-    opacity: .7;
+    opacity: .3;
     transform: scale(1);
     transition: opacity 1300ms ease-in-out, transform 1400ms ease-in-out;
     -webkit-mask-image: linear-gradient(transparent, 20%, black, 50%, transparent);
@@ -162,13 +163,14 @@ body {
 
 .random-pic:hover {
     opacity: 1;
-    transform: scale(1.8);
+    transform: scale(1);
 }
 
 p {
     overflow-wrap: break-word;
     hyphens: auto;
     color: rgb(187, 187, 187);
+    margin-bottom: -10rem;
 }
 
 .space{
@@ -181,10 +183,14 @@ p {
     transform 500ms ease-in-out;
 }
 
-p:hover .space{
+.random-pic:hover .space{
     color: rgb(255, 255, 255);
     opacity: 1;
     transform: scale(1.1);
+}
+
+.bottom-p {
+    margin-top: -10rem;
 }
 
 /* World famous grid layout */

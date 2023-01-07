@@ -9072,3 +9072,352 @@ console.log(reversedString)
 // two one three
 */
 
+// 12-27-2022
+// Use map to double the numbers of an array in a new array.
+/*
+const array = [1,2,3,4,5]
+function doubleArray(array){
+    return array.map(item => item * 2)
+}
+
+const doubledArray = doubleArray(array)
+console.log(doubledArray)
+// [2, 4, 6, 8, 10]
+*/
+
+// Use a WHILE loop to print out the result.
+/*
+const myArray = []
+
+let i = 5
+while(i >= 0){
+    myArray.push(i)
+    i--
+}
+
+console.log(myArray)
+// [5, 4, 3, 2, 1, 0]
+*/
+
+// What is the null coalescing operator, where is it used, and what does it do?
+/*
+function printName(firstName, lastName){
+    lastName = lastName ?? "Nelson"
+    console.log(firstName, lastName)
+}
+printName("Phil")
+// Phil Nelson
+*/
+
+// Create a function that uses map to convert decimal numbers to whole numbers using parseInt()
+/*
+function decToWhole(array){
+    return array.map(item => parseInt(item))
+}
+
+console.log(decToWhole([22.2, 33.4, 77.33234, 55.2311]))
+// [22, 33, 77, 55]
+*/
+
+// What do we surround our tests with in Jest to add more detailed desriptions? What is the syntax?
+// BONUS: What is a convention for functions?
+/*
+describe('#sum', () => {
+    test('it adds numbers correctly', () => {
+        const a = 1
+        const b = 2
+        expect(sum(a, b)).toBe(3)
+    })
+})
+*/
+
+// Create a function that removes the dashes from the string "May-the-force-be-with-you". 
+
+// Bonus: Remove ALL special characters + Add a period at the end.
+/*
+const string = "May-the-force$be&with?you"
+
+function removeDashes(string){
+    return string.split(/\W/).join(' ') + "."
+}
+
+console.log(removeDashes(string))
+// May the force be with you.
+*/
+
+// 12-28-2022
+// What method can we use to determine if an object contains a property?
+/*
+const person = {
+    name: "Phil",
+    age: 34,
+    hobbies: [
+        "training",
+        "music",
+        "programming",
+        "movies"
+    ]
+}
+
+function findProp(obj, prop){
+    if(obj.hasOwnProperty(prop)){
+        return obj[prop]
+    }
+    return "Not Found"
+}
+
+console.log(findProp(person, "name"))
+// Phil
+*/
+
+// How do we generate a random WHOLE number between 1-10?
+/*
+function generateRandomNumber(){
+    return Math.ceil(Math.random() * 10)
+}
+
+const randomNumber = generateRandomNumber()
+console.log(randomNumber)
+// random number between 1-10
+*/
+
+// 12-30-2022
+// What if we want to match a letter appearing between a range (say 3-6 times)?
+/*
+let ohStr = "Ohhhhh no"
+let ohRegex = /Oh{2,5} no/
+let result = ohRegex.test(ohStr)
+console.log(result)
+// true
+*/
+
+// What is a mixin and how can we use it?
+/*
+const plane = {
+    name: "A DC3",
+    numOfWings: 2,
+    capableOfFlight: true
+}
+
+const penguin = {
+    name: "Pen Pen",
+    numOfWings: 2,
+    capableOfFlight: false
+}
+
+const flyingMixin = function(obj){
+    obj.flight = function(){
+        console.log(`${obj.name} has ${obj.numOfWings} wings. ${obj.capableOfFlight ? "" : "However, "}${obj.name} is ${obj.capableOfFlight ? "quite" : "not"} capable of flight.`)
+    }
+}
+
+flyingMixin(penguin)
+penguin.flight()
+// Pen Pen has 2 wings. However, Pen Pen is not capable of flight.
+
+flyingMixin(plane)
+plane.flight()
+// DC3 has 2 wings. DC3 is quite capable of flight.
+*/
+
+// Use a nested for loop to iterate through an array and multiply all of the values:
+/*
+function multiplyAll(arr){
+    let product = 1
+    for(let i = 0; i < arr.length; i++){
+        for(let j = 0; j < arr[i].length; j++){
+            console.log(arr[i][j])
+            console.log(product)
+            product *= arr[i][j]
+        }
+    }
+    return product
+}
+
+let productOfArrays = multiplyAll([[1,2], [3,4], [5,6,7]])
+console.log(productOfArrays)
+*/
+
+// 12-31-2022
+// Difference between find and filter
+// find finds the first item that meets the criteria outlined in the function while filter finds all instances
+/*
+const array = [1,2,3,4,5,6]
+const found = array.find(item => item % 2 === 0)
+const filtered = array.filter(item => item % 2 === 0)
+console.log(found)
+// 2
+console.log(filtered)
+// [2, 4, 6]
+*/
+
+// Create a function that title cases a string (every word's first letter is capitalized)
+/*
+function titleCaseIt(string){
+    return string.toLowerCase().split(' ').map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase())).join(' ')
+}
+
+const string = "this is A funKy WaY to TESt if ThiS IS woRking"
+console.log(titleCaseIt(string))
+// This Is A Funky Way To Test If This Is Working
+*/
+
+// 1-1-2023
+// Create a function that removes all falsy values from an array.
+/*
+function removeFalsy(array){
+    return array.filter(item => {
+        if(item){
+            return item
+        }
+    })
+}
+
+console.log(removeFalsy([1, "this", undefined, null, 0]))
+// [1, 'this']
+*/
+
+// 1-2-2023
+
+// Create an anonymous ARROW function as the callback that prints out 10.
+/*
+function func(x, callback){
+    callback(x)
+}
+
+func(10, (x) => console.log(x))
+// 10
+*/
+
+// How do we prevent an object from being changed/mutated?
+/*
+const person = {
+    name: "Phil"
+}
+
+Object.freeze(person)
+
+person.name = "Bob"
+console.log(person.name)
+// TypeError
+*/
+
+// 1-3-2023
+// Write a function that takes an array and a number. Use a while loop to loop over the array and push a copy of the array to a new array the number of times specified by the number argument.
+/*
+function multiplyArray(array, number){
+    const newArray = []
+    while(number >= 1 ){
+        newArray.push([...array])
+        number--
+    }
+    return newArray
+}
+
+const array1 = [1,2,3,4]
+console.log(multiplyArray(array1, 4))
+*/
+
+// Create a function that looks through an array arr and returns the first element in it that passes a 'truth test'.
+/*
+function findElement(arr, func){
+    for(let i = 0; i < arr.length; i++){
+        let num = arr[i]
+        if(func(num)){
+            return num
+        }
+    }
+    return undefined
+}
+
+console.log(findElement([1,5,3,3,5], num => num % 2 === 0))
+// undefined
+console.log(findElement([1,2,3,3,5], num => num % 2 === 0))
+// 2
+*/
+
+// 1-6-2023
+
+// When using Redux in your project, what are the three things that you need to set up a store for your state?
+// actions, reducers, dispatch
+// Redux is very 'ARD - Action Reducer Dispatch
+
+// Convert this object into an array of names. You can use a while loop or recursion to achieve this.
+/*
+const person = {
+    name: "Phil",
+    friend: {
+        name: "Simon",
+        friend: {
+            name: "Caleb"
+        }
+    }
+}
+
+const personArray = []
+
+function createPersonArray(currentPerson){
+    if(currentPerson == null) return
+    personArray.push(currentPerson.name)
+    createPersonArray(currentPerson.friend)
+    return personArray
+}
+console.log(createPersonArray(person))
+// ['Phil', 'Simon', 'Caleb']
+*/
+
+/*
+let currentPerson = person
+const personArray = []
+
+while(currentPerson != null){
+    personArray.push(currentPerson.name)
+    currentPerson = currentPerson.friend
+}
+
+console.log(personArray)
+// ['Phil', 'Simon', 'Caleb']
+*/
+
+// How do we create a new object based off of an already existing object?
+/*
+const person = {
+    name: "Phil",
+    friend: {
+        name: "Simon",
+        friend: {
+            name: "Caleb"
+        }
+    }
+}
+
+const person2 = Object.create(person)
+console.log(person2.name)
+*/
+
+// Create a Person class with a name
+
+// Next, create a Janitor that inherits Person + takes an additional numberOfMops prop + creates a clean() function that prints 'I cleaned with numberOfMops mops'
+/*
+class Person{
+    constructor(name){
+        this.name = name
+    }
+}
+
+class Janitor extends Person{
+    constructor(name, numberOfMops){
+        super(name)
+        this.numberOfMops = numberOfMops
+    }
+
+    clean(){
+        console.log(`${this.name} just cleaned the whole school with ${this.numberOfMops} mops!`)
+    }
+}
+
+const jerry = new Janitor("Jerry", 23)
+jerry.clean()
+// Jerry just cleaned the whole school with 23 mops!
+*/
+
