@@ -9501,3 +9501,28 @@ indy.speak()
 // Phil told Indy to say "woof!"
 */
 
+//1-8-2023
+// Convert this code to use classes instead of prototype.
+/*
+class Person {
+    constructor(name, age){
+        this.name = name
+        this.age = age
+    }
+
+    printName(){
+        console.log(this.name)
+    }
+
+    printHi(){
+        console.log("Hi")
+    }
+
+    static goodName = "Philly"
+}
+
+const phil = new Person("Phil", 34)
+phil.printName()
+//"Phil"
+*/
+
