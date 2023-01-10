@@ -137,6 +137,7 @@ body {
 .wrapper > * {
     grid-column: 2;
     padding: var(--gap);
+    position: relative;
 }
 
 .full-bleed {
@@ -145,6 +146,7 @@ body {
     margin-inline-end: calc(var(--gap) * -1);
     overflow: hidden;
     /* height: 333px; */
+
 }
 
 .random-pic {
@@ -154,16 +156,15 @@ body {
     /* width: 100%; */
     /* width: calc(100% / 7); 1/7 of the space */
     opacity: .3;
-    transform: scale(1);
     transition: opacity 1300ms ease-in-out, transform 1400ms ease-in-out;
     -webkit-mask-image: linear-gradient(transparent, 20%, black, 50%, transparent);
     mask-image: linear-gradient(transparent, 20%, black, 50%, transparent);
     background-position: bottom;
+    height: 100%;
 }
 
 .random-pic:hover {
     opacity: 1;
-    transform: scale(1);
 }
 
 p {
@@ -171,6 +172,8 @@ p {
     hyphens: auto;
     color: rgb(187, 187, 187);
     margin-bottom: -10rem;
+    position: absolute;
+    z-index: 1;
 }
 
 .space{
@@ -181,16 +184,17 @@ p {
     margin: 0px 3px;
     transition: opacity 400ms ease-in-out, color 400ms ease-in-out,
     transform 500ms ease-in-out;
+    isolation: isolate;
 }
 
-.random-pic:hover .space{
+p:hover .space{
     color: rgb(255, 255, 255);
     opacity: 1;
     transform: scale(1.1);
 }
 
 .bottom-p {
-    margin-top: -10rem;
+    margin-top: -25rem;
 }
 
 /* World famous grid layout */
