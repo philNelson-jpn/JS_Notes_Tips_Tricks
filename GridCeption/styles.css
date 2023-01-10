@@ -1,0 +1,152 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+	margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+	height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+    font-family: "Poppins", sans-serif;
+    background-color: hsl(213, 24%, 26%);
+    --backgroundColor: hsl(214, 15%, 47%);	
+    --borderRadius: 8px;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas: 
+        "aside header"
+        "aside main"
+        "aside footer"
+    ;
+    height: 100vh;
+    gap: 10px;
+    margin: 10px;
+}
+
+.grid-wrapper > * {
+    border-radius: var(--borderRadius);
+    padding: 8px;
+    color: snow;
+}
+
+.aside {
+    grid-area: aside;
+    background: var(--backgroundColor);
+}
+
+.header {
+    grid-area: header;
+    background: var(--backgroundColor);
+}
+
+.main {
+    grid-area: main;
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    grid-area: footer;
+    background: var(--backgroundColor);
+}
+
+.overview-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100px;
+    gap: 10px;
+}
+
+.overview-wrapper > * {
+    border-radius: 8px;
+    padding: 8px;
+    color: snow;
+    background: var(--backgroundColor);
+}
+
+.chart-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 100%);
+    grid-template-areas: 
+        "chart card-1"
+        "chart card-2"
+    ;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.chart-wrapper > * {
+    border-radius: 8px;
+    padding: 8px;
+    color: snow;
+    background: var(--backgroundColor);
+}
+
+.chart{
+    grid-area: chart;
+}
+
+.chart-card-1{
+    grid-area: card-1;
+}
+
+.chart-card-2{
+    grid-area: card-2;
+}
