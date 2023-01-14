@@ -61,6 +61,21 @@ h6 {
 	overflow-wrap: break-word;
 }
 
+:root {
+    --selection-color: hsl(0, 2%, 17%);
+    --selection-background-color: rgb(44, 42, 42);
+} 
+
+::selection {
+    color: var(--selection-color);
+    background-color: var(--selection-background-color);
+}
+
+h1::selection{
+    color: var(--selection-color);
+    background-color: rgb(158, 158, 209);
+}
+
 
 /*
 h1{
