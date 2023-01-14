@@ -9526,3 +9526,19 @@ phil.printName()
 //"Phil"
 */
 
+// 1-14-2023
+// functions on prototypes
+/*
+function Person(name, age){
+    this.name = name
+    this.age = age
+}
+
+Person.prototype.printName = function(){
+    console.log(this.name)
+}
+
+const phil = new Person("Phil", 34)
+phil.printName()
+*/
+
