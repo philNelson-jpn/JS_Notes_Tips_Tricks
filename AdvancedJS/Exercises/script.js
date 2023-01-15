@@ -9542,3 +9542,14 @@ const phil = new Person("Phil", 34)
 phil.printName()
 */
 
+// 1-15-2023
+// Check if a string is made up of either Phil Nelson or Jin Nelson.
+// Now check if any middle names or initials are also included.
+/*
+const name = "Phil Andrew Nelson"
+const regex = /(Phil|Jin).*Nelson/
+const check = regex.test(name)
+console.log(check)
+// true
+*/
+
