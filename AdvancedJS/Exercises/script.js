@@ -9553,3 +9553,29 @@ console.log(check)
 // true
 */
 
+// Write a for loop that iterates through the array and returns the total of the sum of the items in the array
+/*
+const myArr = [2,3,4,5,6,7]
+
+function sumArray(array){
+    let total = 0
+    for(let i = 0; i < array.length; i++){
+        total += array[i]
+    }
+    return total
+}
+
+const total = sumArray(myArr)
+
+console.log(total)
+*/
+
+// Add ["Paul", 35] to the beginning of the myArray variable using unshift().
+/*
+const array = [["Jim", 33], ["Tom", 44], ["Beverely", 62]]
+
+array.unshift(["Paul", 35])
+
+console.log(array[0])
+// ['Paul', 35]
+*/
