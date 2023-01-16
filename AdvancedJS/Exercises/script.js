@@ -9579,3 +9579,24 @@ array.unshift(["Paul", 35])
 console.log(array[0])
 // ['Paul', 35]
 */
+
+// 1-16-2023
+// What are the three arguments that we can pass to array.splice()?
+/*
+const array = ["A New Hope", "Return of the Jedi"]
+
+array.splice(1, 0, "The Empire Strikes Back")
+
+console.log(array)
+// ['A New Hope', 'The Empire Strikes Back', 'Return of the Jedi']
+*/
+
+// What is the shorthand character class of [A-Za-z0-9_]?
+/*
+const string = "Hello b-23"
+const regex = /\w/g
+const result = string.match(regex)
+console.log(result)
+// ['H', 'e', 'l', 'l', 'o', 'b', '2', '3']
+*/
+
