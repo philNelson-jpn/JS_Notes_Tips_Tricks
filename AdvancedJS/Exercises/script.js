@@ -9600,3 +9600,41 @@ console.log(result)
 // ['H', 'e', 'l', 'l', 'o', 'b', '2', '3']
 */
 
+// 1-17-2023
+// Bracket notation when accessing properties from an object
+/*
+const players = {
+    1: "Bobby Ricky",
+    16: "Phil Jackson"
+}
+
+function getPlayerNum(obj, playerNum){
+    console.log(obj[playerNum])
+}
+
+getPlayerNum(players, 1)
+*/
+
+
+// Convert the switch statement to an object that can be used to look up a key and return a value associated with that key.
+// Setup
+function phoneticLookup(val) {
+    let result = ""
+  
+    // Only change code below this line
+    const lookup = {
+        "alpha":"Adams",
+        "bravo":"Boston",
+        "charlie":"Chicago",
+        "delta":"Denver",
+        "echo":"Easy",
+        "foxtrot":"Frank"
+    }
+
+    result = lookup[val]
+  
+    // Only change code above this line
+    return result
+  }
+  
+console.log(phoneticLookup("charlie"))
