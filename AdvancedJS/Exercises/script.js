@@ -9616,12 +9616,11 @@ getPlayerNum(players, 1)
 */
 
 
-// Convert the switch statement to an object that can be used to look up a key and return a value associated with that key.
-// Setup
+// Convert a switch statement to an object that can be used to look up a key and return a value associated with that key.
+/*
 function phoneticLookup(val) {
     let result = ""
-  
-    // Only change code below this line
+
     const lookup = {
         "alpha":"Adams",
         "bravo":"Boston",
@@ -9633,8 +9632,26 @@ function phoneticLookup(val) {
 
     result = lookup[val]
   
-    // Only change code above this line
     return result
   }
   
 console.log(phoneticLookup("charlie"))
+*/
+
+// 1-19-2023
+// Create a map that contains three arrays with the keys 1, 2, 3 (as placeholders for ids). Each key should have a test AND a description value assigned to it. Next, create a function that gets an id (1, 2, or 3) from our map and returns it.
+/*
+const testMap = new Map([
+    [1, {test: "test1", desc: "desc1"}],
+    [2, {test: "test2", desc: "desc2"}],
+    [3, {test: "test3", desc: "desc3"}]
+])
+
+function getId(id){
+    return testMap.get(id)
+}
+
+console.log(getId(2))
+// {test: "test2", desc: "desc2"}
+*/
+
