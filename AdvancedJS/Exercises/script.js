@@ -9655,3 +9655,13 @@ console.log(getId(2))
 // {test: "test2", desc: "desc2"}
 */
 
+// 1-20-2023
+/*
+// Using Math.floor and Math.random, return a random whole number that is >= myMin and <= myMax.
+function randomRange(myMin, myMax){
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin
+}
+
+console.log(randomRange(2, 6))
+*/
+
