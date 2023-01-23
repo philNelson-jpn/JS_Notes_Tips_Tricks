@@ -9737,3 +9737,46 @@ console.log(person2.friends)
 // ['Simon', 'Caleb', 'Jimmy']
 */
 
+// 1-23-2023
+
+// Create the filter function from scratch with Array.prototype
+/*
+Array.prototype.myFilter = function(callback){
+    const newArray = []
+    for(let i = 0; i < this.length; i++){
+        const num = this[i]
+        if(callback(num)){
+            newArray.push(num)
+        }
+    }
+    return newArray
+}
+const array = [2,3,5,6]
+
+const evenFilter = array.myFilter(function(item){
+    return item % 2 === 0
+})
+
+console.log(evenFilter)
+// [2, 6]
+*/
+
+// Use Function Composition to combine both the double function and the plusOne function into one function.
+/*
+const array = [1,2,3,4,5,6]
+
+function double(element){
+    return element * 2
+}
+
+function plusOne(element){
+    return element + 1
+}
+
+function doubledPlusOne(element){
+    return plusOne(double(element))
+}
+console.log(array.map(doubledPlusOne))
+// [3, 5, 7, 9, 11, 13]
+*/
+
