@@ -9780,3 +9780,12 @@ console.log(array.map(doubledPlusOne))
 // [3, 5, 7, 9, 11, 13]
 */
 
+// Split a string and use regex to return an array of words that contains no spaces or special characters.
+/*
+const string = "this%is$a large(amount)of#testosterone"
+const regex = /\W/gi
+const result = string.trim().split(regex).join(' ')
+console.log(result)
+// this is a large amount of testosterone
+*/
+
