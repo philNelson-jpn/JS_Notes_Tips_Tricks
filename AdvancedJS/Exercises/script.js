@@ -9789,3 +9789,45 @@ console.log(result)
 // this is a large amount of testosterone
 */
 
+// 1-25-2023
+
+// Create a new object from an array of objects that only displays two keys from the original object using map.
+/*
+const arrayOfObjs = [
+    {
+        name: "Phil",
+        profession: "Spartan",
+        hobby: "Learning and growing"
+    },
+    {
+        name: "Simon",
+        profession: "Body builder",
+        hobby: "Learning and growing"
+    },
+    {
+        name: "Caleb",
+        profession: "Code genius",
+        hobby: "Learning and growing"
+    }
+]
+
+const nameAndProfession = arrayOfObjs.map(item => ({name: item.name, profession: item.profession}))
+console.log(JSON.stringify(nameAndProfession))
+*/
+
+
+// Create a function that changes a string to title case (only the first letter of each word is capitalized) using map.
+/*
+function toTitleCase(string){
+    return string
+        .toLowerCase()
+        .split(' ')
+        .map(word => word.replace(word.charAt(0), word.charAt(0).toUpperCase()))
+        .join(' ')
+}
+
+const stringToTitleCase = "this IS a tEsT tO seE if THIs woRks"
+console.log(toTitleCase(stringToTitleCase))
+// This Is A Test To See If This Works
+*/
+
