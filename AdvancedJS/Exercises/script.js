@@ -9870,3 +9870,23 @@ console.log(numberArray)
 // [2, 1, 7, 4, 6, 5]
 */
 
+// 1-26-2023
+
+// Change playerNumber to 16 and then use bracket notation to get the player associated with the playerNumber.
+
+// Bonus: Create a function that takes in an object and a playerNumber. Call the function so that "Montana" is logged to the console.
+/*
+const testObj = {
+    12: "Namath",
+    16: "Montana",
+    19: "Unitas"
+}
+
+function getPlayer(obj, playerNumber){
+    console.log(obj[playerNumber])
+}
+
+getPlayer(testObj, 16)
+// Montana
+*/
+
