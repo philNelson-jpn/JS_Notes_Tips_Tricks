@@ -9831,3 +9831,25 @@ console.log(toTitleCase(stringToTitleCase))
 // This Is A Test To See If This Works
 */
 
+// Create breakpoints for media queries that can be injected into styled components
+/*
+const BREAKPOINTS = {
+    tabletMin: 550,
+    laptopMin: 1100,
+    desktopMin: 1500
+}
+
+const QUERIES = {
+    tabletAndUp: `(min-width: ${BREAKPOINTS.tabletMin / 16}rem)`,
+    laptopAndUp: `(min-width: ${BREAKPOINTS.laptopMin / 16}rem)`,
+    desktopAndUp: `(min-width: ${BREAKPOINTS.desktopMin / 16}rem)`
+}
+
+const Wrapper = styled.div`
+    padding: 16px;
+
+    @media ${QUERIES.tabletAndUp} {
+        padding: 32px;
+    }
+`*/
+
