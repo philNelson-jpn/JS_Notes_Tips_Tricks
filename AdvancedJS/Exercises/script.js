@@ -9853,3 +9853,20 @@ const Wrapper = styled.div`
     }
 `*/
 
+// Sort an array without mutating the original array
+/*
+const numberArray = [2,1,7,4,6,5]
+
+function sortArray(array){
+    const newArray = [...array]
+    return newArray.sort((a,b) => {
+        return a - b
+    })
+}
+
+console.log(sortArray(numberArray))
+// [1, 2, 4, 5, 6, 7]
+console.log(numberArray)
+// [2, 1, 7, 4, 6, 5]
+*/
+
