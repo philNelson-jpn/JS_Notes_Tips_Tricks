@@ -9890,3 +9890,30 @@ getPlayer(testObj, 16)
 // Montana
 */
 
+// Write a function that takes in a string and a number. The string should be repeated the number of times specified in the number parameter. Use a for loop and not the .repeat() method.
+/*
+function stringRepeater(string, number){
+    let repeatedString = ""
+    for(let i = 0; i < number; i++){
+        repeatedString += string + " "
+    }
+    return repeatedString
+}
+
+console.log(stringRepeater("hello", 3))
+*/
+
+// Double each element of an array with a for loop.
+/*
+const arr = [1,2,3,4,5,6]
+function doubleArr(array){
+    let doubledArray = []
+    for(let i = 0; i < array.length; i++){
+        doubledArray.push(array[i] * 2)
+    }
+    return doubledArray
+}
+
+console.log(doubleArr(arr))
+*/
+
