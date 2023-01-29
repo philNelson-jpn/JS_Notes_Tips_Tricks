@@ -9,6 +9,7 @@
 // }
 
 
+
 /*
 Remove duplicates from an array:
 const array = [1, 2, 3, 4, 4, 3, 2, 5]
@@ -9902,6 +9903,7 @@ function stringRepeater(string, number){
 
 console.log(stringRepeater("hello", 3))
 */
+// 1-28-2023
 
 // Double each element of an array with a for loop.
 /*
@@ -9915,5 +9917,63 @@ function doubleArr(array){
 }
 
 console.log(doubleArr(arr))
+*/
+
+// Assign list to a destructured array that is equal to 3 through 10.
+/*
+const source = [1,2,3,4,5,6,7,8,9,10]
+
+function removeFirstTwo(list){
+    const [a, b, ...arr] = list
+    return arr
+}
+
+console.log(removeFirstTwo(source))
+// [3, 4, 5, 6, 7, 8, 9, 10]
+*/
+
+//1-29-2023
+
+// Create a function that loops through an object and returns the number of users where their online status is equal to true.
+/*
+const users = {
+    Alan: {
+        online: false
+    },
+    Jim: {
+        online: true
+    },
+    Kim: {
+        online: true
+    },
+    Sarah: {
+        online: true
+    }
+}
+
+function findOnline(obj){
+    let num = 0
+    for(const user in obj){
+        if(obj[user].online){
+            num += 1
+        }
+    }
+    return num
+}
+
+console.log(findOnline(users))
+//3
+*/
+
+// Use recursion to return an array that begins with startNum and ends with endNum.
+/*
+function rangeOfNumbers(startNum, endNum){
+    if(endNum - startNum === 0) return [startNum]
+    const rangeArray = rangeOfNumbers(startNum, endNum - 1)
+    rangeArray.push(endNum)
+    return rangeArray
+}
+
+console.log(rangeOfNumbers(2, 10))
 */
 
