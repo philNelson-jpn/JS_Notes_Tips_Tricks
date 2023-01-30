@@ -9977,3 +9977,23 @@ function rangeOfNumbers(startNum, endNum){
 console.log(rangeOfNumbers(2, 10))
 */
 
+// 1-30-2023
+
+// Recreate the range function
+/*
+export const range = (start, end, step = 1) => {
+    let output = []
+    
+    if (typeof end === 'undefined') {
+      end = start
+      start = 0
+    }
+    
+    for (let i = start; i < end; i += step) {
+      output.push(i)
+    }
+    
+    return output
+  }
+*/
+
