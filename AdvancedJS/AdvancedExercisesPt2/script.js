@@ -59,3 +59,30 @@ CreateUserProto.prototype.printPassProto = function(){
 }
 */
 
+//2-2-2023
+// How do we write a polyfill for a function that doesn't yet exist or is not yet supported?
+/*
+if(Math.double == null){
+    Math.double = function(number){
+        return number * 2
+    }
+}
+
+console.log(Math.double(2))
+//4
+*/
+
+// How do you create a new Map? Since creating a new map creates something like an object that is actually an array, what is something that we can do that we can't do with normal objects?
+/*
+const currencyMap = new Map([
+    ["America", "USD"],
+    ["Japan", "Yen"],
+    ["Mexico", "Peso"],
+])
+
+currencyMap.set("India", "Ruppee")
+//We can use array methods on Maps even though they behave a lot like objects
+const countries = currencyMap.forEach((item, index) => console.log(index))
+// America, Japan, Mexico, India
+*/
+
