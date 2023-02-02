@@ -86,3 +86,19 @@ const countries = currencyMap.forEach((item, index) => console.log(index))
 // America, Japan, Mexico, India
 */
 
+// 2-3-2023
+// Use filter to return only the first three numbers of an array on a new array.
+/*
+const a = [1,2,3,4,5]
+
+const firstThree = a.filter(num => num < 4)
+console.log(firstThree)
+function firstThreeFunc(array){
+    const [a, b, c, ...rest] = array
+    return [a, b, c]
+}
+
+const firstThreeArray = firstThreeFunc(a)
+console.log(firstThreeArray)
+*/
+
