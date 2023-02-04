@@ -102,3 +102,20 @@ const firstThreeArray = firstThreeFunc(a)
 console.log(firstThreeArray)
 */
 
+//2-4-2023
+/*
+function findLongestWord(string){
+    let num = 0
+    let words = string.split(' ')
+    for(let i = 0; i < words.length; i++){
+        if(words[i].length > num){
+            num = words[i].length
+        }
+    }
+
+    return num
+}
+
+console.log(findLongestWord("this is a testy"))
+*/
+
