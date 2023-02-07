@@ -119,3 +119,93 @@ function findLongestWord(string){
 console.log(findLongestWord("this is a testy"))
 */
 
+// 2-7-2023
+// Create a function that returns the sum of a range of an array of two numbers ([1,4] would return 10 (1+2+3+4))
+/*
+function arrayRange(array){
+    let result = 0
+    let min = Math.min(array[0], array[1])
+    let max = Math.max(array[0], array[1])
+    for(let i = min; i <= max; i++){
+        result += i
+    }
+    return result
+}
+
+let rangedArray = arrayRange([4, 1])
+console.log(rangedArray)
+*/
+
+// Write a function that checks if the second argument is the last part of the first argument (a string).
+
+// confirmEnding("Bastian", "n") should return true.
+/*
+function confirmEnding(string, target){
+    return string.slice(string.length - target.length) === target
+}
+
+console.log(confirmEnding("Phil", "m"))
+//false
+console.log(confirmEnding("Phil", "l"))
+// true
+*/
+
+// ・Create a class called Thermostat that takes in 'fahrenheit' as an argument within the constructor
+// ・The Thermostat class should use a getter called 'temperature' to calculate and return celsius (C = 5/9 * (F - 32))
+// ・The Thermostat class should also use a setter that takes in celsius as an argument and sets 'fahrenheit' to C * 9.0 / 5 + 32
+// ・Log a celsius value by passing a fahrenheit value to Thermostat and then set a celsius value and log a fahrenheit value
+// Bonus: Add °C and °F to the results accordingly.
+/*
+class Thermostat{
+    constructor(fahrenheit){
+        this.fahrenheit = fahrenheit
+    }
+
+    get temperature(){
+        return `${5/9 * (this.fahrenheit - 32)}°C`
+    }
+
+    set temperature(celsius){
+        this.fahrenheit = `${celsius * 9 / 5 + 32}°F`
+    }
+}
+
+const newThermo = new Thermostat(32)
+console.log(newThermo.temperature)
+// 0°C
+newThermo.temperature = 32
+console.log(newThermo.fahrenheit)
+// 89.6°F
+*/
+
+// Use map to apply the double function to the array and then log out the result.
+/*
+const array = [1,2,3,4,5]
+
+const double = (element) => element * 2
+
+const doubledArray = array.map(element => double(element))
+const doubledArraySimple = array.map(double)
+console.log(doubledArray)
+// [2, 4, 6, 8, 10]
+console.log(doubledArraySimple)
+// [2, 4, 6, 8, 10]
+*/
+
+// How do we create a component that uses destructuring to house props? Create a component called Employee with firstName, lastName, and age as props.
+/*
+function Employee(){
+    const employees = [{
+        firstName: "Phil",
+        lastName: "Nelson",
+        age: 34
+    }]
+    return (
+        <>
+        <h1>Employee Names</h1>
+        {employees.map(({firstName, lastName, age}) => <h4>{firstName}</h4>)}
+        </>
+    )
+}
+*/
+
