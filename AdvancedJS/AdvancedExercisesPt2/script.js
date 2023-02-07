@@ -209,3 +209,14 @@ function Employee(){
 }
 */
 
+// 2-8-2023
+
+// Use map (a higher order function) on this array to create a newArray that doubles each number in the array.
+/*
+const array = [1,2,3,4,5,6]
+
+const doubledArray = array.map(element => element * 2)
+console.log(doubledArray)
+// [2, 4, 6, 8, 10, 12]
+*/
+
