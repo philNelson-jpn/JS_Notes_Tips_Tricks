@@ -220,3 +220,34 @@ console.log(doubledArray)
 // [2, 4, 6, 8, 10, 12]
 */
 
+// 2-9-2023
+
+// Write a function that takes in an array, removes the first two items and replaces them with two new ones.
+// Hint: The array method you use can take in more than two arguments.
+/*
+function removeAndReplace(array){
+    array.splice(0, 2, "black", "blue")
+    return array
+}
+
+const colorArray = ["yellow", "red", "orange", "purple"]
+
+const newColorArray = removeAndReplace(colorArray)
+console.log(newColorArray)
+// ['black', 'blue', 'orange', 'purple']
+*/
+
+// Create the map function from scratch (on Array.prototype)
+
+// Remember that map only takes in a function. It is performing the method ON an array (not accepting it as a argument).
+/*
+Array.prototype.myMap = function(func){
+    const newArray = []
+    this.forEach(element => newArray.push(func(element)))
+    return newArray
+}
+
+const myMapArray = [1,2,3,4,5]
+console.log(myMapArray.myMap(element => element * 3))
+*/
+
