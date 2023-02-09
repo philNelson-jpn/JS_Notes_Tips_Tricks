@@ -251,3 +251,17 @@ const myMapArray = [1,2,3,4,5]
 console.log(myMapArray.myMap(element => element * 3))
 */
 
+// 2-10-2023
+
+// Create a function that concats two arrays together (the arguments provided to the function).
+/*
+function concatTheseBitches(arr1, arr2) {
+	return arr1.concat(arr2)
+}
+
+const array1 = [1, 2, 3]
+const array2 = [4, 5, 6]
+
+const concatedArrays = concatTheseBitches(array1, array2)
+console.log(concatedArrays)
+*/
