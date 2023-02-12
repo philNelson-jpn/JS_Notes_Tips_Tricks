@@ -250,3 +250,16 @@ Array.prototype.myMap = function(func){
 const myMapArray = [1,2,3,4,5]
 console.log(myMapArray.myMap(element => element * 3))
 */
+
+// 2-13-2023
+
+// Use .replace() and a capture group to change the string "one two three" to "three two one"
+/*
+const string = 'one two three'
+const regex = /(\w+)\s(\w+)\s(\w+)/
+const captureGroup = '$1 $3 $2'
+const reversedString = string.replace(regex, captureGroup)
+
+console.log(reversedString)
+// one three two
+*/
