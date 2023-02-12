@@ -251,3 +251,32 @@ const myMapArray = [1,2,3,4,5]
 console.log(myMapArray.myMap(element => element * 3))
 */
 
+// 2-11-2023
+
+// How do you make a grid that automatically fills in columns with a minimum width of 320px, but expands to 1fr when there is available space and also takes up the whole screen on mobile devices instead of overflowing/creating the dreaded horizontal scroll bar?
+
+/*
+<style>
+  .grid {
+    --min-col-width: min(320px, 100%);
+    display: grid;
+    padding: 16px;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(var(--min-col-width), 1fr));
+  }
+</style>
+*/
+
+// What if we want to import everything from a js file? What is the syntax?
+
+// import * as myModule from './myModule'
+
+// 2-12-2023
+// create the store in Redux
+
+/*const store = createStore(reducer)
+store.subscribe(() => {
+    console.log(store.getState())
+})
+
+export default store */
