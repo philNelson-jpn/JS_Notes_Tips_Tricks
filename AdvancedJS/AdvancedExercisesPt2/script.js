@@ -263,3 +263,21 @@ const reversedString = string.replace(regex, captureGroup)
 console.log(reversedString)
 // one three two
 */
+
+// Create a function that compares two arrays and only returns an element that both arrays DO NOT share
+/*
+function unsharedElements(arr1, arr2) {
+	const combinedArray = arr1.concat(arr2)
+	const filteredArray = combinedArray.filter(
+		(element) => !arr1.includes(element) || !arr2.includes(element)
+	)
+	return filteredArray
+}
+
+const nameArrayOne = ['Bill', 'Todd', 'Jim', 'Phil']
+const nameArrayTwo = ['Bill', 'Todd', 'Phil']
+
+const uniqueNameArray = unsharedElements(nameArrayOne, nameArrayTwo)
+console.log(uniqueNameArray)
+// ['Jim']
+*/
