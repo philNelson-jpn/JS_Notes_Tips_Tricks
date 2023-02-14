@@ -8,8 +8,6 @@
 //     }
 // }
 
-
-
 /*
 Remove duplicates from an array:
 const array = [1, 2, 3, 4, 4, 3, 2, 5]
@@ -262,8 +260,6 @@ console.log(removeDups(array))
 //         ;[this.firstName, this.lastName] = value.split(' ')
 //     },
 // }
-
-
 
 // console.log(person.fullName)
 
@@ -1464,7 +1460,6 @@ console.log(person.fullName)
 // Philly MacDonald
 */
 
-
 // Test syntax with Jest
 /*
 describe("#sum", ()=>{
@@ -2119,9 +2114,9 @@ const result = {
     // '<li class="text-warning">linebreak</li>' ]
     */
 
-    // How do we prevent an object from being changed/mutated?
-    
-    /*const person = {
+// How do we prevent an object from being changed/mutated?
+
+/*const person = {
         name: "Phil"
     }
 
@@ -4455,7 +4450,7 @@ console.log(concatMe(firstArray,secondArray))
 // [1, 2, 3, 4, 5, 6]
 */
 
-  /*
+/*
   function getRating(watchList) {
     // set a variable to watchList called averageRating
     let averageRating = watchList
@@ -5777,8 +5772,7 @@ const result = {
     */
 
 // How do you render JSX components to the DOM? Hint: the method requires two arguments; component to render and the target node.
-    // ReactDOM.render(MyComponent, document.getElementById('target-node'))
-
+// ReactDOM.render(MyComponent, document.getElementById('target-node'))
 
 // Create a map that contains three arrays with the keys 1, 2, 3 (as placeholders for ids). Each key should have a test AND a description value assigned to it. Next, create a function that gets an id (1, 2, or 3) from our map and returns it.
 /*
@@ -6625,7 +6619,7 @@ console.log(evenFilter)
 */
 
 // 10-18-2022
-// Convert an if/else statement to use &&. 
+// Convert an if/else statement to use &&.
 // Hint: You only need one return statement and one <h1> tag.
 /*
 render(){
@@ -6934,119 +6928,6 @@ let result = quote.match(quoteRegex)
 console.log(result)
 */
 
-
-const watchList = [
-    {
-      "Title": "Inception",
-      "Year": "2010",
-      "Rated": "PG-13",
-      "Released": "16 Jul 2010",
-      "Runtime": "148 min",
-      "Genre": "Action, Adventure, Crime",
-      "Director": "Christopher Nolan",
-      "Writer": "Christopher Nolan",
-      "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Tom Hardy",
-      "Plot": "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
-      "Language": "English, Japanese, French",
-      "Country": "USA, UK",
-      "Awards": "Won 4 Oscars. Another 143 wins & 198 nominations.",
-      "Poster": "http://ia.media-imdb.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
-      "Metascore": "74",
-      "imdbRating": "8.8",
-      "imdbVotes": "1,446,708",
-      "imdbID": "tt1375666",
-      "Type": "movie",
-      "Response": "True"
-    },
-    {
-      "Title": "Interstellar",
-      "Year": "2014",
-      "Rated": "PG-13",
-      "Released": "07 Nov 2014",
-      "Runtime": "169 min",
-      "Genre": "Adventure, Drama, Sci-Fi",
-      "Director": "Christopher Nolan",
-      "Writer": "Jonathan Nolan, Christopher Nolan",
-      "Actors": "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow",
-      "Plot": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
-      "Language": "English",
-      "Country": "USA, UK",
-      "Awards": "Won 1 Oscar. Another 39 wins & 132 nominations.",
-      "Poster": "http://ia.media-imdb.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX300.jpg",
-      "Metascore": "74",
-      "imdbRating": "8.6",
-      "imdbVotes": "910,366",
-      "imdbID": "tt0816692",
-      "Type": "movie",
-      "Response": "True"
-    },
-    {
-      "Title": "The Dark Knight",
-      "Year": "2008",
-      "Rated": "PG-13",
-      "Released": "18 Jul 2008",
-      "Runtime": "152 min",
-      "Genre": "Action, Adventure, Crime",
-      "Director": "Christopher Nolan",
-      "Writer": "Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)",
-      "Actors": "Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine",
-      "Plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.",
-      "Language": "English, Mandarin",
-      "Country": "USA, UK",
-      "Awards": "Won 2 Oscars. Another 146 wins & 142 nominations.",
-      "Poster": "http://ia.media-imdb.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
-      "Metascore": "82",
-      "imdbRating": "9.0",
-      "imdbVotes": "1,652,832",
-      "imdbID": "tt0468569",
-      "Type": "movie",
-      "Response": "True"
-    },
-    {
-      "Title": "Batman Begins",
-      "Year": "2005",
-      "Rated": "PG-13",
-      "Released": "15 Jun 2005",
-      "Runtime": "140 min",
-      "Genre": "Action, Adventure",
-      "Director": "Christopher Nolan",
-      "Writer": "Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)",
-      "Actors": "Christian Bale, Michael Caine, Liam Neeson, Katie Holmes",
-      "Plot": "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from the corruption that Scarecrow and the League of Shadows have cast upon it.",
-      "Language": "English, Urdu, Mandarin",
-      "Country": "USA, UK",
-      "Awards": "Nominated for 1 Oscar. Another 15 wins & 66 nominations.",
-      "Poster": "http://ia.media-imdb.com/images/M/MV5BNTM3OTc0MzM2OV5BMl5BanBnXkFtZTYwNzUwMTI3._V1_SX300.jpg",
-      "Metascore": "70",
-      "imdbRating": "8.3",
-      "imdbVotes": "972,584",
-      "imdbID": "tt0372784",
-      "Type": "movie",
-      "Response": "True"
-    },
-    {
-      "Title": "Avatar",
-      "Year": "2009",
-      "Rated": "PG-13",
-      "Released": "18 Dec 2009",
-      "Runtime": "162 min",
-      "Genre": "Action, Adventure, Fantasy",
-      "Director": "James Cameron",
-      "Writer": "James Cameron",
-      "Actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
-      "Plot": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
-      "Language": "English, Spanish",
-      "Country": "USA, UK",
-      "Awards": "Won 3 Oscars. Another 80 wins & 121 nominations.",
-      "Poster": "http://ia.media-imdb.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg",
-      "Metascore": "83",
-      "imdbRating": "7.9",
-      "imdbVotes": "876,575",
-      "imdbID": "tt0499549",
-      "Type": "movie",
-      "Response": "True"
-    }
-  ]
 /*
   function getAvgRating(watchList, director){
     let directorFilms = watchList.filter(film => film.Director === director)
@@ -7190,7 +7071,7 @@ console.log(doubledPlusOne)
 
 // When using Redux in your project, what are the three things that you need to set up a store for your state?
 
-// Redux is 'ard! Actions, Reducer(s), Dispatch 
+// Redux is 'ard! Actions, Reducer(s), Dispatch
 
 // REDUX: When you have multiple reducers what is something that you can do so that you do not have to import each reducer individually?
 
@@ -7359,7 +7240,7 @@ console.log(addFriend(person, "Jack"))
 // friends + Jack
 */
 
-// null coalescence 
+// null coalescence
 /*
 function nullCoalTester(firstName, lastName){
     lastName ??= "Nelson"
@@ -7420,19 +7301,19 @@ const employees = ["Jim", "Carl", "Homer", "Moe"]
 // 11-3-2022
 
 // How can you compare React props to something in HTML? How about something in JS?
-// HTML attributes like an image's src="" and an input's type (radio, text, date, etc.), 
+// HTML attributes like an image's src="" and an input's type (radio, text, date, etc.),
 
 // JS - passing params to a function instead of not passing anything.
-// 
+//
 // For example: f we just had a function that added 1 and 2 together, it would always produce 3. However, if we changed the function to take in two parameters (a and b), then we can add virtually any two numbers together.
 
 // What is a React component?
 // A function that allows us to compose JSX elements that can be reused across our site. Alt: a function that returns UI (React elements) that look very much like HTML. Components are composable, like lego bricks or puzzle pieces that you can use to build larger/greater things.
 
 // Can you pass custom props into native DOM elements? - React
-// No, you can only pass custom props to custom components. 
+// No, you can only pass custom props to custom components.
 
-// Create a function that removes the dashes from the string "May-the-force-be-with-you". 
+// Create a function that removes the dashes from the string "May-the-force-be-with-you".
 
 // Bonus: Remove ALL special characters + Add a period at the end.
 /*
@@ -7500,7 +7381,6 @@ function greetPerson(name, {salutation = "Hello there,", suffix = "Mr."} = {}){
 greetPerson("Phil", {salutation: "Good day,", suffix: "Master"})
 // Good day, Master Phil
 */
-
 
 // 11-7-2022
 /*
@@ -7619,7 +7499,6 @@ const array2 = [1,2,3,4,5,6,7,8]
 const evenArray = array2.myFilter(item => item % 2 === 0)
 console.log(evenArray)
 */
-
 
 /*
 
@@ -7864,7 +7743,6 @@ const {zones} = person.address
 console.log(zones)
 // {zipcode: 43212, carlos: 332211}
 */
-
 
 // Toggle function
 /*
@@ -8132,7 +8010,7 @@ console.log(twoKeys[0].name, twoKeys[1].age)
 
 // 11-19-2022
 
-// Change this to use an anonymous function. 
+// Change this to use an anonymous function.
 /*
 // function printVariable(variable){
 //     console.log(variable)
@@ -8245,7 +8123,6 @@ console.log(array)
 //     expect(sum(a + b)).toBe(3)
 // })
 
-
 // Create a function that uses a closure (a function within another function) called closure() that takes in one argument (a variable).
 
 // The function within closure() (func()) will take in a separate argument (another variable) and log both the closure() arg. and the func() arg.
@@ -8280,19 +8157,19 @@ console.log(copyMachine("this is insane", 3))
 // 11-28-2022
 // Generate new dice while holding dice that have been clicked
 // export default function App() {
-    /**
-     * Challenge: Create a function `holdDice` that takes
-     * `id` as a parameter. For now, just have the function
-     * console.log(id).
-     * 
-     * Then, figure out how to pass that function down to each
-     * instance of the Die component so when each one is clicked,
-     * it logs its own unique ID property. (Hint: there's more
-     * than one way to make that work, so just choose whichever
-     * you want)
-     * 
-     */
-    /*
+/**
+ * Challenge: Create a function `holdDice` that takes
+ * `id` as a parameter. For now, just have the function
+ * console.log(id).
+ *
+ * Then, figure out how to pass that function down to each
+ * instance of the Die component so when each one is clicked,
+ * it logs its own unique ID property. (Hint: there's more
+ * than one way to make that work, so just choose whichever
+ * you want)
+ *
+ */
+/*
         const [dice, setDice] = React.useState(allNewDice())
         
         function generateDice(){
@@ -9014,7 +8891,6 @@ console.log(compareArrays(arr1, arr2))
 // [1, 8]
 */
 
-
 // Write a function that takes a full name, takes the first name and the last name, and saves them as separate variables in an object. Then destructure the object so that both the first name and last name are accessible as separate variables.
 /*
 function splitFullName(fullName){
@@ -9133,7 +9009,7 @@ describe('#sum', () => {
 })
 */
 
-// Create a function that removes the dashes from the string "May-the-force-be-with-you". 
+// Create a function that removes the dashes from the string "May-the-force-be-with-you".
 
 // Bonus: Remove ALL special characters + Add a period at the end.
 /*
@@ -9444,7 +9320,7 @@ console.log(myArray)
 // [10]
 */
 
-// Change this to use an anonymous function. 
+// Change this to use an anonymous function.
 /*
 function printVariable(variable){
     console.log(variable)
@@ -9616,7 +9492,6 @@ function getPlayerNum(obj, playerNum){
 
 getPlayerNum(players, 1)
 */
-
 
 // Convert a switch statement to an object that can be used to look up a key and return a value associated with that key.
 /*
@@ -9816,7 +9691,6 @@ const nameAndProfession = arrayOfObjs.map(item => ({name: item.name, profession:
 console.log(JSON.stringify(nameAndProfession))
 */
 
-
 // Create a function that changes a string to title case (only the first letter of each word is capitalized) using map.
 /*
 function toTitleCase(string){
@@ -9996,4 +9870,3 @@ export const range = (start, end, step = 1) => {
     return output
   }
 */
-
