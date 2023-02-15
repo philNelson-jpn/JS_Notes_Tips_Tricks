@@ -424,3 +424,25 @@ function avgRating(movieArray, director) {
 console.log(avgRating(watchList, 'Christopher Nolan'))
 // The average rating for films directed by Christopher Nolan is 8.675. This average is taken from the IMDB ratings for "Inception","Interstellar","The Dark Knight", and "Batman Begins".
 */
+
+// 2-15-2023
+// Use object lookup instead of a long switch statement
+/*
+const date = new Date().getDay()
+
+const dayMap = {
+	0: 'Sunday',
+	1: 'Monday',
+	2: 'Tuesday',
+	3: 'Wednesday',
+	4: 'Thursday',
+	5: 'Friday',
+	6: 'Saturday',
+}
+const yesterday = dayMap[date - 1]
+const today = dayMap[date]
+const tomorrow = dayMap[date + 1]
+
+const dayString = `Today is ${today}, yesterday was ${yesterday}, and tomorrow is ${tomorrow}`
+console.log(dayString)
+*/
