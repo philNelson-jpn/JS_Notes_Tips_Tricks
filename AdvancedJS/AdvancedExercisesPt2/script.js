@@ -446,3 +446,12 @@ const tomorrow = dayMap[date + 1]
 const dayString = `Today is ${today}, yesterday was ${yesterday}, and tomorrow is ${tomorrow}`
 console.log(dayString)
 */
+
+// 2-17-2023
+
+// Regex, find all of the white spaces in a sentence
+
+const string = 'This is a test to see how many whitespaces there are'
+const regex = /\s/g
+const whiteSpaceCheck = string.match(regex)
+console.log(whiteSpaceCheck.length)
