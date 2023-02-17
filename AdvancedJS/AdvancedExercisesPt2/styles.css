@@ -1,26 +1,45 @@
 body {
-    background-color: hsl(0, 0%, 16%);
-    color: rgb(234, 234, 234);
-    font-family: "Poppins";
+	background-color: hsl(0, 0%, 16%);
+	color: rgb(234, 234, 234);
+	font-family: 'Poppins';
 }
 
-h1{
-    -webkit-text-stroke: 2px rgb(223, 221, 221);
-    color: transparent;
-    font-size: 3rem;
-    filter: drop-shadow(2px 4px 4px hsl(0, 0%, 0%));
+.wrapper {
+	--breathing-room: 16px;
+	display: grid;
+	grid-template-columns: 1fr 40ch 1fr;
+	padding-inline: var(--breathing-room);
+	overflow: hidden;
 }
 
-.long-p{
-    max-width: 50ch;
-    line-height: 1.5;
+.wrapper > * {
+	grid-column: 2;
+}
+
+h1 {
+	grid-column: 1 / -1;
+	-webkit-text-stroke: 2px rgb(223, 221, 221);
+	color: transparent;
+	font-size: 3rem;
+	filter: drop-shadow(2px 4px 4px hsl(0, 0%, 0%));
+	margin-inline: calc(var(--breathing-room) * -1);
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+.long-p {
+	line-height: 1.8;
+	text-overflow: ellipsis;
+	letter-spacing: 1px;
+	word-spacing: 3px;
+	text-justify: inter-word;
 }
 
 .highlight {
-    background-color: hsla(51, 100%, 68%, 0.781);
-    color: hsl(0, 0%, 16%);
-    /* margin-top: 4px; */
-    padding: 6px;
-    line-height: 2;
-    box-decoration-break: clone;
+	background-color: hsla(51, 100%, 68%, 0.781);
+	color: hsl(0, 0%, 16%);
+	/* margin-top: 4px; */
+	padding: 6px;
+	line-height: 2.2;
+	box-decoration-break: clone;
 }
