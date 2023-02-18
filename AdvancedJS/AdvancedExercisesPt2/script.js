@@ -457,3 +457,33 @@ const whiteSpaceCheck = string.match(regex)
 console.log(whiteSpaceCheck.length)
 // 10
 */
+
+//2-18-2023
+
+// Write a function that takes a full name, splits the first name into an array, and returns it. Then destructure the array so that both the first name and last name are accessible as separate variables (assign the destructured array to the function).
+/*
+function splitFullName(fullname){
+	return fullname.split(' ')
+}
+
+const [firstName, lastName] = splitFullName("Phil Nelson")
+console.log(firstName)
+// Phil
+console.log(lastName)
+// Nelson
+*/
+
+// Write a function that reverses a string with a for loop
+/*
+function reverseString(string){
+	let reversedString = ""
+	for(let i = string.length -1 ; i >= 0; i--){
+		reversedString += string[i]
+	}
+	return reversedString
+}
+
+console.log(reverseString("hello"))
+// olleh
+*/
+
