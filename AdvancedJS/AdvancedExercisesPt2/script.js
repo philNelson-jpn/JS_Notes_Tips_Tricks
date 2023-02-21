@@ -487,3 +487,38 @@ console.log(reverseString("hello"))
 // olleh
 */
 
+// 2-20-2023
+
+// Find the longest word in a string and print the length of that word (a number). Bonus: print out the word itself. Bonus bonus: get a word count of the whole string.
+/*
+const sampleString =
+	'What do you think the longest word in this string is, supercalifragilisticexpialadocious or abrakadabra?'
+
+function findLongestWord(string) {
+	const words = string.split(' ')
+	let wordLength = 0
+	let longestWord = ''
+	let numOfWords = words.length
+	for (let i = 0; i < words.length; i++) {
+		if (words[i].length > wordLength) {
+			wordLength = words[i].length
+			longestWord = words[i]
+		}
+	}
+	return `The longest word in the sentence "${string}" is "${longestWord}" at ${wordLength} characters long. Your sentence is ${numOfWords} words long.`
+}
+
+const longestWordNum = findLongestWord(sampleString)
+console.log(longestWordNum)
+// The longest word in the sentence "What do you think the longest word in this string is, supercalifragilisticexpialadocious or abrakadabra?" is "supercalifragilisticexpialadocious" at 34 characters long. Your sentence is 14 words long.
+*/
+
+// Create a function that uses map to convert decimal numbers to whole numbers using parseInt()
+/*
+function decToWhole(numberArray) {
+	return numberArray.map((number) => parseInt(number))
+}
+
+console.log(decToWhole([2.223, 4.223, 54.6345]))
+// [2, 4, 54]
+*/
