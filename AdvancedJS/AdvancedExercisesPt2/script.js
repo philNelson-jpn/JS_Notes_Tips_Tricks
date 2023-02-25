@@ -541,3 +541,12 @@ const evenFilter = array.myFilter((item) => item % 2 === 0)
 console.log(evenFilter)
 [2,4,6]
 */
+
+// Create a single regex that matches all characters that are not a number or a vowel. Remember to include the appropriate flags in the regex.
+/*
+let quote = '3 blind mice'
+let quoteRegex = /[^aeiou0-9]/gi
+let result = quote.match(quoteRegex)
+console.log(result)
+//[' ', 'b', 'l', 'n', 'd', ' ', 'm', 'c']
+*/
