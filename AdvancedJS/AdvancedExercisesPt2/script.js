@@ -522,3 +522,22 @@ function decToWhole(numberArray) {
 console.log(decToWhole([2.223, 4.223, 54.6345]))
 // [2, 4, 54]
 */
+// 2-25-2023
+// Create the filter function from scratch with Array.prototype
+/*
+Array.prototype.myFilter = function (callback) {
+	let filteredArray = []
+	for (let i = 0; i < this.length; i++) {
+		if (callback(this[i])) {
+			filteredArray.push(this[i])
+		}
+	}
+	return filteredArray
+}
+
+const array = [1, 2, 3, 4, 5, 6, 7]
+
+const evenFilter = array.myFilter((item) => item % 2 === 0)
+console.log(evenFilter)
+[2,4,6]
+*/
