@@ -550,3 +550,18 @@ let result = quote.match(quoteRegex)
 console.log(result)
 //[' ', 'b', 'l', 'n', 'd', ' ', 'm', 'c']
 */
+
+// 2-26-2023
+
+// Write a function that takes a full name, takes the first name and the last name, and saves them as separate variables in an object. Then destructure the object so that both the first name and last name are accessible as separate variables.
+
+function printFullName(fullName){
+	const [firstName, lastName] = fullName.split(' ')
+	return {
+		firstName,
+		lastName
+	}
+}
+
+const philly = printFullName("Phil Nelson")
+console.log(philly.firstName)
