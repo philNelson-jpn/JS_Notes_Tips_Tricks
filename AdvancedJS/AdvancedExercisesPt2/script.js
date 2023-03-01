@@ -580,6 +580,7 @@ console.log(randomRange(2, 4))
 // Create a function that uses a closure (a function within another function) called closure() that takes in one argument (a variable).
 
 // The function within closure() (func()) will take in a separate argument (another variable) and log both the closure() arg. and the func() arg.
+
 /*
 function closure(variable1) {
 	return function func(variable2) {
