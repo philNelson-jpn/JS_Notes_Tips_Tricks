@@ -554,7 +554,7 @@ console.log(result)
 // 2-26-2023
 
 // Write a function that takes a full name, takes the first name and the last name, and saves them as separate variables in an object. Then destructure the object so that both the first name and last name are accessible as separate variables.
-
+/*
 function printFullName(fullName){
 	const [firstName, lastName] = fullName.split(' ')
 	return {
@@ -565,3 +565,32 @@ function printFullName(fullName){
 
 const philly = printFullName("Phil Nelson")
 console.log(philly.firstName)
+*/
+
+// 3-2-2023
+// Using Math.floor and Math.random, return a random whole number that is >= myMin and <= myMax.
+/*
+function randomRange(myMin, myMax) {
+	return Math.ceil(Math.random() * (myMax - myMin + 1)) + myMin - 1
+}
+
+console.log(randomRange(2, 4))
+*/
+
+// Create a function that uses a closure (a function within another function) called closure() that takes in one argument (a variable).
+
+// The function within closure() (func()) will take in a separate argument (another variable) and log both the closure() arg. and the func() arg.
+/*
+function closure(variable1) {
+	return function func(variable2) {
+		console.log('step 1')
+		console.log(variable1)
+		console.log('step 2')
+		console.log(variable2)
+		console.log('step 3')
+	}
+}
+
+const someFunc = closure(1)
+someFunc(3)
+*/
