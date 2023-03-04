@@ -595,3 +595,31 @@ function closure(variable1) {
 const someFunc = closure(1)
 someFunc(3)
 */
+
+// 3-4-2023
+
+// Mixins
+/*
+const bird = {
+	name: 'Donald',
+	canFly: true,
+	numOfWings: 2,
+}
+
+const plane = {
+	name: 'DC3',
+	canFly: true,
+	numOfWings: 2,
+}
+
+const flyingMixin = (object) => {
+	object.fly = () => console.log(`${object.name} is flying!`)
+}
+
+flyingMixin(plane)
+plane.fly()
+// DC3 is flying!
+flyingMixin(bird)
+bird.fly()
+// Donald is flying!
+*/
