@@ -623,3 +623,17 @@ flyingMixin(bird)
 bird.fly()
 // Donald is flying!
 */
+
+// 3-9-2023
+// Change this to use an anonymous function.
+/*
+function printVariable(variable) {
+	console.log(printVariable)
+}
+
+function printName(name, callback) {
+	callback(`Hi, my name is ${name}.`)
+}
+
+printName('Phil', (variable) => console.log(variable))
+*/
