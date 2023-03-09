@@ -637,3 +637,61 @@ function printName(name, callback) {
 
 printName('Phil', (variable) => console.log(variable))
 */
+
+// 3-10-2023
+
+// Loop through an array of objects, use a nested if statement to check if one property matches one argument and if a property exists (second argument). Return no such property if it does not exist and return object does not exist if neither match.
+/*
+const contacts = [
+	{
+		firstName: 'Akira',
+		lastName: 'Laine',
+		number: '0543236543',
+		likes: ['Pizza', 'Coding', 'Brownie Points'],
+	},
+	{
+		firstName: 'Harry',
+		lastName: 'Potter',
+		number: '0994372684',
+		likes: ['Hogwarts', 'Magic', 'Hagrid'],
+	},
+	{
+		firstName: 'Sherlock',
+		lastName: 'Holmes',
+		number: '0487345643',
+		likes: ['Intriguing Cases', 'Violin'],
+	},
+	{
+		firstName: 'Kristian',
+		lastName: 'Vos',
+		number: 'unknown',
+		likes: ['JavaScript', 'Gaming', 'Foxes'],
+	},
+]
+
+function lookupProfile(name, prop) {
+	for (let i = 0; i < contacts.length; i++) {
+		const contactName = contacts[i]
+		if (name === contactName.firstName || name === contactName.lastName) {
+			if (contactName.hasOwnProperty(prop)) {
+				return contactName[prop]
+			} else {
+				return `"${prop}" does not exist in contacts object.`
+			}
+		}
+	}
+	return 'Profile does not exist'
+}
+
+console.log(lookupProfile('Vos', 'likes'))
+// ['JavaScript', 'Gaming', 'Foxes']
+*/
+/*
+// How do we add a default parameter to our function?
+function printName(firstName = 'Joe', lastName = 'Schmoe') {
+	console.log(`${firstName} ${lastName}`)
+}
+
+printName()
+// Joe Schmoe
+*/
