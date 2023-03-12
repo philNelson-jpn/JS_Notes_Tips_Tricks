@@ -695,3 +695,21 @@ function printName(firstName = 'Joe', lastName = 'Schmoe') {
 printName()
 // Joe Schmoe
 */
+
+// 3-12-2023
+
+// Create a function that looks through an array arr and returns the first element in it that passes a 'truth test'. This means that given an element x, the 'truth test' is passed if func(x) is true. If no element passes the test, return undefined.
+
+function findElement(arr, func){
+
+	for(let i = 0; i < arr.length; i++){
+		if(func(arr[i])){
+			return arr[i]
+		}
+	}
+	return undefined
+}
+
+const array = [1,3,4,5,6]
+
+console.log(findElement(array, (item) => item % 2 === 0))
