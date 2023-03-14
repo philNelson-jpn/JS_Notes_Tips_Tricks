@@ -699,7 +699,7 @@ printName()
 // 3-12-2023
 
 // Create a function that looks through an array arr and returns the first element in it that passes a 'truth test'. This means that given an element x, the 'truth test' is passed if func(x) is true. If no element passes the test, return undefined.
-
+/*
 function findElement(arr, func){
 
 	for(let i = 0; i < arr.length; i++){
@@ -713,3 +713,27 @@ function findElement(arr, func){
 const array = [1,3,4,5,6]
 
 console.log(findElement(array, (item) => item % 2 === 0))
+*/
+
+// Convert this object into an array of names. You can use a while loop or recursion to achieve this.
+
+const person = {
+	name: 'Phil',
+	friend: {
+		name: 'Simon',
+		friend: {
+			name: 'Caleb',
+		},
+	},
+}
+
+let friendArray = []
+
+function createFriendArray(object) {
+	if (object == null) return
+	friendArray.push(object.name)
+	createFriendArray(object.friend)
+	return friendArray
+}
+
+console.log(createFriendArray(person))
