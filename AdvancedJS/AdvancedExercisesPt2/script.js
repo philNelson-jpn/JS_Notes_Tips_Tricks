@@ -715,8 +715,8 @@ const array = [1,3,4,5,6]
 console.log(findElement(array, (item) => item % 2 === 0))
 */
 
-// Convert this object into an array of names. You can use a while loop or recursion to achieve this.
-
+// Convert an object of people with friends into an array of just names (name and friend keys). With while loop or recursion.
+/*
 const person = {
 	name: 'Phil',
 	friend: {
@@ -737,3 +737,25 @@ function createFriendArray(object) {
 }
 
 console.log(createFriendArray(person))
+*/
+
+// Optional chaining
+/*
+const person = {
+	name: 'Phil',
+	friend: {
+		name: 'Simon',
+		address: {
+			town: 'Landon',
+			street: 'Cali St.',
+		},
+	},
+}
+
+function printFriendsStreet(object) {
+	console.log(object?.friend?.address?.street)
+}
+
+printFriendsStreet(person)
+// Cali St.
+*/
