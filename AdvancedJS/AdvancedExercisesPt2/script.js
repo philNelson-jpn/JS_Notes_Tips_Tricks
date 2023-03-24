@@ -759,3 +759,67 @@ function printFriendsStreet(object) {
 printFriendsStreet(person)
 // Cali St.
 */
+
+// 3-24-2023
+/*
+const obj = {
+	name: 'Phil',
+	age: 34,
+}
+
+delete obj.name
+
+console.log(obj.name)
+//undefined
+*/
+
+// convert a while loop into a recursive function
+/*
+const person = {
+	name: 'Phil',
+	friend: {
+		name: 'Simon',
+		friend: {
+			name: 'Caleb',
+		},
+	},
+}
+
+// let currentPerson = person
+// while (currentPerson != null) {
+// 	console.log(currentPerson.name)
+// 	currentPerson = currentPerson.friend
+// }
+
+function printNames(currentPerson) {
+	if (currentPerson == null) return
+	console.log(currentPerson.name)
+	printNames(currentPerson.friend)
+}
+
+printNames(person)
+// Phil Simon Caleb
+*/
+
+// How do we destructure an object within another object, i.e. how do we get only the keys/values that we want from an object within another object?
+/*
+const person = {
+	name: 'Kocho',
+	age: 34,
+	address: {
+		street: 'Jose',
+		zone: {
+			parkingLot: 'Zone B',
+			lotNum: 32,
+		},
+	},
+}
+
+const {
+	address: {
+		zone: { lotNum },
+	},
+} = person
+console.log(lotNum)
+// 32
+*/
