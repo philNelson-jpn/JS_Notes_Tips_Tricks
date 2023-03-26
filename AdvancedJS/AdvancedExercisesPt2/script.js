@@ -1,5 +1,6 @@
 // //2-1-2023
 
+
 // Change the following function from an impure function to a pure function:
 /*
 const array = [1,2,3,4,5]
@@ -823,3 +824,28 @@ const {
 console.log(lotNum)
 // 32
 */
+
+// 3-26-2023
+
+// Change an impure function to a pure function
+
+const person = {
+	name: "Phil",
+	friends: ["Simon", "Caleb"]
+}
+
+function addFriends(...friendName){
+	const newPerson = {
+		...person,
+		friends: [...person.friends, ...friendName]
+	}
+
+	return newPerson
+}
+
+const newPerson = addFriends("Jimbo", "John", "Jorgeo")
+console.log(newPerson.friends)
+// ['Simon', 'Caleb', 'Jimbo', 'John', 'Jorgeo']
+console.log(person.friends)
+// ['Simon', 'Caleb']
+
