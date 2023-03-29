@@ -1,6 +1,5 @@
 // //2-1-2023
 
-
 // Change the following function from an impure function to a pure function:
 /*
 const array = [1,2,3,4,5]
@@ -828,7 +827,7 @@ console.log(lotNum)
 // 3-26-2023
 
 // Change an impure function to a pure function
-
+/*
 const person = {
 	name: "Phil",
 	friends: ["Simon", "Caleb"]
@@ -849,3 +848,15 @@ console.log(newPerson.friends)
 console.log(person.friends)
 // ['Simon', 'Caleb']
 
+*/
+
+//3-29-2023
+
+// How do you set default values in JavaScript?
+/*
+function printName(firstName, lastName = 'Nelson') {
+	console.log(`${firstName} ${lastName}`)
+}
+
+printName('Phil')
+*/
