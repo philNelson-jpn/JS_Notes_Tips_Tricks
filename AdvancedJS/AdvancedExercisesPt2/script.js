@@ -861,6 +861,8 @@ function printName(firstName, lastName = 'Nelson') {
 printName('Phil')
 */
 
+//4-1-2023
+
 // How do we select 0 or more characters like all of the a's in Aaaaaaaaargh?
 
 // const str = 'Aaaaaaaaargh'
@@ -868,4 +870,26 @@ printName('Phil')
 // console.log(str.match(regex))
 // // 'Aaaaaaaaa', index: 0, input: 'Aaaaaaaaargh'
 
+// Create the filter function from scratch with Array.prototype
+/*
+Array.prototype.myFilter = function (callback) {
+	const newArray = []
+	this.forEach((num) =>
+		callback(this[num]) ? newArray.push(this[num]) : undefined
+	)
+	return newArray
+}
 
+const numArray = [1, 2, 3, 4, 5, 6]
+
+console.log(numArray.myFilter((item) => item % 2 === 0))
+*/
+
+// Check if a string is made up of either Phil Nelson or Jin Nelson.
+// Now check if any middle names or initials are also included.
+/*
+const names = 'Phil Nelson'
+const regex = /(Jin|Phil).*Nelson/
+const result = regex.test(names)
+console.log(result)
+*/
