@@ -860,3 +860,12 @@ function printName(firstName, lastName = 'Nelson') {
 
 printName('Phil')
 */
+
+// How do we select 0 or more characters like all of the a's in Aaaaaaaaargh?
+
+// const str = 'Aaaaaaaaargh'
+// const regex = /a*/i
+// console.log(str.match(regex))
+// // 'Aaaaaaaaa', index: 0, input: 'Aaaaaaaaargh'
+
+
