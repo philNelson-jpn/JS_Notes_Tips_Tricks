@@ -885,8 +885,7 @@ const numArray = [1, 2, 3, 4, 5, 6]
 console.log(numArray.myFilter((item) => item % 2 === 0))
 */
 
-// Check if a string is made up of either Phil Nelson or Jin Nelson.
-// Now check if any middle names or initials are also included.
+// Check if a string is made up of either Phil Nelson or Jin Nelson. Now check if any middle names or initials are also included.
 /*
 const names = 'Phil Nelson'
 const regex = /(Jin|Phil).*Nelson/
