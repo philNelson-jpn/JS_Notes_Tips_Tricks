@@ -892,3 +892,42 @@ const regex = /(Jin|Phil).*Nelson/
 const result = regex.test(names)
 console.log(result)
 */
+
+// 4-4-2023
+// Maps in JS
+/*
+const currencyMap = new Map([
+	["America", "USD"],
+	["Mexico", "Peso"],
+	["Japan", "Yen"],
+])
+
+currencyMap.set("Netherlands", "Euro")
+
+currencyMap.forEach(value => console.log(value))
+// USD, Peso, Yen, Euro
+
+console.log(currencyMap.get("America"))
+// USD
+
+console.log(currencyMap)
+// 0: {"America" => "USD"}
+// key: "America"
+// value: "USD"
+// ...
+*/
+
+// Use a getter to calculate a person's birth year based on { ageThisYear: 34 }
+/*
+const person = {
+	name: "Phil",
+	ageThisYear: 35,
+	get calculateBirthYear(){
+		const date = new Date()
+		return date.getFullYear() - this.ageThisYear
+	}
+}
+
+console.log(person.calculateBirthYear)
+// 1988
+*/
