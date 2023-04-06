@@ -931,3 +931,16 @@ const person = {
 console.log(person.calculateBirthYear)
 // 1988
 */
+
+// 4-6-2023
+// Create a function that title cases a string (every word's first letter is capitalized)
+
+function titleCaseIt(string) {
+	return string
+		.toLowerCase()
+		.split(' ')
+		.map((word) => word.replace(word.charAt(0), word.charAt(0).toUpperCase()))
+		.join(' ')
+}
+
+console.log(titleCaseIt('hello there you slick looking cool dude'))
