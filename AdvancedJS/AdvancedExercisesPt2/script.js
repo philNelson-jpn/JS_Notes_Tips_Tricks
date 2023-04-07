@@ -934,7 +934,7 @@ console.log(person.calculateBirthYear)
 
 // 4-6-2023
 // Create a function that title cases a string (every word's first letter is capitalized)
-
+/*
 function titleCaseIt(string) {
 	return string
 		.toLowerCase()
@@ -944,3 +944,22 @@ function titleCaseIt(string) {
 }
 
 console.log(titleCaseIt('hello there you slick looking cool dude'))
+*/
+
+//4-7-2023
+
+// Use recursion to return an array that begins with startNum and ends with endNum.
+/*
+function rangeOfNums(startNum, endNum) {
+	if (endNum - startNum === 0) return [startNum]
+	console.log(endNum)
+
+	const rangeArray = rangeOfNums(startNum, endNum - 1)
+
+	rangeArray.push(endNum)
+	return rangeArray
+}
+
+console.log(rangeOfNums(2, 7))
+// [2, 3, 4, 5, 6, 7]
+*/
