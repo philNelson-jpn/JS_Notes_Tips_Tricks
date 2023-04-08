@@ -963,3 +963,19 @@ function rangeOfNums(startNum, endNum) {
 console.log(rangeOfNums(2, 7))
 // [2, 3, 4, 5, 6, 7]
 */
+
+// 4-8-2023
+// Create a function that takes in a name and uses printVariable as a callback to print out "Hello, (name)"
+/*
+function printVariable(variable) {
+	console.log(variable)
+}
+
+function printName(name, callback) {
+	callback(`Hello ${name}`)
+}
+
+printName('Phil', printVariable)
+// Hello Phil
+
+*/
