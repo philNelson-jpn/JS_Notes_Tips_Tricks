@@ -979,3 +979,16 @@ printName('Phil', printVariable)
 // Hello Phil
 
 */
+
+// Create a new object from an array of objects that only displays two keys from the original object using map.
+
+const arrayOfObjs = [
+	{ name: 'Phil', age: 34, favoriteFood: 'pizza' },
+	{ name: 'Simon', age: 40, favoriteFood: 'yakiniku' },
+]
+
+const favoriteFoods = arrayOfObjs.map(({ favoriteFood }) => ({
+	favoriteFood,
+}))
+
+console.log(favoriteFoods)
