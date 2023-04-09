@@ -981,7 +981,7 @@ printName('Phil', printVariable)
 */
 
 // Create a new object from an array of objects that only displays two keys from the original object using map.
-
+/*
 const arrayOfObjs = [
 	{ name: 'Phil', age: 34, favoriteFood: 'pizza' },
 	{ name: 'Simon', age: 40, favoriteFood: 'yakiniku' },
@@ -992,3 +992,16 @@ const favoriteFoods = arrayOfObjs.map(({ favoriteFood }) => ({
 }))
 
 console.log(favoriteFoods)
+*/
+
+// 4-9-2023
+// Write a function that checks if the second argument is the last part of the first argument (a string).
+/*
+function checkEnding(string, target){
+	const slicedString = string.slice(string.length - target.length)
+	return slicedString === target
+}
+
+console.log(checkEnding("Hello", "llo"))
+// true
+*/
