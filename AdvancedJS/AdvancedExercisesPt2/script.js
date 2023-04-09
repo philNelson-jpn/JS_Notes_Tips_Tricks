@@ -1005,3 +1005,29 @@ function checkEnding(string, target){
 console.log(checkEnding("Hello", "llo"))
 // true
 */
+
+// Combine two objects together with the spread operator by cloning one of the objects and then adding a new key/value pair.
+/*
+const person = {
+	name: "Jimmy",
+	age: 459,
+	hobby: "Alchemy"
+}
+
+const animal = {
+	type: 'tiger',
+	color: "black",
+	abilities: [
+		'tear you to shreds',
+		'cunning',
+		'500lb bite'
+	]
+}
+
+const animalMan = {...person, ...animal, desire: "rule the world"}
+
+console.log(animalMan.desire)
+// rule the world
+console.log(animalMan.hobby)
+// Alchemy
+*/
