@@ -43,3 +43,9 @@ h1 {
 	line-height: 2.2;
 	box-decoration-break: clone;
 }
+
+/* @media screen and (max-width: 800px) {
+	section {
+		color: blue;
+	}
+} */
