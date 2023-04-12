@@ -1031,3 +1031,16 @@ console.log(animalMan.desire)
 console.log(animalMan.hobby)
 // Alchemy
 */
+
+// 4-12-2023
+// Create an function that removes duplicates from an array using Set. Return an array (not an object)
+
+const arr = [1, 2, 3, 2, 3, 2, 4, 5, 2, 3]
+
+function removeDups(array) {
+	return [...new Set(array)]
+}
+
+const noDupsArr = removeDups(arr)
+console.log(noDupsArr)
+// [1, 2, 3, 4, 5]
