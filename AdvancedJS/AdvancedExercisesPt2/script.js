@@ -1060,3 +1060,20 @@ const noDupsArr = compareArrays(arr1, arr2)
 console.log(noDupsArr)
 // [4, 6]
 */
+
+//4-17-2023
+// Write a function that takes an array and a number. Use a while loop to loop over the array and push a copy of the array to a new array the number of times specified by the number argument.
+/*
+function copyArray(arr, num){
+	const newArray = []
+	let i = 0
+	while(i < num){
+		newArray.push([...arr])
+		i++
+	}
+	return newArray
+}
+
+const superArray = copyArray([1,2,3,4], 3)
+console.log(superArray)
+*/
