@@ -1034,7 +1034,7 @@ console.log(animalMan.hobby)
 
 // 4-12-2023
 // Create an function that removes duplicates from an array using Set. Return an array (not an object)
-
+/*
 const arr = [1, 2, 3, 2, 3, 2, 4, 5, 2, 3]
 
 function removeDups(array) {
@@ -1044,3 +1044,19 @@ function removeDups(array) {
 const noDupsArr = removeDups(arr)
 console.log(noDupsArr)
 // [1, 2, 3, 4, 5]
+*/
+
+// 4-16-2023
+// Create a function that compares two arrays and only returns an element that both arrays DO NOT share
+/*
+function compareArrays(arr1, arr2) {
+	return arr1
+		.concat(arr2)
+		.filter((value) => !arr1.includes(value) || !arr2.includes(value))
+}
+const arr1 = [1, 2, 3, 4, 5]
+const arr2 = [1, 2, 3, 6, 5]
+const noDupsArr = compareArrays(arr1, arr2)
+console.log(noDupsArr)
+// [4, 6]
+*/
