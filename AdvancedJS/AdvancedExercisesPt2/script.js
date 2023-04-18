@@ -1077,3 +1077,23 @@ function copyArray(arr, num){
 const superArray = copyArray([1,2,3,4], 3)
 console.log(superArray)
 */
+//4-18-2023
+// Apply both the double function and the plusOne function to the array with map chaining and log out the result.
+/*
+const array = [1,2,3,4]
+
+function double(element){
+	return element * 2
+}
+
+function plusOne(element){
+	return element + 1
+}
+
+const doubledPlusOne = array.map(element => plusOne(double(element)))
+const doubledPlusOne2 = array.map(double).map(plusOne)
+console.log(doubledPlusOne)
+// [3, 5, 7, 9]
+console.log(doubledPlusOne2)
+// [3, 5, 7, 9]
+*/
