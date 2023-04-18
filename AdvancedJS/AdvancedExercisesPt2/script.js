@@ -1097,3 +1097,36 @@ console.log(doubledPlusOne)
 console.log(doubledPlusOne2)
 // [3, 5, 7, 9]
 */
+
+// 4-19-2023
+// Create a function that loops through an object and returns the number of users where their online status is equal to true.
+/*
+const users = {
+	Alan: {
+		online: false,
+	},
+	Jim: {
+		online: true,
+	},
+	Kelly: {
+		online: false,
+	},
+	Grace: {
+		online: true,
+	},
+}
+
+function getNumOnline(obj) {
+	let numOnline = 0
+	for (const user in obj) {
+		if (obj[user].online) {
+			numOnline++
+		}
+	}
+	return numOnline
+}
+
+const usersOnline = getNumOnline(users)
+console.log(usersOnline)
+*/
+console.log('good bye')
