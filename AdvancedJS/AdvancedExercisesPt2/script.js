@@ -1148,3 +1148,15 @@ function sumOfRange(arr){
 console.log(sumOfRange([1,4]))
 //10
 */
+
+// 4-24-2023
+
+// Using Math.floor and Math.random, return a random whole number that is >= myMin and <= myMax.
+/*
+function randomRange(min, max) {
+	return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+console.log(randomRange(2, 8))
+// Random number between 2 and 8
+*/
