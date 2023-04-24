@@ -1129,3 +1129,22 @@ function getNumOnline(obj) {
 const usersOnline = getNumOnline(users)
 console.log(usersOnline)
 */
+
+// 4-22-2023
+// Create a function that returns the sum of a range of an array of two numbers ([1,4] would return 10
+/*
+function sumOfRange(arr){
+	let sum = 0
+	let min = Math.min(arr[0], arr[1])
+	let max = Math.max(arr[0], arr[1])
+	for(let i = min; i <= max; i++){
+		console.log(`sum is ${sum}`)
+		console.log(`i is ${i}`)
+		sum += i
+	}
+	return sum
+}
+
+console.log(sumOfRange([1,4]))
+//10
+*/
