@@ -1129,4 +1129,3 @@ function getNumOnline(obj) {
 const usersOnline = getNumOnline(users)
 console.log(usersOnline)
 */
-console.log('good bye')
