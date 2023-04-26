@@ -1160,3 +1160,21 @@ function randomRange(min, max) {
 console.log(randomRange(2, 8))
 // Random number between 2 and 8
 */
+
+// 4-26-2023
+// Create the map function from scratch (on Array.prototype)
+
+// Remember that map only takes in a function. It is performing the method ON an array (not accepting it as a argument).
+/*
+Array.prototype.myMap = function(callback){
+	const arr = []
+	this.forEach(item => arr.push(callback(item)))
+	// for(let i = 0; i < this.length; i++){
+	// 	arr.push(callback(this[i]))
+	// }
+	return arr
+}
+const arr1 = [1,2,3,4,5]
+const doubledArray = arr1.myMap(item => item * 2)
+console.log(doubledArray)
+*/
