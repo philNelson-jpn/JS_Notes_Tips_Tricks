@@ -1,51 +1,138 @@
+html,
 body {
-	background-color: hsl(0, 0%, 16%);
-	color: rgb(234, 234, 234);
-	font-family: 'Poppins';
+	height: 100%;
+}
+
+body {
+	background-color: rgb(51, 51, 56);
+	color: white;
+	font-family: poppins;
+	font-size: 3rem;
+	font-weight: 500;
 }
 
 .wrapper {
-	--breathing-room: 16px;
 	display: grid;
-	grid-template-columns: 1fr 40ch 1fr;
-	padding-inline: var(--breathing-room);
-	overflow: hidden;
+	place-content: center;
+	min-height: 100%;
 }
 
-.wrapper > * {
-	grid-column: 2;
+.iMac-wrapper {
+	perspective: 750px;
+	cursor: pointer;
 }
 
-h1 {
-	grid-column: 1 / -1;
-	-webkit-text-stroke: 2px rgb(223, 221, 221);
+.iMac {
+	position: relative;
+	height: 400px;
+	width: 600px;
+	background-image: linear-gradient(
+		90deg,
+		hsl(240deg 2% 90%) 0%,
+		hsl(240deg 4% 89%) 17%,
+		hsl(240deg 5% 88%) 25%,
+		hsl(240deg 6% 86%) 31%,
+		hsl(240deg 6% 85%) 37%,
+		hsl(231deg 8% 83%) 42%,
+		hsl(233deg 9% 82%) 47%,
+		hsl(228deg 1% 80%) 53%,
+		hsl(224deg 1% 74%) 58%,
+		hsl(223deg 2% 68%) 63%,
+		hsl(224deg 2% 66%) 69%,
+		hsl(220deg 4% 65%) 75%,
+		hsl(219deg 5% 63%) 83%,
+		hsl(217deg 6% 62%) 100%
+	);
+	border-radius: 4px;
+	transform: rotateY(0deg);
+	transition: transform 600ms ease-in-out;
+	transform-style: preserve-3d;
+	border-left: 5px solid hsl(217deg 6% 72%);
+}
+
+svg {
+	position: absolute;
+	width: 25px;
+	left: 50%;
+	right: 50%;
+	bottom: 20px;
+}
+
+.screen {
+	display: grid;
+	grid-template-areas:
+		'header header header'
+		'main main sidebar'
+		'main main sidebar';
+	grid-template-rows: 25% 1fr;
+	grid-template-columns: 1fr 2fr 1fr;
+	perspective: 750px;
+	gap: 5px;
+	position: absolute;
+	border: 4px solid transparent;
+	inset: 10px 10px 60px 10px;
+	background-color: hsl(0, 2%, 10%);
+	transform: translate3D(0px, 0, 0px);
+	border-radius: 3px 3px 0px 0px;
+	transition: transform 600ms ease-in-out, border 600ms ease-in-out;
+	transform-style: inherit;
+}
+
+.item {
+	border: 4px solid;
+	transform: translate3D(0px, 0, 0px);
+	transform-style: inherit;
+	background-color: hsl(0, 2%, 10%);
+	border-radius: 2px;
+	display: grid;
+	place-content: center;
 	color: transparent;
-	font-size: 3rem;
-	filter: drop-shadow(2px 4px 4px hsl(0, 0%, 0%));
-	margin-inline: calc(var(--breathing-room) * -1);
-	text-align: center;
-	letter-spacing: 2px;
 }
 
-.long-p {
-	line-height: 1.8;
-	text-overflow: ellipsis;
-	letter-spacing: 1px;
-	word-spacing: 3px;
-	text-justify: inter-word;
+.item.one {
+	grid-area: header;
+	border-color: hsl(113, 85%, 74%);
+	transition: transform 800ms ease-in-out, background-color 1000ms ease-in-out,
+		color 1000ms ease-in-out;
 }
 
-.highlight {
-	background-color: hsla(51, 100%, 68%, 0.781);
-	color: hsl(0, 0%, 16%);
-	/* margin-top: 4px; */
-	padding: 6px;
-	line-height: 2.2;
-	box-decoration-break: clone;
+.item.two {
+	grid-area: main;
+	border-color: hsl(343, 100%, 50%);
+	transition: transform 1200ms ease-in-out, background-color 1500ms ease-in-out,
+		color 2000ms ease-in-out;
 }
 
-/* @media screen and (max-width: 800px) {
-	section {
-		color: blue;
-	}
-} */
+.item.three {
+	grid-area: sidebar;
+	border-color: hsl(240, 100%, 69%);
+	transition: transform 1500ms ease-in-out, background-color 2000ms ease-in-out,
+		color 2500ms ease-in-out;
+}
+
+.iMac-wrapper:hover .iMac {
+	transform: rotateY(40deg);
+}
+
+.iMac-wrapper:hover .screen {
+	transform: translate3D(30px, -10px, 100px);
+	border-color: white;
+}
+
+.iMac-wrapper:hover .item.one {
+	transform: translate3D(60px, -10px, 40px);
+	background-color: hsl(113, 85%, 74%);
+	color: hsl(240, 5%, 21%);
+}
+
+.iMac-wrapper:hover .item.two {
+	transform: translate3D(0px, 30px, 60px);
+	background-color: hsl(343, 100%, 50%);
+	color: hsl(240, 5%, 21%);
+}
+
+.iMac-wrapper:hover .item.three {
+	transform: translate3D(30px, -20px, 90px);
+	background-color: hsl(240, 100%, 69%);
+	color: hsl(240, 5%, 21%);
+}
