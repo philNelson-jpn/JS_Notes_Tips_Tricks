@@ -1178,3 +1178,15 @@ const arr1 = [1,2,3,4,5]
 const doubledArray = arr1.myMap(item => item * 2)
 console.log(doubledArray)
 */
+
+// 5-1-2023
+// Write a function that reverses a string (using methods)
+// First break up the string into individual characters, reverse them, then join them back together
+/*
+function reverseString(string) {
+	return string.split('').reverse().join('')
+}
+
+console.log(reverseString('animal'))
+// lamina
+*/
