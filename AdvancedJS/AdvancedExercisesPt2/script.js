@@ -1220,3 +1220,15 @@ const iteratePrices = items.forEach((item) => {
 console.log(arrayOfPrices)
 //[10, 20, 30, 50, 70]
 */
+
+// Assign list to a destructured array that is equal to 3 through 10.
+/*
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list) {
+	const [a, b, ...arr] = list
+return arr;
+}
+const arr = removeFirstTwo(source);
+console.log(arr)
+// [3, 4, 5, 6, 7, 8, 9, 10]
+*/
