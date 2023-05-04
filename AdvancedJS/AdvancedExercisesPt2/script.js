@@ -1190,3 +1190,33 @@ function reverseString(string) {
 console.log(reverseString('animal'))
 // lamina
 */
+
+// 5-3-2023
+
+// Use .replace() and a capture group to change the string "one two three" to "three two one"
+/*
+const string = "one two three"
+const regex = /(\w+)\s(\w+)\s(\w+)/
+const newOrder = '$3 $2 $1'
+const newString = string.replace(regex, newOrder)
+console.log(newString)
+*/
+
+// 5-4-2023
+// Use the forEach method to only print out the price of each item (only the number)
+/*
+const items = [
+	{ price: 10 },
+	{ price: 20 },
+	{ price: 30 },
+	{ price: 50 },
+	{ price: 70 },
+]
+const arrayOfPrices = []
+const iteratePrices = items.forEach((item) => {
+	arrayOfPrices.push(item.price)
+})
+
+console.log(arrayOfPrices)
+//[10, 20, 30, 50, 70]
+*/
