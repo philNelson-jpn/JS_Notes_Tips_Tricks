@@ -1232,3 +1232,42 @@ const arr = removeFirstTwo(source);
 console.log(arr)
 // [3, 4, 5, 6, 7, 8, 9, 10]
 */
+
+// 5-5-2023
+// Create a function that removes all falsy values from an array with for loop, forEach, and filter.
+/*
+function removeFalsy(array) {
+	const truthyArray = []
+	// for (let i = 0; i < array.length; i++) {
+	// 	if (array[i]) {
+	// 		truthyArray.push(array[i])
+	// 	}
+	// }
+	// return truthyArray
+
+	// array.forEach((item) => item ? truthyArray.push(item) : truthyArray)
+	// return truthyArray
+
+	return array.filter(item => item)
+	
+}
+
+const truthisized = removeFalsy([3, 'yes', '', 0, undefined, null, 7, 'we do'])
+console.log(truthisized)
+// [3, 'yes', 7, 'we do']
+*/
+
+// Create a function that removes the dashes from the string "May-the-force-be-with-you".
+/*
+function removeDashes(string){
+	// return string.split('-').join(' ') + '.'
+
+	// remove any special chars:
+	return `${string.split(/\W/).join(' ')}.`
+}
+
+const forceBeWithYou = "May-the-force-be-with-you"
+
+console.log(removeDashes(forceBeWithYou))
+// May the force be with you.
+*/
