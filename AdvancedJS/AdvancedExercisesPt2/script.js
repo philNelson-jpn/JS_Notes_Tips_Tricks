@@ -1257,7 +1257,7 @@ console.log(truthisized)
 // [3, 'yes', 7, 'we do']
 */
 
-// Create a function that removes the dashes from the string "May-the-force-be-with-you".
+// Create a function that removes the dashes from a string bonus for removing all special characters. Sample string: "May-the-force-be-with-you".
 /*
 function removeDashes(string){
 	// return string.split('-').join(' ') + '.'
