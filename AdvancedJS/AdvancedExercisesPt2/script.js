@@ -1271,3 +1271,19 @@ const forceBeWithYou = "May-the-force-be-with-you"
 console.log(removeDashes(forceBeWithYou))
 // May the force be with you.
 */
+
+// 5-7-2023
+// Write a function that reverses a string with a for loop
+/*
+function reverseAString(string){
+	let reversedString = ""
+	for(let i = string.length - 1; i >= 0; i--){
+		reversedString += string[i]
+	}
+
+	return reversedString
+}
+
+console.log(reverseAString('hello'))
+// olleh
+*/
