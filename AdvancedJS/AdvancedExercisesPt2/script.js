@@ -1191,4 +1191,101 @@ console.log(reverseString('animal'))
 // lamina
 */
 
+// 5-3-2023
+
+// Use .replace() and a capture group to change the string "one two three" to "three two one"
+/*
+const string = "one two three"
+const regex = /(\w+)\s(\w+)\s(\w+)/
+const newOrder = '$3 $2 $1'
+const newString = string.replace(regex, newOrder)
+console.log(newString)
+*/
+
+// 5-4-2023
+// Use the forEach method to only print out the price of each item (only the number)
+/*
+const items = [
+	{ price: 10 },
+	{ price: 20 },
+	{ price: 30 },
+	{ price: 50 },
+	{ price: 70 },
+]
+const arrayOfPrices = []
+const iteratePrices = items.forEach((item) => {
+	arrayOfPrices.push(item.price)
+})
+
+console.log(arrayOfPrices)
+//[10, 20, 30, 50, 70]
+*/
+
+// Assign list to a destructured array that is equal to 3 through 10.
+/*
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list) {
+	const [a, b, ...arr] = list
+return arr;
+}
+const arr = removeFirstTwo(source);
+console.log(arr)
+// [3, 4, 5, 6, 7, 8, 9, 10]
+*/
+
+// 5-5-2023
+// Create a function that removes all falsy values from an array with for loop, forEach, and filter.
+/*
+function removeFalsy(array) {
+	const truthyArray = []
+	// for (let i = 0; i < array.length; i++) {
+	// 	if (array[i]) {
+	// 		truthyArray.push(array[i])
+	// 	}
+	// }
+	// return truthyArray
+
+	// array.forEach((item) => item ? truthyArray.push(item) : truthyArray)
+	// return truthyArray
+
+	return array.filter(item => item)
+	
+}
+
+const truthisized = removeFalsy([3, 'yes', '', 0, undefined, null, 7, 'we do'])
+console.log(truthisized)
+// [3, 'yes', 7, 'we do']
+*/
+
+// Create a function that removes the dashes from a string bonus for removing all special characters. Sample string: "May-the-force-be-with-you".
+/*
+function removeDashes(string){
+	// return string.split('-').join(' ') + '.'
+
+	// remove any special chars:
+	return `${string.split(/\W/).join(' ')}.`
+}
+
+const forceBeWithYou = "May-the-force-be-with-you"
+
+console.log(removeDashes(forceBeWithYou))
+// May the force be with you.
+*/
+
+// 5-7-2023
+// Write a function that reverses a string with a for loop
+/*
+function reverseAString(string){
+	let reversedString = ""
+	for(let i = string.length - 1; i >= 0; i--){
+		reversedString += string[i]
+	}
+
+	return reversedString
+}
+
+console.log(reverseAString('hello'))
+// olleh
+*/
+
 
