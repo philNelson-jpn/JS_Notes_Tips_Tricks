@@ -1310,3 +1310,58 @@ console.log(failuresList)
 // ["<li class='text-warning'>no-var</li>", "<li class='text-warning'>var-on-top</li>", "<li class='text-warning'>linebreak</li>"]
 */
 
+// 5-11-2023
+
+// Loop through an array of objects, use a nested if statement to check if one property matches one argument and if a property exists (second argument). Return no such property if it does not exist and return object does not exist if neither match.
+
+const contacts = [
+	{
+		firstName: 'Akira',
+		lastName: 'Laine',
+		number: '0543236543',
+		likes: ['Pizza', 'Coding', 'Brownie Points'],
+	},
+	{
+		firstName: 'Harry',
+		lastName: 'Potter',
+		number: '0994372684',
+		likes: ['Hogwarts', 'Magic', 'Hagrid'],
+	},
+	{
+		firstName: 'Sherlock',
+		lastName: 'Holmes',
+		number: '0487345643',
+		likes: ['Intriguing Cases', 'Violin'],
+	},
+	{
+		firstName: 'Kristian',
+		lastName: 'Vos',
+		number: 'unknown',
+		likes: ['JavaScript', 'Gaming', 'Foxes'],
+	},
+]
+
+function lookUpProfile(name, prop) {
+	for (let i = 0; i < contacts.length; i++) {
+		const contact = contacts[i]
+		const contactProp = contact[prop]
+		const nameExists = 
+			name === contact.firstName || name === contact.lastName
+		const propExists = contact.hasOwnProperty(prop)
+
+		if (nameExists) {
+			if (propExists) {
+				return contactProp
+			} else {
+				return 'No such property'
+			}
+		}
+	}
+	return 'Contact does not exist'
+}
+
+const contactLikes = lookUpProfile('Harry', 'likes')
+console.log(contactLikes)
+// ['Hogwarts', 'Magic', 'Hagrid']
+
+
