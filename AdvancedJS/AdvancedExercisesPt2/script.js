@@ -1313,7 +1313,7 @@ console.log(failuresList)
 // 5-11-2023
 
 // Loop through an array of objects, use a nested if statement to check if one property matches one argument and if a property exists (second argument). Return no such property if it does not exist and return object does not exist if neither match.
-
+/*
 const contacts = [
 	{
 		firstName: 'Akira',
@@ -1364,4 +1364,21 @@ const contactLikes = lookUpProfile('Harry', 'likes')
 console.log(contactLikes)
 // ['Hogwarts', 'Magic', 'Hagrid']
 
+*/
+/*
+// Create a map that contains three arrays with the keys 1, 2, 3 (as placeholders for ids). Each key should have a test AND a description value assigned to it. Next, create a function that gets an id (1, 2, or 3) from our map and returns it.
 
+const testMap = new Map([
+	[1, { test: 'test1', description: 'desc1' }],
+	[2, { test: 'test2', description: 'desc2' }],
+	[3, { test: 'test3', description: 'desc3' }],
+])
+
+function getMapID(id) {
+	const mapId = testMap.get(id)
+	return mapId.test
+}
+
+console.log(getMapID(3))
+// test3
+*/
