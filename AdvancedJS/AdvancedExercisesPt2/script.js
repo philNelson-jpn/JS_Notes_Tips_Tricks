@@ -1382,3 +1382,41 @@ function getMapID(id) {
 console.log(getMapID(3))
 // test3
 */
+
+// Use a nested for loop to iterate through an array and multiply all of the values:
+/*
+function multiplyAll(arr){
+	let product = 1
+	for(let i = 0; i < arr.length; i++){
+		for(let j = 0; j < arr[i].length; j++){
+			product *= arr[i][j]
+		}
+	}
+	return product
+}
+
+const arrayOfArrays = [[1,2], [3,4], [5,6,7]]
+const isIt5040 = multiplyAll(arrayOfArrays)
+console.log(isIt5040)
+// 5040
+*/
+
+// Find the longest word in a string and print the length of that word (a number).
+/*
+function findLongestWord(string){
+	let numOfLetters = 0
+	let longestWord = ''
+	const words = string.split(' ')
+
+	for(let i = 0; i < words.length; i++){
+		if(words[i].length > numOfLetters){
+			numOfLetters = words[i].length
+			longestWord = words[i]
+		}
+	}
+	return `The longest word in your string is "${longestWord}" with ${numOfLetters} letters`
+}
+
+console.log(findLongestWord("hello there you fabulous thing"))
+// The longest word in your string is "fabulous" with 8 letters
+*/
