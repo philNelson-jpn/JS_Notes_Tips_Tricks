@@ -1415,6 +1415,7 @@ function findLongestWord(string){
 		}
 	}
 	return `The longest word in your string is "${longestWord}" with ${numOfLetters} letters`
+	
 }
 
 console.log(findLongestWord("hello there you fabulous thing"))
