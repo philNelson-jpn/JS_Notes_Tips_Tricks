@@ -1415,9 +1415,31 @@ function findLongestWord(string){
 		}
 	}
 	return `The longest word in your string is "${longestWord}" with ${numOfLetters} letters`
-	
+
 }
 
 console.log(findLongestWord("hello there you fabulous thing"))
 // The longest word in your string is "fabulous" with 8 letters
+*/
+
+// Create the filter function from scratch with Array.prototype
+/*
+Array.prototype.myFilter = function(callback){
+	const newArray = []
+	for(let i = 0; i < this.length; i++){
+		if(callback(this[i])){
+			newArray.push(this[i])
+		}
+	}
+	return newArray
+}
+
+const array = [1,2,3,4,5,6,7,8]
+
+const evenFilter = array.myFilter(item => item % 2 === 0)
+console.log(evenFilter)
+// [2, 4, 6, 8]
+const oddFilter = array.myFilter(item => item % 2 === 1)
+console.log(oddFilter)
+// [1, 3, 5, 7]
 */
