@@ -1443,3 +1443,43 @@ const oddFilter = array.myFilter(item => item % 2 === 1)
 console.log(oddFilter)
 // [1, 3, 5, 7]
 */
+
+// 5-15-2023
+// Retrieve all of the `twinkle`s from twinkleStar by checking to see if anything in twinkleStar matches starRegex globally and case insensitive (ignore case).
+/*
+let twinkleStar = 'Twinkle, twinkle, little star'
+let starRegex = /twinkle/gi
+let result = twinkleStar.match(starRegex)
+console.log(result)
+// ['Twinkle', 'twinkle']
+*/
+// Create a Person class with a name and another class that inherits it
+
+// Next, create a Janitor that inherits Person + takes an additional numberOfMops prop + creates a clean() function that prints 'I cleaned with numberOfMops mops'
+/*
+class Person {
+	constructor(name = 'Jimbo', sex = 'male') {
+		this.name = name
+		this.sex = sex
+	}
+}
+
+class Janitor extends Person {
+	constructor(name, sex, numOfMops = 2) {
+		super(name, sex), (this.numOfMops = numOfMops)
+	}
+
+	clean() {
+		return `${this.name} is such a badass, ${
+			this.sex === 'male' ? 'he' : 'she'
+		} cleaned the whole place by ${
+			this.sex === 'male' ? 'him' : 'her'
+		}self with ${this.numOfMops} mops!`
+	}
+}
+
+const janjan = new Janitor()
+
+console.log(janjan.clean())
+// Jimbo is such a badass, he cleaned the whole place by himself with 2 mops!
+*/
