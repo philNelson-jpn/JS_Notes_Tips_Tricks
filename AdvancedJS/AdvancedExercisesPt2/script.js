@@ -1483,3 +1483,37 @@ const janjan = new Janitor()
 console.log(janjan.clean())
 // Jimbo is such a badass, he cleaned the whole place by himself with 2 mops!
 */
+
+// 5-19-2023
+// Write a function that takes in an array, removes the first two items and replaces them with two new ones.
+/*
+const arrables = ['Gimli', 'Faramir', 'Legolas', 'Aragorn', 'Gandalf']
+function replaceFirstTwo(array) {
+	const [a, b, ...list] = array
+	return ['Jim', 'Greg', ...list]
+}
+
+console.log(replaceFirstTwo(arrables))
+// ['Jim', 'Greg', 'Legolas', 'Aragorn', 'Gandalf']
+*/
+/*
+// Replace an undetermined amount of items in the array with at least the number of items in the original array:
+
+const arrables = ['Gimli', 'Faramir', 'Legolas', 'Aragorn', 'Gandalf']
+function replaceFirstTwo(array, ...newItems) {
+	if (array.length < newItems.length) {
+		throw new Error(`You cannot replace more than ${array.length} items.`)
+	}
+	array.splice(0, newItems.length, ...newItems)
+	return array
+}
+
+console.log(replaceFirstTwo(arrables, 'Kimberly', 'Kyle', 'Jim', 'Kyle', 'Bob'))
+// ['Kimberly', 'Kyle', 'Jim', 'Kyle', 'Bob']
+
+console.log(replaceFirstTwo(arrables, 'Kimberly', 'Kyle', 'Jim', 'Kyle', 'Bob', 'Johnny'))
+//  Error: You cannot replace more than 5 items.
+
+
+// ['Jim', 'Greg', 'Legolas', 'Aragorn', 'Gandalf']
+*/
