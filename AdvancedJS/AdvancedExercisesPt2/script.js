@@ -1517,3 +1517,18 @@ console.log(replaceFirstTwo(arrables, 'Kimberly', 'Kyle', 'Jim', 'Kyle', 'Bob', 
 
 // ['Jim', 'Greg', 'Legolas', 'Aragorn', 'Gandalf']
 */
+
+// 5-22-2023
+// Create a function that changes a string to title case (only the first letter of each word is capitalized) using map.
+/*
+function titleCaseMe(string){
+	return string
+		.toLowerCase()
+		.split(' ')
+		.map(word => word.replace(word.charAt(0), word.charAt(0).toUpperCase()))
+		.join(' ')
+}
+
+console.log(titleCaseMe("hello there mr. bandit"))
+// Hello There Mr. Bandit
+*/
