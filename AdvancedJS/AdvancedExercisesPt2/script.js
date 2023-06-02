@@ -1532,3 +1532,22 @@ function titleCaseMe(string){
 console.log(titleCaseMe("hello there mr. bandit"))
 // Hello There Mr. Bandit
 */
+
+// 6-2-2023
+
+// Use the reduce method to get the total price of all of the items.
+/*
+const items = [
+	{price: 10},
+	{price: 20},
+	{price: 30},
+	{price: 40},
+]
+
+const totalPrice = items.reduce(function(sum, item){
+	console.log(sum)
+	return (item.price + sum)
+}, 100)
+console.log(totalPrice)
+// 200
+*/
