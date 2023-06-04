@@ -1551,3 +1551,18 @@ const totalPrice = items.reduce(function(sum, item){
 console.log(totalPrice)
 // 200
 */
+
+// 6-3-2023
+
+// Write a function that takes in a string and a number. The string should be repeated the number of times specified in the number parameter. Use a for loop and not the .repeat() method.
+/*
+function repeatMe(string, number){
+	let repeatedString = ''
+	for(let i = 0; i < number; i++){
+		repeatedString += string
+	}
+	return repeatedString
+}
+
+console.log(repeatMe("hello", 5))
+*/
