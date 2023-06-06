@@ -1566,3 +1566,29 @@ function repeatMe(string, number){
 
 console.log(repeatMe("hello", 5))
 */
+
+// 6-6-2023
+
+// Convert an object into an array of names. You can use a while loop or recursion to achieve this.
+/*
+const friends = {
+	name: 'Phil',
+	friends: {
+		name: 'Caleb',
+		friends: {
+			name: 'Simon',
+		},
+	},
+}
+
+const newFriends = []
+let currentPerson = friends
+
+while (currentPerson != null) {
+	newFriends.push(currentPerson.name)
+	currentPerson = currentPerson.friends
+}
+
+console.log(newFriends)
+// ['Phil', 'Caleb', 'Simon']
+*/
