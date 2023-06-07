@@ -1592,3 +1592,19 @@ while (currentPerson != null) {
 console.log(newFriends)
 // ['Phil', 'Caleb', 'Simon']
 */
+
+// 6-7-2023
+
+// Write a function that takes in an array and returns a new array with only the third and fourth items in the original array.
+/*
+function thirdAndFourth(array){
+	return array.slice(2,4)
+}
+
+const arr = [1,2,3,4,5]
+
+console.log(thirdAndFourth(arr))
+// [3, 4]
+console.log(arr)
+// [1,2,3,4,5]
+*/
