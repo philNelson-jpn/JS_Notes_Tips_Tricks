@@ -1608,3 +1608,17 @@ console.log(thirdAndFourth(arr))
 console.log(arr)
 // [1,2,3,4,5]
 */
+/*
+function splitFullName(fullName){
+	return fullName.split(' ')
+}
+
+const [firstName, lastName] = splitFullName('Phil Nelson')
+const phil = {
+	firstName,
+	lastName
+}
+
+console.log(phil.firstName)
+// Phil
+*/
