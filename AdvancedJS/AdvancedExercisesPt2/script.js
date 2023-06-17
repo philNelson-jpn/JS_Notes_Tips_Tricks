@@ -1622,3 +1622,39 @@ const phil = {
 console.log(phil.firstName)
 // Phil
 */
+
+// 6-18-2023
+
+// Create a function that uses map to convert decimal numbers to whole numbers using parseInt()
+/*
+function decToWhole(decNumArr){
+	const wholeNumArr = decNumArr.map(num => parseInt(num))
+	return wholeNumArr
+}
+
+const decArr = [22.23, 44.23, 55.63, 11.5522234]
+console.log(decToWhole(decArr))
+// [22, 44, 55, 11]
+*/
+/*
+class Thermostat {
+	constructor(fahrenheit){
+		this.fahrenheit = fahrenheit
+	}
+
+	get temperature(){
+		return `${5/9 * (this.fahrenheit - 32)}°C`
+	}
+
+	set temperature(celsius){
+		this.fahrenheit = `${celsius * 9 / 5 + 32}°F`
+	}
+}
+
+const newTemp = new Thermostat(32)
+console.log(newTemp.temperature)
+// 0°C
+newTemp.temperature = 72
+console.log(newTemp.fahrenheit)
+// 161.6°F
+*/
