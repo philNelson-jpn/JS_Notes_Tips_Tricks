@@ -1658,3 +1658,25 @@ newTemp.temperature = 72
 console.log(newTemp.fahrenheit)
 // 161.6°F
 */
+
+// 6-22-2023
+
+// Write a function that takes a full name, takes the first name and the last name, and saves them as separate variables in an object. Then destructure the object so that both the first name and last name are accessible as separate variables.
+/*
+
+function createPersonObject(fullname, address){
+	const [firstName, lastName] = fullname.split(' ')
+	return {
+		firstName,
+		lastName,
+		address
+	}
+}
+
+const person = createPersonObject('Phil Nelson', '6020 Jose Rd.')
+console.log(person)
+const person2 = new Object(person)
+person2.firstName = "Bobby"
+console.log(person2)
+
+*/
