@@ -1680,3 +1680,18 @@ person2.firstName = "Bobby"
 console.log(person2)
 
 */
+
+// 6-24-2023
+// Write a function that checks if the second argument is the last part of the first argument (a string).
+
+// confirmEnding("Bastian", "n") should return true.
+/*
+function confirmEnding(string, target) {
+	const slicedStr = string.slice(string.length - target.length)
+	console.log(slicedStr)
+	// l
+	return slicedStr === target
+}
+
+console.log(confirmEnding('phil', 'r'))
+*/
