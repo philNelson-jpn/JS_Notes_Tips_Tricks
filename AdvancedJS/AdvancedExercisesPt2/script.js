@@ -1695,3 +1695,24 @@ function confirmEnding(string, target) {
 
 console.log(confirmEnding('phil', 'r'))
 */
+
+// What is a mixin and how can we use it?
+
+const donald = {
+	name: 'Donald',
+	numOfWings: 2
+}
+
+const plane = {
+	name: 'DC-3',
+	numOfWings: 2
+}
+
+const flyingMixin = function(object){
+	object.flying = function(){
+		console.log(`${object.name} is cruising at high altitude`)
+	}
+}
+
+flyingMixin(donald)
+donald.flying()
