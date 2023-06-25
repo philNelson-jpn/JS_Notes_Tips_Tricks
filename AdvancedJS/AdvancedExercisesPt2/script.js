@@ -1697,7 +1697,7 @@ console.log(confirmEnding('phil', 'r'))
 */
 
 // What is a mixin and how can we use it?
-
+/*
 const donald = {
 	name: 'Donald',
 	numOfWings: 2
@@ -1716,3 +1716,29 @@ const flyingMixin = function(object){
 
 flyingMixin(donald)
 donald.flying()
+*/
+
+// 6-25-2023
+
+// Write a function that returns the average rating for films only by a certain director using filter, map, and reduce.
+/*
+function getAvgRating(watchList){
+	const nolanFilms = watchList.filter(film => film.Director === 'Christopher Nolan')
+	const allRatings = nolanFilms.map(film => Number(film.imdbRating))
+	const sumOfRatings = allRatings.reduce((sum, ratings) => ratings + sum)
+	const averageRating = sumOfRatings / allRatings.length
+	return averageRating
+}
+
+console.log(getAvgRating(watchList))
+// 8.675
+*/
+
+// Using Math.floor and Math.random, return a random whole number that is >= myMin and <= myMax.
+/*
+function randomRange(myMin, myMax) {
+	return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin
+}
+
+console.log(randomRange(2, 5))
+*/
