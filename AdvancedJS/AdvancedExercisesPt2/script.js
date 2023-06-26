@@ -1742,3 +1742,21 @@ function randomRange(myMin, myMax) {
 
 console.log(randomRange(2, 5))
 */
+
+// 6-26-2023
+// Use recursion to return an array that begins with startNum and ends with endNum.
+/*
+function rangeOfNumbers(startNum, endNum){
+	if(endNum - startNum === 0){
+		return [startNum]
+	}
+
+	const rangeArray = rangeOfNumbers(startNum, endNum - 1)	
+	rangeArray.push(endNum)
+
+	return rangeArray
+}
+
+console.log(rangeOfNumbers(2, 8))
+*/
+
