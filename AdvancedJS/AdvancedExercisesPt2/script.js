@@ -1760,3 +1760,34 @@ function rangeOfNumbers(startNum, endNum){
 console.log(rangeOfNumbers(2, 8))
 */
 
+// 6-27-2023
+// Change a function that uses a callback to use an anonymous function instead
+/*
+function printName(name, callback){
+	callback(`Hello ${name}`)
+}
+
+printName('Phil', (variable) => {
+	console.log(variable)
+})
+// Hello Phil
+*/
+
+// Change an impure function to a pure function
+/*
+const person = {
+	name: 'Phil',
+	friends: ['Simon', 'Caleb'],
+}
+
+function addFriend(obj, ...friendName) {
+	const newObj = { ...obj, friends: [...obj.friends, ...friendName] }
+	return newObj
+}
+
+const newPerson = addFriend(person, 'Bobby', 'Kelly', 'Janet')
+console.log(newPerson.friends)
+// ['Simon', 'Caleb', 'Bobby', 'Kelly', 'Janet']
+console.log(person.friends)
+// ['Simon', 'Caleb']
+*/
