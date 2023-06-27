@@ -1791,3 +1791,25 @@ console.log(newPerson.friends)
 console.log(person.friends)
 // ['Simon', 'Caleb']
 */
+
+// 6-28-2023
+/*
+const person = {
+	firstName: 'Phil',
+	lastName: 'Nelson',
+	get fullName(){
+		return `${this.firstName} ${this.lastName}`
+	},
+
+	set fullName(value){
+		;[this.firstName, this.lastName] = value.split(' ')
+	}
+}
+
+console.log(person.fullName)
+// Phil Nelson
+
+person.fullName = 'Kelly Williams'
+console.log(person.fullName)
+// Kelly Williams
+*/
