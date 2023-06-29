@@ -1813,3 +1813,43 @@ person.fullName = 'Kelly Williams'
 console.log(person.fullName)
 // Kelly Williams
 */
+
+// 6-29-2023
+
+// Find the longest word in a string and print the length of that word (a number). Bonus: print out the word itself. Bonus bonus: get a word count of the whole string.
+/*
+function findLongestWord(string) {
+	let length = 0
+	const words = string.split(' ')
+	let longestWord = ''
+	
+	for (let i = 0; i < words.length; i++) {
+		if (words[i].length > length) {
+			length = words[i].length
+			longestWord = words[i]
+		}
+	}
+	return `Hello, your sentence has ${words.length} words. The longest word in this sentence is "${longestWord}." "${longestWord}" is ${length} characters long.`
+}
+
+console.log(
+	findLongestWord(
+		'this is a test to see that phillymacdonald is the longest word'
+	)
+)
+*/
+
+// How can you sort an array without mutating the original array? Bonus: What is the function that sorts numbers?
+/*
+const unsortedArray = [2,1,6,4,5,3]
+
+function sortArray(array){
+	const clonedArray = [...array]
+	return clonedArray.sort((a,b) => a - b)
+}
+
+console.log(sortArray(unsortedArray))
+// [1, 2, 3, 4, 5, 6]
+console.log(unsortedArray)
+// [2, 1, 6, 4, 5, 3]
+*/
