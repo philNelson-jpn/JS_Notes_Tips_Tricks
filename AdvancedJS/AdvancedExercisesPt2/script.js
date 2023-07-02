@@ -1853,3 +1853,45 @@ console.log(sortArray(unsortedArray))
 console.log(unsortedArray)
 // [2, 1, 6, 4, 5, 3]
 */
+
+// 7-2-2023
+
+// Create a new object from an array of objects that only displays two keys from the original object using map.
+/*
+const arrayOfObjs = [
+	{
+		name: 'Phil',
+		age: 34,
+		local: 'Japan'
+	},
+	{
+		name: 'John',
+		age: 35,
+		local: 'USA'
+	},
+	{
+		name: 'Kimberly',
+		age: 32,
+		local: 'Czech Republic'
+	}
+]
+
+const newObj = arrayOfObjs.map(({name, local}) => (
+	{name, local}
+))
+
+const newObj2 = arrayOfObjs.map(item => (
+	{
+		name: item.name,
+		local: item.local
+	}
+))
+
+console.log(newObj)
+console.log(newObj2)
+// (3) [{…}, {…}, {…}]
+// {name: 'Phil', local: 'Japan'}
+// {name: 'John', local: 'USA'}
+// {name: 'Kimberly', local: 'Czech Republic'}
+*/
+
