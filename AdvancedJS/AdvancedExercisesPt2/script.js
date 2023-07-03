@@ -1895,3 +1895,25 @@ console.log(newObj2)
 // {name: 'Kimberly', local: 'Czech Republic'}
 */
 
+// 7-3-2023
+// Use Function Composition to combine both the double function and the plusOne function into one function.
+/*
+const array = [1,2,3,4,5]
+
+function double(element){
+	return element * 2
+}
+
+function plusOne(element){
+	return element + 1
+}
+
+function doublePlusOne(element){
+	return plusOne(double(element))
+}
+
+// const doubledPlusOne = array.map(item => doublePlusOne(item))
+const doubledPlusOne = array.map(doublePlusOne)
+console.log(doubledPlusOne)
+// [3, 5, 7, 9, 11]
+*/
