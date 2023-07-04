@@ -1917,3 +1917,32 @@ const doubledPlusOne = array.map(doublePlusOne)
 console.log(doubledPlusOne)
 // [3, 5, 7, 9, 11]
 */
+
+// 7-4-2023
+
+// Create the filter function from scratch with Array.prototype
+/*
+Array.prototype.myFilter = function(callback){
+	const filteredArray = []
+	for(let i = 0; i < this.length; i++){
+		if(callback(this[i])){
+			filteredArray.push(this[i])
+		}
+	}
+	return filteredArray
+}
+
+const arrayOfNums = [1,2,3,4,5,6,7,8,9]
+
+const evenFilter = arrayOfNums.myFilter(function(item){
+	return item % 2 === 0
+})
+console.log(evenFilter)
+[2,4,6,8]
+
+const oddFilter = arrayOfNums.myFilter(function(item){
+	return item % 2 === 1
+})
+console.log(oddFilter)
+[1,3,5,7,9]
+*/
