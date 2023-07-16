@@ -1946,3 +1946,33 @@ const oddFilter = arrayOfNums.myFilter(function(item){
 console.log(oddFilter)
 [1,3,5,7,9]
 */
+
+//7-16-2023
+
+// Convert a while loop into a recursive function
+/*
+const person = {
+	name: 'Phil',
+	friend: {
+		name: 'Simon',
+		friend: {
+			name: 'Caleb',
+		},
+	},
+}
+
+let currentPerson = person
+// while (currentPerson != null) {
+// 	console.log(currentPerson.name)
+// 	currentPerson = currentPerson.friend
+// }
+
+function logName(currentPerson) {
+	if (currentPerson == null) return
+
+	console.log(currentPerson.name)
+	logName(currentPerson.friend)
+}
+
+logName(currentPerson)
+*/
