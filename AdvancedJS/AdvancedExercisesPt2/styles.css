@@ -136,3 +136,74 @@ svg {
 	background-color: hsl(240, 100%, 69%);
 	color: hsl(240, 5%, 21%);
 }
+
+/* 
+
+3D Transformed Avatar Component
+  html, body {
+  height: 100%;
+}
+
+body {
+  background-color: hsl(210deg 15% 6%);
+}
+.card {
+  width: min-content;
+  background: white;
+  text-align: center;
+}
+.avatar {
+  display: block;
+  width: 250px;
+}
+.card p {
+  padding: 4px;
+}
+  
+  .card-wrapper {
+    min-height: 100%;
+    display: grid;
+    place-content: center;
+    perspective: 750px;
+	cursor: pointer;
+  }
+  
+  .card {
+    position: relative;
+    transform: rotateY(0deg);
+	transition: transform 600ms ease-in-out;
+	transform-style: preserve-3d;
+    perspective: 750px;
+    transform: translate3D(0px, 0, 0px);
+    transition: transform 600ms ease-in-out;
+	transform-style: inherit;
+
+    --padding: 8px;
+    --inner-radius: 16px;
+    border-radius: calc(var(--inner-radius) + var(--padding));
+    padding: var(--padding);
+  }
+  
+  .avatar {
+	transform: translate3D(0px, 0, 0px);
+	transform-style: inherit;
+     border-radius: var(--inner-radius) var(--inner-radius) 16px 16px;
+    transition: transform 800ms ease-in-out;
+  }
+
+  .card-wrapper:hover .card {
+	transform: rotateY(40deg);
+}
+
+    .card-wrapper:hover .avatar {
+	transform: translate3D(60px, -10px, 200px) rotateY(-2deg);
+}
+
+  h2 {
+    margin-top: 16px;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+*/
