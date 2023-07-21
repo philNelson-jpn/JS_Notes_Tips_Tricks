@@ -2004,3 +2004,28 @@ function findElement(arr, func){
 console.log(findElement([1,2,3,4], num => num % 2 === 0))
 //2
 */
+
+// 7-21-2023
+// Create a function that returns the sum of a range of an array of two numbers ([1,4] would return 10 (1+2+3+4))
+/*
+const arrToBeSummed = [1,4]
+
+function sumOfRange(array){
+	let sum = 0
+	const maxNum = Math.max(array[0], array[1])
+	const minNum = Math.min(array[0], array[1])
+
+	for(let i = minNum; i <= maxNum; i++){
+		console.log({sum, i})
+		sum += i
+	}
+	return sum
+}
+
+console.log(sumOfRange(arrToBeSummed))
+// {sum: 0, i: 1}
+// {sum: 1, i: 2}
+// {sum: 3, i: 3}
+// {sum: 6, i: 4}
+// 10
+*/
