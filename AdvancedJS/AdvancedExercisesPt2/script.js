@@ -2029,3 +2029,19 @@ console.log(sumOfRange(arrToBeSummed))
 // {sum: 6, i: 4}
 // 10
 */
+
+// 7-24-2023
+// How do you create a new Map. Since creating a new map creates something like an object that is actually an array, what is something that we can do that we can't do with normal objects.
+
+const currencyMap = new Map([
+	['the US', 'Dollars'],
+	['Mexico', 'Pesos'],
+	['Japan', 'Yen'],
+])
+
+currencyMap.forEach((currency, country) => {
+	console.log(`The currency of ${country} is ${currency}.`)
+})
+// The currency of the US is Dollars.
+// The currency of Mexico is Pesos.
+// The currency of Japan is Yen.
