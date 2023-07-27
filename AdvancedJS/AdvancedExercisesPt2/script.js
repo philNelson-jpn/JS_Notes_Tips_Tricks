@@ -2032,7 +2032,7 @@ console.log(sumOfRange(arrToBeSummed))
 
 // 7-24-2023
 // How do you create a new Map. Since creating a new map creates something like an object that is actually an array, what is something that we can do that we can't do with normal objects.
-
+/*
 const currencyMap = new Map([
 	['the US', 'Dollars'],
 	['Mexico', 'Pesos'],
@@ -2045,3 +2045,36 @@ currencyMap.forEach((currency, country) => {
 // The currency of the US is Dollars.
 // The currency of Mexico is Pesos.
 // The currency of Japan is Yen.
+*/
+
+// 7-27-2023
+// Create a function that loops through an object and returns the number of users where their online status is equal to true
+/*
+const users = {
+	Alan: {
+		online: true,
+	},
+	Jim: {
+		online: false,
+	},
+	Carol: {
+		online: true,
+	},
+	Kimberly: {
+		online: false,
+	},
+}
+
+function countOnline(userObj) {
+	let numOnline = 0
+	for (let user in userObj) {
+		if (userObj[user].online) {
+			numOnline++
+		}
+	}
+	return numOnline
+}
+
+console.log(countOnline(users))
+// 2
+*/
