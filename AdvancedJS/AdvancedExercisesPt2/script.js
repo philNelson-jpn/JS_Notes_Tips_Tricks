@@ -2140,3 +2140,22 @@ function double(element){
 console.log(array.map(element => double(element)))
 // [2, 4, 6, 8, 10]
 */
+
+// Create the map function from scratch (on Array.prototype)
+/*
+Array.prototype.myMap = function(callback){
+	const array = []
+	this.forEach(item => array.push(callback(item)))
+	// for(let i = 0; i < this.length; i++){
+	// 	array.push(callback(this[i]))
+	// }
+	return array
+}
+
+const arr = [1,2,3,4,5]
+
+console.log(arr.myMap(el => el * 2))
+// [2, 4, 6, 8, 10]
+*/
+
+
