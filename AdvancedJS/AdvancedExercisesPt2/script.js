@@ -2127,3 +2127,16 @@ function lookUpProfile(name, prop){
 console.log(lookUpProfile('Akira', 'likes'))
 // ['Pizza', 'Coding', 'Brownie Points']
 */
+
+// 7-29-2023
+// Use map to apply a double function to an array and then log out the result.
+/*
+const array = [1,2,3,4,5]
+
+function double(element){
+	return element * 2
+}
+
+console.log(array.map(element => double(element)))
+// [2, 4, 6, 8, 10]
+*/
