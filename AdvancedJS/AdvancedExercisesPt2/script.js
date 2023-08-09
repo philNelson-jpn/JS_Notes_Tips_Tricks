@@ -2158,4 +2158,44 @@ console.log(arr.myMap(el => el * 2))
 // [2, 4, 6, 8, 10]
 */
 
+// 8-8-2023
+// Calculate a person's birth year based on { ageThisYear: 35 }
+/*
+function getBirthYear(ageThisYear) {
+	const date = new Date().getFullYear()
+	console.log(date - ageThisYear)
+}
 
+const person = {
+	name: 'Phil',
+	age: 35,
+}
+
+getBirthYear(person.age)
+// 1988
+*/
+
+// Write a function that reverses a string with a for loop
+/*
+function reverseString(str){
+	let reversedString = ""
+	for(let i = str.length - 1; i >= 0; i--){
+		reversedString += str[i]
+	}
+	return reversedString
+}
+
+console.log(reverseString("Hello there Obi-wan"))
+naw-ibO ereht olleH
+*/
+
+// 8-9-2023
+// Use .replace() and a capture group to change the string "one two three" to "three two one"
+/*
+const str = 'one two three'
+const regex = /(\w+)\s(\w+)\s(\w+)/
+const capgrp = '$3 $2 $1'
+const reversedStr = str.replace(regex, capgrp)
+console.log(reversedStr)
+// three two one
+*/
