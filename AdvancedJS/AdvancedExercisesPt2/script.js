@@ -2199,3 +2199,17 @@ const reversedStr = str.replace(regex, capgrp)
 console.log(reversedStr)
 // three two one
 */
+// 8-15-2023
+// function that compares two arrays and only returns an element that both arrays DO NOT share
+/*
+const arr1 = [2,4,6,7]
+const arr2 = [2,4,6,8]
+
+function compareArrays(arr1, arr2){
+	const combinedArrays = arr1.concat(arr2)
+	return combinedArrays.filter(num => !arr1.includes(num) || !arr2.includes(num))
+}
+
+console.log(compareArrays(arr1, arr2))
+// [7, 8]
+*/
