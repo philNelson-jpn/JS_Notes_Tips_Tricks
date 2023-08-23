@@ -2213,3 +2213,19 @@ function compareArrays(arr1, arr2){
 console.log(compareArrays(arr1, arr2))
 // [7, 8]
 */
+
+//8-23-2023
+// Create a function that uses a closure (a function within another function) called closure() that takes in one argument (a variable).
+/*
+function closure(variable){
+	return function func(variable2){
+		console.log(variable)
+		console.log(variable2)
+	}
+}
+
+const a = closure(1)
+a(2)
+// 1
+// 2
+*/
