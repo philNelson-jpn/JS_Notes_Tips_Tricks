@@ -2229,3 +2229,58 @@ a(2)
 // 1
 // 2
 */
+
+// 8-26-2023
+// Create a function that removes duplicates from an array using Set.
+/*
+const numArray = [1,2,3,4,5,4,5,2,3,4]
+
+function removeDups(array){
+	const noDupsArray = [...new Set(array)]
+	return noDupsArray
+}
+
+console.log(removeDups(numArray))
+// [1, 2, 3, 4, 5]
+*/
+
+// 8-30-2023
+// Create a setter function that allows someone to change the full name
+/*
+const person = {
+	firstName: 'Phil',
+	lastName: 'Nelson',
+	get fullName() {
+		return `${this.firstName} ${this.lastName}`
+	},
+	set fullName(value) {
+		return ([this.firstName, this.lastName] = value.split(' '))
+	},
+}
+
+person.fullName = "Jim Morrison"
+console.log(person.fullName)
+// Jim Morrison
+*/
+/*
+// Create a new Cat class that extends Animal and redefines the speak() function to say "meow"
+class Animal {
+	constructor(name) {
+		this.name = name
+	}
+
+	speak() {
+		console.log(`Hello, there. My name is ${this.name}.`)
+	}
+}
+
+class Cat extends Animal {
+	speak() {
+		console.log('meoooooow')
+	}
+}
+
+const meowmers = new Cat("Meowmers")
+meowmers.speak()
+// meoooooow
+*/
