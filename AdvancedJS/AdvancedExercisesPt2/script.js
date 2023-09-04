@@ -2284,3 +2284,21 @@ const meowmers = new Cat("Meowmers")
 meowmers.speak()
 // meoooooow
 */
+
+// 9-4-2023
+// Apply both the double function and the plusOne function to the array with map chaining and log out the result.
+/*
+const array = [1,2,3,4,5]
+
+function double(element){
+	return element * 2
+}
+
+function plusOne(element){
+	return element + 1
+}
+
+const doubledPlusOne = array.map(double).map(plusOne)
+console.log(doubledPlusOne)
+// [3, 5, 7, 9, 11]
+*/
