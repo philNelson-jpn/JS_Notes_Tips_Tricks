@@ -2302,3 +2302,16 @@ const doubledPlusOne = array.map(double).map(plusOne)
 console.log(doubledPlusOne)
 // [3, 5, 7, 9, 11]
 */
+
+// 9-7-2023
+// Using Math.floor and Math.random, return a random whole number that is >= myMin and <= myMax.
+/*
+function randomRange(myMin, myMax) {
+	const number = Math.floor(Math.random() * (myMax - myMin + 1)) + myMin
+	return number
+}
+
+const ranged = randomRange(2, 6)
+console.log(ranged)
+// num between 2 and 6
+*/
