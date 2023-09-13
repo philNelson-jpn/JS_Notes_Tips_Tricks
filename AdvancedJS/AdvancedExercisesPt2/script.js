@@ -2315,3 +2315,21 @@ const ranged = randomRange(2, 6)
 console.log(ranged)
 // num between 2 and 6
 */
+
+// 9-13-2023
+// Create the filter function from scratch with Array.prototype
+/*
+Array.prototype.myFilter = function(callback){
+	const filteredArray = []
+	this.forEach(element => {
+		if(callback(element)){
+			filteredArray.push(element)
+		}
+	})
+	return filteredArray
+}
+
+const arr = [1,2,3,4,5]
+console.log(arr.myFilter(item => item % 2 === 0))
+// [2, 4]
+*/
