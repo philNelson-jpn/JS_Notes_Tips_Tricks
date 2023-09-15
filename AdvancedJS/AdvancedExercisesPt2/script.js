@@ -2333,3 +2333,13 @@ const arr = [1,2,3,4,5]
 console.log(arr.myFilter(item => item % 2 === 0))
 // [2, 4]
 */
+
+// 9-15-2023
+// Create a single regex that matches all characters that are not a number or a vowel. Remember to include the appropriate flags in the regex.
+/*
+let quote = "3 blind mice"
+let quoteRegex = /[^aeiou0-9]/gi
+let result = quote.match(quoteRegex)
+console.log(result)
+// [' ', 'b', 'l', 'n', 'd', ' ', 'm', 'c']
+*/
