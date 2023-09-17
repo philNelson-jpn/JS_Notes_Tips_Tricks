@@ -2343,3 +2343,28 @@ let result = quote.match(quoteRegex)
 console.log(result)
 // [' ', 'b', 'l', 'n', 'd', ' ', 'm', 'c']
 */
+
+// 9-17-2023
+// Convert an object into an array of names. You can use a while loop or recursion to achieve this.
+/*
+const person = {
+	name: 'Phil',
+	friends: {
+		name: 'Simon',
+		friends: {
+			name: 'Caleb',
+		},
+	},
+}
+
+let currentPerson = person
+let friendsArray = []
+
+while (currentPerson != null) {
+	friendsArray.push(currentPerson.name)
+	currentPerson = currentPerson.friends
+}
+
+console.log(friendsArray)
+console.log('Hello')
+*/
