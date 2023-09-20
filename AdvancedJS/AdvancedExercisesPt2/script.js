@@ -2368,3 +2368,12 @@ while (currentPerson != null) {
 console.log(friendsArray)
 console.log('Hello')
 */
+
+// 9-20-2023
+// Use map to double the numbers of an array in a new array.
+/*
+const arr = [1,2,3,4,5,6]
+const doubledArr = arr.map(num => num * 2)
+console.log(doubledArr)
+// [2, 4, 6, 8, 10, 12]
+*/
