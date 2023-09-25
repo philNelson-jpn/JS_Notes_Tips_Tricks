@@ -137,15 +137,17 @@ svg {
 	color: hsl(240, 5%, 21%);
 }
 
-/* 
 
-3D Transformed Avatar Component
+
+/* 3D Transformed Avatar Component */
   html, body {
   height: 100%;
 }
 
 body {
   background-color: hsl(210deg 15% 6%);
+  display: grid;
+  place-content: center;
 }
 .card {
   width: min-content;
@@ -154,7 +156,7 @@ body {
 }
 .avatar {
   display: block;
-  width: 250px;
+  width: 450px;
 }
 .card p {
   padding: 4px;
@@ -166,6 +168,9 @@ body {
     place-content: center;
     perspective: 750px;
 	cursor: pointer;
+	color: black;
+	width: min-content;
+	border: solid 1px red;
   }
   
   .card {
@@ -206,4 +211,4 @@ body {
   p {
     margin-bottom: 16px;
   }
-*/
+
