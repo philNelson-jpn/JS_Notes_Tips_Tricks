@@ -2377,3 +2377,21 @@ const doubledArr = arr.map(num => num * 2)
 console.log(doubledArr)
 // [2, 4, 6, 8, 10, 12]
 */
+
+// 9-26-2023
+// Write a function that checks if the second argument is the last part of the first argument (a string).
+/*
+function checkEnding(str, target) {
+	const ending = str.slice(str.length - target.length)
+	console.log(ending)
+	if(ending === target){
+		console.log("That's a bingo!")
+	}else{
+		console.log("Ending does not match")
+	}
+}
+
+checkEnding('Hello', 'z')
+// o
+// Ending does not match
+*/
