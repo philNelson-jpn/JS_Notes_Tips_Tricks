@@ -2395,3 +2395,16 @@ checkEnding('Hello', 'z')
 // o
 // Ending does not match
 */
+
+// 10-3-2023
+// Create a function that removes all falsy values from an array
+/*
+const falsyArray = [1, 0, 'Yes', 'No', undefined, null, 'who?', NaN]
+
+function removeFalsy(array) {
+	return array.filter((item) => item)
+}
+
+console.log(removeFalsy(falsyArray))
+// [1, 'Yes', 'No', 'who?']
+*/
