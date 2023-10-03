@@ -2408,3 +2408,17 @@ function removeFalsy(array) {
 console.log(removeFalsy(falsyArray))
 // [1, 'Yes', 'No', 'who?']
 */
+
+// sort an array without mutating the original array
+/*
+const array = [1, 2, 3, 6, 2, 9, 1, 10]
+function sortArray(array) {
+	const arrayToSort = [...array]
+	return arrayToSort.sort((a, b) => {
+		return a - b
+	})
+}
+
+console.log(sortArray(array))
+console.log(array)
+*/
