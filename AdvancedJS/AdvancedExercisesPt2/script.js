@@ -2422,3 +2422,18 @@ function sortArray(array) {
 console.log(sortArray(array))
 console.log(array)
 */
+
+// 10-5-2023
+// Create a function that removes the dashes from the string "May-the-force-be-with-you". 
+/*
+const force = "May-the-force-be-with-you"
+
+function removeDashes(string){
+	const words = string.split("-")
+	const sentence = words.join(' ')
+	console.log(`${sentence}.`)
+}
+
+removeDashes(force)
+*/
+
