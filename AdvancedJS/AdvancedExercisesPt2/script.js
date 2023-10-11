@@ -2424,7 +2424,7 @@ console.log(array)
 */
 
 // 10-5-2023
-// Create a function that removes the dashes from the string "May-the-force-be-with-you". 
+// Create a function that removes the dashes from the string "May-the-force-be-with-you".
 /*
 const force = "May-the-force-be-with-you"
 
@@ -2437,3 +2437,25 @@ function removeDashes(string){
 removeDashes(force)
 */
 
+// 10-11-2023
+// Create a function that title cases a string (every word's first letter is capitalized)
+/*
+const lowerCaseString = "this is for tEstinG iF this REAlly wOrks"
+
+function titleCaser(string){
+	const words = string.toLowerCase().split(' ')
+	const titleCasedWords = words.map(word => word.replace(word.charAt(0), word.charAt(0).toUpperCase()))
+	return titleCasedWords.join(' ')
+}
+
+console.log(titleCaser(lowerCaseString))
+// This Is For Testing If This Really Works
+*/
+
+// How do we generate a random WHOLE number between 1-10?
+/*
+const randomWholeNum = Math.ceil(Math.random() * 10)
+// const randomWholeNum = Math.floor(Math.random() * 10) + 1
+
+console.log(randomWholeNum)
+*/
