@@ -2459,3 +2459,36 @@ const randomWholeNum = Math.ceil(Math.random() * 10)
 
 console.log(randomWholeNum)
 */
+
+// 10-16-2023
+// Print out [5,4,3,2,1] using a while loop.
+/*
+const myArray = []
+
+let i = 5
+while (i >= 0) {
+	myArray.push(i)
+	i--
+}
+
+console.log(myArray)
+*/
+
+// Change an impure function to a pure function
+/*
+const person = {
+	name: "Phil",
+	friends: ["Simon", "Caleb"]
+}
+
+function addFriend(friendName){
+	const newPerson = {...person, friends: [...person.friends, friendName]}
+	return newPerson
+}
+
+const threeFriends = addFriend("Jimmy")
+console.log(threeFriends.friends)
+// ['Simon', 'Caleb', 'Jimmy']
+console.log(person.friends)
+// ['Simon', 'Caleb']
+*/
