@@ -2516,3 +2516,21 @@ console.log(
 
 // 48
 */
+
+// 10-26-2023
+// Check if a string is made up of either person as long as they share the same last name.
+// Now check if any middle names or initials are also included.
+/*
+const str = 'Phil Nelson'
+const regex = /(Phil|Jin) Nelson/
+const check = regex.test(str)
+console.log(check)
+// true
+*/
+/*
+const str = 'Phil Andrew Nelson'
+const regex = /(Phil|Jin).*Nelson/
+const check = regex.test(str)
+console.log(check)
+// true
+*/
