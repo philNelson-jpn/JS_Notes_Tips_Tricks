@@ -2534,3 +2534,19 @@ const check = regex.test(str)
 console.log(check)
 // true
 */
+
+// 10-31-2023
+
+// Write a function that takes in a string and a number. The string should be repeated the number of times specified in the number parameter. Use a for loop and not the .repeat() method.
+/*
+function stringRepeater(string, number){
+	let repeatedString = []
+	for(let i = 0; i < number; i++){
+		repeatedString.push(string)
+	}
+	return repeatedString.join(' ')
+}
+
+console.log(stringRepeater("hello", 4))
+// hello hello hello hello
+*/
