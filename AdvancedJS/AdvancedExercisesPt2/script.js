@@ -2550,3 +2550,64 @@ function stringRepeater(string, number){
 console.log(stringRepeater("hello", 4))
 // hello hello hello hello
 */
+
+// 11-3-2023
+
+// Loop through an array of objects, use a nested if statement to check if one property matches one argument and if a property exists (second argument). Return no such property if it does not exist and return object does not exist if neither match.
+/*
+const contacts = [
+	{
+		firstName: 'Akira',
+		lastName: 'Laine',
+		number: '0543236543',
+		likes: ['Pizza', 'Coding', 'Brownie Points'],
+	},
+	{
+		firstName: 'Harry',
+		lastName: 'Potter',
+		number: '0994372684',
+		likes: ['Hogwarts', 'Magic', 'Hagrid'],
+	},
+	{
+		firstName: 'Sherlock',
+		lastName: 'Holmes',
+		number: '0487345643',
+		likes: ['Intriguing Cases', 'Violin'],
+	},
+	{
+		firstName: 'Kristian',
+		lastName: 'Vos',
+		number: 'unknown',
+		likes: ['JavaScript', 'Gaming', 'Foxes'],
+	},
+]
+*/
+/*
+function lookUpProfile(name, prop){
+	// loop through the array (contacts)
+
+	// use a nested if statement to check if name matches a contact and then if the property exists
+
+	// else return 'no such property'
+
+	// If the loop fails (is false), return "Profile doest not exist"
+}
+*/
+/*
+function lookUpProfile(name, prop) {
+	for (let i = 0; i < contacts.length; i++) {
+		if (name === contacts[i].firstName) {
+			if (contacts[i].hasOwnProperty(prop)) {
+				return contacts[i][prop]
+			} else {
+				return 'no such prop'
+			}
+		}
+	}
+
+	return 'Profile does not exist'
+}
+
+console.log(lookUpProfile('Kristian', 'likes'))
+// ['JavaScript', 'Gaming', 'Foxes']
+*/
