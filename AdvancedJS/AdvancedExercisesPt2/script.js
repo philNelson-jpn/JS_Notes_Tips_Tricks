@@ -2611,3 +2611,22 @@ function lookUpProfile(name, prop) {
 console.log(lookUpProfile('Kristian', 'likes'))
 // ['JavaScript', 'Gaming', 'Foxes']
 */
+
+// Write a function that takes an array and a number. Use a while loop to loop over the array and push a copy of the array to a new array the number of times specified by the number argument.
+/*
+function copyArray(array, num){
+	const copiedArray = []
+	let i = 0
+	while(i < num){
+		copiedArray.push([...array])
+		i++
+	}
+
+	return copiedArray
+}
+
+console.log(copyArray([1,2,3], 3))
+
+// [[1,2,3],[1,2,3],[1,2,3]]
+
+*/
