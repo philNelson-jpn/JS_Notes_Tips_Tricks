@@ -2630,3 +2630,35 @@ console.log(copyArray([1,2,3], 3))
 // [[1,2,3],[1,2,3],[1,2,3]]
 
 */
+
+// 11-11-2023
+// Assign list to a destructured array that is equal to 3 through 10.
+/*
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list) {
+const [a, b, ...arr] = list
+return arr;
+}
+const arr = removeFirstTwo(source);
+console.log(arr)
+// [3, 4, 5, 6, 7, 8, 9, 10]
+*/
+
+// Create a function that returns the sum of a range of an array of two numbers ([1,4] would return 10 (1+2+3+4))
+/*
+function sumOfRange(array){
+	let sum = 0
+	const minArrayNum = Math.min(array[0], array[1])
+	const maxArrayNum = Math.max(array[0], array[1])
+
+	for(let i = minArrayNum; i <= maxArrayNum; i++){
+		sum += i
+		console.log(i)
+	}
+
+	return sum
+}
+
+console.log(sumOfRange([1,4]))
+// 10
+*/
