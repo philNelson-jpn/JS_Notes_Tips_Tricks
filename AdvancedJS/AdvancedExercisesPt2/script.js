@@ -2662,3 +2662,27 @@ function sumOfRange(array){
 console.log(sumOfRange([1,4]))
 // 10
 */
+
+// 11-12-2023
+// mixin practice
+/*
+const bird = {
+	name: 'Donald',
+	numOfWings: 2,
+	canFly: true,
+}
+
+const plane = {
+	name: 'DC3',
+	numOfWings: 2,
+	canFly: true,
+}
+
+function flyingMixin(obj) {
+	obj.isFlying = () => console.log(`${obj.name} is flying!`)
+}
+
+flyingMixin(bird)
+bird.isFlying()
+// Donald is flying!
+*/
