@@ -2686,3 +2686,31 @@ flyingMixin(bird)
 bird.isFlying()
 // Donald is flying!
 */
+
+// 11-17-2023
+// Use the forEach method to only print out the price of each item (only the number)
+/*
+const items = [
+	{ price: 10 },
+	{ price: 20 },
+	{ price: 40 },
+	{ price: 60 },
+	{ price: 100 },
+]
+const priceArray = []
+const prices = items.forEach(({price}) => priceArray.push(price))
+console.log(priceArray)
+// [10, 20, 40, 60, 100]
+
+function getTotal(array){
+	let total = 0
+	for(let i = 0; i < array.length; i++){
+		total += array[i]
+	}
+	return total
+}
+
+const total = getTotal(priceArray)
+console.log(total)
+// 230
+*/
