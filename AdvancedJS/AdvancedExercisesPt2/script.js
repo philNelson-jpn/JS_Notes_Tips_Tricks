@@ -2714,3 +2714,37 @@ const total = getTotal(priceArray)
 console.log(total)
 // 230
 */
+
+// Create a function that loops through an object and returns the number of users where their online status is equal to true.
+/*
+const users = {
+	Alan: {
+		online: false
+	},
+	Sue: {
+		online: true
+	},
+	Jim: {
+		online: false
+	},
+	Kelly: {
+		online: false
+	},
+}
+
+function countOnline(userObj){
+	let numOnline = 0
+	for(let user in userObj){
+		if(userObj[user].online){
+			numOnline ++
+		}
+	}
+
+	return `There ${numOnline > 1 ? "are" : "is"} ${numOnline} user${numOnline > 1 ? "s" : ""} online`
+}
+
+console.log(countOnline(users))
+*/
+
+
+
