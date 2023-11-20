@@ -2746,5 +2746,61 @@ function countOnline(userObj){
 console.log(countOnline(users))
 */
 
+// 11-20-2023
 
+// Create a new object from an array of objects that only displays two keys from the original object using map.
+/*
+const arrayOfObjects = [
+	{
+		name: "Phil",
+		age: 35,
+		job: "English Teacher"
+	},
+	{
+		name: "Joe",
+		age: 37,
+		job: "Programmer"
+	},
+	{
+		name: "Simon",
+		age: 40,
+		job: "English Teacher"
+	},
+	{
+		name: "Kelly",
+		age: 25,
+		job: "Post Office Worker"
+	},
+]
+
+const nameAndAge = arrayOfObjects.map(person => {
+	return {
+		name: person["name"],
+		age: person["age"]
+	}
+})
+
+console.log(JSON.stringify(nameAndAge))
+// [{"name":"Phil","age":35},{"name":"Joe","age":37},{"name":"Simon","age":40},{"name":"Kelly","age":25}]
+
+*/
+
+// Use the reduce method to get the total price of all of the items.
+/*
+const items = [
+	{price: 10},
+	{price: 20},
+	{price: 40},
+	{price: 50},
+	{price: 28},
+]
+
+const total = items.reduce((sum, item) => {
+	console.log(`this is the sum: ${sum}`)
+	console.log(`this is the price: ${item.price}`)
+	console.log(`this is the price + sum: ${item.price} + ${sum}`)
+	return sum + item.price
+}, 0)
+console.log(total)
+*/
 
