@@ -2745,6 +2745,53 @@ function countOnline(userObj){
 
 console.log(countOnline(users))
 */
+/*
+change console.log functionality prank:
+
+function feed(pets){
+	let realLog = console.log
+	console.log = function(message){
+		realLog("You got pranked!")
+	}
+}
 
 
+const pet = "Tom"
+feed(pet)
+console.log(pet[0])
+
+*/
+
+// 11-22-2023
+// Create a class called Thermostat that takes in 'fahrenheit' as an argument within the constructor
+/*
+class Thermostat {
+	constructor(fahrenheit){
+		this.fahrenheit = fahrenheit
+	}
+
+	get temperature(){
+		return (5 / 9 * (this.fahrenheit - 32))
+	}
+
+	set temperature(celsius){
+		this.fahrenheit = (celsius * 9 / 5 + 32)
+	}
+}
+*/
+/*
+const testMap = new Map([
+	[1, {test: "test1", description: "description1"}],
+	[2, {test: "test2", description: "description2"}],
+	[3, {test: "test3", description: "description3"}],
+])
+
+function getId(id){
+	const mapId = testMap.get(id)
+	return mapId?.test
+}
+
+console.log(getId(3))
+// "test3"
+*/
 
