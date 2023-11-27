@@ -2993,3 +2993,21 @@ function getAvgRating(director){
 console.log(getAvgRating("Christopher Nolan"))
 // 8.675
 */
+
+// Write a function that takes a full name, splits the first name into an array, and returns it. Then destructure the array so that both the first name and last name are accessible as separate variables
+/*
+function splitFullName(fullname) {
+	return fullname.split(' ')
+}
+
+const [firstName, lastName] = splitFullName('Phil Nelson')
+console.log(firstName)
+// Phil
+const person = {
+	firstName,
+	lastName,
+}
+
+console.log(person.lastName)
+// Nelson
+*/
