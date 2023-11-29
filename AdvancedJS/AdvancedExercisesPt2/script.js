@@ -3011,3 +3011,38 @@ const person = {
 console.log(person.lastName)
 // Nelson
 */
+
+// 11-29-2023
+// How do we write a polyfill for a function that doesn't yet exist or is not yet supported
+/*
+if (Math.sumOfNums == null) {
+	Math.sumOfNums = (...nums) => nums.reduce((index, num) => num + index, 0)
+}
+
+console.log(Math.sumOfNums(2, 3, 4, 9))
+// 18
+*/
+
+// Write a function that takes in an array, removes the first two items and replaces them with two new ones.
+/*
+function replaceFirstTwo(arr, newOne, newTwo){
+	const [a, b, ...list] = arr
+	return [newOne, newTwo, ...list]
+}
+const arr = [1,2,3,4]
+console.log(replaceFirstTwo(arr, "newOne", "newTwo"))
+// ['newOne', 'newTwo', 3, 4]
+*/
+/*
+function replaceArrayItems(arr, ...newItems){
+	if(newItems.length > arr.length){
+		throw new Error(`You cannot replace more than ${arr.length} items.`)
+	}else{
+		arr.splice(0, newItems.length, ...newItems)
+	}
+	return arr
+}
+
+const arrayables = ["Ghimli", "Legolas", "Aragon", "Boromir", "Frodo", "Sam", "Gandalf"]
+console.log(replaceArrayItems(arrayables, "Jimmy", "Joey"))
+*/
