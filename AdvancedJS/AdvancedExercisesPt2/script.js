@@ -3046,3 +3046,247 @@ function replaceArrayItems(arr, ...newItems){
 const arrayables = ["Ghimli", "Legolas", "Aragon", "Boromir", "Frodo", "Sam", "Gandalf"]
 console.log(replaceArrayItems(arrayables, "Jimmy", "Joey"))
 */
+
+// 11-30-2023
+// Working box to box line snapping
+
+/*
+const App = () => {
+  const [startPosition, setStartPosition] = useState({ x: 0, y: 0 });
+  const [endPosition, setEndPosition] = useState({ x: 0, y: 0 });
+  const [isDrawing, setIsDrawing] = useState(false);
+
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      if (isDrawing) {
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+        setEndPosition({ x: mouseX, y: mouseY });
+      }
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, [isDrawing]);
+
+  const handleBoxClick = (event) => {
+    const boxRect = event.target.getBoundingClientRect();
+    const boxMiddleX = boxRect.right; // Use the right edge
+    const boxMiddleY = boxRect.top + boxRect.height / 2;
+
+    const lineAdjustmentX = -8; // Adjust based on your specific layout
+    const lineAdjustmentY = -(boxRect.height / 2 - 10); // Dynamically adjust for different box heights
+
+    setStartPosition({
+      x: boxMiddleX + lineAdjustmentX,
+      y: boxMiddleY + lineAdjustmentY,
+    });
+    setIsDrawing(true);
+  };
+
+  const handleBox2Click = (event) => {
+    const boxRect = event.target.getBoundingClientRect();
+    const boxMiddleX = boxRect.left; // Use the left edge
+    const boxMiddleY = boxRect.top + boxRect.height / 2;
+
+    const lineAdjustmentX = -8; // Adjust based on your specific layout
+    const lineAdjustmentY = -(boxRect.height / 2 - 10); // Dynamically adjust for different box heights
+
+    setEndPosition({
+      x: boxMiddleX + lineAdjustmentX,
+      y: boxMiddleY + lineAdjustmentY,
+    });
+    setIsDrawing(false);
+  };
+
+  const getLineStyle = () => {
+    const length = Math.sqrt(
+      Math.pow(endPosition.x - startPosition.x, 2) +
+        Math.pow(endPosition.y - startPosition.y, 2),
+    );
+
+    const angle = Math.atan2(
+      endPosition.y - startPosition.y,
+      endPosition.x - startPosition.x,
+    );
+
+    return {
+      transform: `translate(${startPosition.x}px, ${startPosition.y}px) rotate(${angle}rad)`,
+      width: length,
+    };
+  };
+
+  return (
+    <div className="App">
+      <div
+        className="box"
+        onClick={handleBoxClick}
+        style={{ left: 50, top: 100 }}
+      >
+        Box 1
+      </div>
+      <div
+        className="box"
+        onClick={handleBox2Click}
+        style={{ left: 250, top: 100 }}
+      >
+        Box 2
+      </div>
+      {startPosition.x !== 0 && <div className="line" style={getLineStyle()} />}
+    </div>
+  );
+};
+
+// CSS Styles
+/*
+.App {
+  position: relative;
+}
+
+.box {
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.line {
+  position: absolute;
+  height: 2px;
+  background-color: black;
+  transform-origin: 0% 50%;
+}
+
+*/
+
+// Accidental Paint.js Version where moving the cursor draws on the page rather than making lines between boxes
+/*
+const App = () => {
+  const [positions, setPositions] = useState([]);
+  const [isDrawing, setIsDrawing] = useState(false);
+
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      if (isDrawing) {
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+
+        setPositions((prevPositions) => [
+          ...prevPositions,
+          { x: mouseX, y: mouseY },
+        ]);
+      }
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, [isDrawing]);
+
+  const handleBoxClick = (event) => {
+    const boxRect = event.target.getBoundingClientRect();
+    const boxMiddleX = boxRect.right - 4; // Adjust based on your specific layout
+    const boxMiddleY = boxRect.top + boxRect.height / 2;
+
+    setIsDrawing(true);
+    setPositions([{ x: boxMiddleX, y: boxMiddleY }]);
+  };
+
+  const handleBox2Click = (event) => {
+    const boxRect = event.target.getBoundingClientRect();
+    const boxMiddleX = boxRect.left + 4; // Adjust based on your specific layout
+    const boxMiddleY = boxRect.top + boxRect.height / 2;
+
+    setIsDrawing(false);
+    setPositions((prevPositions) => [
+      ...prevPositions,
+      { x: boxMiddleX, y: boxMiddleY },
+    ]);
+  };
+
+  const getLines = () => {
+    const lines = [];
+
+    for (let i = 0; i < positions.length - 1; i += 2) {
+      const startPosition = positions[i];
+      const endPosition = positions[i + 1];
+
+      const length = Math.sqrt(
+        Math.pow(endPosition.x - startPosition.x, 2) +
+        Math.pow(endPosition.y - startPosition.y, 2),
+      );
+
+      const angle = Math.atan2(
+        endPosition.y - startPosition.y,
+        endPosition.x - startPosition.x,
+      );
+
+      lines.push({
+        transform: `translate(${startPosition.x}px, ${startPosition.y}px) rotate(${angle}rad)`,
+        width: length,
+      });
+    }
+
+    return lines;
+  };
+
+  return (
+    <div className="App">
+      <div
+        className="box"
+        onClick={handleBoxClick}
+        style={{ left: 50, top: 100 }}
+      >
+        Box 1
+      </div>
+      <div
+        className="box"
+        onClick={handleBox2Click}
+        style={{ left: 150, top: 100 }}
+      >
+        Box 2
+      </div>
+      <div className="box" onClick={handleBoxClick} style={{ left: 250, top: 100 }}>
+        Box 3
+      </div>
+      <div className="box" onClick={handleBox2Click} style={{ left: 350, top: 100 }}>
+        Box 4
+      </div>
+      <div className="box" onClick={handleBoxClick} style={{ left: 450, top: 100 }}>
+        Box 5
+      </div>
+      {getLines().map((lineStyle, index) => (
+        <div key={index} className="line" style={lineStyle} />
+      ))}
+    </div>
+  );
+};
+
+export default App;
+*/
+
+// 12-1-2023
+// Using Math.floor and Math.random, return a random whole number that is between two numbers provided as arguments
+/*
+function randomRange(num1, num2) {
+	const min = Math.min(num1, num2)
+	const max = Math.max(num1, num2)
+
+	return Math.floor(Math.random() * (max - min + 1)) + min
+}
+console.log(randomRange(2, 5))
+// Breakdown
+// Math.floor() rounds down
+// Math.random() * (5 - 2 + 1) will be a random number between 0 and 3
+// because Math.random() * 4 will be rounded down, even if the number produced is 3.999999999
+// + min (or + 2) will ensure that the random number generated will fall in the range provided.
+*/
