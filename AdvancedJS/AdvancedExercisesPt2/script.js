@@ -3290,3 +3290,12 @@ console.log(randomRange(2, 5))
 // because Math.random() * 4 will be rounded down, even if the number produced is 3.999999999
 // + min (or + 2) will ensure that the random number generated will fall in the range provided.
 */
+
+// 12-4-2023
+// Use .replace() and a capture group to change the string "one two three" to "three two one"
+
+const str = 'one two three'
+const reg = /(\w+)\s(\w+)\s(\w+)/
+const newStr = '$3 $2 $1'
+const reversedStr = str.replace(reg, newStr)
+console.log(reversedStr)
