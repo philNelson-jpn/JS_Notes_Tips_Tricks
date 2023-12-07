@@ -3293,9 +3293,115 @@ console.log(randomRange(2, 5))
 
 // 12-4-2023
 // Use .replace() and a capture group to change the string "one two three" to "three two one"
-
+/*
 const str = 'one two three'
 const reg = /(\w+)\s(\w+)\s(\w+)/
 const newStr = '$3 $2 $1'
 const reversedStr = str.replace(reg, newStr)
 console.log(reversedStr)
+*/
+
+/*
+
+type User = {
+	id: string
+	name: string
+	age: number
+}
+
+type ContextType = {
+	users: User[]
+	addUser: ({name, age}: { name: String, age: number }) => void
+}
+
+const Context = createContext<ContextType | null>(null)
+
+export function useUsers(){
+	const usersContext = usersContext(Context)
+	if(usersContext == null) {
+		throw new Error("Must use within provider")
+	}
+	return usersContext
+}
+
+export default function App() {
+	const [users, setUsers] = React.useState<User[]>([])
+
+	React.useEffect(() => {
+		getUsers().then(setUsers)
+	}, [])
+
+	function addUser({name, age}: {name: string; age: number}){
+		setUsers(prevUsers => {
+			return [...prevUsers, { id: crypto.randomUUID(), name, age}]
+		})
+	}
+
+	return (
+		<Context.Provider value={{ users }}>
+			<h1>Some stuff</h1>
+		</Context.Provider>
+	)
+}
+
+function getUsers(){
+	return Promise.resolve([
+		{id: crypto.randomUUID(), name: "Phil", age: 35}
+	])
+}
+
+
+*/
+
+// Create the filter function from scratch with Array.prototype
+/*
+Array.prototype.myFilter = function(callback){
+	const newArray = []
+
+	this.forEach(item => callback(this[item]) && newArray.push(this[item]))
+	
+	return newArray
+}
+
+const arr = [1,2,3,4,5,6,7,8,9,10]
+
+const evenFilter = arr.myFilter(item => item % 2 === 0)
+console.log(evenFilter)
+// [2, 4, 6, 8, 10]
+*/
+/*
+Array.prototype.myFilter = function(callback){
+	const filteredArray = []
+
+	this.forEach(item => callback(this[item]) && filteredArray.push(this[item]))
+
+	return filteredArray
+}
+
+const arr = [1,2,3,4,4,5,6,7,8,9,10]
+
+const oddFilter = arr.myFilter(item => item % 2 !== 0)
+console.log(oddFilter)
+// [3, 5, 7, 9]
+*/
+
+// Find the longest word in a string and print the length of that word (a number)
+/*
+function findLongestWord(str){
+	const words = str.split(" ")
+	let numOfLetters = 0
+	let longestWord = ""
+
+	for(let i = 0; i < words.length; i++){
+		if(words[i].length > numOfLetters){
+			longestWord = words[i]
+			numOfLetters = longestWord.length
+		}
+	}
+
+	return `The longest word in your sentence is ${longestWord} with a character count of ${numOfLetters}. There are ${words.length} words in your sentence.`
+}
+
+console.log(findLongestWord("Hello there sasquatch you son of a biatch. Supercalifragilistic"))
+// The longest word in your sentence is Supercalifragilistic with a character count of 20. There are 9 words in your sentence.
+*/
