@@ -3405,3 +3405,19 @@ function findLongestWord(str){
 console.log(findLongestWord("Hello there sasquatch you son of a biatch. Supercalifragilistic"))
 // The longest word in your sentence is Supercalifragilistic with a character count of 20. There are 9 words in your sentence.
 */
+
+function arrayToObject(array) {
+	const obj = {}
+	array.forEach(([key, value]) => {
+		obj[key] = value
+	})
+
+	return obj
+}
+const arr = [
+	['keyOne', 1],
+	['keyTwo', 2],
+	['keyThree', true],
+]
+
+console.log(arrayToObject(arr))

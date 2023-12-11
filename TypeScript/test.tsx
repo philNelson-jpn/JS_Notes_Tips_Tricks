@@ -8,15 +8,15 @@ type User = {
 
 type ContextType = {
 	users: User[]
-	addUser: ({name, age}: { name: String, age: number }) => void
+	addUser: ({ name, age }: { name: String; age: number }) => void
 }
 
 const Context = React.createContext<ContextType | null>(null)
 
-export function useUsers(){
+export function useUsers() {
 	const usersContext = React.useContext(Context)
-	if(usersContext == null) {
-		throw new Error("Must use within provider")
+	if (usersContext == null) {
+		throw new Error('Must use within provider')
 	}
 	return usersContext
 }
@@ -28,9 +28,9 @@ export default function App() {
 		getUsers().then(setUsers)
 	}, [])
 
-	function addUser({name, age}: {name: string; age: number}){
-		setUsers(prevUsers => {
-			return [...prevUsers, { id: crypto.randomUUID(), name, age}]
+	function addUser({ name, age }: { name: string; age: number }) {
+		setUsers((prevUsers) => {
+			return [...prevUsers, { id: crypto.randomUUID(), name, age }]
 		})
 	}
 
@@ -41,8 +41,6 @@ export default function App() {
 	)
 }
 
-function getUsers(){
-	return Promise.resolve([
-		{id: crypto.randomUUID(), name: "Phil", age: 35}
-	])
+function getUsers() {
+	return Promise.resolve([{ id: crypto.randomUUID(), name: 'Phil', age: 35 }])
 }
