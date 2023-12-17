@@ -3443,3 +3443,19 @@ function doubleArr(arr){
 console.log(doubleArr(arr))
 // [2, 4, 6, 8, 10]
 */
+
+
+// 12-18-2023
+// Create a function that looks through an array arr and returns the first element in it that passes a truth test
+
+function truthTest(arr, func){
+	let truthyArr = []
+
+	arr.forEach(item => func(item) && truthyArr.push(item))
+
+	return truthyArr.length > 0 ? truthyArr : "no elements pass the test"
+}
+
+console.log(truthTest([1,1,3,5], (item) => item % 2 === 0))
+// "no elements pass the test"
+
