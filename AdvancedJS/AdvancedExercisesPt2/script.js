@@ -3447,7 +3447,7 @@ console.log(doubleArr(arr))
 
 // 12-18-2023
 // Create a function that looks through an array arr and returns the first element in it that passes a truth test
-
+/*
 function truthTest(arr, func){
 	let truthyArr = []
 
@@ -3459,3 +3459,13 @@ function truthTest(arr, func){
 console.log(truthTest([1,1,3,5], (item) => item % 2 === 0))
 // "no elements pass the test"
 
+*/
+
+// 12-30-2023
+// Retrieve all of the `twinkle`s from twinkleStar by checking to see if anything in twinkleStar matches starRegex globally and case insensitive (ignore case).
+/*
+let twinkleStar = "Twinkle, twinkle, little star"
+let starRegex = /twink/gi
+let result = twinkleStar.match(starRegex)
+console.log(result)
+*/
