@@ -3406,7 +3406,6 @@ console.log(findLongestWord("Hello there sasquatch you son of a biatch. Supercal
 // The longest word in your sentence is Supercalifragilistic with a character count of 20. There are 9 words in your sentence.
 */
 
-
 /*
 function arrayToObject(array) {
 	const obj = {}
@@ -3444,7 +3443,6 @@ console.log(doubleArr(arr))
 // [2, 4, 6, 8, 10]
 */
 
-
 // 12-18-2023
 // Create a function that looks through an array arr and returns the first element in it that passes a truth test
 /*
@@ -3468,4 +3466,49 @@ let twinkleStar = "Twinkle, twinkle, little star"
 let starRegex = /twink/gi
 let result = twinkleStar.match(starRegex)
 console.log(result)
+*/
+
+// 1-4-2024
+// Create the map function from scratch (on Array.prototype)
+/*
+Array.prototype.myMap = function(callback){
+	const newArr = []
+	this.forEach((item) => newArr.push(callback(item)))
+	return newArr
+}
+
+const arr = [1, 2, 3, 4]
+
+const doubledArr = arr.myMap(elem => elem * 2)
+console.log(doubledArr)
+*/
+
+// Change a function from an impure function to a pure function
+/*
+const array = [1,2,3,4]
+
+function addElement(element){
+	array.push(element)
+}
+
+function pureAddElement(arr, element){
+	return [...arr, element]
+}
+
+const newArray = pureAddElement(array, 5)
+console.log(newArray)
+// [1, 2, 3, 4, 5]
+console.log(array)
+// [1, 2, 3, 4]
+*/
+
+// 1-7-2024
+// Change a function to use an anonymous function
+/*
+function printName(name, callback) {
+	callback(`Hello ${name}`)
+}
+
+printName('Phil', (variable) => console.log(variable))
+//Hello Phil
 */
