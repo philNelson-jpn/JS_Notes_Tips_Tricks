@@ -3512,3 +3512,18 @@ function printName(name, callback) {
 printName('Phil', (variable) => console.log(variable))
 //Hello Phil
 */
+
+// 1-8-2024
+// Write a function that reverses a string with a for loop
+/*
+function reverseString(string) {
+	let reversedString = ''
+	for (let i = string.length - 1; i >= 0; i--) {
+		reversedString += string[i]
+	}
+	return reversedString
+}
+
+console.log(reverseString('hello there, General Kenobi'))
+// iboneK lareneG ,ereht olleh
+*/
