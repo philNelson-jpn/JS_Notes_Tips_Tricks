@@ -3527,3 +3527,22 @@ function reverseString(string) {
 console.log(reverseString('hello there, General Kenobi'))
 // iboneK lareneG ,ereht olleh
 */
+
+// 1-9-2023
+// Create a function that grabs a value from an object using bracket notation.
+
+const testObj = {
+	12: "Namath",
+	16: "Montana",
+	19: "Unitas"
+}
+
+const playerNumber = 16
+const player = testObj[playerNumber]
+console.log(player)
+
+function printPlayer(obj, playerNum){
+	console.log(obj[playerNum])
+}
+
+printPlayer(testObj, 16)
