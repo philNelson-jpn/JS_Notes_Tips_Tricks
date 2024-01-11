@@ -3560,3 +3560,16 @@ function repeater(string, number) {
 console.log(repeater('hello', 5))
 // hello hello hello hello hello
 */
+
+const stupidCode = "what's your perfect first date?"
+	.split('')
+	.map(parseInt)
+	.filter((a) => a)
+	.reduce((a, b) => a + b)
+	.toString()
+	.split('')
+	.reverse()
+	.join('')
+
+console.log(stupidCode)
+
