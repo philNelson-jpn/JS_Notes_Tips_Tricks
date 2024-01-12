@@ -3561,6 +3561,8 @@ console.log(repeater('hello', 5))
 // hello hello hello hello hello
 */
 
+// 1-12-2024
+/*
 const stupidCode = "what's your perfect first date?"
 	.split('')
 	.map(parseInt)
@@ -3572,4 +3574,47 @@ const stupidCode = "what's your perfect first date?"
 	.join('')
 
 console.log(stupidCode)
+*/
+
+// Convert an object into an array of names. You can use a while loop or recursion to achieve this.
+/*
+const person = {
+	name: 'Phil',
+	friend: {
+		name: 'Simon',
+		friend: {
+			name: 'Caleb',
+		},
+	},
+}
+
+const friendsArray = []
+let currentPerson = person
+while (currentPerson != null) {
+	friendsArray.push(currentPerson.name)
+	currentPerson = currentPerson.friend
+}
+
+console.log(friendsArray)
+// [ 'Phil', 'Simon', 'Caleb' ]
+*/
+
+// Add a setter to an object so that we can set an explicit fullName outside of the person object.
+/*
+const person = {
+	firstName: 'Phil',
+	lastName: 'Nelson',
+	get fullName() {
+		return `${this.firstName} ${this.lastName}`
+	},
+	set fullName(value) {
+		return ([this.firstName, this.lastName] = value.split(' '))
+	},
+}
+
+person.fullName = 'Jimmy Johns'
+console.log(person.fullName)
+// Jimmy Johns
+*/
+
 
