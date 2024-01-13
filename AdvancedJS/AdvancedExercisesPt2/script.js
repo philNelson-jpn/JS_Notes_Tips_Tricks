@@ -3617,4 +3617,34 @@ console.log(person.fullName)
 // Jimmy Johns
 */
 
+// 1-13-2024
+// Write a function that takes a full name, takes the first name and the last name, and saves them as separate variables in an object. Then destructure the object so that both the first name and last name are accessible as separate variables.
+/*
+function splitFirstName(fullName, address){
+	const [firstName, lastName] = fullName.split(' ')
+	return {
+		firstName,
+		lastName,
+		address
+	}
+}
 
+const {firstName, lastName, address} = splitFirstName("Phil Nelson", "Jose St.")
+console.log(address)
+// "Jose St."
+*/
+
+// Method you can use on an object to return the keys of that object in an array
+/*
+const exampleObject = {
+	name: "Phil",
+	age: 35,
+	hobbies: [
+		"training", "coding", "playing with my kids"
+	]
+}
+
+const keysOfExampleObject = Object.keys(exampleObject)
+console.log(keysOfExampleObject)
+// ['name', 'age', 'hobbies']
+*/
