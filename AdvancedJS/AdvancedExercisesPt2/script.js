@@ -3648,3 +3648,18 @@ const keysOfExampleObject = Object.keys(exampleObject)
 console.log(keysOfExampleObject)
 // ['name', 'age', 'hobbies']
 */
+
+// Use recursion to return an array that begins with startNum and ends with endNum.
+/*
+function rangeOfNumbers(startNum, endNum){
+	if(endNum - startNum === 0){
+		return [startNum]
+	}
+	const recursive = rangeOfNumbers(startNum, endNum - 1)
+	recursive.push(endNum)
+	return recursive
+}
+
+console.log(rangeOfNumbers(2,7))
+// [2, 3, 4, 5, 6, 7]
+*/
