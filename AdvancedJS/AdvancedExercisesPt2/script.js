@@ -3663,3 +3663,16 @@ function rangeOfNumbers(startNum, endNum){
 console.log(rangeOfNumbers(2,7))
 // [2, 3, 4, 5, 6, 7]
 */
+
+// 1-17-2024
+// Write a function that checks if the second argument is the last part of the first argument
+/*
+function confirmEnding(string, target){
+	const lastPart = string.slice(string.length - target.length)
+	const isLastPartTarget = lastPart === target
+	return isLastPartTarget
+}
+
+console.log(confirmEnding("Hello", "o"))
+// true
+*/
