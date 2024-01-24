@@ -3679,7 +3679,7 @@ console.log(confirmEnding("Hello", "o"))
 
 // 1-21-2024
 // create JS variables to set sizes (rems) for media queries (mobile first)
-
+/*
 const BREAKPOINTS = {
 	tabletMin: 550,
 	laptopMin: 1100,
@@ -3691,3 +3691,8 @@ const QUERIES = {
 	laptopAndUp: `(min-width: ${BREAKPOINTS.laptopMin / 16}rem)`,
 	desktopAndUp: `(min-width: ${BREAKPOINTS.desktopMin / 16}rem)`,
 }
+*/
+
+// 1-24-2024
+// Perfect Apple iOS icon corner radius calculation
+const radius = width * 2/9
