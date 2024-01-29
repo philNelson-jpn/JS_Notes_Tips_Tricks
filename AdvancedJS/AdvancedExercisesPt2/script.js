@@ -3697,4 +3697,24 @@ const QUERIES = {
 // Perfect Apple iOS icon corner radius calculation
 // const radius = width * 2/9
 
-// 1-27-2024
+// 1-29-2024
+// Create an function that removes duplicates from an array using Set and return an array
+/*
+const numberSet = new Set([
+	2, 2, 3, 4
+])
+
+const [...numbers] = numberSet
+// [2, 3, 4]
+
+const numberArray = [2,2,2,3,4,5,4,4,4,6,7,8,9,0]
+
+function removeDuplicates(array){
+	return [...new Set(array)]
+}
+
+const noDuplicatesArray = removeDuplicates(numberArray)
+console.log(noDuplicatesArray)
+// [2, 3, 4, 5, 6, 7, 8, 9, 0]
+
+*/
