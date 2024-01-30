@@ -3718,3 +3718,41 @@ console.log(noDuplicatesArray)
 // [2, 3, 4, 5, 6, 7, 8, 9, 0]
 
 */
+
+// 1-30-2024
+// Convert a while loop into a recursive function
+/*
+const person = {
+	name: "Phil",
+	friend: {
+		name: "Simon",
+		friend: {
+			name: "Caleb"
+		}
+	}
+}
+
+let currentPerson = person
+while(currentPerson != null){
+	console.log(currentPerson.name)
+	currentPerson = currentPerson.friend
+}
+
+// Phil
+// Simon
+// Caleb
+
+function getFriends(currentPerson){
+	if(currentPerson == null){
+		return
+	}
+	console.log(currentPerson.name)
+	getFriends(currentPerson.friend)
+}
+
+getFriends(person)
+
+// Phil
+// Simon
+// Caleb
+*/
