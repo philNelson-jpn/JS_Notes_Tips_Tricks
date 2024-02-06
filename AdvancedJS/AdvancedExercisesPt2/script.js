@@ -3756,3 +3756,38 @@ getFriends(person)
 // Simon
 // Caleb
 */
+
+// 2-6-2024
+
+// Create a function that uses map to convert decimal numbers to whole numbers using parseInt()
+/*
+function decToWholeAndSort(arr){
+	const wholeNums = arr.map(num => parseInt(num))
+
+	return wholeNums.sort((a,b) => a - b)
+}
+
+const array = [2.223, 43.235, 5.77342]
+console.log(decToWholeAndSort(array))
+// [2, 5, 43]
+*/
+
+/*
+const array = [2.223, 43.235, 5.77342]
+
+function decToWhole(arr){
+	const wholeNums = arr.map(num => parseInt(num))
+
+	return wholeNums
+}
+
+function arraySorter(arr){
+	return arr.sort((a,b) => a - b)
+}
+
+const sortedWholeNumArr = arraySorter(decToWhole(array))
+console.log(sortedWholeNumArr)
+// [2, 5, 43]
+console.log(array)
+// [2.223, 43.235, 5.77342]
+*/
