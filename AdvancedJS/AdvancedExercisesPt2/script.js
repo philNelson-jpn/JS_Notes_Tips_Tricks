@@ -3791,3 +3791,58 @@ console.log(sortedWholeNumArr)
 console.log(array)
 // [2.223, 43.235, 5.77342]
 */
+
+//3-8-2024
+
+// Loop through an array of objects, use a nested if statement to check if one property matches one argument and if a property exists (second argument). Return no such property if it does not exist and return object does not exist if neither match.
+
+/*
+const contacts = [
+	{
+		firstName: 'Akira',
+		lastName: 'Laine',
+		number: '0543236543',
+		likes: ['Pizza', 'Coding', 'Brownie Points'],
+	},
+	{
+		firstName: 'Harry',
+		lastName: 'Potter',
+		number: '0994372684',
+		likes: ['Hogwarts', 'Magic', 'Hagrid'],
+	},
+	{
+		firstName: 'Sherlock',
+		lastName: 'Holmes',
+		number: '0487345643',
+		likes: ['Intriguing Cases', 'Violin'],
+	},
+	{
+		firstName: 'Kristian',
+		lastName: 'Vos',
+		number: 'unknown',
+		likes: ['JavaScript', 'Gaming', 'Foxes'],
+	},
+]
+
+function lookUpProfile(name, prop) {
+	for (let i = 0; i < contacts.length; i++) {
+		const contact = contacts[i]
+		const contactProps = contact[prop]
+		const profileExists = name === contact.firstName || name === contact.lastName
+		const propExists = contact.hasOwnProperty(prop)
+
+		if (profileExists) {
+			if (propExists) {
+				return contactProps
+			} else {
+				return 'No such property'
+			}
+		}
+	}
+	return 'Profile does not exist'
+}
+
+console.log(lookUpProfile('Holmes', 'likes'))
+//['Intriguing Cases', 'Violin']
+*/
+
