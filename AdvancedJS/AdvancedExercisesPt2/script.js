@@ -3846,3 +3846,17 @@ console.log(lookUpProfile('Holmes', 'likes'))
 //['Intriguing Cases', 'Violin']
 */
 
+// 3-12-2024
+//Using Math.floor and Math.random, return a random whole number that is >= myMin and <= myMax.
+/*
+function randomRange(myMin, myMax) {
+	const min = Math.min(myMin, myMax)
+	const max = Math.max(myMin, myMax)
+	const randomNumInRange = Math.floor(Math.random() * max - min + 1) + min
+
+	return randomNumInRange
+}
+
+console.log(randomRange(2, 26))
+// random number between 2 and 26
+*/
