@@ -3860,3 +3860,23 @@ function randomRange(myMin, myMax) {
 console.log(randomRange(2, 26))
 // random number between 2 and 26
 */
+
+// 3-22-2023
+// Create the filter function from scratch with Array.prototype
+/*
+Array.prototype.myFilter = function (callback) {
+	const arr = []
+	this.forEach((item) => {
+		const num = this[item]
+		if (callback(num)) {
+			arr.push(num)
+		}
+	})
+	return arr
+}
+
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const evenArray = array.myFilter((num) => num % 2 === 0)
+console.log(evenArray)
+// [2, 4, 6, 8, 10]
+*/
